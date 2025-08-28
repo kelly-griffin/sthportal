@@ -1,0 +1,16 @@
+﻿name: Bug report
+about: Something isn’t working
+labels: bug
+body:
+  - type: textarea
+    id: what
+    attributes: { label: What happened?, description: Clear, concise description }
+  - type: textarea
+    id: steps
+    attributes: { label: Steps to reproduce, description: 1) … 2) … 3) … }
+  - type: textarea
+    id: expected
+    attributes: { label: Expected behavior }
+  - type: input
+    id: page
+    attributes: { label: Affected page/file (if known) }

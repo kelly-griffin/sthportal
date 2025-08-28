@@ -1,0 +1,15 @@
+﻿name-template: "v$NEXT_PATCH_VERSION"
+tag-template: "v$NEXT_PATCH_VERSION"
+categories:
+  - title: "🚀 Features"
+    labels: ["enhancement","frontend"]
+  - title: "🐛 Fixes"
+    labels: ["bug","PHP"]
+  - title: "🧰 Maintenance"
+    labels: ["documentation","ci","chore"]
+change-template: "- $TITLE (#$NUMBER) by @$AUTHOR"
+version-resolver:
+  major: { labels: ["semver:major"] }
+  minor: { labels: ["enhancement"] }
+  patch: { labels: ["bug","documentation","ci"] }
+  default: patch

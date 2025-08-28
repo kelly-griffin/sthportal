@@ -1,0 +1,13 @@
+﻿name: Feature request
+about: Propose an improvement or new capability
+labels: enhancement
+body:
+  - type: textarea
+    id: summary
+    attributes: { label: Summary, description: What & why }
+  - type: textarea
+    id: acceptance
+    attributes: { label: Acceptance criteria, description: Checklist of done }
+  - type: textarea
+    id: notes
+    attributes: { label: Notes / constraints }
