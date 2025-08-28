@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Recap UHA-Farm-16 — Visitor 0 @ Home 0</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  body{font:16px/1.4 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:#0e1114;color:#e8eaed;margin:0;padding:24px}
+  .card{max-width:900px;margin:0 auto;background:#11161c;border:1px solid #1f2630;border-radius:12px;box-shadow:0 6px 24px rgba(0,0,0,.25)}
+  header{padding:16px 20px;border-bottom:1px solid #1f2630}
+  h1{font-size:20px;margin:0 0 6px}
+  .meta{color:#aab2bd;font-size:14px}
+  .section{padding:16px 20px;border-top:1px solid #1f2630}
+  .section h2{font-size:16px;margin:0 0 10px;color:#cfd8e3}
+  ul{margin:0;padding-left:18px}
+  .pill{display:inline-block;background:#1e2a36;color:#cfe6ff;border:1px solid #2a3a4b;border-radius:999px;padding:2px 10px;margin-right:8px;font-size:12px}
+  .mono{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace}
+</style>
+</head>
+<body>
+  <div class="card">
+    <header>
+      <h1>Game Recap — Visitor 0 @ Home 0</h1>
+      <div class="meta">
+                <span class="pill">W: Ville Husso  (SDG)</span>        <span class="pill mono">UHA-Farm-16</span>
+      </div>
+    </header>
+    <div class="section">
+      <h2>Summary</h2>
+      <p>
+                  Visitor 0 @ Home 0.
+                         Winning goalie: Ville Husso  (SDG).      </p>
+    </div>
+    <div class="section">
+      <h2>Scoring Summary</h2>
+              <ul>
+          <li>Goals</li><li>Goalie Stats</li><li>Unknown Goalie (COL), 1 saves from 10 shots - (0.100), 20:22 minutes</li><li>Unknown Goalie (COL), 0 saves from 11 shots - (0.000), L, 0-1-0, 39:38 minutes</li><li>San Diego Gulls - 0 on 0 Attempt(s) - 0.00% - Score 0 goal in Penalty Kill</li><li>Colorado Eagles - 0 on 1 Attempt(s) - 0.00% - Score 0 goal in Penalty Kill</li><li>Unknown Goalie enters game at 4:36 of 1st period</li><li>Unknown Goalie enters game at 9:13 of 1st period</li><li>Unknown Goalie enters game at 9:39 of 1st period</li><li>Unknown Goalie enters game at 9:47 of 1st period</li><li>Unknown Goalie enters game at 11:36 of 1st period</li><li>Unknown Goalie enters game at 0:11 of 2nd period</li><li>Unknown Goalie enters game at 0:21 of 2nd period</li><li>Unknown Goalie enters game at 0:37 of 2nd period</li><li>Unknown Goalie enters game at 10:54 of 2nd period</li><li>Unknown Goalie enters game at 1:39 of 3rd period</li><li>Unknown Goalie enters game at 4:43 of 3rd period</li><li>Goaltenders</li><li>Starting : Ville Husso Backup : Unknown Goalie</li><li>Starting : Unknown Goalie Backup : Unknown Goalie</li><li>Goal by Ross Johnston - San Diego Gulls : 1 - Colorado Eagles : 0</li><li>Goal by Brock McGinn - San Diego Gulls : 2 - Colorado Eagles : 0</li><li>Goal by Sam Colangelo - San Diego Gulls : 3 - Colorado Eagles : 0</li><li>Goal by Nikita Nesterenko - San Diego Gulls : 4 - Colorado Eagles : 0</li><li>Unknown Goalie enters game</li><li>Goal by Jack Drury - San Diego Gulls : 4 - Colorado Eagles : 1</li><li>Goal by Ross Johnston - San Diego Gulls : 5 - Colorado Eagles : 1</li><li>Goal by Nikita Nesterenko - San Diego Gulls : 6 - Colorado Eagles : 1</li><li>Goal by Nikita Nesterenko - San Diego Gulls : 7 - Colorado Eagles : 1</li><li>Goal by Sam Colangelo - San Diego Gulls : 8 - Colorado Eagles : 1</li><li>Goal by Ross Johnston - San Diego Gulls : 9 - Colorado Eagles : 1</li><li>Goal by Sam Colangelo - San Diego Gulls : 10 - Colorado Eagles : 1</li><li>11:32 of 1st period - Stopped by Unknown Goalie with a rebound.</li><li>Goal by Ross Johnston - San Diego Gulls : 11 - Colorado Eagles : 1</li><li>Goal by Sam Malinski - San Diego Gulls : 11 - Colorado Eagles : 2</li><li>Goal by Chris Wagner - San Diego Gulls : 11 - Colorado Eagles : 3</li><li>Goals for this period are 11 for San Diego Gulls vs 3 for Colorado Eagles.</li><li>Goal by Nikita Nesterenko - San Diego Gulls : 12 - Colorado Eagles : 3</li><li>Goal by Sam Colangelo - San Diego Gulls : 13 - Colorado Eagles : 3</li><li>Goal by Sam Colangelo - San Diego Gulls : 14 - Colorado Eagles : 3</li><li>Goal by Sam Malinski - San Diego Gulls : 14 - Colorado Eagles : 4</li><li>Goal by Jimmy Vesey - San Diego Gulls : 14 - Colorado Eagles : 5</li><li>Goal by Brock McGinn - San Diego Gulls : 15 - Colorado Eagles : 5</li><li>Goal by Sam Malinski - San Diego Gulls : 15 - Colorado Eagles : 6</li><li>Goals for this period are 4 for San Diego Gulls vs 3 for Colorado Eagles.</li><li>Goal by Jack Drury - San Diego Gulls : 15 - Colorado Eagles : 7</li><li>Goal by Ross Johnston - San Diego Gulls : 16 - Colorado Eagles : 7</li><li>Goal by Brock McGinn - San Diego Gulls : 17 - Colorado Eagles : 7</li><li>Goal by Nikita Nesterenko - San Diego Gulls : 18 - Colorado Eagles : 7</li><li>Goal by Sam Colangelo - San Diego Gulls : 19 - Colorado Eagles : 7</li><li>Goal by Ross Johnston - San Diego Gulls : 20 - Colorado Eagles : 7</li><li>Goals for this period are 5 for San Diego Gulls vs 1 for Colorado Eagles.</li><li>. Pass by Unknown Player intercepted by Ivan Ivan. Pass to Sam Malinski in neutral zone. Puck is dumped in San Diego Gulls zone by Sam Malinski. Puck retreived by Ross Johnston. Pass to Unknown Player in neutral zone. Unknown Player moves puck in Colorado Eagles zone. Pass by Unknown Player intercepted by Wyatt Aamodt. Pass to Sam Malinski in neutral zone. Puck is dumped in San Diego Gulls zone by Sam Malinski. Puck retreived by Ross Johnston. Ross Johnston is hit by Unknown Player and loses puck. Free Puck Retrieved by Wyatt Aamodt for Colorado Eagles. Normal Defense Lineup #2 - Unknown Player, Unknown Player are on ice for Colorado Eagles. Pass to Ivan Ivan. Pass to Unknown Player. Pass to Ivan Ivan. Wrist shot by Ivan Ivan. Stopped by Ville Husso with a rebound. Free Puck Retrieved by Ross Johnston for San Diego Gulls. Pass to Unknown Player in neutral zone. Pass to Ross Johnston in Colorado Eagles zone. Snap shot by Ross Johnston. Stopped by Unknown Goalie with a rebound. Free Puck Retrieved by Ross Johnston for San Diego Gulls. Wrist shot by Ross Johnston. Shot Hit the Post. Free Puck Retrieved by Ross Johnston for San Diego Gulls. Snap shot by Ross Johnston.</li><li>. End of Period. Goals for this period are 11 for San Diego Gulls vs 3 for Colorado Eagles. Shots for this period are 12 for San Diego Gulls vs 16 for Colorado Eagles.</li><li>. End of Period. Goals for this period are 4 for San Diego Gulls vs 3 for Colorado Eagles. Shots for this period are 4 for San Diego Gulls vs 16 for Colorado Eagles.</li><li>. End of Period. Goals for this period are 5 for San Diego Gulls vs 1 for Colorado Eagles. Shots for this period are 5 for San Diego Gulls vs 9 for Colorado Eagles.</li>        </ul>
+          </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+{
+    "gwg": "Kevin Fiala",
+    "winningGoalie": "Darcy Kuemper",
+    "firstStar": "",
+    "secondStar": "",
+    "thirdStar": "",
+    "gameNumber": 3,
+    "visitor": {
+        "name": "Los Angeles Kings",
+        "score": 0,
+        "abbr": "LAK"
+    },
+    "home": {
+        "name": "Colorado Avalanche",
+        "score": 0,
+        "abbr": "COL"
+    },
+    "date": ""
+}

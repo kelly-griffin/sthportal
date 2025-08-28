@@ -1,0 +1,16 @@
+{
+    "gwg": "",
+    "winningGoalie": "Unknown Goalie  (JAK)",
+    "firstStar": "Tomas Nosek (JAK)",
+    "secondStar": "Mackie Samoskevich (JAK)",
+    "thirdStar": "Uvis Balinskis (JAK)",
+    "gameNumber": 0,
+    "visitor": {
+        "name": "",
+        "score": 0
+    },
+    "home": {
+        "name": "",
+        "score": 0
+    }
+}

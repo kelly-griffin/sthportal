@@ -1,0 +1,19 @@
+{
+    "gwg": "",
+    "winningGoalie": "Artemi Panarin",
+    "firstStar": "",
+    "secondStar": "",
+    "thirdStar": "",
+    "gameNumber": 9,
+    "visitor": {
+        "name": "Buffalo Sabres",
+        "score": 0,
+        "abbr": "BUF"
+    },
+    "home": {
+        "name": "New York Rangers",
+        "score": 0,
+        "abbr": "NYR"
+    },
+    "date": ""
+}

@@ -1,0 +1,1339 @@
+/* Cleaned: duplicate properties removed within rules; identical duplicate rules removed (kept last). */
+/* ========= UHA Portal — STATISTICS v1.6.3 (minimal patch) ========= */
+/* Keep your layout exactly; only additions: avatar bg var + initials + stacked name blocks */
+.statistics-container {
+
+  max-width: 1180px;
+  width: min(96vw, 1180px);
+  margin: 0 auto;
+  padding: 16px;
+  color: #e6e6e6;
+}
+.statistics-container a {
+ color: #cfe7ff;
+}
+.statistics-container h1,
+.statistics-container h2,
+.statistics-container h3 {
+ color: #ffffff;
+}
+.stats-subnav {
+
+  display: flex;
+  gap: 10px;
+  border-bottom: 1px solid #2a2a2a;
+  margin-bottom: 16px;
+}
+.stats-subnav .tab-link {
+
+  display:inline-block;
+  padding: 8px 10px;
+  text-decoration: none;
+  border-radius: 6px 6px 0 0;
+  background: #1e293b;
+  color: #e6e6e6;
+  font-weight: 700;
+  font-size: 13px;
+}
+.stats-subnav .tab-link.active {
+ background:#2d67a8; color:#fff;
+}
+.tab-panel {
+ display:none;
+}
+.tab-panel.active {
+ display:block;
+}
+.leaders-grid {
+
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap:20px;
+}
+.leaders-card {
+
+  background: #0f1115;
+  border: 1px solid #2a2a2a;
+  border-radius: 10px;
+  padding: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,.35);
+  color:#e6e6e6;
+}
+.card-head {
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+}
+.card-head h2 {
+ margin:0; font-size:18px;
+}
+.metric-tabs {
+ display:flex; gap:6px; flex-wrap:wrap;
+}
+.metric-tabs.solo {
+ opacity:.85;
+}
+.metric-tab {
+
+  background:#1e293b;
+  color:#dbe5f5;
+  border:1px solid #2f4161;
+  font-size:11px;
+  padding:3px 8px;
+  border-radius:999px;
+  cursor:pointer;
+}
+.metric-tab.active {
+
+  background:#2d67a8;
+  border-color:#2d67a8;
+  color:#fff;
+}
+.metric-panels {
+
+  display:grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap:14px;
+  margin-top: 8px;
+}
+.metric-panels .metric-panel {
+
+  display:none;
+  grid-column: 2;
+}
+.metric-panels .metric-panel.active {
+ display:block;
+}
+.mini-board {
+
+  list-style: none;
+  margin:0; padding:0;
+  border:1px solid #2a2a2a;
+  border-radius:8px;
+  overflow:hidden;
+  background:#0b0d11;
+}
+.mini-board li {
+
+  display:grid;
+  grid-template-columns: 26px 1fr 48px 60px;
+  align-items:center;
+  gap:8px;
+  padding:6px 8px;
+  border-bottom:1px solid #1f1f1f;
+  font-size:13px;
+  color:#e6e6e6;
+  cursor:pointer;
+}
+.mini-board li:last-child {
+ border-bottom:none;
+}
+.mini-board li:hover {
+ background:#121723;
+}
+.mini-board .rank {
+ text-align:center; opacity:.8;
+}
+.mini-board .team {
+ text-align:center; font-variant: all-small-caps; opacity:.95;
+}
+.mini-board .val {
+ text-align:right; font-weight:800; color:#ffffff;
+}
+.placeholder {
+ padding: 40px; text-align:center; opacity:.85;
+}
+.diag {
+
+  background:#1b2638;
+  border:1px solid #3a4b66;
+  color:#ecf3ff;
+  padding:10px 12px;
+  border-radius:8px;
+  margin:8px 0 16px 0;
+}
+.diag code {
+
+  display:block;
+  white-space:pre-wrap;
+  word-break:break-all;
+  background:#0e1522;
+  border:1px solid #334155;
+  color:#cfe7ff;
+  padding:8px;
+  border-radius:6px;
+}
+@media (min-width: 1400px) {
+
+  .statistics-container{ max-width: 1280px; width: min(95vw, 1280px);
+}
+}
+@media (max-width: 980px) {
+
+  .leaders-grid{ grid-template-columns: 1fr;
+}
+.metric-panels {
+ grid-template-columns: 1fr;
+}
+.metric-panels .metric-panel {
+ grid-column: 1;
+}
+}
+.statistics-container {
+
+  box-sizing: border-box;
+  width: min(96vw, 1180px);
+  margin: 0 auto;
+  padding: 16px;
+}
+.stats-subnav {
+ flex-wrap: wrap; overflow-x: hidden;
+}
+/* --- NHL-style feature card (scoped to stats metric panels) --- */
+.metric-panels > .feature-panel {
+ 
+  display: flex; 
+  align-items: center; 
+  gap: 18px; 
+  padding: 16px;
+}
+/* Avatar: solid team colour + initials fallback */
+.metric-panels > .feature-panel .avatar {
+
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  background: var(--avatar-bg, #222);       /* <— team colour from JS */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.metric-panels > .feature-panel .avatar img {
+
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  background: transparent;                  /* prevent white flash */
+}
+.metric-panels > .feature-panel .avatar .avatar-initials {
+
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 1;
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0,0,0,.35);
+}
+/* Text stack */
+.metric-panels > .feature-panel .feat-name {
+ 
+  font-size: 26px; 
+  font-weight: 900; 
+  line-height: 1.15; 
+  text-align: center;
+}
+/* allow stacked first/last injected by JS */
+.metric-panels > .feature-panel .feat-name .first,
+.metric-panels > .feature-panel .feat-name .last {
+
+  display:block;
+}
+.metric-panels > .feature-panel .feat-team {
+ 
+  font-size: 14px; 
+  opacity: .85; 
+  margin-bottom: 6px;
+}
+.metric-panels > .feature-panel .feat-metric .metric-label {
+
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: .7;
+}
+.metric-panels > .feature-panel .feat-metric .metric-value {
+
+  font-size: 54px;
+  font-weight: 900;
+  line-height: 1;
+  color: #fff;
+  text-shadow: 0 2px 6px rgba(0,0,0,.4);
+}
+.feature-panel {
+ display:flex; flex-direction:column; align-items:center; text-align:center; gap:8px;
+}
+.feature-panel .feat-team {
+ display:none !important;
+}
+.feature-panel .feat-name {
+ max-width:270px; overflow:hidden; text-overflow:ellipsis;
+}
+@media (max-width:980px) {
+ .feature-panel .feat-name{ max-width:60vw;
+}
+}
+.feature-panel .feat-metric [data-metric-label] {
+ display:block; font-size:18px; text-transform:uppercase; letter-spacing:1px; opacity:.8; margin-bottom:2px;
+}
+.feature-panel .feat-metric [data-metric-val] {
+ display:block; font-size:68px; font-weight:900; line-height:1;
+}
+.feature-panel .feat-info {
+ display:flex; align-items:center; gap:6px; font-size:13px; opacity:.9; margin-top:4px;
+}
+.feature-panel .feat-info .feat-logo {
+ width:20px; height:20px; object-fit:contain;
+}
+.feature-panel .feat-info .dot {
+ opacity:.6;
+}
+/* Center the info bar under the name (goalies looked offset) */
+.feature-panel .feat-info {
+
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* --- Skaters tab: Summary table --- */
+.skaters-wrap {
+ display: grid; gap: 12px;
+}
+.skaters-toolbar .label {
+
+  display:inline-block; padding:6px 10px; background:#1e293b; color:#dbe5f5;
+  border:1px solid #2f4161; border-radius:999px; font-size:12px; text-transform:uppercase; opacity:.9;
+}
+.table-scroll {
+ overflow:auto;
+}
+.skaters-table {
+
+  width:100%; border-collapse: separate; border-spacing:0 6px; color:#e6e6e6;
+}
+.skaters-table thead th {
+
+  font-size:12px; text-transform:uppercase; letter-spacing:.4px; opacity:.75; padding:8px 10px; text-align:left;
+}
+.skaters-table tbody tr {
+
+  background:#0f1115; border:1px solid #2a2a2a; border-radius:8px;
+}
+.skaters-table tbody td {
+
+  padding:10px; vertical-align:middle;
+}
+.skaters-table .col-rank {
+ width:40px; text-align:right; opacity:.8;
+}
+.skaters-table .col-team,
+.skaters-table .col-pos,
+.skaters-table .col-gp,
+.skaters-table .col-g,
+.skaters-table .col-a,
+.skaters-table .col-p {
+ text-align:center;
+}
+.skaters-table .col-p {
+ font-weight:800;
+}
+@media (max-width: 900px) {
+
+  .skaters-table thead { display:none;
+}
+.skaters-table tbody tr {
+ display:grid; grid-template-columns: 36px 1fr 36px 36px 36px 36px 36px; align-items:center;
+}
+.skaters-table .col-rank {
+ grid-column:1;
+}
+.skaters-table .col-name {
+ grid-column:2;
+}
+.skaters-table .col-team {
+ grid-column:3;
+}
+.skaters-table .col-pos {
+ grid-column:4;
+}
+.skaters-table .col-gp {
+ grid-column:5;
+}
+.skaters-table .col-g {
+ grid-column:6;
+}
+.skaters-table .col-a {
+ grid-column:7;
+}
+.skaters-table .col-p {
+ grid-column:1 / -1; justify-self:end; padding-top:0;
+}
+}
+/* --- Skaters tab: compact table + filters --- */
+#tab-skaters .skaters-toolbar {
+
+  display:flex; align-items:center; justify-content:space-between; gap:12px;
+}
+#tab-skaters .skaters-filters {
+ display:flex; gap:10px; align-items:center;
+}
+#tab-skaters .skaters-filters label {
+ font-size:12px; opacity:.9; display:flex; gap:6px; align-items:center;
+}
+#tab-skaters .skaters-filters select {
+
+  background:#0f1115; color:#e6e6e6; border:1px solid #2f4161;
+  border-radius:6px; padding:4px 8px; font-size:12px;
+}
+#tab-skaters .skaters-table {
+ font-size:12px; table-layout:fixed;
+}
+#tab-skaters .skaters-table thead th {
+ font-size:10px; padding:6px 8px; letter-spacing:.3px;
+}
+#tab-skaters .skaters-table tbody td {
+ padding:8px 8px;
+}
+#tab-skaters .skaters-table .col-name {
+ font-size:13px;
+}
+#tab-skaters .skaters-table .col-rank {
+ width:32px; text-align:right;
+}
+#tab-skaters .skaters-table .col-team,
+#tab-skaters .skaters-table .col-pos,
+#tab-skaters .skaters-table .col-gp,
+#tab-skaters .skaters-table .col-g,
+#tab-skaters .skaters-table .col-a,
+#tab-skaters .skaters-table .col-p {
+ text-align:center;
+}
+#tab-skaters .skaters-table .col-gp,
+#tab-skaters .skaters-table .col-g,
+#tab-skaters .skaters-table .col-a,
+#tab-skaters .skaters-table .col-p {
+ width:64px;
+}
+#tab-skaters .skaters-table .col-team {
+ width:64px;
+}
+#tab-skaters .skaters-table .col-pos {
+ width:56px;
+}
+#tab-skaters .skaters-table .col-p {
+ font-weight:800;
+}
+/* mobile: hide header, grid rows, keep last col as the “big” number */
+@media (max-width: 900px) {
+
+  #tab-skaters .skaters-table thead{ display:none;
+}
+#tab-skaters .skaters-table tbody tr {
+
+    display:grid; grid-template-columns: 32px 1fr 48px 48px 48px 48px 48px; align-items:center;
+}
+#tab-skaters .skaters-table .col-p {
+ grid-column:1 / -1; justify-self:end; padding-top:0;
+}
+}
+/* Skaters: clickable header sort indicators */
+#tab-skaters .skaters-table th[data-sort] {
+
+  cursor: pointer; user-select: none;
+}
+#tab-skaters .skaters-table th[data-sort].active.asc::after {
+ content: " ▲"; opacity:.8;
+}
+#tab-skaters .skaters-table th[data-sort].active.desc::after {
+ content: " ▼"; opacity:.8;
+}
+/* Skaters Summary — compact */
+#tab-skaters .skaters-table {
+
+  table-layout: fixed;
+  font-size: 11px;
+}
+#tab-skaters .skaters-table thead th {
+ font-size: 10px; padding: 6px 6px; letter-spacing: .2px;
+}
+#tab-skaters .skaters-table tbody td {
+ padding: 6px 6px;
+}
+#tab-skaters .skaters-table .col-name {
+ font-size: 12px;
+}
+#tab-skaters .skaters-table .col-rank {
+ width: 32px; text-align: right;
+}
+#tab-skaters .skaters-table .col-team,
+#tab-skaters .skaters-table .col-pos,
+#tab-skaters .skaters-table .col-gp,
+#tab-skaters .skaters-table .col-g,
+#tab-skaters .skaters-table .col-a,
+#tab-skaters .skaters-table .col-p,
+#tab-skaters .skaters-table .col-plus,
+#tab-skaters .skaters-table .col-pim,
+#tab-skaters .skaters-table .col-ppg,
+#tab-skaters .skaters-table .col-evg,
+#tab-skaters .skaters-table .col-ppg2,
+#tab-skaters .skaters-table .col-ppp,
+#tab-skaters .skaters-table .col-shg,
+#tab-skaters .skaters-table .col-shp,
+#tab-skaters .skaters-table .col-otg,
+#tab-skaters .skaters-table .col-gwg,
+#tab-skaters .skaters-table .col-s,
+#tab-skaters .skaters-table .col-spct,
+#tab-skaters .skaters-table .col-toi,
+#tab-skaters .skaters-table .col-fow {
+
+  text-align: center;
+}
+/* Skaters Summary — tighten spacing */
+#tab-skaters .skaters-table {
+
+  border-collapse: separate;
+  border-spacing: 0 3px;                 /* row gap was ~6px */
+  font-variant-numeric: tabular-nums;    /* cleaner digits */
+}
+#tab-skaters .skaters-table thead th {
+ padding: 4px 6px;
+}
+/* was 6px */
+#tab-skaters .skaters-table tbody td {
+  padding: 4px 6px;
+}
+/* was 6px */
+
+/* narrower fixed widths for compact numeric columns */
+#tab-skaters .skaters-table .col-rank {
+ width: 28px; text-align:right;
+}
+#tab-skaters .skaters-table .col-team {
+ width: 48px; text-align:center;
+}
+#tab-skaters .skaters-table .col-pos {
+ width: 40px; text-align:center;
+}
+/* most stat columns */
+#tab-skaters .skaters-table .col-gp,
+#tab-skaters .skaters-table .col-g,
+#tab-skaters .skaters-table .col-a,
+#tab-skaters .skaters-table .col-p,
+#tab-skaters .skaters-table .col-plus,
+#tab-skaters .skaters-table .col-pim,
+#tab-skaters .skaters-table .col-evg,
+#tab-skaters .skaters-table .col-ppg2,  /* PPG */
+#tab-skaters .skaters-table .col-ppg,   /* P/GP */
+#tab-skaters .skaters-table .col-ppp,
+#tab-skaters .skaters-table .col-shg,
+#tab-skaters .skaters-table .col-shp,
+#tab-skaters .skaters-table .col-otg,
+#tab-skaters .skaters-table .col-gwg,
+#tab-skaters .skaters-table .col-s {
+
+  width: 44px; text-align:center;
+}
+/* slightly wider to fit units */
+#tab-skaters .skaters-table .col-spct {
+ width: 56px; text-align:center;
+}
+/* S% */
+#tab-skaters .skaters-table .col-fow {
+ width: 56px; text-align:center;
+}
+/* FOW% */
+#tab-skaters .skaters-table .col-toi {
+ width: 64px; text-align:center;
+}
+/* TOI/GP like 27:53 */
+
+/* --- Bio Info table --- */
+.bio-table {
+
+  width:100%;
+  border-collapse: separate;
+  border-spacing: 0 3px;
+  color:#e6e6e6;
+  table-layout: fixed;
+  font-size: 11px;
+}
+.bio-table thead th {
+
+  font-size:10px;
+  text-transform:uppercase;
+  letter-spacing:.3px;
+  opacity:.75;
+  padding:6px 6px;
+  text-align:left;
+}
+.bio-table tbody tr {
+
+  background:#0f1115;
+  border:1px solid #2a2a2a;
+  border-radius:8px;
+}
+.bio-table tbody td {
+ padding:6px 6px; vertical-align:middle;
+}
+.bio-table .col-rank {
+ width:32px; text-align:right;
+}
+.bio-table .col-team,
+.bio-table .col-pos,
+.bio-table .col-dyr,
+.bio-table .col-drnd,
+.bio-table .col-dovr,
+.bio-table .col-gp,
+.bio-table .col-g,
+.bio-table .col-a,
+.bio-table .col-p {
+ text-align:center;
+}
+.bio-table th[data-sort] {
+ cursor:pointer; user-select:none;
+}
+.bio-table th[data-sort].active.asc::after {
+ content:" ▲"; opacity:.8;
+}
+.bio-table th[data-sort].active.desc::after {
+ content:" ▼"; opacity:.8;
+}
+.bio-table .col-team {
+ width:48px; text-align:center;
+}
+.bio-table .col-pos {
+ width:40px;  text-align:center;
+}
+.bio-table .col-gp,
+.bio-table .col-g,
+.bio-table .col-a,
+.bio-table .col-p,
+.bio-table .col-dyr,
+.bio-table .col-drnd,
+.bio-table .col-dovr {
+ width:48px;
+}
+.bio-table .col-ht, .bio-table .col-wt {
+ width:60px; text-align:center;
+}
+.bio-table .col-ctry {
+ width:52px; text-align:center;
+}
+/* Prevent Draft Yr header from stacking */
+.bio-table .col-dyr,
+.bio-table th.col-dyr {
+
+  white-space: nowrap;
+}
+/* --- Face-off table (Skaters) --- */
+.faceoff-table {
+
+  width:100%;
+  border-collapse: separate;
+  border-spacing: 0 3px;
+  color:#e6e6e6;
+  table-layout: fixed;
+  font-size: 11px;
+}
+.faceoff-table thead th {
+
+  font-size:10px;
+  text-transform:uppercase;
+  letter-spacing:.3px;
+  opacity:.75;
+  padding:6px 6px;
+  text-align:left;
+}
+.faceoff-table tbody tr {
+
+  background:#0f1115;
+  border:1px solid #2a2a2a;
+  border-radius:8px;
+}
+.faceoff-table tbody td {
+ padding:6px 6px; vertical-align:middle;
+}
+.faceoff-table .col-rank {
+ width:32px; text-align:right;
+}
+.faceoff-table .col-team,
+.faceoff-table .col-pos,
+.faceoff-table .col-gp,
+.faceoff-table .col-fo,
+.faceoff-table .col-evfo,
+.faceoff-table .col-ppfo,
+.faceoff-table .col-shfo,
+.faceoff-table .col-ozfo,
+.faceoff-table .col-nzfo,
+.faceoff-table .col-dzfo,
+.faceoff-table .col-fowp,
+.faceoff-table .col-evfowp,
+.faceoff-table .col-ppfowp,
+.faceoff-table .col-shfowp,
+.faceoff-table .col-ozfowp,
+.faceoff-table .col-nzfowp,
+.faceoff-table .col-dzfowp {
+ text-align:center;
+}
+.faceoff-table th[data-sort] {
+ cursor:pointer; user-select:none;
+}
+.faceoff-table th[data-sort].active.asc::after {
+ content:" ▲"; opacity:.8;
+}
+.faceoff-table th[data-sort].active.desc::after {
+ content:" ▼"; opacity:.8;
+}
+/* === Skaters → Face-off tabs polish (scoped) === */
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs"] .bio-table,
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs-wl"] .bio-table {
+
+  table-layout: fixed;               /* prevents header/body drift */
+}
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs"] .bio-table th,
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs"] .bio-table td,
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs-wl"] .bio-table th,
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs-wl"] .bio-table td {
+
+  padding: 6px 8px;                  /* tighter cells for many columns */
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;/* align digits vertically */
+  font-feature-settings: "tnum";
+}
+/* === Skaters → Face-off tabs: de-squish names === */
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs"] .table-scroll,
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs-wl"] .table-scroll {
+
+  overflow-x: auto;              /* allow horizontal scroll if needed */
+}
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs"] .bio-table,
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs-wl"] .bio-table {
+
+  table-layout: fixed;           /* keep header/body aligned */
+  min-width: 1720px;             /* prevents columns from crushing names */
+}
+#tab-skaters .bio-table .col-name {
+
+  min-width: 120px;              /* more space for names */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;       /* graceful if viewport is narrow */
+}
+/* tighten non-name columns a touch */
+#tab-skaters .bio-table .col-team {
+ width: 54px;  text-align:center !important;
+}
+#tab-skaters .bio-table .col-pos {
+ width: 46px;  text-align:center !important;
+}
+#tab-skaters .bio-table .col-gp {
+ width: 48px;  text-align:right  !important;
+}
+/* numeric columns slightly narrower so name gets more room */
+#tab-skaters .bio-table .col-toi,
+#tab-skaters .bio-table .col-fo,
+#tab-skaters .bio-table .col-fow,
+#tab-skaters .bio-table .col-fol,
+#tab-skaters .bio-table .col-fowp,
+#tab-skaters .bio-table .col-evfo,
+#tab-skaters .bio-table .col-evfow,
+#tab-skaters .bio-table .col-evfol,
+#tab-skaters .bio-table .col-evfowp,
+#tab-skaters .bio-table .col-ppfo,
+#tab-skaters .bio-table .col-ppfow,
+#tab-skaters .bio-table .col-ppfol,
+#tab-skaters .bio-table .col-ppfowp,
+#tab-skaters .bio-table .col-shfo,
+#tab-skaters .bio-table .col-shfow,
+#tab-skaters .bio-table .col-shfol,
+#tab-skaters .bio-table .col-shfowp,
+#tab-skaters .bio-table .col-ozfo,
+#tab-skaters .bio-table .col-ozfow,
+#tab-skaters .bio-table .col-ozfol,
+#tab-skaters .bio-table .col-ozfowp,
+#tab-skaters .bio-table .col-nzfo,
+#tab-skaters .bio-table .col-nzfow,
+#tab-skaters .bio-table .col-nzfol,
+#tab-skaters .bio-table .col-nzfowp,
+#tab-skaters .bio-table .col-dzfo,
+#tab-skaters .bio-table .col-dzfow,
+#tab-skaters .bio-table .col-dzfol,
+#tab-skaters .bio-table .col-dzfowp {
+
+  width: 56px;                   /* was ~62px */
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+}
+/* ===== Face-off tabs: tidy & de-squish (scoped) ===== */
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs-wl"] .table-scroll{
+  display:block;
+  width:100%;
+  overflow-x:auto;
+  -webkit-overflow-scrolling:touch;
+}
+
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs-wl"] .bio-table{
+  table-layout:auto;          /* let columns size naturally */
+  width:100%;
+  min-width:1920px;           /* force scrollbar instead of crushing */
+}
+
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs-wl"] .bio-table th,
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs-wl"] .bio-table td{
+  padding:6px 10px;
+  white-space:nowrap;
+  font-variant-numeric:tabular-nums;
+  font-feature-settings:"tnum";
+}
+
+/* give names room, truncate gracefully */
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs-wl"] .bio-table .col-name{
+  min-width:65px;
+  max-width:130px;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+
+/* small columns aligned like the other tables */
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs-wl"] .bio-table .col-team{ width:56px; text-align:center; }
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs-wl"] .bio-table .col-pos { width:48px; text-align:center; }
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs-wl"] .bio-table .col-gp  { width:56px; text-align:center; }
+
+/* numeric alignment defaults */
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs-wl"] .bio-table td[class^="col-"],
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs-wl"] .bio-table th[class^="col-"]{ text-align:center; }
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs-wl"] .bio-table .col-name,
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs-wl"] .bio-table .col-team,
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs-wl"] .bio-table .col-pos{ text-align:center; }
+
+/* optional: make dense tables easier on small screens */
+@media (max-width:1500px){
+  #tab-skaters .skaters-subpanel[data-subtab="faceoffs-wl"] .bio-table{ min-width:1100px; }
+}
+/* Face-off tabs: tighten Player column (only) */
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs-wl"] .bio-table .col-name{ text-align:left; 
+  width: 100px;          /* was too wide */
+  max-width: 200px;
+  min-width: 0;          /* allow shrinking */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Nudge overall table floor down so names don’t inflate the layout */
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs-wl"] .bio-table{
+  min-width: 1125px;     /* was 1920px; adjust as needed */
+}
+
+/* Slightly tighter cell padding to help fit */
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs-wl"] .bio-table th,
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs-wl"] .bio-table td{
+  padding: 3px 4px;
+}
+/* === Skaters → Face-off Percentages (compact + left name) === */
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs"] .table-scroll{
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* let columns size naturally but keep things tight */
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs"] .bio-table{
+  table-layout: auto !important;
+  width: 100%;
+  min-width: 1125px;               /* prevents squish, but smaller than before */
+}
+
+/* tighter cells */
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs"] .bio-table thead th,
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs"] .bio-table tbody td{
+  padding: 2px 6px !important;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+}
+
+/* name column: LEFT aligned + slimmer */
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs"] .bio-table .col-name{
+  text-align: left !important;     /* <- fixes right-aligned names */
+  width: 60px !important;                      /* tighten as needed: 160–190 works well */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* small meta columns */
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs"] .bio-table .col-team{ width: 50px; text-align: center !important; }
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs"] .bio-table .col-pos { width: 40px; text-align: center !important; }
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs"] .bio-table .col-gp  { width: 48px; text-align: right  !important; }
+
+/* numeric defaults (everything except name/team/pos) */
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs"] .bio-table td[class^="col-"],
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs"] .bio-table th[class^="col-"]{
+  text-align: center;
+}
+
+/* numeric widths kept *tight* */
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs"] .bio-table
+  .col-fo, .col-evfo, .col-ppfo, .col-shfo,
+  .col-ozfo, .col-nzfo, .col-dzfo { width: 48px; }
+
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs"] .bio-table
+  .col-fowp, .col-evfowp, .col-ppfowp, .col-shfowp,
+  .col-ozfowp, .col-nzfowp, .col-dzfowp { width: 54px; } /* a bit wider for % like 66.7 */
+
+
+/* === Patch: Skaters → Face-off Percentages ONLY (compact + left name) === */
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs"] .table-scroll{
+  overflow-x:auto;
+  -webkit-overflow-scrolling:touch;
+}
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs"] .bio-table{
+  table-layout:auto !important;
+  width:100%;
+  min-width:1125px;
+}
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs"] .bio-table thead th,
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs"] .bio-table tbody td{
+  padding:4px 6px !important;
+  white-space:nowrap;
+  font-variant-numeric:tabular-nums;
+  font-feature-settings:"tnum";
+}
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs"] .bio-table .col-name{
+  text-align:left !important;
+  width:40px !important;
+  overflow:hidden; text-overflow:ellipsis;
+}
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs"] .bio-table .col-team{ width:50px; text-align:center !important; }
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs"] .bio-table .col-pos { width:40px; text-align:center !important; }
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs"] .bio-table .col-gp  { width:46px; text-align:right  !important; }
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs"] .bio-table td[class^="col-"],
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs"] .bio-table th[class^="col-"]{
+  text-align:center;
+}
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs"] .bio-table .col-name,
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs"] .bio-table .col-team,
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs"] .bio-table .col-pos{ text-align:left; }
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs"] .bio-table
+  .col-fo, .col-evfo, .col-ppfo, .col-shfo,
+  .col-ozfo, .col-nzfo, .col-dzfo { width:30px; }
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs"] .bio-table
+  .col-fowp, .col-evfowp, .col-ppfowp, .col-shfowp,
+  .col-ozfowp, .col-nzfowp, .col-dzfowp { width:46px; }
+/* === Skaters → Face-off Wins & Losses ONLY (compact + left name) === */
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs-wl"] .table-scroll{
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs-wl"] .bio-table{
+  table-layout: auto !important;   /* natural column sizing */
+  width: 100%;
+  min-width: 1075px;               /* avoid squish; tweak to taste */
+}
+
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs-wl"] .bio-table thead th,
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs-wl"] .bio-table tbody td{
+  padding: 1px 6px !important;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+}
+
+/* Player column: LEFT aligned and compact */
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs-wl"] .bio-table .col-name{
+  text-align: left !important;
+  width: 80px; max-width: 150px; min-width: 80px;
+  overflow: hidden; text-overflow: ellipsis;
+}
+
+/* Small meta columns */
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs-wl"] .bio-table .col-team{ width: 50px; text-align: center !important; }
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs-wl"] .bio-table .col-pos { width: 40px; text-align: center !important; }
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs-wl"] .bio-table .col-gp  { width: 46px; text-align: right  !important; }
+
+/* Numeric defaults (kept centered if you prefer; change to right if you want) */
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs-wl"] .bio-table td[class^="col-"],
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs-wl"] .bio-table th[class^="col-"]{
+  text-align: center;
+}
+
+/* Tight widths for counts */
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs-wl"] .bio-table
+  .col-fo, .col-fow, .col-fol,
+  .col-evfo, .col-evfow, .col-evfol,
+  .col-ppfo, .col-ppfow, .col-ppfol,
+  .col-shfo, .col-shfow, .col-shfol,
+  .col-ozfo, .col-ozfow, .col-ozfol,
+  .col-nzfo, .col-nzfow, .col-nzfol,
+  .col-dzfo, .col-dzfow, .col-dzfol { width: 48px !important; }
+
+/* Slightly wider for FOW% */
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs-wl"] .bio-table .col-fowp { width: 48px; }
+
+/* === Skaters → Face-off Wins & Losses: lock widths + left names === */
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs-wl"] .bio-table .col-name{
+  text-align: left !important;
+}
+
+/* Hard widths for FO / FOW / FOL (header + body) */
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs-wl"] .bio-table th.col-fo,
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs-wl"] .bio-table td.col-fo{
+  width: 48px !important; max-width: 48px !important;
+}
+
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs-wl"] .bio-table th.col-fow,
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs-wl"] .bio-table td.col-fow{
+  width: 48px !important; max-width: 48px !important;
+}
+
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs-wl"] .bio-table th.col-fol,
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs-wl"] .bio-table td.col-fol{
+  width: 48px !important; max-width: 48px !important;
+}
+
+/* (optional) align WL numbers like the % tab: uncomment if you prefer right alignment
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs-wl"] .bio-table td[class^="col-"],
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs-wl"] .bio-table th[class^="col-"]{
+  text-align: right !important;
+}
+*/
+/* === Skaters → Face-off Wins & Losses (final compact + strict widths) === */
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs-wl"] .table-scroll{
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs-wl"] .bio-table{
+  table-layout: fixed !important;  /* make the column widths authoritative */
+  width: 100%;
+  min-width: 1100px !important;    /* force horizontal scroll instead of stretching */
+}
+
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs-wl"] .bio-table thead th,
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs-wl"] .bio-table tbody td{
+  padding: 3px 6px !important;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+}
+
+/* Names: left and compact */
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs-wl"] .bio-table .col-name{
+  text-align: left !important;
+  width: 130px !important; max-width: 130px !important;
+  overflow: hidden; text-overflow: ellipsis;
+}
+
+/* Small meta columns */
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs-wl"] .bio-table .col-team{ width: 36px !important; text-align: center !important; }
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs-wl"] .bio-table .col-pos { width: 30px !important; text-align: center !important; }
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs-wl"] .bio-table .col-gp  { width: 36px !important; text-align: center  !important; }
+
+/* Hard widths for all WL numeric columns (header + body) */
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs-wl"] .bio-table th.col-fo,
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs-wl"] .bio-table td.col-fo,
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs-wl"] .bio-table th.col-fow,
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs-wl"] .bio-table td.col-fow,
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs-wl"] .bio-table th.col-fol,
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs-wl"] .bio-table td.col-fol,
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs-wl"] .bio-table th.col-evfo,
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs-wl"] .bio-table td.col-evfo,
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs-wl"] .bio-table th.col-evfow,
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs-wl"] .bio-table td.col-evfow,
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs-wl"] .bio-table th.col-evfol,
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs-wl"] .bio-table td.col-evfol,
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs-wl"] .bio-table th.col-ppfo,
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs-wl"] .bio-table td.col-ppfo,
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs-wl"] .bio-table th.col-ppfow,
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs-wl"] .bio-table td.col-ppfow,
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs-wl"] .bio-table th.col-ppfol,
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs-wl"] .bio-table td.col-ppfol,
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs-wl"] .bio-table th.col-shfo,
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs-wl"] .bio-table td.col-shfo,
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs-wl"] .bio-table th.col-shfow,
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs-wl"] .bio-table td.col-shfow,
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs-wl"] .bio-table th.col-shfol,
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs-wl"] .bio-table td.col-shfol,
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs-wl"] .bio-table th.col-ozfo,
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs-wl"] .bio-table td.col-ozfo,
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs-wl"] .bio-table th.col-ozfow,
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs-wl"] .bio-table td.col-ozfow,
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs-wl"] .bio-table th.col-ozfol,
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs-wl"] .bio-table td.col-ozfol,
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs-wl"] .bio-table th.col-nzfo,
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs-wl"] .bio-table td.col-nzfo,
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs-wl"] .bio-table th.col-nzfow,
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs-wl"] .bio-table td.col-nzfow,
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs-wl"] .bio-table th.col-nzfol,
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs-wl"] .bio-table td.col-nzfol,
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs-wl"] .bio-table th.col-dzfo,
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs-wl"] .bio-table td.col-dzfo,
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs-wl"] .bio-table th.col-dzfow,
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs-wl"] .bio-table td.col-dzfow,
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs-wl"] .bio-table th.col-dzfol,
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs-wl"] .bio-table td.col-dzfol{
+  width: 30px !important; max-width: 30px !important;
+}
+
+/* FOW% a touch wider */
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs-wl"] .bio-table th.col-fowp,
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs-wl"] .bio-table td.col-fowp{
+  width: 40px !important; max-width: 40px !important;
+}
+/* === Skaters → Face-off Wins & Losses: wrap headers to two lines === */
+#tab-skaters .skaters-subpanel[data-subtab="faceoffs-wl"] .bio-table thead th{
+  white-space: normal !important;   /* allow wrapping (overrides earlier nowrap) */
+  word-break: break-word;           /* break at spaces */
+  line-height: 1.1;                 /* tighter vertical spacing */
+  text-align: center;
+  padding-top: 6px;                 /* small vertical breathing room */
+  padding-bottom: 6px;
+  /* optional: make headers a hair smaller
+  font-size: 11px;
+  */
+}
+
+/* Skaters toolbar: right-align Report + Rows */
+#tab-skaters .skaters-filters{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  flex-wrap:wrap;              /* wraps nicely on smaller widths */
+}
+
+/* keep each label tidy */
+#tab-skaters .skaters-filters > label{
+  display:flex;
+  align-items:center;
+  gap:6px;
+  white-space:nowrap;
+}
+
+/* push the 'Report' group (and everything after it) to the right */
+#tab-skaters .skaters-filters > label:has(> #skaters-subtab){
+  margin-left:auto;
+}
+
+/* optional: make the dropdowns a touch tighter */
+#tab-skaters .skaters-filters select{
+  height:28px;
+  padding:2px 8px;
+}
+
+/* === GOALIES TAB === */
+
+/* === GOALIES TAB — visual polish & fixed column widths === */
+#tab-goalies .bio-table{
+  width:100%;
+  table-layout: fixed;                 /* lock the widths below */
+  border-collapse: separate;
+  border-spacing:0 3px;
+  font-size:11px;
+  color:#e6e6e6;
+  font-variant-numeric: tabular-nums;  /* align digits nicely */
+}
+
+#tab-goalies .bio-table thead th{
+  font-size:10px;
+  text-transform:uppercase;
+  letter-spacing:.3px;
+  opacity:.75;
+  padding:6px 6px;
+  white-space:nowrap;
+  text-align:center;
+}
+
+#tab-goalies .bio-table tbody tr{
+  background:#0f1115;
+  border:1px solid #2a2a2a;
+  border-radius:8px;
+}
+
+#tab-goalies .bio-table tbody td{
+  padding:6px 6px;
+  vertical-align:middle;
+  text-align:center;
+}
+
+/* subtle hover like the other tabs */
+#tab-goalies .bio-table tbody tr:hover{
+  background:#12161c;
+}
+
+/* make the sorted column use the faint-blue band (already added globally) */
+#tab-goalies .bio-table th.active-col,
+#tab-goalies .bio-table td.active-col{
+  background-color: rgba(45,103,168,.12);
+}
+
+/* clickable header affordance + arrows (matches others) */
+#tab-goalies .bio-table th[data-sort]{ cursor:pointer; user-select:none; }
+#tab-goalies .bio-table th[data-sort].active.asc::after{ content:" ▲"; opacity:.8; }
+#tab-goalies .bio-table th[data-sort].active.desc::after{ content:" ▼"; opacity:.8; }
+
+/* ---- hard widths (keeps the table from looking wobbly) ---- */
+#tab-goalies .bio-table .col-rank  { width:42px;  text-align:right; }
+#tab-goalies .bio-table .col-name  { width:200px; text-align:left;  overflow:hidden; text-overflow:ellipsis; }
+#tab-goalies .bio-table .col-team  { width:86px; text-align:left ; }
+
+#tab-goalies .bio-table .col-gp,
+#tab-goalies .bio-table .col-gs,
+#tab-goalies .bio-table .col-w,
+#tab-goalies .bio-table .col-l,
+#tab-goalies .bio-table .col-ot  { width:54px; }
+
+#tab-goalies .bio-table .col-sa,
+#tab-goalies .bio-table .col-svs { width:66px; }
+#tab-goalies .bio-table .col-ga  { width:54px; }
+
+#tab-goalies .bio-table .col-sv_pct,
+#tab-goalies .bio-table .col-gaa { width:60px; }
+
+#tab-goalies .bio-table .col-toi  { width:76px; }   /* 240:00 fits cleanly */
+#tab-goalies .bio-table .col-so,
+#tab-goalies .bio-table .col-a,
+#tab-goalies .bio-table .col-pim { width:54px; }
+
+
+
+/* === Goalies toolbar: pill + right-aligned filters === */
+#tab-teams .teams-toolbar{
+  display:flex; align-items:center; gap:12px; margin-bottom:8px;
+}
+#tab-teams .teams-toolbar .label{
+  display:inline-block; padding:6px 10px; background:#1e293b; color:#dbe5f5;
+  border:1px solid #2f4161; border-radius:999px; font-size:12px; text-transform:uppercase; opacity:.9;
+}
+#tab-teams .teams-filters{
+  display:flex; align-items:center; gap:10px; flex-wrap:wrap; margin-left:auto;
+}
+#tab-teams .teams-filters label{
+  display:flex; align-items:center; gap:6px; white-space:nowrap; font-size:12px; opacity:.95;
+}
+#tab-teams .teams-filters select{
+  background:#0f1115; color:#e6e6e6; border:1px solid #2f4161; border-radius:6px; padding:4px 8px; font-size:12px; height:28px;
+}
+
+/* === TEAMS TAB === */
+
+/* === Teams toolbar: pill + right-aligned filters === */
+#tab-goalies .goalies-toolbar{
+  display:flex; align-items:center; gap:12px; margin-bottom:8px;
+}
+#tab-goalies .goalies-toolbar .label{
+  display:inline-block; padding:6px 10px; background:#1e293b; color:#dbe5f5;
+  border:1px solid #2f4161; border-radius:999px; font-size:12px; text-transform:uppercase; opacity:.9;
+}
+#tab-goalies .goalies-filters{
+  display:flex; align-items:center; gap:10px; flex-wrap:wrap; margin-left:auto;
+}
+#tab-goalies .goalies-filters label{
+  display:flex; align-items:center; gap:6px; white-space:nowrap; font-size:12px; opacity:.95;
+}
+#tab-goalies .goalies-filters select{
+  background:#0f1115; color:#e6e6e6; border:1px solid #2f4161; border-radius:6px; padding:4px 8px; font-size:12px; height:28px;
+}
+#tab-goalies .bio-table {
+  padding-right: 20px!important;  /* adds gutter space to the right */
+}
+
+/* === TEAMS TAB — fixed widths + NHL.com-style table === */
+#tab-teams .teams-table{
+  width:100%;
+  border-collapse: separate;
+  border-spacing:0 3px;
+  table-layout: fixed;              /* enforce the widths below */
+  color:#e6e6e6;
+  font-size:11px;
+  font-variant-numeric: tabular-nums;
+}
+
+#tab-teams .teams-table thead th{
+  font-size:10px;
+  text-transform:uppercase;
+  letter-spacing:.3px;
+  opacity:.75;
+  padding:6px 6px;
+  white-space:nowrap;               /* keep headers on one line */
+  text-align:center;
+}
+
+#tab-teams .teams-table tbody tr{
+  background:#0f1115;
+  border:1px solid #2a2a2a;
+  border-radius:8px;
+}
+
+#tab-teams .teams-table tbody td{
+  padding:6px 6px;
+  vertical-align:middle;
+  text-align:center;
+}
+
+/* --- hard widths (match the visual rhythm of other tabs) --- */
+#tab-teams .teams-table .col-rank   { width:22px;  text-align:right; }
+#tab-teams .teams-table .col-team   { width:130px; text-align:left; overflow:hidden; text-overflow:ellipsis; }
+#tab-teams .teams-table .col-gp,
+#tab-teams .teams-table .col-w,
+#tab-teams .teams-table .col-l,
+#tab-teams .teams-table .col-ot     { width:34px; }
+
+#tab-teams .teams-table .col-p      { width:42px; }
+#tab-teams .teams-table .col-p_pct  { width:46px; }         /* P% */
+
+#tab-teams .teams-table .col-rw,
+#tab-teams .teams-table .col-row,
+#tab-teams .teams-table .col-sow    { width:38px; }
+
+#tab-teams .teams-table .col-gf,
+#tab-teams .teams-table .col-ga     { width:38px; }
+#tab-teams .teams-table .col-gf_gp,
+#tab-teams .teams-table .col-ga_gp  { width:46px; }         /* GF/GP, GA/GP */
+
+#tab-teams .teams-table .col-pp_pct,
+#tab-teams .teams-table .col-pk_pct { width:46px; }         /* PP%, PK% */
+
+#tab-teams .teams-table .col-net_pp_pct,
+#tab-teams .teams-table .col-net_pk_pct { width:52px; }     /* NET PP%, NET PK% */
+
+#tab-teams .teams-table .col-shots_gp,
+#tab-teams .teams-table .col-sa_gp  { width:50px; }         /* Shots/GP, SA/GP */
+
+#tab-teams .teams-table .col-fow_pct{ width:50px; }         /* FOW% */
+
+/* TEAMS: clickable header + arrows + subtle highlight */
+#tab-teams .teams-table th[data-sort]{
+  cursor: pointer;
+  user-select: none;
+}
+
+#tab-teams .teams-table th[data-sort].active{
+  color:#fff;                 /* subtle highlight like other tabs */
+  font-weight: 800;
+}
+
+#tab-teams .teams-table th[data-sort].active.asc::after{
+  content:" ▲";
+  opacity:.8;
+}
+
+#tab-teams .teams-table th[data-sort].active.desc::after{
+  content:" ▼";
+  opacity:.8;
+}
+
+/* === HIGHLIGHT ACTIVE SORTED COLUMN (NHL.COM STYLE) === */
+
+.stats-table th.active-col,
+.stats-table td.active-col,
+.bio-table th.active-col,
+.bio-table td.active-col,
+.skaters-table th.active-col,
+.skaters-table td.active-col,
+.teams-table th.active-col,
+.teams-table td.active-col {
+  background-color: rgba(45, 103, 168, 0.12); /* faint blue */
+}

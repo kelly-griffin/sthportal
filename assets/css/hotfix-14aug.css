@@ -1,0 +1,14 @@
+/* Kill default blue/underline on standings links and preserve our color */
+.standings a { color: inherit; text-decoration: none; }
+.standings .st-conf-head .st-link { color: #9fb0ff; text-decoration: none; }
+.standings .st-conf-head .st-link:hover { text-decoration: underline; }
+
+/* Make team row link look like text */
+.standings .team-inner { color: inherit; text-decoration: none; }
+
+/* Make sure the feature overlay keeps your weight/spacing */
+.feature .overlay h2 { margin: 0 0 6px; font-weight: 900; }
+.feature .overlay p  { margin: 0; }
+
+/* Ensure headlines block shows when we have fallback items */
+.top-headlines { display: block; }

@@ -1,0 +1,51 @@
+/* assets/css/tokens.css
+   Core design tokens: colors, radius, shadows, spacing, fonts
+*/
+
+/* === Dark (default) === */
+:root {
+  --color-bg: #202428;        /* page background */
+  --color-card: #0D1117;      /* cards/containers */
+  --color-ink: #E8EEF5;       /* default text */
+  --color-ink-soft: #95A3B4;  /* muted text */
+  --color-border: #2F3F53;    /* borders, outlines */
+  --color-accent: #185a9d;    /* buttons, links */
+  --color-accent-hover: #1d6fc2;
+  --color-success: #4caf50;
+  --color-error: #ff5c5c;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+
+  --shadow-card: inset 0 1px 0 #ffffff12,
+                 0 0 0 1px #ffffff0f;
+  --shadow-elevated: 0 2px 6px rgba(0,0,0,.35);
+
+  --font-body: 14px/1.5 system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  --font-heading: 600 1.2em/1.3 system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* === Light Theme Overrides === */
+html[data-theme="light"] {
+  --color-bg: #f4f6f8;
+  --color-card: #ffffff;
+  --color-ink: #222222;
+  --color-ink-soft: #555555;
+  --color-border: #cfd8dc;
+  --color-accent: #0f5fb4;
+  --color-accent-hover: #2176d2;
+  --shadow-card: inset 0 1px 0 #00000012,
+                 0 0 0 1px #0000000f;
+}
+
+/* === Future: custom packs === */
+html[data-theme="winter-25"] {
+  --color-bg: #001a33;
+  --color-card: #003366;
+  --color-ink: #e6f7ff;
+  --color-ink-soft: #99ccee;
+  --color-border: #004c80;
+  --color-accent: #99d6ff;
+  --color-accent-hover: #b3e0ff;
+}

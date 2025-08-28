@@ -1,0 +1,960 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfTypeOutputXMLTodayGame xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <TypeOutputXMLTodayGame>
+    <GameNumber>Farm18</GameNumber>
+    <Link>UHA-Farm-18.html</Link>
+    <VisitorTeamNumber>15</VisitorTeamNumber>
+    <VisitorTeam>Laval Rocket</VisitorTeam>
+    <VisitorTeamAbbre>LAV</VisitorTeamAbbre>
+    <VisitorTeamShots>7</VisitorTeamShots>
+    <VisitorTeamShotsAttemp>13</VisitorTeamShotsAttemp>
+    <VisitorTeamScore>1</VisitorTeamScore>
+    <VisitorTeamGoal>Unknown Player(1)</VisitorTeamGoal>
+    <VisitorTeamGoaler>Jakub Dobes (LAV), 15 saves from 19 shots - (0.789), L, 1-1-0, 60:00 minutes </VisitorTeamGoaler>
+    <VisitorTeamThemeID>0</VisitorTeamThemeID>
+    <HomeTeamNumber>4</HomeTeamNumber>
+    <HomeTeam>Calgary Wranglers</HomeTeam>
+    <HomeTeamAbbre>CGY</HomeTeamAbbre>
+    <HomeTeamShots>19</HomeTeamShots>
+    <HomeTeamShotsAttemp>47</HomeTeamShotsAttemp>
+    <HomeTeamScore>4</HomeTeamScore>
+    <HomeTeamGoal>Sam Morton(1,2,3), Adam Klapka(1)</HomeTeamGoal>
+    <HomeTeamGoaler>Unknown Goalie (CGY), 6 saves from 7 shots - (0.857), W, 1-0-0, 60:00 minutes </HomeTeamGoaler>
+    <HomeTeamThemeID>0</HomeTeamThemeID>
+    <Note />
+    <Star>
+      <string xsi:nil="true" />
+      <string>Sam Morton (CGY)</string>
+      <string>Adam Klapka (CGY)</string>
+      <string>Justin Kirkland (CGY)</string>
+    </Star>
+  </TypeOutputXMLTodayGame>
+  <TypeOutputXMLTodayGame>
+    <GameNumber>Farm19</GameNumber>
+    <Link>UHA-Farm-19.html</Link>
+    <VisitorTeamNumber>6</VisitorTeamNumber>
+    <VisitorTeam>Rockford IceHogs</VisitorTeam>
+    <VisitorTeamAbbre>RCK</VisitorTeamAbbre>
+    <VisitorTeamShots>11</VisitorTeamShots>
+    <VisitorTeamShotsAttemp>28</VisitorTeamShotsAttemp>
+    <VisitorTeamScore>3</VisitorTeamScore>
+    <VisitorTeamGoal>Unknown Player(1), Colton Dach(2), Nolan Allan(1)</VisitorTeamGoal>
+    <VisitorTeamGoaler>Unknown Goalie (RCK), 16 saves from 19 shots - (0.842), OTL, 0-0-1, 65:00 minutes </VisitorTeamGoaler>
+    <VisitorTeamThemeID>0</VisitorTeamThemeID>
+    <HomeTeamNumber>20</HomeTeamNumber>
+    <HomeTeam>Belleville Senators</HomeTeam>
+    <HomeTeamAbbre>BVL</HomeTeamAbbre>
+    <HomeTeamShots>19</HomeTeamShots>
+    <HomeTeamShotsAttemp>43</HomeTeamShotsAttemp>
+    <HomeTeamScore>4</HomeTeamScore>
+    <HomeTeamGoal>Unknown Player(1,2), Zack MacEwen(1)</HomeTeamGoal>
+    <HomeTeamGoaler>Mads Sogaard (BVL), 8 saves from 11 shots - (0.727), W, 1-0-0, 65:00 minutes </HomeTeamGoaler>
+    <HomeTeamThemeID>0</HomeTeamThemeID>
+    <Note>End in Shootout</Note>
+    <Star>
+      <string xsi:nil="true" />
+      <string>Nolan Allan (RCK)</string>
+      <string>Colton Dach (RCK)</string>
+      <string>Isaak Phillips (RCK)</string>
+    </Star>
+  </TypeOutputXMLTodayGame>
+  <TypeOutputXMLTodayGame>
+    <GameNumber>Farm20</GameNumber>
+    <Link>UHA-Farm-20.html</Link>
+    <VisitorTeamNumber>17</VisitorTeamNumber>
+    <VisitorTeam>Utica Comets</VisitorTeam>
+    <VisitorTeamAbbre>UTI</VisitorTeamAbbre>
+    <VisitorTeamShots>13</VisitorTeamShots>
+    <VisitorTeamShotsAttemp>31</VisitorTeamShotsAttemp>
+    <VisitorTeamScore>1</VisitorTeamScore>
+    <VisitorTeamGoal>Unknown Player(1)</VisitorTeamGoal>
+    <VisitorTeamGoaler>Nico Daws (UTI), 14 saves from 18 shots - (0.778), L, 2-1-0, 41:47 minutes Unknown Goalie (UTI), 8 saves from 12 shots - (0.667), 18:13 minutes </VisitorTeamGoaler>
+    <VisitorTeamThemeID>0</VisitorTeamThemeID>
+    <HomeTeamNumber>8</HomeTeamNumber>
+    <HomeTeam>Cleveland Monsters</HomeTeam>
+    <HomeTeamAbbre>CLV</HomeTeamAbbre>
+    <HomeTeamShots>30</HomeTeamShots>
+    <HomeTeamShotsAttemp>63</HomeTeamShotsAttemp>
+    <HomeTeamScore>8</HomeTeamScore>
+    <HomeTeamGoal>Mikael Pyyhtia(1), Kevin Labanc(1,2), Denton Mateychuk(1,2), Luca Del Bel Belluz(1,2,3)</HomeTeamGoal>
+    <HomeTeamGoaler>Jet Greaves (CLV), 12 saves from 13 shots - (0.923), W, 1-0-0, 60:00 minutes </HomeTeamGoaler>
+    <HomeTeamThemeID>0</HomeTeamThemeID>
+    <Note />
+    <Star>
+      <string xsi:nil="true" />
+      <string>Luca Del Bel Belluz (CLV)</string>
+      <string>Kevin Labanc (CLV)</string>
+      <string>Denton Mateychuk (CLV)</string>
+    </Star>
+  </TypeOutputXMLTodayGame>
+  <TypeOutputXMLTodayGame>
+    <GameNumber>Farm21</GameNumber>
+    <Link>UHA-Farm-21.html</Link>
+    <VisitorTeamNumber>23</VisitorTeamNumber>
+    <VisitorTeam>San Jose Barracuda</VisitorTeam>
+    <VisitorTeamAbbre>SJB</VisitorTeamAbbre>
+    <VisitorTeamShots>29</VisitorTeamShots>
+    <VisitorTeamShotsAttemp>57</VisitorTeamShotsAttemp>
+    <VisitorTeamScore>7</VisitorTeamScore>
+    <VisitorTeamGoal>Cam Lund(1), Unknown Player(1,2), Patrick Giles(1), Jack Thompson(2), Carl Grundstrom(3,4)</VisitorTeamGoal>
+    <VisitorTeamGoaler>Unknown Goalie (SJB), 11 saves from 14 shots - (0.786), W, 1-0-0, 60:00 minutes </VisitorTeamGoaler>
+    <VisitorTeamThemeID>0</VisitorTeamThemeID>
+    <HomeTeamNumber>9</HomeTeamNumber>
+    <HomeTeam>Texas Stars</HomeTeam>
+    <HomeTeamAbbre>TEX</HomeTeamAbbre>
+    <HomeTeamShots>14</HomeTeamShots>
+    <HomeTeamShotsAttemp>42</HomeTeamShotsAttemp>
+    <HomeTeamScore>3</HomeTeamScore>
+    <HomeTeamGoal>Unknown Player(1), Colin Blackwell(1), Lian Bichsel(1)</HomeTeamGoal>
+    <HomeTeamGoaler>Unknown Goalie (TEX), 19 saves from 24 shots - (0.792), L, 0-1-0, 45:03 minutes Unknown Goalie (TEX), 3 saves from 5 shots - (0.600), 14:57 minutes </HomeTeamGoaler>
+    <HomeTeamThemeID>0</HomeTeamThemeID>
+    <Note />
+    <Star>
+      <string xsi:nil="true" />
+      <string>Jack Thompson (SJB)</string>
+      <string>Carl Grundstrom (SJB)</string>
+      <string>Cam Lund (SJB)</string>
+    </Star>
+  </TypeOutputXMLTodayGame>
+  <TypeOutputXMLTodayGame>
+    <GameNumber>Pro22</GameNumber>
+    <Link>UHA-22.html</Link>
+    <VisitorTeamNumber>13</VisitorTeamNumber>
+    <VisitorTeam>Los Angeles Kings</VisitorTeam>
+    <VisitorTeamAbbre>LAK</VisitorTeamAbbre>
+    <VisitorTeamShots>30</VisitorTeamShots>
+    <VisitorTeamShotsAttemp>57</VisitorTeamShotsAttemp>
+    <VisitorTeamScore>4</VisitorTeamScore>
+    <VisitorTeamGoal>Adrian Kempe(4), Kevin Fiala(3,4,5)</VisitorTeamGoal>
+    <VisitorTeamGoaler>Darcy Kuemper (LAK), 16 saves from 21 shots - (0.762), L, 1-1-1, 45:39 minutes David Rittich (LAK), 10 saves from 12 shots - (0.833), 14:21 minutes </VisitorTeamGoaler>
+    <VisitorTeamThemeID>13</VisitorTeamThemeID>
+    <HomeTeamNumber>32</HomeTeamNumber>
+    <HomeTeam>Winnipeg Jets</HomeTeam>
+    <HomeTeamAbbre>WPG</HomeTeamAbbre>
+    <HomeTeamShots>33</HomeTeamShots>
+    <HomeTeamShotsAttemp>69</HomeTeamShotsAttemp>
+    <HomeTeamScore>7</HomeTeamScore>
+    <HomeTeamGoal>Adam Lowry(1), Gabriel Vilardi(1,2,3), Kyle Connor(1,2), Neal Pionk(1)</HomeTeamGoal>
+    <HomeTeamGoaler>Connor Hellebuyck (WPG), 26 saves from 30 shots - (0.867), W, 1-1-0, 60:00 minutes </HomeTeamGoaler>
+    <HomeTeamThemeID>32</HomeTeamThemeID>
+    <Note />
+    <Star>
+      <string xsi:nil="true" />
+      <string>Gabriel Vilardi (WPG)</string>
+      <string>Neal Pionk (WPG)</string>
+      <string>Kyle Connor (WPG)</string>
+    </Star>
+  </TypeOutputXMLTodayGame>
+  <TypeOutputXMLTodayGame>
+    <GameNumber>Farm22</GameNumber>
+    <Link>UHA-Farm-22.html</Link>
+    <VisitorTeamNumber>26</VisitorTeamNumber>
+    <VisitorTeam>Syracuse Crunch</VisitorTeam>
+    <VisitorTeamAbbre>SYR</VisitorTeamAbbre>
+    <VisitorTeamShots>19</VisitorTeamShots>
+    <VisitorTeamShotsAttemp>37</VisitorTeamShotsAttemp>
+    <VisitorTeamScore>3</VisitorTeamScore>
+    <VisitorTeamGoal>Conor Geekie(8), Nick Perbix(7,8)</VisitorTeamGoal>
+    <VisitorTeamGoaler>Unknown Goalie (SYR), 13 saves from 15 shots - (0.867), W, 1-0-0, 60:00 minutes </VisitorTeamGoaler>
+    <VisitorTeamThemeID>0</VisitorTeamThemeID>
+    <HomeTeamNumber>12</HomeTeamNumber>
+    <HomeTeam>Jacksonville Barons</HomeTeam>
+    <HomeTeamAbbre>JAK</HomeTeamAbbre>
+    <HomeTeamShots>15</HomeTeamShots>
+    <HomeTeamShotsAttemp>37</HomeTeamShotsAttemp>
+    <HomeTeamScore>2</HomeTeamScore>
+    <HomeTeamGoal>Jonah Gadjovich(4), Unknown Player(1)</HomeTeamGoal>
+    <HomeTeamGoaler>Unknown Goalie (JAK), 16 saves from 19 shots - (0.842), L, 0-1-0, 59:34 minutes </HomeTeamGoaler>
+    <HomeTeamThemeID>0</HomeTeamThemeID>
+    <Note />
+    <Star>
+      <string xsi:nil="true" />
+      <string>Nick Perbix (SYR)</string>
+      <string>Conor Geekie (SYR)</string>
+      <string>Gage Goncalves (SYR)</string>
+    </Star>
+  </TypeOutputXMLTodayGame>
+  <TypeOutputXMLTodayGame>
+    <GameNumber>Pro23</GameNumber>
+    <Link>UHA-23.html</Link>
+    <VisitorTeamNumber>25</VisitorTeamNumber>
+    <VisitorTeam>St. Louis Blues</VisitorTeam>
+    <VisitorTeamAbbre>STL</VisitorTeamAbbre>
+    <VisitorTeamShots>28</VisitorTeamShots>
+    <VisitorTeamShotsAttemp>60</VisitorTeamShotsAttemp>
+    <VisitorTeamScore>3</VisitorTeamScore>
+    <VisitorTeamGoal>Jake Neighbours(1), Mathieu Joseph(1), Robert Thomas(1)</VisitorTeamGoal>
+    <VisitorTeamGoaler>Jordan Binnington (STL), 29 saves from 34 shots - (0.853), L, 0-2-0, 60:00 minutes </VisitorTeamGoaler>
+    <VisitorTeamThemeID>25</VisitorTeamThemeID>
+    <HomeTeamNumber>4</HomeTeamNumber>
+    <HomeTeam>Calgary Flames</HomeTeam>
+    <HomeTeamAbbre>CGY</HomeTeamAbbre>
+    <HomeTeamShots>34</HomeTeamShots>
+    <HomeTeamShotsAttemp>61</HomeTeamShotsAttemp>
+    <HomeTeamScore>5</HomeTeamScore>
+    <HomeTeamGoal>Anthony Mantha(2), Daniil Miromanov(1), Jonathan Huberdeau(1), MacKenzie Weegar(1), Nazem Kadri(2)</HomeTeamGoal>
+    <HomeTeamGoaler>Dustin Wolf (CGY), 25 saves from 28 shots - (0.893), W, 1-2-0, 60:00 minutes </HomeTeamGoaler>
+    <HomeTeamThemeID>4</HomeTeamThemeID>
+    <Note />
+    <Star>
+      <string xsi:nil="true" />
+      <string>Jonathan Huberdeau (CGY)</string>
+      <string>Daniil Miromanov (CGY)</string>
+      <string>Robert Thomas (STL)</string>
+    </Star>
+  </TypeOutputXMLTodayGame>
+  <TypeOutputXMLTodayGame>
+    <GameNumber>Farm23</GameNumber>
+    <Link>UHA-Farm-23.html</Link>
+    <VisitorTeamNumber>14</VisitorTeamNumber>
+    <VisitorTeam>Iowa Wild</VisitorTeam>
+    <VisitorTeamAbbre>IOW</VisitorTeamAbbre>
+    <VisitorTeamShots>24</VisitorTeamShots>
+    <VisitorTeamShotsAttemp>50</VisitorTeamShotsAttemp>
+    <VisitorTeamScore>5</VisitorTeamScore>
+    <VisitorTeamGoal>Devin Shore(7,8,9), David Jiricek(5,6)</VisitorTeamGoal>
+    <VisitorTeamGoaler>Unknown Goalie (IOW), 9 saves from 11 shots - (0.818), W, 1-0-0, 60:00 minutes </VisitorTeamGoaler>
+    <VisitorTeamThemeID>0</VisitorTeamThemeID>
+    <HomeTeamNumber>16</HomeTeamNumber>
+    <HomeTeam>Milwaukee Admirals</HomeTeam>
+    <HomeTeamAbbre>MIL</HomeTeamAbbre>
+    <HomeTeamShots>11</HomeTeamShots>
+    <HomeTeamShotsAttemp>22</HomeTeamShotsAttemp>
+    <HomeTeamScore>2</HomeTeamScore>
+    <HomeTeamGoal>Kieffer Bellows(2,3)</HomeTeamGoal>
+    <HomeTeamGoaler>Unknown Goalie (MIL), 19 saves from 24 shots - (0.792), L, 0-1-0, 60:00 minutes </HomeTeamGoaler>
+    <HomeTeamThemeID>0</HomeTeamThemeID>
+    <Note />
+    <Star>
+      <string xsi:nil="true" />
+      <string>Devin Shore (IOW)</string>
+      <string>David Jiricek (IOW)</string>
+      <string>Declan Chisholm (IOW)</string>
+    </Star>
+  </TypeOutputXMLTodayGame>
+  <TypeOutputXMLTodayGame>
+    <GameNumber>Pro24</GameNumber>
+    <Link>UHA-24.html</Link>
+    <VisitorTeamNumber>3</VisitorTeamNumber>
+    <VisitorTeam>Buffalo Sabres</VisitorTeam>
+    <VisitorTeamAbbre>BUF</VisitorTeamAbbre>
+    <VisitorTeamShots>28</VisitorTeamShots>
+    <VisitorTeamShotsAttemp>53</VisitorTeamShotsAttemp>
+    <VisitorTeamScore>5</VisitorTeamScore>
+    <VisitorTeamGoal>JJ Peterka(2), Josh Norris(1,2), Rasmus Dahlin(3), Tage Thompson(4)</VisitorTeamGoal>
+    <VisitorTeamGoaler>Ukko-Pekka Luukkonen (BUF), 25 saves from 26 shots - (0.962), W, 2-0-0, 60:00 minutes </VisitorTeamGoaler>
+    <VisitorTeamThemeID>3</VisitorTeamThemeID>
+    <HomeTeamNumber>2</HomeTeamNumber>
+    <HomeTeam>Boston Bruins</HomeTeam>
+    <HomeTeamAbbre>BOS</HomeTeamAbbre>
+    <HomeTeamShots>26</HomeTeamShots>
+    <HomeTeamShotsAttemp>58</HomeTeamShotsAttemp>
+    <HomeTeamScore>1</HomeTeamScore>
+    <HomeTeamGoal>Casey Mittelstadt(1)</HomeTeamGoal>
+    <HomeTeamGoaler>Jeremy Swayman (BOS), 13 saves from 17 shots - (0.765), L, 1-2-0, 34:18 minutes Joonas Korpisalo (BOS), 10 saves from 11 shots - (0.909), 25:42 minutes </HomeTeamGoaler>
+    <HomeTeamThemeID>2</HomeTeamThemeID>
+    <Note />
+    <Star>
+      <string xsi:nil="true" />
+      <string>Rasmus Dahlin (BUF)</string>
+      <string>JJ Peterka (BUF)</string>
+      <string>Josh Norris (BUF)</string>
+    </Star>
+  </TypeOutputXMLTodayGame>
+  <TypeOutputXMLTodayGame>
+    <GameNumber>Farm24</GameNumber>
+    <Link>UHA-Farm-24.html</Link>
+    <VisitorTeamNumber>8</VisitorTeamNumber>
+    <VisitorTeam>Cleveland Monsters</VisitorTeam>
+    <VisitorTeamAbbre>CLV</VisitorTeamAbbre>
+    <VisitorTeamShots>21</VisitorTeamShots>
+    <VisitorTeamShotsAttemp>49</VisitorTeamShotsAttemp>
+    <VisitorTeamScore>1</VisitorTeamScore>
+    <VisitorTeamGoal>Denton Mateychuk(3)</VisitorTeamGoal>
+    <VisitorTeamGoaler>Jet Greaves (CLV), 19 saves from 21 shots - (0.905), L, 1-1-0, 59:42 minutes </VisitorTeamGoaler>
+    <VisitorTeamThemeID>0</VisitorTeamThemeID>
+    <HomeTeamNumber>3</HomeTeamNumber>
+    <HomeTeam>Rochester Americans</HomeTeam>
+    <HomeTeamAbbre>ROC</HomeTeamAbbre>
+    <HomeTeamShots>21</HomeTeamShots>
+    <HomeTeamShotsAttemp>42</HomeTeamShotsAttemp>
+    <HomeTeamScore>2</HomeTeamScore>
+    <HomeTeamGoal>Unknown Player(1), Peyton Krebs(1)</HomeTeamGoal>
+    <HomeTeamGoaler>Devon Levi (ROC), 20 saves from 21 shots - (0.952), W, 1-1-0, 60:00 minutes </HomeTeamGoaler>
+    <HomeTeamThemeID>0</HomeTeamThemeID>
+    <Note />
+    <Star>
+      <string xsi:nil="true" />
+      <string>Peyton Krebs (ROC)</string>
+      <string>Devon Levi (ROC)</string>
+      <string>Denton Mateychuk (CLV)</string>
+    </Star>
+  </TypeOutputXMLTodayGame>
+  <TypeOutputXMLTodayGame>
+    <GameNumber>Pro25</GameNumber>
+    <Link>UHA-25.html</Link>
+    <VisitorTeamNumber>27</VisitorTeamNumber>
+    <VisitorTeam>Toronto Maple Leafs</VisitorTeam>
+    <VisitorTeamAbbre>TOR</VisitorTeamAbbre>
+    <VisitorTeamShots>35</VisitorTeamShots>
+    <VisitorTeamShotsAttemp>72</VisitorTeamShotsAttemp>
+    <VisitorTeamScore>4</VisitorTeamScore>
+    <VisitorTeamGoal>Mitch Marner(1), Oliver Ekman-Larsson(1), William Nylander(2,3)</VisitorTeamGoal>
+    <VisitorTeamGoaler>Anthony Stolarz (TOR), 26 saves from 29 shots - (0.897), W, 2-0-0, 60:00 minutes </VisitorTeamGoaler>
+    <VisitorTeamThemeID>27</VisitorTeamThemeID>
+    <HomeTeamNumber>10</HomeTeamNumber>
+    <HomeTeam>Detroit Red Wings</HomeTeam>
+    <HomeTeamAbbre>DET</HomeTeamAbbre>
+    <HomeTeamShots>29</HomeTeamShots>
+    <HomeTeamShotsAttemp>56</HomeTeamShotsAttemp>
+    <HomeTeamScore>3</HomeTeamScore>
+    <HomeTeamGoal>Alex DeBrincat(2,3), Patrick Kane(1)</HomeTeamGoal>
+    <HomeTeamGoaler>Cam Talbot (DET), 31 saves from 35 shots - (0.886), L, 1-1-0, 59:00 minutes </HomeTeamGoaler>
+    <HomeTeamThemeID>10</HomeTeamThemeID>
+    <Note />
+    <Star>
+      <string xsi:nil="true" />
+      <string>William Nylander (TOR)</string>
+      <string>Alex DeBrincat (DET)</string>
+      <string>Oliver Ekman-Larsson (TOR)</string>
+    </Star>
+  </TypeOutputXMLTodayGame>
+  <TypeOutputXMLTodayGame>
+    <GameNumber>Farm25</GameNumber>
+    <Link>UHA-Farm-25.html</Link>
+    <VisitorTeamNumber>4</VisitorTeamNumber>
+    <VisitorTeam>Calgary Wranglers</VisitorTeam>
+    <VisitorTeamAbbre>CGY</VisitorTeamAbbre>
+    <VisitorTeamShots>19</VisitorTeamShots>
+    <VisitorTeamShotsAttemp>47</VisitorTeamShotsAttemp>
+    <VisitorTeamScore>5</VisitorTeamScore>
+    <VisitorTeamGoal>Sam Morton(4), Adam Klapka(2), Justin Kirkland(1), Ryan Lomberg(1)</VisitorTeamGoal>
+    <VisitorTeamGoaler>Unknown Goalie (CGY), 16 saves from 20 shots - (0.800), W, 1-0-0, 64:34 minutes </VisitorTeamGoaler>
+    <VisitorTeamThemeID>0</VisitorTeamThemeID>
+    <HomeTeamNumber>11</HomeTeamNumber>
+    <HomeTeam>Bakersfield Condors</HomeTeam>
+    <HomeTeamAbbre>BAK</HomeTeamAbbre>
+    <HomeTeamShots>20</HomeTeamShots>
+    <HomeTeamShotsAttemp>42</HomeTeamShotsAttemp>
+    <HomeTeamScore>4</HomeTeamScore>
+    <HomeTeamGoal>Vasily Podkolzin(1), Unknown Player(1,2), Max Jones(1)</HomeTeamGoal>
+    <HomeTeamGoaler>Unknown Goalie (BAK), 15 saves from 19 shots - (0.789), OTL, 0-0-1, 65:00 minutes </HomeTeamGoaler>
+    <HomeTeamThemeID>0</HomeTeamThemeID>
+    <Note>End in Shootout</Note>
+    <Star>
+      <string xsi:nil="true" />
+      <string>Adam Klapka (CGY)</string>
+      <string>Ryan Lomberg (CGY)</string>
+      <string>Joel Hanley (CGY)</string>
+    </Star>
+  </TypeOutputXMLTodayGame>
+  <TypeOutputXMLTodayGame>
+    <GameNumber>Pro26</GameNumber>
+    <Link>UHA-26.html</Link>
+    <VisitorTeamNumber>17</VisitorTeamNumber>
+    <VisitorTeam>New Jersey Devils</VisitorTeam>
+    <VisitorTeamAbbre>NJD</VisitorTeamAbbre>
+    <VisitorTeamShots>28</VisitorTeamShots>
+    <VisitorTeamShotsAttemp>48</VisitorTeamShotsAttemp>
+    <VisitorTeamScore>3</VisitorTeamScore>
+    <VisitorTeamGoal>Nico Hischier(1,2), Stefan Noesen(1)</VisitorTeamGoal>
+    <VisitorTeamGoaler>Jacob Markstrom (NJD), 12 saves from 16 shots - (0.750), L, 1-1-0, 23:22 minutes Jake Allen (NJD), 14 saves from 17 shots - (0.824), 36:38 minutes </VisitorTeamGoaler>
+    <VisitorTeamThemeID>17</VisitorTeamThemeID>
+    <HomeTeamNumber>26</HomeTeamNumber>
+    <HomeTeam>Tampa Bay Lightning</HomeTeam>
+    <HomeTeamAbbre>TBL</HomeTeamAbbre>
+    <HomeTeamShots>33</HomeTeamShots>
+    <HomeTeamShotsAttemp>50</HomeTeamShotsAttemp>
+    <HomeTeamScore>7</HomeTeamScore>
+    <HomeTeamGoal>Brandon Hagel(1,2), Brayden Point(3), Jake Guentzel(2,3), Nikita Kucherov(2,3)</HomeTeamGoal>
+    <HomeTeamGoaler>Andrei Vasilevskiy (TBL), 25 saves from 28 shots - (0.893), W, 2-0-0, 60:00 minutes </HomeTeamGoaler>
+    <HomeTeamThemeID>26</HomeTeamThemeID>
+    <Note />
+    <Star>
+      <string xsi:nil="true" />
+      <string>Nikita Kucherov (TBL)</string>
+      <string>Jake Guentzel (TBL)</string>
+      <string>Brandon Hagel (TBL)</string>
+    </Star>
+  </TypeOutputXMLTodayGame>
+  <TypeOutputXMLTodayGame>
+    <GameNumber>Pro27</GameNumber>
+    <Link>UHA-27.html</Link>
+    <VisitorTeamNumber>20</VisitorTeamNumber>
+    <VisitorTeam>Ottawa Senators</VisitorTeam>
+    <VisitorTeamAbbre>OTT</VisitorTeamAbbre>
+    <VisitorTeamShots>32</VisitorTeamShots>
+    <VisitorTeamShotsAttemp>53</VisitorTeamShotsAttemp>
+    <VisitorTeamScore>4</VisitorTeamScore>
+    <VisitorTeamGoal>Drake Batherson(1), Fabian Zetterlund(1), Shane Pinto(1), Thomas Chabot(1)</VisitorTeamGoal>
+    <VisitorTeamGoaler>Linus Ullmark (OTT), 22 saves from 27 shots - (0.815), L, 0-1-1, 60:00 minutes </VisitorTeamGoaler>
+    <VisitorTeamThemeID>20</VisitorTeamThemeID>
+    <HomeTeamNumber>12</HomeTeamNumber>
+    <HomeTeam>Florida Panthers</HomeTeam>
+    <HomeTeamAbbre>FLA</HomeTeamAbbre>
+    <HomeTeamShots>27</HomeTeamShots>
+    <HomeTeamShotsAttemp>49</HomeTeamShotsAttemp>
+    <HomeTeamScore>5</HomeTeamScore>
+    <HomeTeamGoal>Carter Verhaeghe(3), Sam Reinhart(4,5,6,7)</HomeTeamGoal>
+    <HomeTeamGoaler>Sergei Bobrovsky (FLA), 28 saves from 32 shots - (0.875), W, 2-1-0, 60:00 minutes </HomeTeamGoaler>
+    <HomeTeamThemeID>12</HomeTeamThemeID>
+    <Note />
+    <Star>
+      <string xsi:nil="true" />
+      <string>Sam Reinhart (FLA)</string>
+      <string>Carter Verhaeghe (FLA)</string>
+      <string>Shane Pinto (OTT)</string>
+    </Star>
+  </TypeOutputXMLTodayGame>
+  <TypeOutputXMLTodayGame>
+    <GameNumber>Pro28</GameNumber>
+    <Link>UHA-28.html</Link>
+    <VisitorTeamNumber>31</VisitorTeamNumber>
+    <VisitorTeam>Washington Capitals</VisitorTeam>
+    <VisitorTeamAbbre>WSH</VisitorTeamAbbre>
+    <VisitorTeamShots>35</VisitorTeamShots>
+    <VisitorTeamShotsAttemp>73</VisitorTeamShotsAttemp>
+    <VisitorTeamScore>2</VisitorTeamScore>
+    <VisitorTeamGoal>Alex Ovechkin(1,2)</VisitorTeamGoal>
+    <VisitorTeamGoaler>Logan Thompson (WSH), 33 saves from 36 shots - (0.917), L, 1-1-0, 59:01 minutes </VisitorTeamGoaler>
+    <VisitorTeamThemeID>31</VisitorTeamThemeID>
+    <HomeTeamNumber>18</HomeTeamNumber>
+    <HomeTeam>New York Islanders</HomeTeam>
+    <HomeTeamAbbre>NYI</HomeTeamAbbre>
+    <HomeTeamShots>36</HomeTeamShots>
+    <HomeTeamShotsAttemp>67</HomeTeamShotsAttemp>
+    <HomeTeamScore>3</HomeTeamScore>
+    <HomeTeamGoal>Anders Lee(2), Bo Horvat(1,2)</HomeTeamGoal>
+    <HomeTeamGoaler>Ilya Sorokin (NYI), 33 saves from 35 shots - (0.943), W, 1-1-0, 60:00 minutes </HomeTeamGoaler>
+    <HomeTeamThemeID>18</HomeTeamThemeID>
+    <Note />
+    <Star>
+      <string xsi:nil="true" />
+      <string>Bo Horvat (NYI)</string>
+      <string>Alex Ovechkin (WSH)</string>
+      <string>Anders Lee (NYI)</string>
+    </Star>
+  </TypeOutputXMLTodayGame>
+  <TypeOutputXMLTodayGame>
+    <GameNumber>Pro29</GameNumber>
+    <Link>UHA-29.html</Link>
+    <VisitorTeamNumber>19</VisitorTeamNumber>
+    <VisitorTeam>New York Rangers</VisitorTeam>
+    <VisitorTeamAbbre>NYR</VisitorTeamAbbre>
+    <VisitorTeamShots>31</VisitorTeamShots>
+    <VisitorTeamShotsAttemp>42</VisitorTeamShotsAttemp>
+    <VisitorTeamScore>5</VisitorTeamScore>
+    <VisitorTeamGoal>Adam Fox(2), Artemi Panarin(3,4,5), Chris Kreider(3)</VisitorTeamGoal>
+    <VisitorTeamGoaler>Igor Shesterkin (NYR), 32 saves from 35 shots - (0.914), W, 2-1-0, 60:00 minutes </VisitorTeamGoaler>
+    <VisitorTeamThemeID>19</VisitorTeamThemeID>
+    <HomeTeamNumber>22</HomeTeamNumber>
+    <HomeTeam>Pittsburgh Penguins</HomeTeam>
+    <HomeTeamAbbre>PIT</HomeTeamAbbre>
+    <HomeTeamShots>35</HomeTeamShots>
+    <HomeTeamShotsAttemp>70</HomeTeamShotsAttemp>
+    <HomeTeamScore>3</HomeTeamScore>
+    <HomeTeamGoal>Bryan Rust(3), Erik Karlsson(1), Sidney Crosby(1)</HomeTeamGoal>
+    <HomeTeamGoaler>Alex Nedeljkovic (PIT), 26 saves from 31 shots - (0.839), L, 1-2-0, 60:00 minutes </HomeTeamGoaler>
+    <HomeTeamThemeID>22</HomeTeamThemeID>
+    <Note />
+    <Star>
+      <string xsi:nil="true" />
+      <string>Artemi Panarin (NYR)</string>
+      <string>Sidney Crosby (PIT)</string>
+      <string>Will Borgen (NYR)</string>
+    </Star>
+  </TypeOutputXMLTodayGame>
+  <TypeOutputXMLTodayGame>
+    <GameNumber>Pro30</GameNumber>
+    <Link>UHA-30.html</Link>
+    <VisitorTeamNumber>21</VisitorTeamNumber>
+    <VisitorTeam>Philadelphia Flyers</VisitorTeam>
+    <VisitorTeamAbbre>PHI</VisitorTeamAbbre>
+    <VisitorTeamShots>23</VisitorTeamShots>
+    <VisitorTeamShotsAttemp>45</VisitorTeamShotsAttemp>
+    <VisitorTeamScore>1</VisitorTeamScore>
+    <VisitorTeamGoal>Owen Tippett(2)</VisitorTeamGoal>
+    <VisitorTeamGoaler>Ivan Fedotov (PHI), 6 saves from 9 shots - (0.667), 26:57 minutes Samuel Ersson (PHI), 13 saves from 17 shots - (0.765), L, 1-1-0, 33:03 minutes </VisitorTeamGoaler>
+    <VisitorTeamThemeID>21</VisitorTeamThemeID>
+    <HomeTeamNumber>5</HomeTeamNumber>
+    <HomeTeam>Carolina Hurricanes</HomeTeam>
+    <HomeTeamAbbre>CAR</HomeTeamAbbre>
+    <HomeTeamShots>26</HomeTeamShots>
+    <HomeTeamShotsAttemp>51</HomeTeamShotsAttemp>
+    <HomeTeamScore>7</HomeTeamScore>
+    <HomeTeamGoal>Andrei Svechnikov(1,2,3), Jack Roslovic(1), Jordan Martinook(1), Seth Jarvis(2,3)</HomeTeamGoal>
+    <HomeTeamGoaler>Pyotr Kochetkov (CAR), 22 saves from 23 shots - (0.957), W, 1-1-0, 60:00 minutes </HomeTeamGoaler>
+    <HomeTeamThemeID>5</HomeTeamThemeID>
+    <Note />
+    <Star>
+      <string xsi:nil="true" />
+      <string>Andrei Svechnikov (CAR)</string>
+      <string>Seth Jarvis (CAR)</string>
+      <string>Sebastian Aho (CAR)</string>
+    </Star>
+  </TypeOutputXMLTodayGame>
+  <TypeOutputXMLTodayGame>
+    <GameNumber>Pro31</GameNumber>
+    <Link>UHA-31.html</Link>
+    <VisitorTeamNumber>15</VisitorTeamNumber>
+    <VisitorTeam>Montreal Canadiens</VisitorTeam>
+    <VisitorTeamAbbre>MTL</VisitorTeamAbbre>
+    <VisitorTeamShots>24</VisitorTeamShots>
+    <VisitorTeamShotsAttemp>52</VisitorTeamShotsAttemp>
+    <VisitorTeamScore>3</VisitorTeamScore>
+    <VisitorTeamGoal>Christian Dvorak(1), Nick Suzuki(1,2)</VisitorTeamGoal>
+    <VisitorTeamGoaler>Sam Montembeault (MTL), 28 saves from 30 shots - (0.933), W, 1-2-0, 59:50 minutes </VisitorTeamGoaler>
+    <VisitorTeamThemeID>15</VisitorTeamThemeID>
+    <HomeTeamNumber>6</HomeTeamNumber>
+    <HomeTeam>Chicago Blackhawks</HomeTeam>
+    <HomeTeamAbbre>CHI</HomeTeamAbbre>
+    <HomeTeamShots>30</HomeTeamShots>
+    <HomeTeamShotsAttemp>74</HomeTeamShotsAttemp>
+    <HomeTeamScore>2</HomeTeamScore>
+    <HomeTeamGoal>Alec Martinez(1), Jason Dickinson(1)</HomeTeamGoal>
+    <HomeTeamGoaler>Arvid Soderblom (CHI), 21 saves from 24 shots - (0.875), OTL, 0-1-2, 60:18 minutes </HomeTeamGoaler>
+    <HomeTeamThemeID>6</HomeTeamThemeID>
+    <Note>End in Overtime</Note>
+    <Star>
+      <string xsi:nil="true" />
+      <string>Nick Suzuki (MTL)</string>
+      <string>Cole Caufield (MTL)</string>
+      <string>Lane Hutson (MTL)</string>
+    </Star>
+  </TypeOutputXMLTodayGame>
+  <TypeOutputXMLTodayGame>
+    <GameNumber>Pro32</GameNumber>
+    <Link>UHA-32.html</Link>
+    <VisitorTeamNumber>28</VisitorTeamNumber>
+    <VisitorTeam>Utah Mammoth</VisitorTeam>
+    <VisitorTeamAbbre>UTA</VisitorTeamAbbre>
+    <VisitorTeamShots>33</VisitorTeamShots>
+    <VisitorTeamShotsAttemp>60</VisitorTeamShotsAttemp>
+    <VisitorTeamScore>4</VisitorTeamScore>
+    <VisitorTeamGoal>Clayton Keller(1), Dylan Guenther(1), Lawson Crouse(1), Matias Maccelli(1)</VisitorTeamGoal>
+    <VisitorTeamGoaler>Karel Vejmelka (UTA), 27 saves from 30 shots - (0.900), W, 1-1-0, 60:00 minutes </VisitorTeamGoaler>
+    <VisitorTeamThemeID>28</VisitorTeamThemeID>
+    <HomeTeamNumber>16</HomeTeamNumber>
+    <HomeTeam>Nashville Predators</HomeTeam>
+    <HomeTeamAbbre>NSH</HomeTeamAbbre>
+    <HomeTeamShots>30</HomeTeamShots>
+    <HomeTeamShotsAttemp>68</HomeTeamShotsAttemp>
+    <HomeTeamScore>3</HomeTeamScore>
+    <HomeTeamGoal>Brady Skjei(1), Filip Forsberg(2), Steven Stamkos(2)</HomeTeamGoal>
+    <HomeTeamGoaler>Juuse Saros (NSH), 29 saves from 33 shots - (0.879), L, 1-1-0, 60:00 minutes </HomeTeamGoaler>
+    <HomeTeamThemeID>16</HomeTeamThemeID>
+    <Note />
+    <Star>
+      <string xsi:nil="true" />
+      <string>Dylan Guenther (UTA)</string>
+      <string>Clayton Keller (UTA)</string>
+      <string>Lawson Crouse (UTA)</string>
+    </Star>
+  </TypeOutputXMLTodayGame>
+  <TypeOutputXMLTodayGame>
+    <GameNumber>Pro33</GameNumber>
+    <Link>UHA-33.html</Link>
+    <VisitorTeamNumber>8</VisitorTeamNumber>
+    <VisitorTeam>Columbus Blue Jackets</VisitorTeam>
+    <VisitorTeamAbbre>CBJ</VisitorTeamAbbre>
+    <VisitorTeamShots>30</VisitorTeamShots>
+    <VisitorTeamShotsAttemp>74</VisitorTeamShotsAttemp>
+    <VisitorTeamScore>5</VisitorTeamScore>
+    <VisitorTeamGoal>Cole Sillinger(1), Dmitri Voronkov(1), Sean Monahan(1), Zach Werenski(1,2)</VisitorTeamGoal>
+    <VisitorTeamGoaler>Elvis Merzlikins (CBJ), 31 saves from 33 shots - (0.939), W, 1-1-0, 60:00 minutes </VisitorTeamGoaler>
+    <VisitorTeamThemeID>8</VisitorTeamThemeID>
+    <HomeTeamNumber>14</HomeTeamNumber>
+    <HomeTeam>Minnesota Wild</HomeTeam>
+    <HomeTeamAbbre>MIN</HomeTeamAbbre>
+    <HomeTeamShots>33</HomeTeamShots>
+    <HomeTeamShotsAttemp>67</HomeTeamShotsAttemp>
+    <HomeTeamScore>2</HomeTeamScore>
+    <HomeTeamGoal>Joel Eriksson Ek(1), Marcus Foligno(1)</HomeTeamGoal>
+    <HomeTeamGoaler>Filip Gustavsson (MIN), 25 saves from 30 shots - (0.833), L, 1-1-0, 60:00 minutes </HomeTeamGoaler>
+    <HomeTeamThemeID>14</HomeTeamThemeID>
+    <Note />
+    <Star>
+      <string xsi:nil="true" />
+      <string>Zach Werenski (CBJ)</string>
+      <string>Sean Monahan (CBJ)</string>
+      <string>Dmitri Voronkov (CBJ)</string>
+    </Star>
+  </TypeOutputXMLTodayGame>
+  <TypeOutputXMLTodayGame>
+    <GameNumber>Pro34</GameNumber>
+    <Link>UHA-34.html</Link>
+    <VisitorTeamNumber>9</VisitorTeamNumber>
+    <VisitorTeam>Dallas Stars</VisitorTeam>
+    <VisitorTeamAbbre>DAL</VisitorTeamAbbre>
+    <VisitorTeamShots>28</VisitorTeamShots>
+    <VisitorTeamShotsAttemp>58</VisitorTeamShotsAttemp>
+    <VisitorTeamScore>5</VisitorTeamScore>
+    <VisitorTeamGoal>Jamie Benn(1), Matt Duchene(1), Mikko Rantanen(1,2), Wyatt Johnston(1)</VisitorTeamGoal>
+    <VisitorTeamGoaler>Jake Oettinger (DAL), 39 saves from 43 shots - (0.907), W, 2-0-0, 60:12 minutes </VisitorTeamGoaler>
+    <VisitorTeamThemeID>9</VisitorTeamThemeID>
+    <HomeTeamNumber>7</HomeTeamNumber>
+    <HomeTeam>Colorado Avalanche</HomeTeam>
+    <HomeTeamAbbre>COL</HomeTeamAbbre>
+    <HomeTeamShots>43</HomeTeamShots>
+    <HomeTeamShotsAttemp>77</HomeTeamShotsAttemp>
+    <HomeTeamScore>4</HomeTeamScore>
+    <HomeTeamGoal>Cale Makar(4), Devon Toews(2), Jonathan Drouin(1), Nathan MacKinnon(2)</HomeTeamGoal>
+    <HomeTeamGoaler>Mackenzie Blackwood (COL), 23 saves from 28 shots - (0.821), OTL, 1-1-1, 60:12 minutes </HomeTeamGoaler>
+    <HomeTeamThemeID>7</HomeTeamThemeID>
+    <Note>End in Overtime</Note>
+    <Star>
+      <string xsi:nil="true" />
+      <string>Cale Makar (COL)</string>
+      <string>Jamie Benn (DAL)</string>
+      <string>Wyatt Johnston (DAL)</string>
+    </Star>
+  </TypeOutputXMLTodayGame>
+  <TypeOutputXMLTodayGame>
+    <GameNumber>Pro35</GameNumber>
+    <Link>UHA-35.html</Link>
+    <VisitorTeamNumber>29</VisitorTeamNumber>
+    <VisitorTeam>Vancouver Canucks</VisitorTeam>
+    <VisitorTeamAbbre>VAN</VisitorTeamAbbre>
+    <VisitorTeamShots>33</VisitorTeamShots>
+    <VisitorTeamShotsAttemp>60</VisitorTeamShotsAttemp>
+    <VisitorTeamScore>5</VisitorTeamScore>
+    <VisitorTeamGoal>Filip Chytil(1), Jake DeBrusk(1), Quinn Hughes(1,2,3)</VisitorTeamGoal>
+    <VisitorTeamGoaler>Thatcher Demko (VAN), 25 saves from 31 shots - (0.806), L, 1-1-0, 59:10 minutes </VisitorTeamGoaler>
+    <VisitorTeamThemeID>29</VisitorTeamThemeID>
+    <HomeTeamNumber>11</HomeTeamNumber>
+    <HomeTeam>Edmonton Oilers</HomeTeam>
+    <HomeTeamAbbre>EDM</HomeTeamAbbre>
+    <HomeTeamShots>31</HomeTeamShots>
+    <HomeTeamShotsAttemp>62</HomeTeamShotsAttemp>
+    <HomeTeamScore>6</HomeTeamScore>
+    <HomeTeamGoal>Adam Henrique(1), Evan Bouchard(1), Leon Draisaitl(2,3), Mattias Ekholm(1,2)</HomeTeamGoal>
+    <HomeTeamGoaler>Stuart Skinner (EDM), 28 saves from 33 shots - (0.848), W, 2-0-0, 60:00 minutes </HomeTeamGoaler>
+    <HomeTeamThemeID>11</HomeTeamThemeID>
+    <Note />
+    <Star>
+      <string xsi:nil="true" />
+      <string>Quinn Hughes (VAN)</string>
+      <string>Leon Draisaitl (EDM)</string>
+      <string>Mattias Ekholm (EDM)</string>
+    </Star>
+  </TypeOutputXMLTodayGame>
+  <TypeOutputXMLTodayGame>
+    <GameNumber>Pro36</GameNumber>
+    <Link>UHA-36.html</Link>
+    <VisitorTeamNumber>1</VisitorTeamNumber>
+    <VisitorTeam>Anaheim Ducks</VisitorTeam>
+    <VisitorTeamAbbre>ANA</VisitorTeamAbbre>
+    <VisitorTeamShots>25</VisitorTeamShots>
+    <VisitorTeamShotsAttemp>49</VisitorTeamShotsAttemp>
+    <VisitorTeamScore>3</VisitorTeamScore>
+    <VisitorTeamGoal>Mason McTavish(1,2), Troy Terry(1)</VisitorTeamGoal>
+    <VisitorTeamGoaler>Lukas Dostal (ANA), 24 saves from 25 shots - (0.960), W, 1-1-0, 60:00 minutes </VisitorTeamGoaler>
+    <VisitorTeamThemeID>1</VisitorTeamThemeID>
+    <HomeTeamNumber>23</HomeTeamNumber>
+    <HomeTeam>San Jose Sharks</HomeTeam>
+    <HomeTeamAbbre>SJS</HomeTeamAbbre>
+    <HomeTeamShots>25</HomeTeamShots>
+    <HomeTeamShotsAttemp>66</HomeTeamShotsAttemp>
+    <HomeTeamScore>1</HomeTeamScore>
+    <HomeTeamGoal>Macklin Celebrini(2)</HomeTeamGoal>
+    <HomeTeamGoaler>Alexandar Georgiev (SJS), 22 saves from 25 shots - (0.880), L, 1-1-0, 60:00 minutes </HomeTeamGoaler>
+    <HomeTeamThemeID>23</HomeTeamThemeID>
+    <Note />
+    <Star>
+      <string xsi:nil="true" />
+      <string>Mason McTavish (ANA)</string>
+      <string>Lukas Dostal (ANA)</string>
+      <string>Frank Vatrano (ANA)</string>
+    </Star>
+  </TypeOutputXMLTodayGame>
+  <TypeOutputXMLTodayGame>
+    <GameNumber>Pro37</GameNumber>
+    <Link>UHA-37.html</Link>
+    <VisitorTeamNumber>30</VisitorTeamNumber>
+    <VisitorTeam>Vegas Golden Knights</VisitorTeam>
+    <VisitorTeamAbbre>VGK</VisitorTeamAbbre>
+    <VisitorTeamShots>36</VisitorTeamShots>
+    <VisitorTeamShotsAttemp>67</VisitorTeamShotsAttemp>
+    <VisitorTeamScore>8</VisitorTeamScore>
+    <VisitorTeamGoal>Brandon Saad(1), Reilly Smith(1,2,3), Tomas Hertl(2), William Karlsson(1,2,3)</VisitorTeamGoal>
+    <VisitorTeamGoaler>Adin Hill (VGK), 23 saves from 27 shots - (0.852), W, 2-1-0, 60:00 minutes </VisitorTeamGoaler>
+    <VisitorTeamThemeID>30</VisitorTeamThemeID>
+    <HomeTeamNumber>24</HomeTeamNumber>
+    <HomeTeam>Seattle Kraken</HomeTeam>
+    <HomeTeamAbbre>SEA</HomeTeamAbbre>
+    <HomeTeamShots>27</HomeTeamShots>
+    <HomeTeamShotsAttemp>61</HomeTeamShotsAttemp>
+    <HomeTeamScore>4</HomeTeamScore>
+    <HomeTeamGoal>Brandon Montour(1,2), Jared McCann(1,2)</HomeTeamGoal>
+    <HomeTeamGoaler>Joey Daccord (SEA), 15 saves from 19 shots - (0.789), 34:11 minutes Philipp Grubauer (SEA), 13 saves from 17 shots - (0.765), L, 0-1-0, 25:49 minutes </HomeTeamGoaler>
+    <HomeTeamThemeID>24</HomeTeamThemeID>
+    <Note />
+    <Star>
+      <string xsi:nil="true" />
+      <string>William Karlsson (VGK)</string>
+      <string>Reilly Smith (VGK)</string>
+      <string>Brandon Saad (VGK)</string>
+    </Star>
+  </TypeOutputXMLTodayGame>
+  <TypeOutputXMLTodayGame>
+    <GameNumber>Farm26</GameNumber>
+    <Link>UHA-Farm-26.html</Link>
+    <VisitorTeamNumber>22</VisitorTeamNumber>
+    <VisitorTeam>Wilkes-Barre/Scranton Penguins</VisitorTeam>
+    <VisitorTeamAbbre>WSP</VisitorTeamAbbre>
+    <VisitorTeamShots>22</VisitorTeamShots>
+    <VisitorTeamShotsAttemp>34</VisitorTeamShotsAttemp>
+    <VisitorTeamScore>3</VisitorTeamScore>
+    <VisitorTeamGoal>Valtteri Puustinen(3), Vladislav Kolyachonok(2), Rutger McGroarty(1)</VisitorTeamGoal>
+    <VisitorTeamGoaler>Joel Blomqvist (WSP), 13 saves from 15 shots - (0.867), W, 1-0-0, 59:23 minutes </VisitorTeamGoaler>
+    <VisitorTeamThemeID>0</VisitorTeamThemeID>
+    <HomeTeamNumber>21</HomeTeamNumber>
+    <HomeTeam>Lehigh Valley Phantoms</HomeTeam>
+    <HomeTeamAbbre>LVP</HomeTeamAbbre>
+    <HomeTeamShots>15</HomeTeamShots>
+    <HomeTeamShotsAttemp>31</HomeTeamShotsAttemp>
+    <HomeTeamScore>2</HomeTeamScore>
+    <HomeTeamGoal>Jakob Pelletier(9,10)</HomeTeamGoal>
+    <HomeTeamGoaler>Aleksei Kolosov (LVP), 19 saves from 22 shots - (0.864), OTL, 1-0-1, 60:08 minutes </HomeTeamGoaler>
+    <HomeTeamThemeID>0</HomeTeamThemeID>
+    <Note>End in Overtime</Note>
+    <Star>
+      <string xsi:nil="true" />
+      <string>Jakob Pelletier (LVP)</string>
+      <string>Valtteri Puustinen (WSP)</string>
+      <string>Rutger McGroarty (WSP)</string>
+    </Star>
+  </TypeOutputXMLTodayGame>
+  <TypeOutputXMLTodayGame>
+    <GameNumber>Farm27</GameNumber>
+    <Link>UHA-Farm-27.html</Link>
+    <VisitorTeamNumber>18</VisitorTeamNumber>
+    <VisitorTeam>Bridgeport Islanders</VisitorTeam>
+    <VisitorTeamAbbre>BRI</VisitorTeamAbbre>
+    <VisitorTeamShots>10</VisitorTeamShots>
+    <VisitorTeamShotsAttemp>24</VisitorTeamShotsAttemp>
+    <VisitorTeamScore>1</VisitorTeamScore>
+    <VisitorTeamGoal>Scott Perunovich(2)</VisitorTeamGoal>
+    <VisitorTeamGoaler>Marcus Hogberg (BRI), 22 saves from 26 shots - (0.846), L, 1-1-0, 60:00 minutes </VisitorTeamGoaler>
+    <VisitorTeamThemeID>0</VisitorTeamThemeID>
+    <HomeTeamNumber>29</HomeTeamNumber>
+    <HomeTeam>Abbotsford Canucks</HomeTeam>
+    <HomeTeamAbbre>ABB</HomeTeamAbbre>
+    <HomeTeamShots>26</HomeTeamShots>
+    <HomeTeamShotsAttemp>49</HomeTeamShotsAttemp>
+    <HomeTeamScore>4</HomeTeamScore>
+    <HomeTeamGoal>Aatu Raty(3,4,5), Nils Aman(1)</HomeTeamGoal>
+    <HomeTeamGoaler>Nikita Tolopilo (ABB), 9 saves from 10 shots - (0.900), W, 1-0-1, 60:00 minutes </HomeTeamGoaler>
+    <HomeTeamThemeID>0</HomeTeamThemeID>
+    <Note />
+    <Star>
+      <string xsi:nil="true" />
+      <string>Aatu Raty (ABB)</string>
+      <string>Nils Aman (ABB)</string>
+      <string>Arshdeep Bains (ABB)</string>
+    </Star>
+  </TypeOutputXMLTodayGame>
+  <TypeOutputXMLTodayGame>
+    <GameNumber>Farm28</GameNumber>
+    <Link>UHA-Farm-28.html</Link>
+    <VisitorTeamNumber>13</VisitorTeamNumber>
+    <VisitorTeam>Ontario Reign</VisitorTeam>
+    <VisitorTeamAbbre>ONT</VisitorTeamAbbre>
+    <VisitorTeamShots>17</VisitorTeamShots>
+    <VisitorTeamShotsAttemp>36</VisitorTeamShotsAttemp>
+    <VisitorTeamScore>3</VisitorTeamScore>
+    <VisitorTeamGoal>Samuel Helenius(1), Akil Thomas(3,4)</VisitorTeamGoal>
+    <VisitorTeamGoaler>Erik Portillo (ONT), 17 saves from 19 shots - (0.895), W, 2-0-0, 60:00 minutes </VisitorTeamGoaler>
+    <VisitorTeamThemeID>0</VisitorTeamThemeID>
+    <HomeTeamNumber>25</HomeTeamNumber>
+    <HomeTeam>Springfield Thunderbirds</HomeTeam>
+    <HomeTeamAbbre>SPR</HomeTeamAbbre>
+    <HomeTeamShots>19</HomeTeamShots>
+    <HomeTeamShotsAttemp>41</HomeTeamShotsAttemp>
+    <HomeTeamScore>2</HomeTeamScore>
+    <HomeTeamGoal>Unknown Player(1), Nathan Walker(5)</HomeTeamGoal>
+    <HomeTeamGoaler>Unknown Goalie (SPR), 14 saves from 17 shots - (0.824), L, 0-1-0, 59:00 minutes </HomeTeamGoaler>
+    <HomeTeamThemeID>0</HomeTeamThemeID>
+    <Note />
+    <Star>
+      <string xsi:nil="true" />
+      <string>Akil Thomas (ONT)</string>
+      <string>Nathan Walker (SPR)</string>
+      <string>Samuel Helenius (ONT)</string>
+    </Star>
+  </TypeOutputXMLTodayGame>
+  <TypeOutputXMLTodayGame>
+    <GameNumber>Farm29</GameNumber>
+    <Link>UHA-Farm-29.html</Link>
+    <VisitorTeamNumber>19</VisitorTeamNumber>
+    <VisitorTeam>Hartford Wolf Pack</VisitorTeam>
+    <VisitorTeamAbbre>HFD</VisitorTeamAbbre>
+    <VisitorTeamShots>15</VisitorTeamShots>
+    <VisitorTeamShotsAttemp>34</VisitorTeamShotsAttemp>
+    <VisitorTeamScore>2</VisitorTeamScore>
+    <VisitorTeamGoal>Zac Jones(5), Matt Rempe(7)</VisitorTeamGoal>
+    <VisitorTeamGoaler>Louis Domingue (HFD), 12 saves from 16 shots - (0.750), L, 1-1-0, 32:21 minutes Unknown Goalie (HFD), 1 saves from 3 shots - (0.333), 27:39 minutes </VisitorTeamGoaler>
+    <VisitorTeamThemeID>0</VisitorTeamThemeID>
+    <HomeTeamNumber>30</HomeTeamNumber>
+    <HomeTeam>Henderson Silver Knights</HomeTeam>
+    <HomeTeamAbbre>HSK</HomeTeamAbbre>
+    <HomeTeamShots>19</HomeTeamShots>
+    <HomeTeamShotsAttemp>35</HomeTeamShotsAttemp>
+    <HomeTeamScore>6</HomeTeamScore>
+    <HomeTeamGoal>Callahan Burke(6), Victor Olofsson(3,4), Alexander Holtz(8,9), Tanner Laczynski(11)</HomeTeamGoal>
+    <HomeTeamGoaler>Akira Schmid (HSK), 13 saves from 15 shots - (0.867), W, 2-1-0, 60:00 minutes </HomeTeamGoaler>
+    <HomeTeamThemeID>0</HomeTeamThemeID>
+    <Note />
+    <Star>
+      <string xsi:nil="true" />
+      <string>Callahan Burke (HSK)</string>
+      <string>Victor Olofsson (HSK)</string>
+      <string>Alexander Holtz (HSK)</string>
+    </Star>
+  </TypeOutputXMLTodayGame>
+  <TypeOutputXMLTodayGame>
+    <GameNumber>Farm30</GameNumber>
+    <Link>UHA-Farm-30.html</Link>
+    <VisitorTeamNumber>7</VisitorTeamNumber>
+    <VisitorTeam>Colorado Eagles</VisitorTeam>
+    <VisitorTeamAbbre>COL</VisitorTeamAbbre>
+    <VisitorTeamShots>21</VisitorTeamShots>
+    <VisitorTeamShotsAttemp>42</VisitorTeamShotsAttemp>
+    <VisitorTeamScore>6</VisitorTeamScore>
+    <VisitorTeamGoal>Jimmy Vesey(2,3), Sam Malinski(4), Ivan Ivan(1,2), Jack Drury(3)</VisitorTeamGoal>
+    <VisitorTeamGoaler>Unknown Goalie (COL), 16 saves from 19 shots - (0.842), W, 1-0-0, 60:00 minutes </VisitorTeamGoaler>
+    <VisitorTeamThemeID>0</VisitorTeamThemeID>
+    <HomeTeamNumber>14</HomeTeamNumber>
+    <HomeTeam>Iowa Wild</HomeTeam>
+    <HomeTeamAbbre>IOW</HomeTeamAbbre>
+    <HomeTeamShots>19</HomeTeamShots>
+    <HomeTeamShotsAttemp>37</HomeTeamShotsAttemp>
+    <HomeTeamScore>3</HomeTeamScore>
+    <HomeTeamGoal>Devin Shore(10), Unknown Player(1,2)</HomeTeamGoal>
+    <HomeTeamGoaler>Unknown Goalie (IOW), 13 saves from 17 shots - (0.765), L, 0-1-0, 43:31 minutes Unknown Goalie (IOW), 2 saves from 4 shots - (0.500), 16:29 minutes </HomeTeamGoaler>
+    <HomeTeamThemeID>0</HomeTeamThemeID>
+    <Note />
+    <Star>
+      <string xsi:nil="true" />
+      <string>Jack Drury (COL)</string>
+      <string>Jimmy Vesey (COL)</string>
+      <string>Sam Malinski (COL)</string>
+    </Star>
+  </TypeOutputXMLTodayGame>
+  <TypeOutputXMLTodayGame>
+    <GameNumber>Farm31</GameNumber>
+    <Link>UHA-Farm-31.html</Link>
+    <VisitorTeamNumber>5</VisitorTeamNumber>
+    <VisitorTeam>Charlotte Checkers</VisitorTeam>
+    <VisitorTeamAbbre>CHA</VisitorTeamAbbre>
+    <VisitorTeamShots>29</VisitorTeamShots>
+    <VisitorTeamShotsAttemp>52</VisitorTeamShotsAttemp>
+    <VisitorTeamScore>5</VisitorTeamScore>
+    <VisitorTeamGoal>Tyson Jost(3), Unknown Player(1,2), Justin Robidas(1), Ty Smith(5)</VisitorTeamGoal>
+    <VisitorTeamGoaler>Spencer Martin (CHA), 20 saves from 23 shots - (0.870), W, 2-1-0, 60:00 minutes </VisitorTeamGoaler>
+    <VisitorTeamThemeID>0</VisitorTeamThemeID>
+    <HomeTeamNumber>17</HomeTeamNumber>
+    <HomeTeam>Utica Comets</HomeTeam>
+    <HomeTeamAbbre>UTI</HomeTeamAbbre>
+    <HomeTeamShots>23</HomeTeamShots>
+    <HomeTeamShotsAttemp>51</HomeTeamShotsAttemp>
+    <HomeTeamScore>3</HomeTeamScore>
+    <HomeTeamGoal>Nathan Bastian(3), Seamus Casey(11,12)</HomeTeamGoal>
+    <HomeTeamGoaler>Nico Daws (UTI), 24 saves from 29 shots - (0.828), L, 2-2-0, 60:00 minutes </HomeTeamGoaler>
+    <HomeTeamThemeID>0</HomeTeamThemeID>
+    <Note />
+    <Star>
+      <string xsi:nil="true" />
+      <string>Ty Smith (CHA)</string>
+      <string>Skyler Brind'Amour (CHA)</string>
+      <string>Justin Robidas (CHA)</string>
+    </Star>
+  </TypeOutputXMLTodayGame>
+  <TypeOutputXMLTodayGame>
+    <GameNumber>Farm32</GameNumber>
+    <Link>UHA-Farm-32.html</Link>
+    <VisitorTeamNumber>15</VisitorTeamNumber>
+    <VisitorTeam>Laval Rocket</VisitorTeam>
+    <VisitorTeamAbbre>LAV</VisitorTeamAbbre>
+    <VisitorTeamShots>12</VisitorTeamShots>
+    <VisitorTeamShotsAttemp>23</VisitorTeamShotsAttemp>
+    <VisitorTeamScore>2</VisitorTeamScore>
+    <VisitorTeamGoal>Lucas Condotta(2), Logan Mailloux(5)</VisitorTeamGoal>
+    <VisitorTeamGoaler>Jakub Dobes (LAV), 18 saves from 21 shots - (0.857), L, 1-2-0, 60:00 minutes </VisitorTeamGoaler>
+    <VisitorTeamThemeID>0</VisitorTeamThemeID>
+    <HomeTeamNumber>27</HomeTeamNumber>
+    <HomeTeam>Toronto Marlies</HomeTeam>
+    <HomeTeamAbbre>TOR</HomeTeamAbbre>
+    <HomeTeamShots>21</HomeTeamShots>
+    <HomeTeamShotsAttemp>33</HomeTeamShotsAttemp>
+    <HomeTeamScore>3</HomeTeamScore>
+    <HomeTeamGoal>Unknown Player(1), Alex Steeves(1), Philippe Myers(1)</HomeTeamGoal>
+    <HomeTeamGoaler>Dennis Hildeby (TOR), 10 saves from 12 shots - (0.833), W, 1-1-0, 60:00 minutes </HomeTeamGoaler>
+    <HomeTeamThemeID>0</HomeTeamThemeID>
+    <Note />
+    <Star>
+      <string xsi:nil="true" />
+      <string>Alex Steeves (TOR)</string>
+      <string>Logan Mailloux (LAV)</string>
+      <string>Philippe Myers (TOR)</string>
+    </Star>
+  </TypeOutputXMLTodayGame>
+  <TypeOutputXMLTodayGame>
+    <GameNumber>Farm33</GameNumber>
+    <Link>UHA-Farm-33.html</Link>
+    <VisitorTeamNumber>10</VisitorTeamNumber>
+    <VisitorTeam>Grand Rapids Griffins</VisitorTeam>
+    <VisitorTeamAbbre>GRG</VisitorTeamAbbre>
+    <VisitorTeamShots>20</VisitorTeamShots>
+    <VisitorTeamShotsAttemp>44</VisitorTeamShotsAttemp>
+    <VisitorTeamScore>1</VisitorTeamScore>
+    <VisitorTeamGoal />
+    <VisitorTeamGoaler>Alex Lyon (GRG), 8 saves from 8 shots - (1.000), W, 3-0-0, 65:00 minutes </VisitorTeamGoaler>
+    <VisitorTeamThemeID>0</VisitorTeamThemeID>
+    <HomeTeamNumber>24</HomeTeamNumber>
+    <HomeTeam>Coachella Valley Firebirds</HomeTeam>
+    <HomeTeamAbbre>CVF</HomeTeamAbbre>
+    <HomeTeamShots>8</HomeTeamShots>
+    <HomeTeamShotsAttemp>21</HomeTeamShotsAttemp>
+    <HomeTeamScore>0</HomeTeamScore>
+    <HomeTeamGoal />
+    <HomeTeamGoaler>Unknown Goalie (CVF), 20 saves from 20 shots - (1.000), OTL, 0-0-1, 65:00 minutes </HomeTeamGoaler>
+    <HomeTeamThemeID>0</HomeTeamThemeID>
+    <Note>End in Shootout</Note>
+    <Star>
+      <string xsi:nil="true" />
+      <string>Alex Lyon (GRG)</string>
+      <string>Elmer Soderblom (GRG)</string>
+      <string>Sebastian Cossa (GRG)</string>
+    </Star>
+  </TypeOutputXMLTodayGame>
+  <TypeOutputXMLTodayGame>
+    <GameNumber>Pro38</GameNumber>
+    <Link>UHA-38.html</Link>
+    <VisitorTeamNumber>31</VisitorTeamNumber>
+    <VisitorTeam>Washington Capitals</VisitorTeam>
+    <VisitorTeamAbbre>WSH</VisitorTeamAbbre>
+    <VisitorTeamShots>36</VisitorTeamShots>
+    <VisitorTeamShotsAttemp>69</VisitorTeamShotsAttemp>
+    <VisitorTeamScore>5</VisitorTeamScore>
+    <VisitorTeamGoal>Alex Ovechkin(3), Dylan Strome(4), Jakob Chychrun(1,2), Pierre-Luc Dubois(2)</VisitorTeamGoal>
+    <VisitorTeamGoaler>Logan Thompson (WSH), 24 saves from 25 shots - (0.960), W, 2-1-0, 60:00 minutes </VisitorTeamGoaler>
+    <VisitorTeamThemeID>31</VisitorTeamThemeID>
+    <HomeTeamNumber>19</HomeTeamNumber>
+    <HomeTeam>New York Rangers</HomeTeam>
+    <HomeTeamAbbre>NYR</HomeTeamAbbre>
+    <HomeTeamShots>25</HomeTeamShots>
+    <HomeTeamShotsAttemp>42</HomeTeamShotsAttemp>
+    <HomeTeamScore>1</HomeTeamScore>
+    <HomeTeamGoal>Adam Fox(3)</HomeTeamGoal>
+    <HomeTeamGoaler>Igor Shesterkin (NYR), 31 saves from 36 shots - (0.861), L, 2-2-0, 60:00 minutes </HomeTeamGoaler>
+    <HomeTeamThemeID>19</HomeTeamThemeID>
+    <Note />
+    <Star>
+      <string xsi:nil="true" />
+      <string>Pierre-Luc Dubois (WSH)</string>
+      <string>Jakob Chychrun (WSH)</string>
+      <string>Alex Ovechkin (WSH)</string>
+    </Star>
+  </TypeOutputXMLTodayGame>
+</ArrayOfTypeOutputXMLTodayGame>

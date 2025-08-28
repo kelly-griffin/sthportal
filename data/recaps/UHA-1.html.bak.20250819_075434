@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Recap UHA-1 — Chicago Blackhawks 0 @ Florida Panthers 0</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  body{font:16px/1.4 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:#0e1114;color:#e8eaed;margin:0;padding:24px}
+  .card{max-width:900px;margin:0 auto;background:#11161c;border:1px solid #1f2630;border-radius:12px;box-shadow:0 6px 24px rgba(0,0,0,.25)}
+  header{padding:16px 20px;border-bottom:1px solid #1f2630}
+  h1{font-size:20px;margin:0 0 6px}
+  .meta{color:#aab2bd;font-size:14px}
+  .section{padding:16px 20px;border-top:1px solid #1f2630}
+  .section h2{font-size:16px;margin:0 0 10px;color:#cfd8e3}
+  ul{margin:0;padding-left:18px}
+  .pill{display:inline-block;background:#1e2a36;color:#cfe6ff;border:1px solid #2a3a4b;border-radius:999px;padding:2px 10px;margin-right:8px;font-size:12px}
+  .mono{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace}
+</style>
+</head>
+<body>
+  <div class="card">
+    <header>
+      <h1>Game Recap — Chicago Blackhawks 0 @ Florida Panthers 0</h1>
+      <div class="meta">
+        <span class="pill">GWG: Sam Reinhart</span>        <span class="pill">W: Sergei Bobrovsky</span>        <span class="pill mono">UHA-1</span>
+      </div>
+    </header>
+    <div class="section">
+      <h2>Summary</h2>
+      <p>
+                  Chicago Blackhawks 0 @ Florida Panthers 0.
+                 The game-winner was Sam Reinhart.         Winning goalie: Sergei Bobrovsky.      </p>
+    </div>
+    <div class="section">
+      <h2>Scoring Summary</h2>
+              <ul>
+          <li>Goals</li><li>Goalie Stats</li><li>Chicago Blackhawks - 2 on 4 Attempt(s) - 50.00% - Score 0 goal in Penalty Kill</li><li>Florida Panthers - 0 on 0 Attempt(s) - 0.00% - Score 0 goal in Penalty Kill</li><li>Goaltenders</li><li>Goal by Sam Reinhart - Chicago Blackhawks : 0 - Florida Panthers : 1</li><li>Goal by Sam Reinhart - Chicago Blackhawks : 0 - Florida Panthers : 2</li><li>Goals for this period are 0 for Chicago Blackhawks vs 2 for Florida Panthers.</li><li>Goal by Carter Verhaeghe - Chicago Blackhawks : 0 - Florida Panthers : 3</li><li>Goal by Carter Verhaeghe - Chicago Blackhawks : 0 - Florida Panthers : 4</li><li>Goal by Gustav Forsling - Chicago Blackhawks : 0 - Florida Panthers : 5</li><li>Goal by Matthew Tkachuk - Chicago Blackhawks : 0 - Florida Panthers : 6</li><li>Goals for this period are 0 for Chicago Blackhawks vs 4 for Florida Panthers.</li><li>Goal by Brad Marchand - Chicago Blackhawks : 0 - Florida Panthers : 7</li><li>Goal by Ilya Mikheyev - Chicago Blackhawks : 1 - Florida Panthers : 7</li><li>Goals for this period are 1 for Chicago Blackhawks vs 1 for Florida Panthers.</li><li>. End of Period. Goals for this period are 0 for Chicago Blackhawks vs 2 for Florida Panthers. Shots for this period are 8 for Chicago Blackhawks vs 7 for Florida Panthers.</li><li>. End of Period. Goals for this period are 0 for Chicago Blackhawks vs 4 for Florida Panthers. Shots for this period are 15 for Chicago Blackhawks vs 14 for Florida Panthers.</li><li>. End of Period. Goals for this period are 1 for Chicago Blackhawks vs 1 for Florida Panthers. Shots for this period are 7 for Chicago Blackhawks vs 7 for Florida Panthers.</li>        </ul>
+          </div>
+  </div>
+</body>
+</html>

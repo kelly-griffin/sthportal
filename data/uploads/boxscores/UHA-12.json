@@ -1,0 +1,19 @@
+{
+    "gwg": "Travis Konecny",
+    "winningGoalie": "Samuel Ersson",
+    "firstStar": "",
+    "secondStar": "",
+    "thirdStar": "",
+    "gameNumber": 12,
+    "visitor": {
+        "name": "Florida Panthers",
+        "score": 0,
+        "abbr": "FLA"
+    },
+    "home": {
+        "name": "Philadelphia Flyers",
+        "score": 0,
+        "abbr": "PHI"
+    },
+    "date": ""
+}

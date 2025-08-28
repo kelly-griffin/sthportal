@@ -1,0 +1,19 @@
+{
+    "gwg": "",
+    "winningGoalie": "",
+    "firstStar": "",
+    "secondStar": "",
+    "thirdStar": "",
+    "gameNumber": 48,
+    "visitor": {
+        "name": "Toronto Maple Leafs",
+        "score": 0,
+        "abbr": "TOR"
+    },
+    "home": {
+        "name": "Carolina Hurricanes",
+        "score": 0,
+        "abbr": "CAR"
+    },
+    "date": "2025-10-13"
+}

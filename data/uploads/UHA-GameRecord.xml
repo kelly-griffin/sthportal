@@ -1,0 +1,413 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfTypeLeagueGameRecord xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <TypeLeagueGameRecord>
+    <intGameMostGoals>
+      <HomeTeamName>
+        <string xsi:nil="true" />
+        <string>Buffalo Sabres</string>
+        <string>Seattle Kraken</string>
+        <string>Winnipeg Jets</string>
+        <string>Edmonton Oilers</string>
+        <string>Los Angeles Kings</string>
+        <string>Washington Capitals</string>
+        <string>Edmonton Oilers</string>
+        <string>Tampa Bay Lightning</string>
+        <string>Tampa Bay Lightning</string>
+        <string>Florida Panthers</string>
+      </HomeTeamName>
+      <VisitorTeamName>
+        <string xsi:nil="true" />
+        <string>New York Rangers</string>
+        <string>Vegas Golden Knights</string>
+        <string>Los Angeles Kings</string>
+        <string>Vancouver Canucks</string>
+        <string>Colorado Avalanche</string>
+        <string>Boston Bruins</string>
+        <string>Calgary Flames</string>
+        <string>New Jersey Devils</string>
+        <string>Ottawa Senators</string>
+        <string>Philadelphia Flyers</string>
+      </VisitorTeamName>
+      <Year>
+        <short>0</short>
+        <short>1</short>
+        <short>1</short>
+        <short>1</short>
+        <short>1</short>
+        <short>1</short>
+        <short>1</short>
+        <short>1</short>
+        <short>1</short>
+        <short>1</short>
+        <short>1</short>
+      </Year>
+      <VValue>
+        <short>0</short>
+        <short>14</short>
+        <short>12</short>
+        <short>11</short>
+        <short>11</short>
+        <short>10</short>
+        <short>10</short>
+        <short>10</short>
+        <short>10</short>
+        <short>9</short>
+        <short>9</short>
+      </VValue>
+      <ScheduleGame>
+        <short>0</short>
+        <short>9</short>
+        <short>37</short>
+        <short>22</short>
+        <short>35</short>
+        <short>3</short>
+        <short>5</short>
+        <short>6</short>
+        <short>26</short>
+        <short>11</short>
+        <short>12</short>
+      </ScheduleGame>
+      <intNumber>10</intNumber>
+    </intGameMostGoals>
+    <intGameMostAssists>
+      <HomeTeamName>
+        <string xsi:nil="true" />
+        <string>Buffalo Sabres</string>
+        <string>Winnipeg Jets</string>
+        <string>Seattle Kraken</string>
+        <string>Edmonton Oilers</string>
+        <string>Los Angeles Kings</string>
+        <string>Washington Capitals</string>
+        <string>Florida Panthers</string>
+        <string>Vancouver Canucks</string>
+        <string>Detroit Red Wings</string>
+        <string>Florida Panthers</string>
+      </HomeTeamName>
+      <VisitorTeamName>
+        <string xsi:nil="true" />
+        <string>New York Rangers</string>
+        <string>Los Angeles Kings</string>
+        <string>Vegas Golden Knights</string>
+        <string>Vancouver Canucks</string>
+        <string>Colorado Avalanche</string>
+        <string>Boston Bruins</string>
+        <string>Chicago Blackhawks</string>
+        <string>Calgary Flames</string>
+        <string>Montreal Canadiens</string>
+        <string>Philadelphia Flyers</string>
+      </VisitorTeamName>
+      <Year>
+        <short>0</short>
+        <short>1</short>
+        <short>1</short>
+        <short>1</short>
+        <short>1</short>
+        <short>1</short>
+        <short>1</short>
+        <short>1</short>
+        <short>1</short>
+        <short>1</short>
+        <short>1</short>
+      </Year>
+      <VValue>
+        <short>0</short>
+        <short>23</short>
+        <short>19</short>
+        <short>18</short>
+        <short>17</short>
+        <short>16</short>
+        <short>16</short>
+        <short>15</short>
+        <short>15</short>
+        <short>14</short>
+        <short>14</short>
+      </VValue>
+      <ScheduleGame>
+        <short>0</short>
+        <short>9</short>
+        <short>22</short>
+        <short>37</short>
+        <short>35</short>
+        <short>3</short>
+        <short>5</short>
+        <short>1</short>
+        <short>19</short>
+        <short>10</short>
+        <short>12</short>
+      </ScheduleGame>
+      <intNumber>10</intNumber>
+    </intGameMostAssists>
+    <intGameMostPoints>
+      <HomeTeamName>
+        <string xsi:nil="true" />
+        <string>Buffalo Sabres</string>
+        <string>Winnipeg Jets</string>
+        <string>Seattle Kraken</string>
+        <string>Edmonton Oilers</string>
+        <string>Los Angeles Kings</string>
+        <string>Washington Capitals</string>
+        <string>Florida Panthers</string>
+        <string>Florida Panthers</string>
+        <string>Colorado Avalanche</string>
+        <string>Vancouver Canucks</string>
+      </HomeTeamName>
+      <VisitorTeamName>
+        <string xsi:nil="true" />
+        <string>New York Rangers</string>
+        <string>Los Angeles Kings</string>
+        <string>Vegas Golden Knights</string>
+        <string>Vancouver Canucks</string>
+        <string>Colorado Avalanche</string>
+        <string>Boston Bruins</string>
+        <string>Chicago Blackhawks</string>
+        <string>Philadelphia Flyers</string>
+        <string>Utah Mammoth</string>
+        <string>Calgary Flames</string>
+      </VisitorTeamName>
+      <Year>
+        <short>0</short>
+        <short>1</short>
+        <short>1</short>
+        <short>1</short>
+        <short>1</short>
+        <short>1</short>
+        <short>1</short>
+        <short>1</short>
+        <short>1</short>
+        <short>1</short>
+        <short>1</short>
+      </Year>
+      <VValue>
+        <short>0</short>
+        <short>37</short>
+        <short>30</short>
+        <short>30</short>
+        <short>28</short>
+        <short>26</short>
+        <short>26</short>
+        <short>23</short>
+        <short>23</short>
+        <short>23</short>
+        <short>23</short>
+      </VValue>
+      <ScheduleGame>
+        <short>0</short>
+        <short>9</short>
+        <short>22</short>
+        <short>37</short>
+        <short>35</short>
+        <short>3</short>
+        <short>5</short>
+        <short>1</short>
+        <short>12</short>
+        <short>18</short>
+        <short>19</short>
+      </ScheduleGame>
+      <intNumber>10</intNumber>
+    </intGameMostPoints>
+    <intGameMostShots>
+      <HomeTeamName>
+        <string xsi:nil="true" />
+        <string>Buffalo Sabres</string>
+        <string>Seattle Kraken</string>
+        <string>Los Angeles Kings</string>
+        <string>Florida Panthers</string>
+        <string>New York Islanders</string>
+        <string>Colorado Avalanche</string>
+        <string>Washington Capitals</string>
+        <string>Pittsburgh Penguins</string>
+        <string>Vegas Golden Knights</string>
+        <string>Tampa Bay Lightning</string>
+      </HomeTeamName>
+      <VisitorTeamName>
+        <string xsi:nil="true" />
+        <string>New York Rangers</string>
+        <string>Anaheim Ducks</string>
+        <string>Colorado Avalanche</string>
+        <string>Philadelphia Flyers</string>
+        <string>Washington Capitals</string>
+        <string>Dallas Stars</string>
+        <string>Boston Bruins</string>
+        <string>New York Islanders</string>
+        <string>Los Angeles Kings</string>
+        <string>Ottawa Senators</string>
+      </VisitorTeamName>
+      <Year>
+        <short>0</short>
+        <short>1</short>
+        <short>1</short>
+        <short>1</short>
+        <short>1</short>
+        <short>1</short>
+        <short>1</short>
+        <short>1</short>
+        <short>1</short>
+        <short>1</short>
+        <short>1</short>
+      </Year>
+      <VValue>
+        <short>0</short>
+        <short>79</short>
+        <short>75</short>
+        <short>73</short>
+        <short>73</short>
+        <short>71</short>
+        <short>71</short>
+        <short>68</short>
+        <short>67</short>
+        <short>66</short>
+        <short>66</short>
+      </VValue>
+      <ScheduleGame>
+        <short>0</short>
+        <short>9</short>
+        <short>21</short>
+        <short>3</short>
+        <short>12</short>
+        <short>28</short>
+        <short>34</short>
+        <short>5</short>
+        <short>13</short>
+        <short>7</short>
+        <short>11</short>
+      </ScheduleGame>
+      <intNumber>10</intNumber>
+    </intGameMostShots>
+    <intGameMostPim>
+      <HomeTeamName>
+        <string xsi:nil="true" />
+        <string>Florida Panthers</string>
+        <string>Edmonton Oilers</string>
+        <string>New York Rangers</string>
+        <string>Boston Bruins</string>
+        <string>Calgary Flames</string>
+        <string>Buffalo Sabres</string>
+        <string>Detroit Red Wings</string>
+        <string>Nashville Predators</string>
+        <string>Colorado Avalanche</string>
+        <string>Detroit Red Wings</string>
+      </HomeTeamName>
+      <VisitorTeamName>
+        <string xsi:nil="true" />
+        <string>Ottawa Senators</string>
+        <string>Vancouver Canucks</string>
+        <string>Pittsburgh Penguins</string>
+        <string>Chicago Blackhawks</string>
+        <string>St. Louis Blues</string>
+        <string>New York Rangers</string>
+        <string>Montreal Canadiens</string>
+        <string>Columbus Blue Jackets</string>
+        <string>Utah Mammoth</string>
+        <string>Toronto Maple Leafs</string>
+      </VisitorTeamName>
+      <Year>
+        <short>0</short>
+        <short>1</short>
+        <short>1</short>
+        <short>1</short>
+        <short>1</short>
+        <short>1</short>
+        <short>1</short>
+        <short>1</short>
+        <short>1</short>
+        <short>1</short>
+        <short>1</short>
+      </Year>
+      <VValue>
+        <short>0</short>
+        <short>40</short>
+        <short>28</short>
+        <short>24</short>
+        <short>24</short>
+        <short>24</short>
+        <short>22</short>
+        <short>22</short>
+        <short>22</short>
+        <short>22</short>
+        <short>22</short>
+      </VValue>
+      <ScheduleGame>
+        <short>0</short>
+        <short>27</short>
+        <short>35</short>
+        <short>2</short>
+        <short>8</short>
+        <short>23</short>
+        <short>9</short>
+        <short>10</short>
+        <short>16</short>
+        <short>18</short>
+        <short>25</short>
+      </ScheduleGame>
+      <intNumber>10</intNumber>
+    </intGameMostPim>
+    <intGameMostHits>
+      <HomeTeamName>
+        <string xsi:nil="true" />
+        <string>Boston Bruins</string>
+        <string>Calgary Flames</string>
+        <string>Carolina Hurricanes</string>
+        <string>San Jose Sharks</string>
+        <string>Tampa Bay Lightning</string>
+        <string>Winnipeg Jets</string>
+        <string>Boston Bruins</string>
+        <string>Florida Panthers</string>
+        <string>St. Louis Blues</string>
+        <string>San Jose Sharks</string>
+      </HomeTeamName>
+      <VisitorTeamName>
+        <string xsi:nil="true" />
+        <string>Chicago Blackhawks</string>
+        <string>St. Louis Blues</string>
+        <string>New Jersey Devils</string>
+        <string>Anaheim Ducks</string>
+        <string>Ottawa Senators</string>
+        <string>Los Angeles Kings</string>
+        <string>Buffalo Sabres</string>
+        <string>Ottawa Senators</string>
+        <string>Minnesota Wild</string>
+        <string>Vegas Golden Knights</string>
+      </VisitorTeamName>
+      <Year>
+        <short>0</short>
+        <short>1</short>
+        <short>1</short>
+        <short>1</short>
+        <short>1</short>
+        <short>1</short>
+        <short>1</short>
+        <short>1</short>
+        <short>1</short>
+        <short>1</short>
+        <short>1</short>
+      </Year>
+      <VValue>
+        <short>0</short>
+        <short>49</short>
+        <short>47</short>
+        <short>46</short>
+        <short>46</short>
+        <short>45</short>
+        <short>45</short>
+        <short>45</short>
+        <short>44</short>
+        <short>40</short>
+        <short>39</short>
+      </VValue>
+      <ScheduleGame>
+        <short>0</short>
+        <short>8</short>
+        <short>23</short>
+        <short>14</short>
+        <short>36</short>
+        <short>11</short>
+        <short>22</short>
+        <short>24</short>
+        <short>27</short>
+        <short>15</short>
+        <short>20</short>
+      </ScheduleGame>
+      <intNumber>10</intNumber>
+    </intGameMostHits>
+  </TypeLeagueGameRecord>
+</ArrayOfTypeLeagueGameRecord>

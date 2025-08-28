@@ -1,0 +1,19 @@
+{
+    "gwg": "",
+    "winningGoalie": "Nikita Zadorov",
+    "firstStar": "",
+    "secondStar": "",
+    "thirdStar": "",
+    "gameNumber": 40,
+    "visitor": {
+        "name": "Tampa Bay Lightning",
+        "score": 0,
+        "abbr": "TBL"
+    },
+    "home": {
+        "name": "Boston Bruins",
+        "score": 0,
+        "abbr": "BOS"
+    },
+    "date": ""
+}

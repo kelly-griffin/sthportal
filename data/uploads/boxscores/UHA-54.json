@@ -1,0 +1,19 @@
+{
+    "gwg": "",
+    "winningGoalie": "Joel Eriksson Ek",
+    "firstStar": "",
+    "secondStar": "",
+    "thirdStar": "",
+    "gameNumber": 54,
+    "visitor": {
+        "name": "Dallas Stars",
+        "score": 0,
+        "abbr": "DAL"
+    },
+    "home": {
+        "name": "Minnesota Wild",
+        "score": 0,
+        "abbr": "MIN"
+    },
+    "date": ""
+}

@@ -1,0 +1,192 @@
+/* ========= UHA Portal — HOME CANVAS ========= */
+
+/* Optional old site header block (kept for reuse if needed) */
+.site-header{
+  padding:18px 20px; text-align:center; letter-spacing:.5px;
+  background:var(--surface-2); border-bottom:2px solid #555
+}
+.site-header h1{ margin:0; font-size:32px; font-weight:800; color:var(--ink) }
+
+/* Main 3‑column grid for homepage */
+.canvas{
+  display:grid; grid-template-columns:220px 1fr 280px; gap:16px; padding:16px;
+}
+
+/* Left: stacked stats sections */
+.sidebar-title{
+  background:var(--surface-4); color:var(--ink-inverse);
+  padding:8px 10px; font-weight:800; font-size:14px; text-transform:uppercase; margin-bottom:8px
+}
+.leadersStack{ background:#111; color:#eee; border:1px solid #000; padding:10px; min-height:560px }
+.sectionCard{ border:1px solid #2a2a2a; border-radius:6px; padding:8px; margin-bottom:10px; background:#181818 }
+.sectionHeader{ display:flex; align-items:center; justify-content:space-between; margin-bottom:6px }
+.sectionTitle{
+  font-weight:900; font-size:13px; text-transform:uppercase; letter-spacing:.3px;
+  background:#2a2a2a; color:#eee; padding:6px 8px; border-radius:4px
+}
+.statTabs{ display:flex; gap:6px; flex-wrap:wrap; margin:6px 0 6px }
+.statTab{
+  cursor:pointer; border:1px solid #333; background:#1d1d1d; color:#ccc;
+  border-radius:999px; padding:4px 8px; font-size:11px; font-weight:800
+}
+.statTab.active{ background:#fff; color:#111; border-color:#fff }
+.leader-list{ border-top:1px solid #2a2a2a; margin-top:6px }
+.leader-row{
+  display:grid; grid-template-columns:24px 1fr 44px; gap:8px; align-items:center;
+  padding:8px 0; border-bottom:1px dashed #2c2c2c
+}
+.rank{
+  background:#2a2a2a; color:#fff; border-radius:999px; font-weight:900; text-align:center;
+  font-size:12px; width:24px; height:24px; line-height:24px
+}
+.leader-name{ font-weight:800 }
+.leader-name small{ display:block; opacity:.6; font-weight:600 }
+.leader-val{ font-weight:900; text-align:right }
+
+/* Center: feature story & top headlines */
+.main .feature{ background:var(--surface-3); border:1px solid #666; padding:10px; min-height:360px }
+.feature .story-head{
+  background:var(--surface-4); color:var(--ink-inverse); padding:6px 10px; font-weight:900;
+  text-transform:uppercase; margin:-10px -10px 10px; font-size:12px; display:flex; justify-content:space-between; gap:10px
+}
+.feature .image{ display:flex; align-items:center; justify-content:center; background:#aaa; color:#111; font-weight:800; height:280px }
+.feature .overlay{ margin-top:8px; background:linear-gradient(180deg,transparent,rgba(0,0,0,.65)); color:#fff; padding:10px; border-radius:6px }
+
+.sub{ display:grid; grid-template-columns:repeat(3,1fr); gap:8px; margin-top:10px }
+.sub .card{ background:#eee; border:1px solid #bbb; min-height:120px; display:flex; align-items:center; justify-content:center; font-weight:800 }
+
+.top-headlines{ background:var(--surface-3); border:1px solid #666; padding:10px }
+.top-headlines .section-title{
+  background:var(--surface-4); color:var(--ink-inverse); padding:6px 10px; font-weight:800;
+  text-transform:uppercase; margin-bottom:10px; font-size:12px
+}
+.th-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:12px }
+.th-item{ background:#eee; border:1px solid #aaa; min-height:120px; display:flex; align-items:center; justify-content:center; font-weight:700 }
+.th-caption{ display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:8px; font-size:12px }
+.th-caption small{ display:block; opacity:.6; margin-top:2px }
+
+/* Right: scores & standings boxes */
+.sidebar-right .box{ background:#111; color:#eee; border:1px solid #000; min-height:220px; margin-bottom:16px; padding:10px }
+.sidebar-right .title{
+  background:var(--surface-4); color:var(--ink-inverse); padding:6px 10px; font-weight:800;
+  text-transform:uppercase; margin:-10px -10px 10px; font-size:14px
+}
+
+/* Footer */
+.footer{
+  height:40px; border-top:3px solid #333; background:var(--surface-2);
+  display:flex; align-items:center; justify-content:center; font-size:12px; color:#222; margin-top:12px
+}
+
+/* Basic responsiveness so it doesn’t explode on narrower windows */
+@media (max-width: 1100px){
+  .canvas{ grid-template-columns:1fr; }
+  .sidebar-right{ order:3 }
+  .main{ order:2 }
+}
+/* Leaders Bar v2 helpers */
+.scopeBar { margin: 0 0 8px; }
+.scopeTab { font-weight: 800; }
+
+/* ===== Leaders panels (Skaters/Defense/Goalies/Rookies) ===== */
+.leadersCard{
+  background:#fff; color:#111; border:1px solid #cfd6e4; border-radius:10px;
+  padding:10px; margin:0 0 12px; box-shadow:0 1px 0 #e6ecf6;
+}
+.leadersHeader{
+  display:flex; align-items:center; justify-content:space-between; margin-bottom:6px;
+}
+.leadersTitle{
+  font-weight:900; font-size:18px; letter-spacing:.2px;
+}
+.leadersMore{
+  font-size:12px; text-decoration:none; color:#1a4bff;
+}
+.leadersMore:hover{ text-decoration:underline; }
+
+/* Tabs with underline for active */
+.leadersTabs{ display:flex; gap:16px; border-bottom:1px solid #e6ecf6; margin:6px 0 8px; }
+.leadersTab{
+  background:none; border:0; padding:8px 0; cursor:pointer; font-weight:700; color:#333;
+  position:relative;
+}
+.leadersTab.active{ color:#000; }
+.leadersTab.active::after{
+  content:''; position:absolute; left:0; right:0; bottom:-1px; height:3px; border-radius:3px; background:#111;
+}
+
+/* List rows styled like rounded chips */
+.leadersList{ display:grid; gap:6px; margin-top:8px; }
+.leadersItem{
+  display:grid; grid-template-columns:auto 1fr auto; align-items:center; gap:10px;
+  border:1px solid #e6ecf6; border-radius:12px; padding:8px 10px; background:#f9fbff;
+}
+.leadersItem.top{
+  background:#e8f0ff; border-color:#c8d8ff;
+}
+.leadersRank{ font-weight:800; color:#333; min-width:34px; text-align:left; }
+.leadersName{ font-weight:700; color:#0b1220; }
+.leadersName small{ display:block; font-weight:600; color:#6c7a93; margin-top:2px }
+.leadersValue{ font-weight:900; color:#0b1220; min-width:44px; text-align:right; }
+
+/* Dark site compatibility: let container inherit light style without breaking page */
+.leadersStack .leadersCard{ background:#fff; color:#111; }
+
+/* ===== Scores: date ribbon ===== */
+.scores-dates{ display:flex; align-items:center; gap:8px; margin:0 0 8px }
+.scores-dates .nav{ background:#0b1118; color:#eaf1ff; border:1px solid #233044; border-radius:8px; padding:.35rem .55rem; cursor:pointer }
+.dates-strip{ display:grid; grid-template-columns:repeat(5, 1fr); gap:8px; flex:1 }
+.date-pill{
+  width:100%; text-align:left; background:#0f151e; color:#dfe9ff; border:1px solid #233044; border-radius:12px; padding:8px;
+}
+.date-pill .d1{ font-weight:900 }
+.date-pill .d2{ font-size:11px; opacity:.8; margin-top:2px }
+.date-pill .d3{ margin-top:6px; font-size:12px; color:#9fb0cc }
+.date-pill.active{ outline:2px solid var(--brand); background:#0e203c; }
+
+/* ===== Scores: cards ===== */
+.game-card{
+  background:#fff; color:#0b1220; border:1px solid #cfd6e4; border-radius:12px;
+  padding:12px; margin-bottom:12px; position:relative;
+}
+.status-badge{
+  position:absolute; top:10px; left:10px;
+  font-size:11px; font-weight:800; padding:3px 6px; border-radius:6px;
+  background:#e8eef9; color:#1a2b55; border:1px solid #cbd6ec;
+}
+.game-card.status-live .status-badge{ background:#ffe8e8; color:#8a1010; border-color:#ffc9c9 }
+.game-card.status-final .status-badge{ background:#e8f5e9; color:#1b5e20; border-color:#c8e6c9 }
+
+.team{
+  display:grid; grid-template-columns:auto 1fr auto; align-items:center; gap:10px; padding:10px 6px;
+}
+.team + .team{ border-top:1px dashed #e6ecf6 }
+.logo-link{ display:block; width:36px; height:36px; border-radius:10px; overflow:hidden; }
+.logo{ display:block; width:36px; height:36px; object-fit:contain; }
+.logo.badge{ display:flex; align-items:center; justify-content:center; background:#e6ecf6; font-weight:900; border-radius:10px }
+.meta .name{ font-weight:900 }
+.meta .sog{ font-size:12px; color:#6c7a93; margin-top:2px }
+.big-score{ font-weight:900; font-size:26px; min-width:24px; text-align:right }
+
+.goals{
+  display:grid; grid-template-columns:auto 1fr auto; align-items:center; gap:8px;
+  margin-top:8px; padding:8px; border:1px solid #e6ecf6; border-radius:10px; background:#f9fbff;
+}
+.goal-nav{ cursor:pointer; user-select:none; padding:6px 8px; border:1px solid #d6e3fb; border-radius:8px; background:#eef4ff; font-weight:900 }
+.goal-empty{ color:#6c7a93; font-weight:700; }
+.goal-body{ display:flex; align-items:center; gap:10px }
+.headshot{ width:38px; height:38px; border-radius:999px; object-fit:cover; border:1px solid #cfd6e4 }
+.headshot.empty{ background:#e6ecf6 }
+.goal-title{ font-weight:900 }
+.goal-assists{ font-size:12px; color:#6c7a93; margin-top:1px }
+.goal-line{ font-size:12px; color:#6c7a93; margin-top:2px }
+.play-btn{ width:28px; height:28px; border-radius:999px; border:1px solid #d6e3fb; display:flex; align-items:center; justify-content:center; background:#eef4ff; font-size:12px; font-weight:900; color:#4663ff; }
+.play-btn::after{ content:'' } /* purely decorative; no action */
+
+.links{ display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:10px }
+.btn.ghost{
+  display:flex; align-items:center; justify-content:center; gap:6px; padding:.55rem .6rem;
+  border:1px solid #cfd6e4; border-radius:10px; background:#fff; color:#0b1220; text-decoration:none; font-weight:800;
+}
+.btn.ghost:hover{ background:#f3f6fc }
+

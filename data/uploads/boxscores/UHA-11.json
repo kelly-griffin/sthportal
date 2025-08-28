@@ -1,0 +1,19 @@
+{
+    "gwg": "Brayden Point",
+    "winningGoalie": "Andrei Vasilevskiy",
+    "firstStar": "",
+    "secondStar": "",
+    "thirdStar": "",
+    "gameNumber": 11,
+    "visitor": {
+        "name": "Ottawa Senators",
+        "score": 0,
+        "abbr": "OTT"
+    },
+    "home": {
+        "name": "Tampa Bay Lightning",
+        "score": 0,
+        "abbr": "TBL"
+    },
+    "date": ""
+}

@@ -1,0 +1,19 @@
+{
+    "gwg": "Pierre-Luc Dubois",
+    "winningGoalie": "Logan Thompson",
+    "firstStar": "",
+    "secondStar": "",
+    "thirdStar": "",
+    "gameNumber": 5,
+    "visitor": {
+        "name": "Boston Bruins",
+        "score": 0,
+        "abbr": "BOS"
+    },
+    "home": {
+        "name": "Washington Capitals",
+        "score": 0,
+        "abbr": "WSH"
+    },
+    "date": ""
+}

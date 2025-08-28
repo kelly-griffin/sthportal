@@ -1,0 +1,91 @@
+/* Shared page layout tweaks */
+.game-canvas { display:grid; grid-template-columns:1fr 320px; gap:16px; padding:16px; }
+.game-main   { display:grid; gap:12px; }
+
+/* Cards */
+.card{
+  background:#fff; color:#0b1220; border:1px solid #cfd6e4; border-radius:12px;
+  padding:12px; box-shadow:0 1px 0 #e6ecf6;
+}
+.card-title{
+  font-weight:900; font-size:18px; margin:0 0 8px; letter-spacing:.2px;
+}
+
+/* Header */
+.game-header{
+  display:grid; grid-template-columns:1fr auto 1fr; align-items:center; gap:10px;
+  background:#0f151e; color:#eaf1ff; border:1px solid #233044; border-radius:12px; padding:10px;
+}
+.game-header .side{ display:flex; align-items:center; gap:8px; }
+.game-header .side .name{ font-weight:900; font-size:16px; }
+.team-logo{ width:36px; height:36px; border-radius:10px; object-fit:contain; background:#0b1118; border:1px solid #233044; display:block }
+.team-logo.badge{ display:flex; align-items:center; justify-content:center; color:#cfe1ff; font-weight:900; }
+
+.scoreline{ text-align:center; }
+.scoreline .status{ font-size:12px; opacity:.85; }
+.scoreline .score{ font-weight:900; font-size:24px; margin:2px 0; }
+.scoreline .date{ font-size:12px; opacity:.8; }
+
+.badge{
+  display:inline-block; background:#e8eef9; color:#1a2b55; border:1px solid #cbd6ec;
+  padding:0 6px; border-radius:6px; font-weight:800; font-size:12px;
+}
+
+/* Grid two-up */
+.grid-2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+
+/* Shots by period table */
+.shots-grid{ display:grid; grid-template-columns:80px 1fr 1fr; gap:6px; }
+.shots-grid .head{ font-weight:900; color:#1a2b55; }
+.shots-grid .row{ display:contents; }
+.shots-grid .cell{ background:#f9fbff; border:1px solid #e6ecf6; padding:6px 8px; border-radius:8px; }
+.shots-grid .cell.period{ font-weight:800; }
+
+/* PP mini table */
+.pp-grid{ display:grid; gap:6px; }
+.pp-row{
+  display:flex; align-items:center; justify-content:space-between;
+  background:#f9fbff; border:1px solid #e6ecf6; padding:6px 8px; border-radius:8px;
+}
+
+/* Plays */
+.plays{ display:grid; gap:6px; }
+.play{
+  display:grid; grid-template-columns:100px 1fr; gap:10px;
+  background:#fff; border:1px solid #e6ecf6; border-radius:10px; padding:8px 10px;
+}
+.play .when{ font-weight:800; color:#6c7a93; }
+.muted{ color:#6c7a93; }
+
+/* Goalies + Stars */
+.goalies{ display:grid; gap:6px; }
+.g-row{
+  display:grid; grid-template-columns:60px 1fr 70px 70px 80px; gap:8px;
+  background:#f9fbff; border:1px solid #e6ecf6; border-radius:8px; padding:6px 8px;
+}
+.stars{ display:grid; grid-template-columns:repeat(3,1fr); gap:8px; }
+.star{
+  background:#f9fbff; border:1px solid #e6ecf6; border-radius:8px; padding:8px;
+  display:grid; gap:4px; text-align:center;
+}
+.star .star-rank{ font-weight:900; color:#1a2b55; }
+
+/* Log page */
+.log-plays{ display:grid; gap:4px; }
+.log-period{ font-weight:900; margin-top:6px; color:#1a2b55; }
+.log-row{
+  display:grid; grid-template-columns:80px 60px 1fr; gap:8px;
+  background:#fff; border:1px solid #e6ecf6; border-radius:8px; padding:6px 8px;
+}
+
+/* Sidebar links */
+.side-links{ display:flex; flex-wrap:wrap; gap:6px; }
+.side-links .btn.ghost{ font-size:12px; padding:.35rem .5rem; }
+.game-empty{ text-align:center; padding:24px; }
+.game-empty .big{ font-weight:900; margin-bottom:8px; }
+
+/* Responsive */
+@media (max-width: 1100px){
+  .grid-2{ grid-template-columns:1fr; }
+  .game-canvas{ grid-template-columns:1fr; }
+}

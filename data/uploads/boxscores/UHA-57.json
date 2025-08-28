@@ -1,0 +1,19 @@
+{
+    "gwg": "",
+    "winningGoalie": "Brady Tkachuk",
+    "firstStar": "",
+    "secondStar": "",
+    "thirdStar": "",
+    "gameNumber": 57,
+    "visitor": {
+        "name": "Buffalo Sabres",
+        "score": 0,
+        "abbr": "BUF"
+    },
+    "home": {
+        "name": "Ottawa Senators",
+        "score": 0,
+        "abbr": "OTT"
+    },
+    "date": ""
+}

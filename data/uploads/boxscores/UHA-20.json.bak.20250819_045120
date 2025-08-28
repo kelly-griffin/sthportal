@@ -1,0 +1,19 @@
+{
+    "gwg": "",
+    "winningGoalie": "Timothy Liljegren",
+    "firstStar": "",
+    "secondStar": "",
+    "thirdStar": "",
+    "gameNumber": 20,
+    "visitor": {
+        "name": "San Jose Sharks",
+        "score": 0,
+        "abbr": "SJS"
+    },
+    "home": {
+        "name": "Vegas Golden Knights",
+        "score": 0,
+        "abbr": "VGK"
+    },
+    "date": ""
+}

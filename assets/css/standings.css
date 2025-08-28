@@ -1,0 +1,58 @@
+/* ========= UHA Portal — STANDINGS ========= */
+
+.page {
+  display: flex;
+  gap: 16px;
+  padding: 16px;
+}
+
+/* Keep schedule page width consistent with home page */
+.standings-container {
+  max-width: 1200px;     /* match .portal-body in home.css */
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* Style the card wrapper like home’s boxes */
+.standings-card {
+  background: #555;
+  border-radius: 8px;
+  padding: 1.25rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 22px;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+.standings-tabs { display:flex; gap:.5rem; margin: .25rem 0 1rem 0; }
+.standings-tabs .pill { background:#23314e; color:#fff; padding:.35rem .6rem; border-radius:999px; text-decoration:none; font-weight:600; }
+.standings-tabs .pill.active { background:#3d5aa6; }
+.conf-h { margin:1rem 0 .5rem; font-size:18px; font-weight:800; }
+
+.two-cols { display:grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap:12px; }
+
+.uha-table { width:100%; border-collapse:collapse; background:#1e2636; color:#edf2ff; border-radius:8px; overflow:hidden; }
+.uha-table thead th { background:#2a334a; font-weight:800; font-size:13px; padding:.5rem .6rem; text-align:center; }
+.uha-table td { padding:.45rem .6rem; border-top:1px solid rgba(255,255,255,0.06); text-align:center; }
+.uha-table td.team { text-align:left; display:flex; align-items:center; gap:.5rem; }
+.uha-table td.team .crest { width:22px; height:22px; filter: drop-shadow(0 1px 1px rgba(0,0,0,.3)); }
+.uha-table td.pts strong { color:#fff; }
+.uha-table tr.cut-line td { border-top:2px solid #5d6b85; }
+
+@media (max-width: 900px) {
+  .two-cols { grid-template-columns: 1fr; }
+  .uha-table thead th.pct, .uha-table thead th.rw, .uha-table thead th.row, .uha-table thead th.diff,
+  .uha-table td.pct, .uha-table td.rw, .uha-table td.row, .uha-table td.diff { display:none; }
+}
+
+
+/* compact standings spacing */
+.stack-cols{display:block}
+.uha-table th,.uha-table td{padding:4px 6px}
+.uha-table .team .t{font-weight:700}
+.stand-table .table-title{margin-bottom:6px}
+.uha-table tr.cut-line td{border-top:3px solid #888}

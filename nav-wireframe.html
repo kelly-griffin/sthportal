@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>UHA Portal – Nav Wireframe</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root{
+    --bg:#0b0f14; --surface:#121821; --text:#eaf1ff; --muted:#9fb0cc; --line:#233044;
+    --link:#79b7ff; --accent:#46e0a0;
+    /* context colors (overridden by body classes below) */
+    --brand:#1e88e5;      /* primary */
+    --brand-2:#0d47a1;    /* dark */
+    --brand-3:#64b5f6;    /* light */
+  }
+  /* Context themes */
+  body.league-uha{ --brand:#1e88e5; --brand-2:#0d47a1; --brand-3:#64b5f6; }
+  body.league-echl{ --brand:#e53935; --brand-2:#8e0000; --brand-3:#ef9a9a; }
+  body.league-intl{ --brand:#43a047; --brand-2:#1b5e20; --brand-3:#a5d6a7; }
+  body.league-juniors{ --brand:#ff8f00; --brand-2:#e65100; --brand-3:#ffd180; }
+  body.team-view{ --brand:#7e57c2; --brand-2:#4527a0; --brand-3:#b39ddb; } /* example team colors */
+
+  *{box-sizing:border-box}
+  body{margin:0;background:linear-gradient(180deg,var(--bg),#0a0e13 120%); color:var(--text); font:14.5px/1.45 system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+  a{color:var(--link); text-decoration:none}
+  a:hover{opacity:.9}
+  .container{max-width:1200px;margin:0 auto;padding:0 16px}
+
+  /* Demo bar to switch contexts */
+  .demo-bar{background:#0f141b;border-bottom:1px solid var(--line)}
+  .demo-bar .container{display:flex;gap:.5rem;align-items:center;justify-content:space-between;padding:.5rem 16px}
+  .chips{display:flex;gap:.5rem;flex-wrap:wrap}
+  .chip{padding:.3rem .6rem;border:1px solid var(--line);border-radius:999px;background:#0b1118;color:var(--muted);cursor:pointer}
+  .chip.active{background:var(--brand); color:#fff; border-color:transparent}
+
+  /* Header */
+  .site-header{background:linear-gradient(180deg,var(--brand-2),var(--brand)); border-bottom:1px solid rgba(255,255,255,.08)}
+  .site-top{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
+  .brand{display:flex;align-items:center;gap:.6rem}
+  .brand .logo{width:36px;height:36px;border-radius:10px;background:radial-gradient(circle at 30% 30%, #fff6, #0000 60%), var(--brand-3); border:1px solid #ffffff20}
+  .brand .title{font-weight:700;letter-spacing:.2px}
+  .profile{display:flex;align-items:center;gap:.6rem}
+  .profile .btn{padding:.4rem .65rem;border:1px solid #ffffff2a;border-radius:8px;color:#fff}
+  .profile .btn:hover{background:#ffffff14}
+
+  /* Main nav */
+  .main-nav{display:flex;gap:.25rem;flex-wrap:wrap;align-items:center}
+  .nav-wrap{background:#0e141d;border:1px solid var(--line); border-radius:12px; padding:6px; box-shadow:0 6px 18px #0007}
+  .nav-item{position:relative}
+  .nav-btn{color:#eaf1ff;padding:.5rem .7rem;border-radius:8px;display:inline-flex;gap:.35rem;align-items:center}
+  .nav-btn:hover{background:#ffffff0d}
+  .nav-item:hover .dropdown{display:block}
+  .dropdown{display:none;position:absolute;top:100%;left:0;background:#0f151e;border:1px solid var(--line);border-radius:10px;min-width:240px;box-shadow:0 12px 30px #000a;z-index:10}
+  .dropdown a{display:block;padding:.55rem .7rem;color:#dfe9ff}
+  .dropdown a:hover{background:#ffffff0a}
+
+  /* Context header strip (auto-swaps per league/team) */
+  .context-header{background:linear-gradient(180deg, color-mix(in oklab, var(--brand) 92%, #000 8%), color-mix(in oklab, var(--brand-2) 85%, #000 15%));
+    border-top:1px solid #ffffff18; border-bottom:1px solid #000; box-shadow:inset 0 -1px 0 #ffffff0a}
+  .context-inner{display:flex;align-items:center;gap:12px;padding:12px 0}
+  .context-logo{width:44px;height:44px;border-radius:12px;background:var(--brand-3);border:2px solid #ffffff2a}
+  .context-titles .kicker{font-size:12px;color:#d7e6ffb2;letter-spacing:.2px;text-transform:uppercase}
+  .context-titles .h1{font-size:18px;font-weight:800;letter-spacing:.2px}
+  .subnav{display:flex;gap:.35rem;flex-wrap:wrap;margin-top:8px}
+  .pill{padding:.35rem .65rem;border:1px solid var(--line);border-radius:999px;background:#0b1118;color:#cfe1ff}
+  .pill.active{background:var(--brand); border-color:transparent; color:#fff}
+
+  /* Options + Admin panels (stubs) */
+  .panel{margin:16px 0;padding:12px;border:1px solid var(--line);border-radius:12px;background:#0e141d}
+  .panel h3{margin:.2rem 0 8px;font-size:16px}
+  .grid{display:grid;gap:10px}
+  .grid.cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+  label{display:block;color:#c9d7f0;font-size:13px}
+  input[type="file"], select, input[type="text"], .sw{width:100%; background:#0b1118;color:#eaf1ff;border:1px solid var(--line);border-radius:8px;padding:.45rem .55rem}
+  .row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+  .sw[disabled]{opacity:.5}
+
+  .footer{color:#9bb0d1; padding:30px 0 60px; text-align:center}
+</style>
+</head>
+<body class="league-uha">
+  <!-- demo bar to switch contexts and toggle theme lock -->
+  <div class="demo-bar">
+    <div class="container">
+      <div class="chips" id="ctxChips">
+        <span class="chip active" data-body="league-uha">UHA</span>
+        <span class="chip" data-body="league-echl">ECHL</span>
+        <span class="chip" data-body="league-intl">International</span>
+        <span class="chip" data-body="league-juniors">Juniors</span>
+        <span class="chip" data-body="team-view">Team View</span>
+      </div>
+      <div class="row">
+        <label class="row" style="gap:.4rem;">
+          <input type="checkbox" id="lockTheme">
+          <span>Lock Theme (Commissioner)</span>
+        </label>
+        <select id="userTheme" title="User Theme">
+          <option value="auto">User Theme: Auto</option>
+          <option value="dark">Dark</option>
+          <option value="light">Light</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container site-top">
+      <div class="brand">
+        <div class="logo" title="Portal Logo"></div>
+        <div class="title">UHA Hockey Portal</div>
+      </div>
+      <nav class="main-nav nav-wrap" aria-label="Primary">
+        <div class="nav-item"><a class="nav-btn" href="#">Home</a></div>
+
+        <div class="nav-item">
+          <a class="nav-btn" href="#">Teams</a>
+          <div class="dropdown">
+            <a href="#">My Team Dashboard</a>
+            <a href="#">All Teams</a>
+            <a href="#">Depth Charts</a>
+            <a href="#">Team Stats</a>
+            <a href="#">Roster Moves</a>
+            <a href="#">Lines Upload</a>
+            <a href="#">Team History &amp; Records</a>
+          </div>
+        </div>
+
+        <div class="nav-item">
+          <a class="nav-btn" href="#">Leagues ▾</a>
+          <div class="dropdown">
+            <a href="#">UHA (Main)</a>
+            <a href="#">Farm League (AHL)</a>
+            <a href="#">ECHL (Optional)</a>
+            <a href="#">International (Optional)</a>
+            <a href="#">Junior Leagues (Optional)</a>
+          </div>
+        </div>
+
+        <div class="nav-item">
+          <a class="nav-btn" href="#">Players</a>
+          <div class="dropdown">
+            <a href="#">All Players</a>
+            <a href="#">Free Agents</a>
+            <a href="#">Waiver Wire</a>
+            <a href="#">Prospect List</a>
+            <a href="#">Draft History</a>
+            <a href="#">Compare Players</a>
+          </div>
+        </div>
+
+        <div class="nav-item">
+          <a class="nav-btn" href="#">Transactions</a>
+          <div class="dropdown">
+            <a href="#">Trade Center</a>
+            <a href="#">Signing Center</a>
+            <a href="#">Waivers</a>
+            <a href="#">Buyouts</a>
+            <a href="#">All Transactions Log</a>
+          </div>
+        </div>
+
+        <div class="nav-item">
+          <a class="nav-btn" href="#">Stats ▾</a>
+          <div class="dropdown">
+            <a href="#">League Leaders</a>
+            <a href="#">Team Leaders</a>
+            <a href="#">Milestones</a>
+            <a href="#">Special Teams</a>
+            <a href="#">Attendance &amp; Financials</a>
+            <a href="#">Salary Cap Tracker</a>
+          </div>
+        </div>
+
+        <div class="nav-item">
+          <a class="nav-btn" href="#">Front Office</a>
+          <div class="dropdown">
+            <a href="#">Roster Management</a>
+            <a href="#">Lines &amp; Strategy</a>
+            <a href="#">Personnel Changes</a>
+            <a href="#">Financial Management</a>
+            <a href="#">Scouting Assignments</a>
+            <a href="#">Cap Management Tools</a>
+          </div>
+        </div>
+
+        <div class="nav-item">
+          <a class="nav-btn" href="#">Draft</a>
+          <div class="dropdown">
+            <a href="#">Draft Room</a>
+            <a href="#">Prospect Rankings</a>
+            <a href="#">Team Picks</a>
+            <a href="#">Past Drafts</a>
+          </div>
+        </div>
+
+        <div class="nav-item">
+          <a class="nav-btn" href="#">Tournaments</a>
+          <div class="dropdown">
+            <a href="#">World Cup of Hockey</a>
+            <a href="#">Olympics</a>
+            <a href="#">World Juniors</a>
+            <a href="#">IIHF Worlds</a>
+          </div>
+        </div>
+
+        <div class="nav-item">
+          <a class="nav-btn" href="#">Media</a>
+          <div class="dropdown">
+            <a href="#">News Hub</a>
+            <a href="#">Press Releases</a>
+            <a href="#">Weekly Recaps</a>
+            <a href="#">Player of the Week</a>
+            <a href="#">Social Hub</a>
+          </div>
+        </div>
+
+        <div class="nav-item">
+          <a class="nav-btn" href="#">Options</a>
+          <div class="dropdown">
+            <a href="#">Download Latest League File</a>
+            <a href="#">Quick GM Settings</a>
+            <a href="#">Change Theme</a>
+            <a href="#"><strong>Full Options Page</strong></a>
+          </div>
+        </div>
+
+        <div class="nav-item">
+          <a class="nav-btn" href="#">Admin</a>
+          <div class="dropdown">
+            <a href="#">League Settings &amp; Toggles</a>
+            <a href="#"><strong>Branding &amp; Assets</strong></a>
+            <a href="#"><strong>Theme Manager</strong></a>
+            <a href="#"><strong>Header/Banner Manager</strong></a>
+            <a href="#">GM Management</a>
+            <a href="#">Trade Approvals</a>
+            <a href="#">Scheduler</a>
+          </div>
+        </div>
+      </nav>
+      <div class="profile">
+        <a class="btn" href="#">Login</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Context-sensitive header (league/team) -->
+  <div class="context-header">
+    <div class="container context-inner">
+      <div class="context-logo" aria-hidden="true"></div>
+      <div class="context-titles">
+        <div class="kicker" id="ctxKicker">UHA League</div>
+        <div class="h1" id="ctxTitle">Standings &amp; Leaders</div>
+        <div class="subnav" id="ctxSubnav">
+          <a class="pill active" href="#">Standings</a>
+          <a class="pill" href="#">Schedule</a>
+          <a class="pill" href="#">Leaders</a>
+          <a class="pill" href="#">Transactions</a>
+          <a class="pill" href="#">Injuries</a>
+          <a class="pill" href="#">Playoffs</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main class="container">
+    <!-- Admin customization stubs -->
+    <section class="panel">
+      <h3>Admin: Branding &amp; Assets (Wireframe)</h3>
+      <div class="grid cols-2">
+        <div>
+          <label>Portal Logo</label>
+          <input type="file" />
+        </div>
+        <div>
+          <label>League Logo (Current Context)</label>
+          <input type="file" />
+        </div>
+        <div>
+          <label>Team Logo (If Team View)</label>
+          <input type="file" />
+        </div>
+        <div>
+          <label>Header Banner</label>
+          <input type="file" />
+        </div>
+        <div>
+          <label>Primary Color (hex)</label>
+          <input type="text" placeholder="#1e88e5" />
+        </div>
+        <div>
+          <label>Secondary Color (hex)</label>
+          <input type="text" placeholder="#0d47a1" />
+        </div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h3>Admin: Theme Manager (Wireframe)</h3>
+      <div class="grid cols-2">
+        <div>
+          <label>Default League Theme</label>
+          <select>
+            <option>UHA Blue</option>
+            <option>ECHL Red</option>
+            <option>International Green</option>
+            <option>Juniors Orange</option>
+          </select>
+        </div>
+        <div>
+          <label>Allow GMs to Change Theme</label>
+          <select id="allowGmTheme">
+            <option value="1">Yes</option>
+            <option value="0" selected>No</option>
+          </select>
+        </div>
+        <div>
+          <label>Seasonal Styles</label>
+          <select>
+            <option>Off</option>
+            <option>Winter Classic</option>
+            <option>Holiday</option>
+          </select>
+        </div>
+        <div>
+          <label>Apply different theme per league</label>
+          <select>
+            <option>Yes</option>
+            <option selected>No</option>
+          </select>
+        </div>
+      </div>
+      <div style="margin-top:8px;color:#9fb0cc">Note: When “Lock Theme” is enabled by the commish, the user theme picker is disabled.</div>
+    </section>
+
+    <section class="panel">
+      <h3>Options (Quick)</h3>
+      <div class="row">
+        <a class="pill" href="#">Download Latest League File</a>
+        <a class="pill" href="#">Quick GM Settings</a>
+        <a class="pill" href="#">Change Theme</a>
+        <a class="pill" href="#">Full Options Page</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    © UHA Hockey Portal — Wireframe mockup for navigation, context headers, and theme locking.
+  </footer>
+
+<script>
+  // demo: context switching & theme lock behavior
+  const body = document.body;
+  const chips = document.getElementById('ctxChips');
+  const lockTheme = document.getElementById('lockTheme');
+  const userTheme = document.getElementById('userTheme');
+  const allowGmTheme = document.getElementById('allowGmTheme');
+  const ctxKicker = document.getElementById('ctxKicker');
+  const ctxTitle  = document.getElementById('ctxTitle');
+  const ctxSubnav = document.getElementById('ctxSubnav');
+
+  const contexts = {
+    'league-uha':    { kicker:'UHA League', title:'Standings & Leaders',
+      sub:['Standings','Schedule','Leaders','Transactions','Injuries','Playoffs'] },
+    'league-echl':   { kicker:'ECHL League', title:'ECHL Central',
+      sub:['Standings','Schedule','Leaders','Transactions','Injuries','Playoffs'] },
+    'league-intl':   { kicker:'International', title:'Global Leagues',
+      sub:['Standings','Schedule','Leaders','Worlds','Olympics','World Cup'] },
+    'league-juniors':{ kicker:'Junior Leagues', title:'Prospects & Draft Board',
+      sub:['Standings','Schedule','Leaders','Draft Eligibles','CHL','NCAA'] },
+    'team-view':     { kicker:'Team: Halifax Moose (example)', title:'Team Hub',
+      sub:['Roster','Lines','Stats','Schedule','History','Transactions'] },
+  };
+
+  function setContext(key){
+    body.className = key;
+    // update active chip
+    [...chips.querySelectorAll('.chip')].forEach(c=>{
+      c.classList.toggle('active', c.dataset.body === key);
+    });
+    // update header texts
+    ctxKicker.textContent = contexts[key].kicker;
+    ctxTitle.textContent = contexts[key].title;
+    // rebuild subnav pills
+    ctxSubnav.innerHTML = '';
+    contexts[key].sub.forEach((label,i)=>{
+      const a = document.createElement('a');
+      a.href = '#';
+      a.className = 'pill' + (i===0?' active':'');
+      a.textContent = label;
+      ctxSubnav.appendChild(a);
+    });
+  }
+
+  chips.addEventListener('click', (e)=>{
+    const el = e.target.closest('.chip');
+    if(!el) return;
+    setContext(el.dataset.body);
+  });
+
+  function applyThemeLockUI(){
+    const locked = lockTheme.checked || allowGmTheme.value === '0';
+    userTheme.disabled = locked;
+  }
+
+  lockTheme.addEventListener('change', applyThemeLockUI);
+  allowGmTheme.addEventListener('change', applyThemeLockUI);
+
+  // init
+  setContext('league-uha');
+  applyThemeLockUI();
+</script>
+</body>
+</html>

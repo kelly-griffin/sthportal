@@ -1,0 +1,1430 @@
+﻿Number,Team,Transaction
+1,1,[2025-08-15 9:04:10 AM] - Team Name Change : Team 1 changed name to Anaheim Ducks
+2,1,[2025-08-15 9:05:45 AM] - Anaheim Ducks hired Joel Quenneville for $1 for 1 year(s).
+3,2,[2025-08-15 9:07:16 AM] - Team Name Change : Team 2 changed name to Boston Bruins
+4,2,[2025-08-15 9:08:36 AM] - Boston Bruins hired Marco Sturm for $1 for 1 year(s).
+5,2,[2025-08-15 9:08:59 AM] - Team Name Change : Farm Team 2 changed name to Providence Bruins
+6,3,[2025-08-15 9:10:55 AM] - Team Name Change : Team 3 changed name to Buffalo Sabres
+7,1,[2025-08-15 10:32:51 AM] - Team Name Change : Farm Team 1 changed name to San Diego Gulls
+8,1,[2025-08-15 10:40:05 AM] - San Diego Gulls hired Matt McIlvane for $1 for 1 year(s).
+9,2,[2025-08-15 10:40:47 AM] - Team Name Change : Providence Bruins changed name to Providence Bruins
+10,3,[2025-08-15 10:42:14 AM] - Team Name Change : Farm Team 3 changed name to Rochester Americans
+11,3,[2025-08-15 10:43:01 AM] - Rochester Americans hired Michael Leone for $1 for 1 year(s).
+12,3,[2025-08-15 10:44:03 AM] - Buffalo Sabres hired Lindy Ruff for $1 for 1 year(s).
+13,4,[2025-08-15 10:45:19 AM] - Team Name Change : Team 4 changed name to Calgary Flames
+14,4,[2025-08-15 10:46:07 AM] - Calgary Flames hired Ryan Huska for $1 for 1 year(s).
+15,4,[2025-08-15 10:46:20 AM] - Team Name Change : Farm Team 4 changed name to Calgary Wranglers
+16,4,[2025-08-15 10:46:26 AM] - Team Name Change : Calgary Wranglers changed name to Calgary Wranglers
+17,4,[2025-08-15 10:47:26 AM] - Calgary Wranglers hired Trent Cull for $1 for 1 year(s).
+18,5,[2025-08-15 10:48:42 AM] - Team Name Change : Team 5 changed name to Carolina Hurricanes
+19,5,[2025-08-15 10:49:19 AM] - Carolina Hurricanes hired Rod Brind'Amour for $1 for 1 year(s).
+20,5,[2025-08-15 10:49:36 AM] - Team Name Change : Farm Team 5 changed name to Charlotte Checkers
+21,5,[2025-08-15 10:50:12 AM] - Charlotte Checkers hired Geordie Kinnear for $1 for 1 year(s).
+22,6,[2025-08-15 10:51:50 AM] - Team Name Change : Team 6 changed name to Chicago Blackhawks
+23,6,[2025-08-15 10:52:26 AM] - Chicago Blackhawks hired Jeff Blashill for $1 for 1 year(s).
+24,6,[2025-08-15 10:52:38 AM] - Team Name Change : Farm Team 6 changed name to Rockford IceHogs
+25,7,[2025-08-15 10:55:59 AM] - Team Name Change : Team 7 changed name to Colorado Avalanche
+26,7,[2025-08-15 10:56:41 AM] - Colorado Avalanche hired Jared Bednar for $1 for 1 year(s).
+27,7,[2025-08-15 10:57:44 AM] - Team Name Change : Farm Team 7 changed name to Colorado Eagles
+28,7,[2025-08-15 10:58:43 AM] - Colorado Eagles hired Aaron Schneekloth for $1 for 1 year(s).
+29,8,[2025-08-15 10:59:49 AM] - Team Name Change : Team 8 changed name to Columbus Blue Jackets
+30,8,[2025-08-15 11:00:20 AM] - Columbus Blue Jackets hired Dean Evason for $1 for 1 year(s).
+31,8,[2025-08-15 11:00:43 AM] - Team Name Change : Farm Team 8 changed name to Cleveland Monsters
+32,8,[2025-08-15 11:01:27 AM] - Cleveland Monsters hired Trent Vogelhuber for $1 for 1 year(s).
+33,9,[2025-08-15 11:04:47 AM] - Team Name Change : Team 9 changed name to Dallas Stars
+34,9,[2025-08-15 11:07:11 AM] - Dallas Stars hired Glen Gulutzan for $1 for 1 year(s).
+35,9,[2025-08-15 11:10:56 AM] - Team Name Change : Farm Team 9 changed name to Texas Stars
+36,9,[2025-08-15 11:11:51 AM] - Texas Stars hired Neil Graham for $1 for 1 year(s).
+37,10,[2025-08-15 11:41:56 AM] - Team Name Change : Team 10 changed name to Detroit Red Wings
+38,10,[2025-08-15 11:42:21 AM] - Detroit Red Wings hired Todd McLellan for $1 for 1 year(s).
+39,10,[2025-08-15 11:42:36 AM] - Team Name Change : Farm Team 10 changed name to Grand Rapids Griffins
+40,10,[2025-08-15 11:42:43 AM] - Team Name Change : Grand Rapids Griffins changed name to Grand Rapids Griffins
+41,10,[2025-08-15 11:43:11 AM] - Grand Rapids Griffins hired Dan Watson for $1 for 1 year(s).
+42,11,[2025-08-15 11:43:36 AM] - Team Name Change : Team 11 changed name to Edmonton Oilers
+43,11,[2025-08-15 11:44:00 AM] - Edmonton Oilers hired Kris Knoblauch for $1 for 1 year(s).
+44,11,[2025-08-15 11:44:09 AM] - Team Name Change : Farm Team 11 changed name to Bakersfield Condors
+45,11,[2025-08-15 11:44:49 AM] - Bakersfield Condors hired Colin Chaulk for $1 for 1 year(s).
+46,12,[2025-08-15 11:45:30 AM] - Team Name Change : Team 12 changed name to Florida Panthers
+47,12,[2025-08-15 11:46:02 AM] - Florida Panthers hired Paul Maurice for $1 for 1 year(s).
+48,12,[2025-08-15 11:46:22 AM] - Team Name Change : Farm Team 12 changed name to Charlotte Checkers
+49,12,[2025-08-15 11:46:39 AM] - Team Name Change : Charlotte Checkers changed name to Charlotte Checkers 2
+50,13,[2025-08-15 11:48:31 AM] - Team Name Change : Team 13 changed name to Los Angeles Kings
+51,13,[2025-08-15 11:48:57 AM] - Los Angeles Kings hired Jim Hiller for $1 for 1 year(s).
+52,13,[2025-08-15 11:49:08 AM] - Team Name Change : Farm Team 13 changed name to Ontario Reign
+53,14,[2025-08-15 11:50:58 AM] - Team Name Change : Team 14 changed name to Minnesota Wild
+54,14,[2025-08-15 11:51:42 AM] - Minnesota Wild hired John Hynes for $1 for 1 year(s).
+55,14,[2025-08-15 11:51:50 AM] - Team Name Change : Farm Team 14 changed name to Iowa Wild
+56,14,[2025-08-15 11:52:25 AM] - Iowa Wild hired Greg Cronin for $1 for 1 year(s).
+57,15,[2025-08-15 11:53:45 AM] - Team Name Change : Team 15 changed name to Montreal Canadiens
+58,15,[2025-08-15 11:54:16 AM] - Montreal Canadiens hired Martin St. Louis for $1 for 1 year(s).
+59,15,[2025-08-15 11:54:27 AM] - Team Name Change : Farm Team 15 changed name to Laval Rocket
+60,15,[2025-08-15 11:55:03 AM] - Laval Rocket hired Pascal Vincent for $1 for 1 year(s).
+61,16,[2025-08-15 11:55:44 AM] - Team Name Change : Team 16 changed name to Nashville Predators
+62,16,[2025-08-15 11:56:12 AM] - Nashville Predators hired Andrew Brunette for $1 for 1 year(s).
+63,16,[2025-08-15 11:56:26 AM] - Team Name Change : Farm Team 16 changed name to Milwaukee Admirals
+64,16,[2025-08-15 11:56:34 AM] - Team Name Change : Milwaukee Admirals changed name to Milwaukee Admirals
+65,16,[2025-08-15 11:56:59 AM] - Milwaukee Admirals hired Karl Taylor for $1 for 1 year(s).
+66,17,[2025-08-15 11:57:43 AM] - Team Name Change : Team 17 changed name to New Jersey Devils
+67,17,[2025-08-15 11:58:13 AM] - New Jersey Devils hired Sheldon Keefe for $1 for 1 year(s).
+68,17,[2025-08-15 11:58:24 AM] - Team Name Change : Farm Team 17 changed name to Utica Comets
+69,17,[2025-08-15 11:59:00 AM] - Utica Comets hired Ryan Parent for $1 for 1 year(s).
+70,18,[2025-08-15 12:00:18 PM] - Team Name Change : Team 18 changed name to New York Islanders
+71,18,[2025-08-15 12:00:51 PM] - New York Islanders hired Patrick Roy for $1 for 1 year(s).
+72,18,[2025-08-15 12:01:08 PM] - Team Name Change : Farm Team 18 changed name to Bridgeport Islanders
+73,18,[2025-08-15 12:01:17 PM] - Team Name Change : Bridgeport Islanders changed name to Bridgeport Islanders
+74,18,[2025-08-15 12:01:39 PM] - Bridgeport Islanders hired Rocky Thompson for $1 for 1 year(s).
+75,19,[2025-08-15 12:01:59 PM] - Team Name Change : Team 19 changed name to New York Rangers
+76,19,[2025-08-15 12:02:20 PM] - Team Name Change : Farm Team 19 changed name to Farm Team 19
+77,19,[2025-08-15 12:02:33 PM] - New York Rangers hired Mike Sullivan for $1 for 1 year(s).
+78,19,[2025-08-15 12:02:45 PM] - Team Name Change : Farm Team 19 changed name to Hartford Wolf Pack
+79,19,[2025-08-15 12:03:21 PM] - Hartford Wolf Pack hired Grant Potulny for $1 for 1 year(s).
+80,20,[2025-08-15 12:04:16 PM] - Team Name Change : Team 20 changed name to Ottawa Senators
+81,20,[2025-08-15 12:05:11 PM] - Team Name Change : Farm Team 20 changed name to Belleville Senators
+82,20,[2025-08-15 12:05:20 PM] - Ottawa Senators hired Travis Green for $1 for 1 year(s).
+83,20,[2025-08-15 12:05:46 PM] - Team Name Change : Belleville Senators changed name to Belleville Senators
+84,20,[2025-08-15 12:05:58 PM] - Belleville Senators hired David Bell for $1 for 1 year(s).
+85,21,[2025-08-15 12:06:35 PM] - Team Name Change : Team 21 changed name to Philadelphia Flyers
+86,21,[2025-08-15 12:07:15 PM] - Philadelphia Flyers hired Rick Tocchet for $1 for 1 year(s).
+87,21,[2025-08-15 12:07:30 PM] - Team Name Change : Farm Team 21 changed name to Lehigh Valley Phantoms
+88,21,[2025-08-15 12:07:56 PM] - Team Name Change : Lehigh Valley Phantoms changed name to Lehigh Valley Phantoms
+89,21,[2025-08-15 12:08:40 PM] - Lehigh Valley Phantoms hired Ian Laperriere for $1 for 1 year(s).
+90,22,[2025-08-15 12:09:53 PM] - Team Name Change : Team 22 changed name to Pittsburgh Penguins
+91,22,[2025-08-15 12:10:29 PM] - Pittsburgh Penguins hired Dan Muse for $1 for 1 year(s).
+92,22,[2025-08-15 12:11:10 PM] - Team Name Change : Farm Team 22 changed name to Wilkes-Barre/Scranton Penguins
+93,22,[2025-08-15 12:12:22 PM] - Wilkes-Barre/Scranton Penguins hired Kirk MacDonald for $1 for 1 year(s).
+94,23,[2025-08-15 12:12:45 PM] - Team Name Change : Team 23 changed name to San Jose Sharks
+95,23,[2025-08-15 12:13:15 PM] - San Jose Sharks hired Ryan Warsofsky for $1 for 1 year(s).
+96,23,[2025-08-15 12:13:25 PM] - Team Name Change : Farm Team 23 changed name to San Jose Barracuda
+97,23,[2025-08-15 12:13:54 PM] - San Jose Barracuda hired John McCarthy for $1 for 1 year(s).
+98,24,[2025-08-15 12:14:30 PM] - Team Name Change : Team 24 changed name to Seattle Kraken
+99,24,[2025-08-15 12:15:04 PM] - Seattle Kraken hired Lane Lambert for $1 for 1 year(s).
+100,24,[2025-08-15 12:15:20 PM] - Team Name Change : Farm Team 24 changed name to Coachella Valley Firebirds
+101,24,[2025-08-15 12:16:04 PM] - Coachella Valley Firebirds hired Derek Laxdal for $1 for 1 year(s).
+102,25,[2025-08-15 1:21:09 PM] - Team Name Change : Team 25 changed name to St. Louis Blues
+103,25,[2025-08-15 1:21:39 PM] - St. Louis Blues hired Jim Montgomery for $1 for 1 year(s).
+104,25,[2025-08-15 1:22:26 PM] - Team Name Change : Farm Team 25 changed name to Springfield Thunderbirds
+105,25,[2025-08-15 1:22:36 PM] - Team Name Change : Springfield Thunderbirds changed name to Springfield Thunderbirds
+106,25,[2025-08-15 1:23:29 PM] - Springfield Thunderbirds hired Steve Konowalchuk for $1 for 1 year(s).
+107,26,[2025-08-15 1:23:54 PM] - Team Name Change : Team 26 changed name to Tampa Bay Lightning
+108,26,[2025-08-15 1:24:25 PM] - Tampa Bay Lightning hired Jon Cooper for $1 for 1 year(s).
+109,26,[2025-08-15 1:24:35 PM] - Team Name Change : Farm Team 26 changed name to Syracuse Crunch
+110,26,[2025-08-15 1:24:43 PM] - Team Name Change : Syracuse Crunch changed name to Syracuse Crunch
+111,26,[2025-08-15 1:24:57 PM] - Team Name Change : Syracuse Crunch changed name to Syracuse Crunch
+112,26,[2025-08-15 1:25:09 PM] - Syracuse Crunch hired Joel Bouchard for $1 for 1 year(s).
+113,27,[2025-08-15 1:26:23 PM] - Team Name Change : Team 27 changed name to Toronto Maple Leafs
+114,27,[2025-08-15 1:26:54 PM] - Toronto Maple Leafs hired Craig Berube for $1 for 1 year(s).
+115,27,[2025-08-15 1:27:01 PM] - Team Name Change : Farm Team 27 changed name to Toronto Marlies
+116,28,[2025-08-15 1:27:24 PM] - Team Name Change : Team 28 changed name to Utah Mammoth
+117,28,[2025-08-15 1:27:51 PM] - Team Name Change : Farm Team 28 changed name to Farm Team 28
+118,28,[2025-08-15 1:27:58 PM] - Utah Mammoth hired Andre Tourigny for $1 for 1 year(s).
+119,28,[2025-08-15 1:28:08 PM] - Team Name Change : Farm Team 28 changed name to Tucson Roadrunners
+120,28,[2025-08-15 1:28:41 PM] - Tucson Roadrunners hired Steve Potvin for $1 for 1 year(s).
+121,29,[2025-08-15 1:29:17 PM] - Team Name Change : Team 29 changed name to Vancouver Canucks
+122,29,[2025-08-15 1:29:43 PM] - Vancouver Canucks hired Adam Foote for $1 for 1 year(s).
+123,29,[2025-08-15 1:29:57 PM] - Team Name Change : Farm Team 29 changed name to Abbotsford Canucks
+124,29,[2025-08-15 1:30:18 PM] - Abbotsford Canucks hired Manny Malhotra for $1 for 1 year(s).
+125,30,[2025-08-15 1:30:54 PM] - Team Name Change : Team 30 changed name to Vegas Golden Knights
+126,30,[2025-08-15 1:31:24 PM] - Vegas Golden Knights hired Bruce Cassidy for $1 for 1 year(s).
+127,30,[2025-08-15 1:31:36 PM] - Team Name Change : Farm Team 30 changed name to Henderson Silver Knights
+128,30,[2025-08-15 1:32:06 PM] - Henderson Silver Knights hired Ryan Craig for $1 for 1 year(s).
+129,31,[2025-08-15 1:32:32 PM] - Team Name Change : Team 31 changed name to Henderson Silver Knights
+130,31,[2025-08-15 1:32:38 PM] - Team Name Change : Henderson Silver Knights changed name to Washington Capitals
+131,31,[2025-08-15 1:33:09 PM] - Washington Capitals hired Spencer Carbery for $1 for 1 year(s).
+132,31,[2025-08-15 1:33:26 PM] - Team Name Change : Farm Team 31 changed name to Hershey Bears
+133,31,[2025-08-15 1:33:55 PM] - Hershey Bears hired Derek King for $1 for 1 year(s).
+134,32,[2025-08-15 1:35:36 PM] - Team Name Change : Team 32 changed name to Winnipeg Jets
+135,32,[2025-08-15 1:36:11 PM] - Winnipeg Jets hired Scott Arniel for $1 for 1 year(s).
+136,32,[2025-08-15 1:36:21 PM] - Team Name Change : Farm Team 32 changed name to Manitoba Moose
+137,32,[2025-08-15 1:36:58 PM] - Manitoba Moose hired Mark Morrison for $1 for 1 year(s).
+138,12,[2025-08-15 1:58:31 PM] - Team Name Change : Charlotte Checkers 2 changed name to Jacksonville Barons
+139,11,[2025-08-15 2:37:08 PM] - Leon Draisaitl was added to Edmonton Oilers.
+140,27,[2025-08-15 2:37:08 PM] - William Nylander was added to Toronto Maple Leafs.
+141,31,[2025-08-15 2:37:08 PM] - Alex Ovechkin was added to Washington Capitals.
+142,3,[2025-08-15 2:37:08 PM] - Tage Thompson was added to Buffalo Sabres.
+143,2,[2025-08-15 2:37:08 PM] - David Pastrnak was added to Boston Bruins.
+144,26,[2025-08-15 2:37:08 PM] - Brayden Point was added to Tampa Bay Lightning.
+145,32,[2025-08-15 2:37:08 PM] - Kyle Connor was added to Winnipeg Jets.
+146,26,[2025-08-15 2:37:08 PM] - Jake Guentzel was added to Tampa Bay Lightning.
+147,32,[2025-08-15 2:37:08 PM] - Mark Scheifele was added to Winnipeg Jets.
+148,12,[2025-08-15 2:37:08 PM] - Sam Reinhart was added to Florida Panthers.
+149,10,[2025-08-15 2:37:08 PM] - Alex DeBrincat was added to Detroit Red Wings.
+150,27,[2025-08-15 2:37:08 PM] - John Tavares was added to Toronto Maple Leafs.
+151,26,[2025-08-15 2:37:08 PM] - Nikita Kucherov was added to Tampa Bay Lightning.
+152,19,[2025-08-15 2:37:08 PM] - Artemi Panarin was added to New York Rangers.
+153,15,[2025-08-15 2:37:08 PM] - Cole Caufield was added to Montreal Canadiens.
+154,25,[2025-08-15 2:37:08 PM] - Jordan Kyrou was added to St. Louis Blues.
+155,3,[2025-08-15 2:37:08 PM] - Alex Tuch was added to Buffalo Sabres.
+156,26,[2025-08-15 2:37:08 PM] - Brandon Hagel was added to Tampa Bay Lightning.
+157,9,[2025-08-15 2:37:08 PM] - Jason Robertson was added to Dallas Stars.
+158,13,[2025-08-15 2:37:08 PM] - Adrian Kempe was added to Los Angeles Kings.
+159,22,[2025-08-15 2:37:08 PM] - Rickard Rakell was added to Pittsburgh Penguins.
+160,17,[2025-08-15 2:37:08 PM] - Nico Hischier was added to New Jersey Devils.
+161,4,[2025-08-15 2:37:08 PM] - Nazem Kadri was added to Calgary Flames.
+162,13,[2025-08-15 2:37:08 PM] - Kevin Fiala was added to Los Angeles Kings.
+163,30,[2025-08-15 2:37:08 PM] - Pavel Dorofeyev was added to Vegas Golden Knights.
+164,22,[2025-08-15 2:37:08 PM] - Sidney Crosby was added to Pittsburgh Penguins.
+165,27,[2025-08-15 2:37:08 PM] - Auston Matthews was added to Toronto Maple Leafs.
+166,9,[2025-08-15 2:37:08 PM] - Wyatt Johnston was added to Dallas Stars.
+167,31,[2025-08-15 2:37:08 PM] - Tom Wilson was added to Washington Capitals.
+168,2,[2025-08-15 2:37:08 PM] - Morgan Geekie was added to Boston Bruins.
+169,7,[2025-08-15 2:37:08 PM] - Nathan MacKinnon was added to Colorado Avalanche.
+170,9,[2025-08-15 2:37:08 PM] - Mikko Rantanen was added to Dallas Stars.
+171,5,[2025-08-15 2:37:08 PM] - Seth Jarvis was added to Carolina Hurricanes.
+172,30,[2025-08-15 2:37:08 PM] - Tomas Hertl was added to Vegas Golden Knights.
+173,16,[2025-08-15 2:37:08 PM] - Filip Forsberg was added to Nashville Predators.
+174,8,[2025-08-15 2:37:08 PM] - Kirill Marchenko was added to Columbus Blue Jackets.
+175,22,[2025-08-15 2:37:08 PM] - Bryan Rust was added to Pittsburgh Penguins.
+176,6,[2025-08-15 2:37:08 PM] - Ryan Donato was added to Chicago Blackhawks.
+177,8,[2025-08-15 2:37:08 PM] - Adam Fantilli was added to Columbus Blue Jackets.
+178,7,[2025-08-15 2:37:08 PM] - Cale Makar was added to Colorado Avalanche.
+179,28,[2025-08-15 2:37:08 PM] - Clayton Keller was added to Utah Mammoth.
+180,15,[2025-08-15 2:37:08 PM] - Nick Suzuki was added to Montreal Canadiens.
+181,9,[2025-08-15 2:37:08 PM] - Matt Duchene was added to Dallas Stars.
+182,10,[2025-08-15 2:37:08 PM] - Dylan Larkin was added to Detroit Red Wings.
+183,31,[2025-08-15 2:37:08 PM] - Aliaksei Protas was added to Washington Capitals.
+184,23,[2025-08-15 2:37:08 PM] - Tyler Toffoli was added to San Jose Sharks.
+185,31,[2025-08-15 2:37:08 PM] - Dylan Strome was added to Washington Capitals.
+186,5,[2025-08-15 2:37:08 PM] - Sebastian Aho was added to Carolina Hurricanes.
+187,27,[2025-08-15 2:37:08 PM] - Matthew Knies was added to Toronto Maple Leafs.
+188,20,[2025-08-15 2:37:08 PM] - Brady Tkachuk was added to Ottawa Senators.
+189,18,[2025-08-15 2:37:08 PM] - Anders Lee was added to New York Islanders.
+190,30,[2025-08-15 2:37:08 PM] - Jack Eichel was added to Vegas Golden Knights.
+191,9,[2025-08-15 2:37:08 PM] - Roope Hintz was added to Dallas Stars.
+192,4,[2025-08-15 2:37:08 PM] - Jonathan Huberdeau was added to Calgary Flames.
+193,18,[2025-08-15 2:37:08 PM] - Bo Horvat was added to New York Islanders.
+194,29,[2025-08-15 2:37:08 PM] - Jake DeBrusk was added to Vancouver Canucks.
+195,27,[2025-08-15 2:37:08 PM] - Mitch Marner was added to Toronto Maple Leafs.
+196,7,[2025-08-15 2:37:08 PM] - Martin Necas was added to Colorado Avalanche.
+197,10,[2025-08-15 2:37:08 PM] - Lucas Raymond was added to Detroit Red Wings.
+198,14,[2025-08-15 2:37:08 PM] - Matt Boldy was added to Minnesota Wild.
+199,17,[2025-08-15 2:37:08 PM] - Jack Hughes was added to New Jersey Devils.
+200,3,[2025-08-15 2:37:08 PM] - JJ Peterka was added to Buffalo Sabres.
+201,32,[2025-08-15 2:37:08 PM] - Gabriel Vilardi was added to Winnipeg Jets.
+202,28,[2025-08-15 2:37:08 PM] - Dylan Guenther was added to Utah Mammoth.
+203,26,[2025-08-15 2:37:08 PM] - Anthony Cirelli was added to Tampa Bay Lightning.
+204,16,[2025-08-15 2:37:08 PM] - Steven Stamkos was added to Nashville Predators.
+205,7,[2025-08-15 2:37:08 PM] - Artturi Lehkonen was added to Colorado Avalanche.
+206,11,[2025-08-15 2:37:08 PM] - Zach Hyman was added to Edmonton Oilers.
+207,11,[2025-08-15 2:37:08 PM] - Connor McDavid was added to Edmonton Oilers.
+208,20,[2025-08-15 2:37:08 PM] - Drake Batherson was added to Ottawa Senators.
+209,25,[2025-08-15 2:37:08 PM] - Dylan Holloway was added to St. Louis Blues.
+210,21,[2025-08-15 2:37:08 PM] - Matvei Michkov was added to Philadelphia Flyers.
+211,19,[2025-08-15 2:37:08 PM] - Vincent Trocheck was added to New York Rangers.
+212,31,[2025-08-15 2:37:08 PM] - Connor McMichael was added to Washington Capitals.
+213,7,[2025-08-15 2:37:08 PM] - Brock Nelson was added to Colorado Avalanche.
+214,17,[2025-08-15 2:37:08 PM] - Timo Meier was added to New Jersey Devils.
+215,24,[2025-08-15 2:37:08 PM] - Jaden Schwartz was added to Seattle Kraken.
+216,28,[2025-08-15 2:37:08 PM] - Logan Cooley was added to Utah Mammoth.
+217,23,[2025-08-15 2:37:08 PM] - Macklin Celebrini was added to San Jose Sharks.
+218,14,[2025-08-15 2:37:08 PM] - Kirill Kaprizov was added to Minnesota Wild.
+219,12,[2025-08-15 2:37:08 PM] - Sam Bennett was added to Florida Panthers.
+220,29,[2025-08-15 2:37:08 PM] - Brock Boeser was added to Vancouver Canucks.
+221,29,[2025-08-15 2:37:08 PM] - Pius Suter was added to Vancouver Canucks.
+222,21,[2025-08-15 2:37:08 PM] - Tyson Foerster was added to Philadelphia Flyers.
+223,21,[2025-08-15 2:37:08 PM] - Travis Konecny was added to Philadelphia Flyers.
+224,32,[2025-08-15 2:37:08 PM] - Nikolaj Ehlers was added to Winnipeg Jets.
+225,14,[2025-08-15 2:37:08 PM] - Marco Rossi was added to Minnesota Wild.
+226,8,[2025-08-15 2:37:08 PM] - Kent Johnson was added to Columbus Blue Jackets.
+227,18,[2025-08-15 2:37:08 PM] - Kyle Palmieri was added to New York Islanders.
+228,4,[2025-08-15 2:37:08 PM] - Matt Coronato was added to Calgary Flames.
+229,13,[2025-08-15 2:37:08 PM] - Warren Foegele was added to Los Angeles Kings.
+230,8,[2025-08-15 2:37:08 PM] - Zach Werenski was added to Columbus Blue Jackets.
+231,6,[2025-08-15 2:37:08 PM] - Connor Bedard was added to Chicago Blackhawks.
+232,13,[2025-08-15 2:37:08 PM] - Quinton Byfield was added to Los Angeles Kings.
+233,30,[2025-08-15 2:37:08 PM] - Ivan Barbashev was added to Vegas Golden Knights.
+234,12,[2025-08-15 2:37:08 PM] - Brad Marchand was added to Florida Panthers.
+235,8,[2025-08-15 2:37:08 PM] - Dmitri Voronkov was added to Columbus Blue Jackets.
+236,6,[2025-08-15 2:37:08 PM] - Tyler Bertuzzi was added to Chicago Blackhawks.
+237,30,[2025-08-15 2:37:08 PM] - Brett Howden was added to Vegas Golden Knights.
+238,24,[2025-08-15 2:37:08 PM] - Eeli Tolvanen was added to Seattle Kraken.
+239,19,[2025-08-15 2:37:08 PM] - J.T. Miller was added to New York Rangers.
+240,9,[2025-08-15 2:37:08 PM] - Mikael Granlund was added to Dallas Stars.
+241,24,[2025-08-15 2:37:08 PM] - Jared McCann was added to Seattle Kraken.
+242,12,[2025-08-15 2:37:08 PM] - Matthew Tkachuk was added to Florida Panthers.
+243,1,[2025-08-15 2:37:08 PM] - Mason McTavish was added to Anaheim Ducks.
+244,9,[2025-08-15 2:37:08 PM] - Mason Marchment was added to Dallas Stars.
+245,25,[2025-08-15 2:37:08 PM] - Jake Neighbours was added to St. Louis Blues.
+246,26,[2025-08-15 2:37:08 PM] - Nick Paul was added to Tampa Bay Lightning.
+247,17,[2025-08-15 2:37:08 PM] - Stefan Noesen was added to New Jersey Devils.
+248,5,[2025-08-15 2:37:08 PM] - Jack Roslovic was added to Carolina Hurricanes.
+249,19,[2025-08-15 2:37:08 PM] - Chris Kreider was added to New York Rangers.
+250,17,[2025-08-15 2:37:08 PM] - Jesper Bratt was added to New Jersey Devils.
+251,25,[2025-08-15 2:37:08 PM] - Robert Thomas was added to St. Louis Blues.
+252,13,[2025-08-15 2:37:08 PM] - Anze Kopitar was added to Los Angeles Kings.
+253,10,[2025-08-15 2:37:08 PM] - Patrick Kane was added to Detroit Red Wings.
+254,16,[2025-08-15 2:37:08 PM] - Jonathan Marchessault was added to Nashville Predators.
+255,1,[2025-08-15 2:37:08 PM] - Troy Terry was added to Anaheim Ducks.
+256,3,[2025-08-15 2:37:08 PM] - Jason Zucker was added to Buffalo Sabres.
+257,16,[2025-08-15 2:37:08 PM] - Ryan O'Reilly was added to Nashville Predators.
+258,26,[2025-08-15 2:37:08 PM] - Oliver Bjorkstrand was added to Tampa Bay Lightning.
+259,1,[2025-08-15 2:37:08 PM] - Frank Vatrano was added to Anaheim Ducks.
+260,15,[2025-08-15 2:37:08 PM] - Brendan Gallagher was added to Montreal Canadiens.
+261,20,[2025-08-15 2:37:08 PM] - Shane Pinto was added to Ottawa Senators.
+262,3,[2025-08-15 2:37:08 PM] - Josh Norris was added to Buffalo Sabres.
+263,7,[2025-08-15 2:37:08 PM] - Valeri Nichushkin was added to Colorado Avalanche.
+264,12,[2025-08-15 2:37:08 PM] - Aleksander Barkov was added to Florida Panthers.
+265,31,[2025-08-15 2:37:08 PM] - Pierre-Luc Dubois was added to Washington Capitals.
+266,28,[2025-08-15 2:37:08 PM] - Nick Schmaltz was added to Utah Mammoth.
+267,19,[2025-08-15 2:37:08 PM] - Mika Zibanejad was added to New York Rangers.
+268,25,[2025-08-15 2:37:08 PM] - Pavel Buchnevich was added to St. Louis Blues.
+269,3,[2025-08-15 2:37:08 PM] - Ryan McLeod was added to Buffalo Sabres.
+270,12,[2025-08-15 2:37:08 PM] - Carter Verhaeghe was added to Florida Panthers.
+271,11,[2025-08-15 2:37:08 PM] - Ryan Nugent-Hopkins was added to Edmonton Oilers.
+272,5,[2025-08-15 2:37:08 PM] - Andrei Svechnikov was added to Carolina Hurricanes.
+273,31,[2025-08-15 2:37:08 PM] - Jakob Chychrun was added to Washington Capitals.
+274,28,[2025-08-15 2:37:08 PM] - Barrett Hayton was added to Utah Mammoth.
+275,18,[2025-08-15 2:37:08 PM] - Simon Holmstrom was added to New York Islanders.
+276,1,[2025-08-15 2:37:08 PM] - Leo Carlsson was added to Anaheim Ducks.
+277,19,[2025-08-15 2:37:08 PM] - Will Cuylle was added to New York Rangers.
+278,1,[2025-08-15 2:37:08 PM] - Cutter Gauthier was added to Anaheim Ducks.
+279,21,[2025-08-15 2:37:08 PM] - Owen Tippett was added to Philadelphia Flyers.
+280,24,[2025-08-15 2:37:08 PM] - Matty Beniers was added to Seattle Kraken.
+281,9,[2025-08-15 2:37:08 PM] - Evgenii Dadonov was added to Dallas Stars.
+282,27,[2025-08-15 2:37:08 PM] - Bobby McMann was added to Toronto Maple Leafs.
+283,6,[2025-08-15 2:37:08 PM] - Ilya Mikheyev was added to Chicago Blackhawks.
+284,15,[2025-08-15 2:37:08 PM] - Patrik Laine was added to Montreal Canadiens.
+285,30,[2025-08-15 2:37:08 PM] - Mark Stone was added to Vegas Golden Knights.
+286,8,[2025-08-15 2:37:08 PM] - Sean Monahan was added to Columbus Blue Jackets.
+287,14,[2025-08-15 2:37:08 PM] - Mats Zuccarello was added to Minnesota Wild.
+288,29,[2025-08-15 2:37:08 PM] - Conor Garland was added to Vancouver Canucks.
+289,24,[2025-08-15 2:37:08 PM] - Shane Wright was added to Seattle Kraken.
+290,13,[2025-08-15 2:37:08 PM] - Alex Laferriere was added to Los Angeles Kings.
+291,20,[2025-08-15 2:37:08 PM] - Fabian Zetterlund was added to Ottawa Senators.
+292,29,[2025-08-15 2:37:08 PM] - Kiefer Sherwood was added to Vancouver Canucks.
+293,16,[2025-08-15 2:37:08 PM] - Michael Bunting was added to Nashville Predators.
+294,10,[2025-08-15 2:37:08 PM] - Marco Kasper was added to Detroit Red Wings.
+295,1,[2025-08-15 2:37:08 PM] - Alex Killorn was added to Anaheim Ducks.
+296,25,[2025-08-15 2:37:08 PM] - Zack Bolduc was added to St. Louis Blues.
+297,17,[2025-08-15 2:37:08 PM] - Dawson Mercer was added to New Jersey Devils.
+298,11,[2025-08-15 2:37:08 PM] - Corey Perry was added to Edmonton Oilers.
+299,20,[2025-08-15 2:37:08 PM] - Adam Gaudette was added to Ottawa Senators.
+300,25,[2025-08-15 2:37:08 PM] - Brayden Schenn was added to St. Louis Blues.
+301,32,[2025-08-15 2:37:08 PM] - Cole Perfetti was added to Winnipeg Jets.
+302,23,[2025-08-15 2:37:08 PM] - Will Smith was added to San Jose Sharks.
+303,5,[2025-08-15 2:37:08 PM] - Taylor Hall was added to Carolina Hurricanes.
+304,24,[2025-08-15 2:37:08 PM] - Brandon Montour was added to Seattle Kraken.
+305,13,[2025-08-15 2:37:08 PM] - Trevor Moore was added to Los Angeles Kings.
+306,14,[2025-08-15 2:37:08 PM] - Frederick Gaudreau was added to Minnesota Wild.
+307,8,[2025-08-15 2:37:08 PM] - Mathieu Olivier was added to Columbus Blue Jackets.
+308,3,[2025-08-15 2:37:08 PM] - Rasmus Dahlin was added to Buffalo Sabres.
+309,23,[2025-08-15 2:37:08 PM] - William Eklund was added to San Jose Sharks.
+310,2,[2025-08-15 2:37:08 PM] - Elias Lindholm was added to Boston Bruins.
+311,12,[2025-08-15 2:37:08 PM] - Anton Lundell was added to Florida Panthers.
+312,32,[2025-08-15 2:37:08 PM] - Nino Niederreiter was added to Winnipeg Jets.
+313,7,[2025-08-15 2:37:08 PM] - Charlie Coyle was added to Colorado Avalanche.
+314,5,[2025-08-15 2:37:08 PM] - Jackson Blake was added to Carolina Hurricanes.
+315,4,[2025-08-15 2:37:08 PM] - Yegor Sharangovich was added to Calgary Flames.
+316,29,[2025-08-15 2:37:08 PM] - Quinn Hughes was added to Vancouver Canucks.
+317,22,[2025-08-15 2:37:08 PM] - Evgeni Malkin was added to Pittsburgh Penguins.
+318,9,[2025-08-15 2:37:08 PM] - Thomas Harley was added to Dallas Stars.
+319,9,[2025-08-15 2:37:08 PM] - Jamie Benn was added to Dallas Stars.
+320,20,[2025-08-15 2:37:08 PM] - Dylan Cozens was added to Ottawa Senators.
+321,21,[2025-08-15 2:37:08 PM] - Noah Cates was added to Philadelphia Flyers.
+322,25,[2025-08-15 2:37:08 PM] - Colton Parayko was added to St. Louis Blues.
+323,8,[2025-08-15 2:37:08 PM] - James van Riemsdyk was added to Columbus Blue Jackets.
+324,32,[2025-08-15 2:37:08 PM] - Adam Lowry was added to Winnipeg Jets.
+325,7,[2025-08-15 2:37:08 PM] - Ross Colton was added to Colorado Avalanche.
+326,11,[2025-08-15 2:37:08 PM] - Jeff Skinner was added to Edmonton Oilers.
+327,7,[2025-08-15 2:37:08 PM] - Joel Kiviranta was added to Colorado Avalanche.
+328,17,[2025-08-15 2:37:08 PM] - Paul Cotter was added to New Jersey Devils.
+329,26,[2025-08-15 2:37:08 PM] - Victor Hedman was added to Tampa Bay Lightning.
+330,6,[2025-08-15 2:37:08 PM] - Teuvo Teravainen was added to Chicago Blackhawks.
+331,28,[2025-08-15 2:37:08 PM] - Mikhail Sergachev was added to Utah Mammoth.
+332,20,[2025-08-15 2:37:08 PM] - Claude Giroux was added to Ottawa Senators.
+333,29,[2025-08-15 2:37:08 PM] - Elias Pettersson was added to Vancouver Canucks.
+334,21,[2025-08-15 2:37:08 PM] - Sean Couturier was added to Philadelphia Flyers.
+335,2,[2025-08-15 2:37:08 PM] - Casey Mittelstadt was added to Boston Bruins.
+336,3,[2025-08-15 2:37:08 PM] - Jack Quinn was added to Buffalo Sabres.
+337,4,[2025-08-15 2:37:08 PM] - Blake Coleman was added to Calgary Flames.
+338,5,[2025-08-15 2:37:08 PM] - Jordan Martinook was added to Carolina Hurricanes.
+339,6,[2025-08-15 2:37:08 PM] - Nick Foligno was added to Chicago Blackhawks.
+340,4,[2025-08-15 2:37:08 PM] - Mikael Backlund was added to Calgary Flames.
+341,12,[2025-08-15 2:37:08 PM] - Evan Rodrigues was added to Florida Panthers.
+342,30,[2025-08-15 2:37:08 PM] - Nicolas Roy was added to Vegas Golden Knights.
+343,12,[2025-08-15 2:37:08 PM] - Mackie Samoskevich was added to Florida Panthers.
+344,32,[2025-08-15 2:37:08 PM] - Alex Iafallo was added to Winnipeg Jets.
+345,30,[2025-08-15 2:37:08 PM] - Victor Olofsson was added to Vegas Golden Knights.
+346,17,[2025-08-15 2:37:08 PM] - Ondrej Palat was added to New Jersey Devils.
+347,11,[2025-08-15 2:37:08 PM] - Viktor Arvidsson was added to Edmonton Oilers.
+348,15,[2025-08-15 2:37:08 PM] - Josh Anderson was added to Montreal Canadiens.
+349,15,[2025-08-15 2:37:08 PM] - Alex Newhook was added to Montreal Canadiens.
+350,31,[2025-08-15 2:37:08 PM] - Anthony Beauvillier was added to Washington Capitals.
+351,3,[2025-08-15 2:37:08 PM] - Jiri Kulich was added to Buffalo Sabres.
+352,27,[2025-08-15 2:37:08 PM] - Nicholas Robertson was added to Toronto Maple Leafs.
+353,11,[2025-08-15 2:37:08 PM] - Evan Bouchard was added to Edmonton Oilers.
+354,32,[2025-08-15 2:37:08 PM] - Josh Morrissey was added to Winnipeg Jets.
+355,2,[2025-08-15 2:37:08 PM] - Pavel Zacha was added to Boston Bruins.
+356,24,[2025-08-15 2:37:08 PM] - Kaapo Kakko was added to Seattle Kraken.
+357,1,[2025-08-15 2:37:08 PM] - Jackson LaCombe was added to Anaheim Ducks.
+358,18,[2025-08-15 2:37:08 PM] - Jean-Gabriel Pageau was added to New York Islanders.
+359,5,[2025-08-15 2:37:08 PM] - Logan Stankoven was added to Carolina Hurricanes.
+360,4,[2025-08-15 2:37:08 PM] - Morgan Frost was added to Calgary Flames.
+361,5,[2025-08-15 2:37:08 PM] - Eric Robinson was added to Carolina Hurricanes.
+362,14,[2025-08-15 2:37:08 PM] - Joel Eriksson Ek was added to Minnesota Wild.
+363,14,[2025-08-15 2:37:08 PM] - Marcus Foligno was added to Minnesota Wild.
+364,31,[2025-08-15 2:37:08 PM] - Andrew Mangiapane was added to Washington Capitals.
+365,28,[2025-08-15 2:37:08 PM] - Kevin Stenlund was added to Utah Mammoth.
+366,31,[2025-08-15 2:37:08 PM] - Nic Dowd was added to Washington Capitals.
+367,24,[2025-08-15 2:37:08 PM] - Chandler Stephenson was added to Seattle Kraken.
+368,30,[2025-08-15 2:37:08 PM] - Reilly Smith was added to Vegas Golden Knights.
+369,5,[2025-08-15 2:37:08 PM] - Jordan Staal was added to Carolina Hurricanes.
+370,15,[2025-08-15 2:37:08 PM] - Jake Evans was added to Montreal Canadiens.
+371,20,[2025-08-15 2:37:08 PM] - Ridly Greig was added to Ottawa Senators.
+372,27,[2025-08-15 2:37:08 PM] - Scott Laughton was added to Toronto Maple Leafs.
+373,30,[2025-08-15 2:37:08 PM] - Brandon Saad was added to Vegas Golden Knights.
+374,11,[2025-08-15 2:37:08 PM] - Connor Brown was added to Edmonton Oilers.
+375,4,[2025-08-15 2:37:08 PM] - Connor Zary was added to Calgary Flames.
+376,28,[2025-08-15 2:37:08 PM] - Jack McBain was added to Utah Mammoth.
+377,29,[2025-08-15 2:37:08 PM] - Filip Chytil was added to Vancouver Canucks.
+378,22,[2025-08-15 2:37:08 PM] - Kevin Hayes was added to Pittsburgh Penguins.
+379,22,[2025-08-15 2:37:08 PM] - Tommy Novak was added to Pittsburgh Penguins.
+380,21,[2025-08-15 2:37:08 PM] - Bobby Brink was added to Philadelphia Flyers.
+381,5,[2025-08-15 2:37:08 PM] - Jesperi Kotkaniemi was added to Carolina Hurricanes.
+382,15,[2025-08-15 2:37:08 PM] - Christian Dvorak was added to Montreal Canadiens.
+383,1,[2025-08-15 2:37:08 PM] - Trevor Zegras was added to Anaheim Ducks.
+384,21,[2025-08-15 2:37:08 PM] - Ryan Poehling was added to Philadelphia Flyers.
+385,30,[2025-08-15 2:37:08 PM] - Keegan Kolesar was added to Vegas Golden Knights.
+386,30,[2025-08-15 2:37:08 PM] - Tanner Pearson was added to Vegas Golden Knights.
+387,11,[2025-08-15 2:37:08 PM] - Adam Henrique was added to Edmonton Oilers.
+388,6,[2025-08-15 2:37:08 PM] - Frank Nazar was added to Chicago Blackhawks.
+389,10,[2025-08-15 2:37:08 PM] - Jonatan Berggren was added to Detroit Red Wings.
+390,12,[2025-08-15 2:37:08 PM] - Jesper Boqvist was added to Florida Panthers.
+391,19,[2025-08-15 2:37:08 PM] - Jonny Brodzinski was added to New York Rangers.
+392,26,[2025-08-15 2:37:08 PM] - Mitchell Chaffee was added to Tampa Bay Lightning.
+393,28,[2025-08-15 2:37:08 PM] - Lawson Crouse was added to Utah Mammoth.
+394,5,[2025-08-15 2:37:08 PM] - Mark Jankowski was added to Carolina Hurricanes.
+395,20,[2025-08-15 2:37:08 PM] - Jake Sanderson was added to Ottawa Senators.
+396,22,[2025-08-15 2:37:08 PM] - Erik Karlsson was added to Pittsburgh Penguins.
+397,24,[2025-08-15 2:37:08 PM] - Vince Dunn was added to Seattle Kraken.
+398,32,[2025-08-15 2:37:08 PM] - Vladislav Namestnikov was added to Winnipeg Jets.
+399,7,[2025-08-15 2:37:08 PM] - Jonathan Drouin was added to Colorado Avalanche.
+400,13,[2025-08-15 2:37:08 PM] - Andrei Kuzmenko was added to Los Angeles Kings.
+401,14,[2025-08-15 2:37:08 PM] - Marcus Johansson was added to Minnesota Wild.
+402,8,[2025-08-15 2:37:08 PM] - Cole Sillinger was added to Columbus Blue Jackets.
+403,10,[2025-08-15 2:37:08 PM] - Vladimir Tarasenko was added to Detroit Red Wings.
+404,10,[2025-08-15 2:37:08 PM] - J.T. Compher was added to Detroit Red Wings.
+405,12,[2025-08-15 2:37:08 PM] - Gustav Forsling was added to Florida Panthers.
+406,4,[2025-08-15 2:37:08 PM] - Rasmus Andersson was added to Calgary Flames.
+407,15,[2025-08-15 2:37:08 PM] - Joel Armia was added to Montreal Canadiens.
+408,14,[2025-08-15 2:37:08 PM] - Gustav Nyquist was added to Minnesota Wild.
+409,20,[2025-08-15 2:37:08 PM] - Michael Amadio was added to Ottawa Senators.
+410,14,[2025-08-15 2:37:08 PM] - Ryan Hartman was added to Minnesota Wild.
+411,9,[2025-08-15 2:37:08 PM] - Mavrik Bourque was added to Dallas Stars.
+412,4,[2025-08-15 2:37:08 PM] - Joel Farabee was added to Calgary Flames.
+413,22,[2025-08-15 2:37:08 PM] - Philip Tomasino was added to Pittsburgh Penguins.
+414,14,[2025-08-15 2:37:08 PM] - Justin Brazeau was added to Minnesota Wild.
+415,17,[2025-08-15 2:37:08 PM] - Erik Haula was added to New Jersey Devils.
+416,10,[2025-08-15 2:37:08 PM] - Michael Rasmussen was added to Detroit Red Wings.
+417,22,[2025-08-15 2:37:08 PM] - Blake Lizotte was added to Pittsburgh Penguins.
+418,8,[2025-08-15 2:37:08 PM] - Luke Kunin was added to Columbus Blue Jackets.
+419,19,[2025-08-15 2:37:08 PM] - Adam Fox was added to New York Rangers.
+420,7,[2025-08-15 2:37:08 PM] - Devon Toews was added to Colorado Avalanche.
+421,1,[2025-08-15 2:37:08 PM] - Ryan Strome was added to Anaheim Ducks.
+422,32,[2025-08-15 2:37:08 PM] - Neal Pionk was added to Winnipeg Jets.
+423,18,[2025-08-15 2:37:08 PM] - Noah Dobson was added to New York Islanders.
+424,30,[2025-08-15 2:37:08 PM] - Noah Hanifin was added to Vegas Golden Knights.
+425,24,[2025-08-15 2:37:08 PM] - Andre Burakovsky was added to Seattle Kraken.
+426,18,[2025-08-15 2:37:08 PM] - Maxim Tsyplakov was added to New York Islanders.
+427,23,[2025-08-15 2:37:08 PM] - Alexander Wennberg was added to San Jose Sharks.
+428,16,[2025-08-15 2:37:08 PM] - Brady Skjei was added to Nashville Predators.
+429,16,[2025-08-15 2:37:08 PM] - Luke Evangelista was added to Nashville Predators.
+430,14,[2025-08-15 2:37:08 PM] - Brock Faber was added to Minnesota Wild.
+431,3,[2025-08-15 2:37:08 PM] - Zach Benson was added to Buffalo Sabres.
+432,3,[2025-08-15 2:37:08 PM] - Peyton Krebs was added to Buffalo Sabres.
+433,29,[2025-08-15 2:37:08 PM] - Drew O'Connor was added to Vancouver Canucks.
+434,10,[2025-08-15 2:37:08 PM] - Andrew Copp was added to Detroit Red Wings.
+435,15,[2025-08-15 2:37:08 PM] - Kirby Dach was added to Montreal Canadiens.
+436,32,[2025-08-15 2:37:08 PM] - Mason Appleton was added to Winnipeg Jets.
+437,32,[2025-08-15 2:37:08 PM] - Brandon Tanev was added to Winnipeg Jets.
+438,31,[2025-08-15 2:37:08 PM] - Lars Eller was added to Washington Capitals.
+439,21,[2025-08-15 2:37:08 PM] - Garnet Hathaway was added to Philadelphia Flyers.
+440,7,[2025-08-15 2:37:08 PM] - Logan O'Connor was added to Colorado Avalanche.
+441,15,[2025-08-15 2:37:08 PM] - Emil Heineman was added to Montreal Canadiens.
+442,2,[2025-08-15 2:37:08 PM] - Cole Koepke was added to Boston Bruins.
+443,1,[2025-08-15 2:37:08 PM] - Sam Colangelo was added to Anaheim Ducks.
+444,20,[2025-08-15 2:37:08 PM] - Thomas Chabot was added to Ottawa Senators.
+445,17,[2025-08-15 2:37:08 PM] - Dougie Hamilton was added to New Jersey Devils.
+446,25,[2025-08-15 2:37:08 PM] - Cam Fowler was added to St. Louis Blues.
+447,16,[2025-08-15 2:37:08 PM] - Roman Josi was added to Nashville Predators.
+448,12,[2025-08-15 2:37:08 PM] - Seth Jones was added to Florida Panthers.
+449,11,[2025-08-15 2:37:08 PM] - Mattias Ekholm was added to Edmonton Oilers.
+450,22,[2025-08-15 2:37:08 PM] - Kris Letang was added to Pittsburgh Penguins.
+451,30,[2025-08-15 2:37:08 PM] - William Karlsson was added to Vegas Golden Knights.
+452,22,[2025-08-15 2:37:08 PM] - Danton Heinen was added to Pittsburgh Penguins.
+453,24,[2025-08-15 2:37:08 PM] - Jordan Eberle was added to Seattle Kraken.
+454,8,[2025-08-15 2:37:08 PM] - Dante Fabbro was added to Columbus Blue Jackets.
+455,13,[2025-08-15 2:37:08 PM] - Alex Turcotte was added to Los Angeles Kings.
+456,12,[2025-08-15 2:37:08 PM] - Eetu Luostarinen was added to Florida Panthers.
+457,9,[2025-08-15 2:37:08 PM] - Tyler Seguin was added to Dallas Stars.
+458,8,[2025-08-15 2:37:08 PM] - Justin Danforth was added to Columbus Blue Jackets.
+459,31,[2025-08-15 2:37:08 PM] - Brandon Duhaime was added to Washington Capitals.
+460,10,[2025-08-15 2:37:08 PM] - Craig Smith was added to Detroit Red Wings.
+461,20,[2025-08-15 2:37:08 PM] - David Perron was added to Ottawa Senators.
+462,24,[2025-08-15 2:37:08 PM] - Michael Eyssimont was added to Seattle Kraken.
+463,16,[2025-08-15 2:37:08 PM] - Jakub Vrana was added to Nashville Predators.
+464,4,[2025-08-15 2:37:08 PM] - MacKenzie Weegar was added to Calgary Flames.
+465,10,[2025-08-15 2:37:08 PM] - Moritz Seider was added to Detroit Red Wings.
+466,13,[2025-08-15 2:37:08 PM] - Phillip Danault was added to Los Angeles Kings.
+467,27,[2025-08-15 2:37:08 PM] - Max Domi was added to Toronto Maple Leafs.
+468,21,[2025-08-15 2:37:08 PM] - Travis Sanheim was added to Philadelphia Flyers.
+469,25,[2025-08-15 2:37:08 PM] - Philip Broberg was added to St. Louis Blues.
+470,29,[2025-08-15 2:37:08 PM] - Teddy Blueger was added to Vancouver Canucks.
+471,29,[2025-08-15 2:37:08 PM] - Nils Hoglander was added to Vancouver Canucks.
+472,11,[2025-08-15 2:37:08 PM] - Vasily Podkolzin was added to Edmonton Oilers.
+473,6,[2025-08-15 2:37:08 PM] - Lukas Reichel was added to Chicago Blackhawks.
+474,14,[2025-08-15 2:37:08 PM] - Jake Middleton was added to Minnesota Wild.
+475,26,[2025-08-15 2:37:08 PM] - Gage Goncalves was added to Tampa Bay Lightning.
+476,28,[2025-08-15 2:37:08 PM] - Nick Bjugstad was added to Utah Mammoth.
+477,27,[2025-08-15 2:37:08 PM] - Steven Lorentz was added to Toronto Maple Leafs.
+478,7,[2025-08-15 2:37:08 PM] - Parker Kelly was added to Colorado Avalanche.
+479,28,[2025-08-15 2:37:08 PM] - Matias Maccelli was added to Utah Mammoth.
+480,7,[2025-08-15 2:37:08 PM] - Jack Drury was added to Colorado Avalanche.
+481,16,[2025-08-15 2:37:08 PM] - Fedor Svechkov was added to Nashville Predators.
+482,6,[2025-08-15 2:37:08 PM] - Joe Veleno was added to Chicago Blackhawks.
+483,1,[2025-08-15 2:37:08 PM] - Robby Fabbri was added to Anaheim Ducks.
+484,25,[2025-08-15 2:37:08 PM] - Nathan Walker was added to St. Louis Blues.
+485,11,[2025-08-15 2:37:08 PM] - Trent Frederic was added to Edmonton Oilers.
+486,18,[2025-08-15 2:37:08 PM] - Pierre Engvall was added to New York Islanders.
+487,32,[2025-08-15 2:37:08 PM] - Morgan Barron was added to Winnipeg Jets.
+488,26,[2025-08-15 2:37:08 PM] - Conor Geekie was added to Tampa Bay Lightning.
+489,18,[2025-08-15 2:37:08 PM] - Marc Gatcomb was added to New York Islanders.
+490,30,[2025-08-15 2:37:08 PM] - Shea Theodore was added to Vegas Golden Knights.
+491,5,[2025-08-15 2:37:08 PM] - Shayne Gostisbehere was added to Carolina Hurricanes.
+492,17,[2025-08-15 2:37:08 PM] - Luke Hughes was added to New Jersey Devils.
+493,27,[2025-08-15 2:37:08 PM] - Morgan Rielly was added to Toronto Maple Leafs.
+494,11,[2025-08-15 2:37:08 PM] - Jake Walman was added to Edmonton Oilers.
+495,3,[2025-08-15 2:37:08 PM] - Owen Power was added to Buffalo Sabres.
+496,3,[2025-08-15 2:37:08 PM] - Bowen Byram was added to Buffalo Sabres.
+497,8,[2025-08-15 2:37:08 PM] - Ivan Provorov was added to Columbus Blue Jackets.
+498,14,[2025-08-15 2:37:08 PM] - Jared Spurgeon was added to Minnesota Wild.
+499,26,[2025-08-15 2:37:08 PM] - Yanni Gourde was added to Tampa Bay Lightning.
+500,10,[2025-08-15 2:37:08 PM] - Simon Edvinsson was added to Detroit Red Wings.
+501,28,[2025-08-15 2:37:08 PM] - Michael Kesselring was added to Utah Mammoth.
+502,24,[2025-08-15 2:37:08 PM] - Adam Larsson was added to Seattle Kraken.
+503,19,[2025-08-15 2:37:08 PM] - K'Andre Miller was added to New York Rangers.
+504,31,[2025-08-15 2:37:08 PM] - Taylor Raddysh was added to Washington Capitals.
+505,11,[2025-08-15 2:37:08 PM] - Brett Kulak was added to Edmonton Oilers.
+506,2,[2025-08-15 2:37:08 PM] - Charlie McAvoy was added to Boston Bruins.
+507,16,[2025-08-15 2:37:08 PM] - Colton Sissons was added to Nashville Predators.
+508,23,[2025-08-15 2:37:08 PM] - Nikolai Kovalenko was added to San Jose Sharks.
+509,1,[2025-08-15 2:37:08 PM] - Olen Zellweger was added to Anaheim Ducks.
+510,21,[2025-08-15 2:37:08 PM] - Jamie Drysdale was added to Philadelphia Flyers.
+511,8,[2025-08-15 2:37:08 PM] - Boone Jenner was added to Columbus Blue Jackets.
+512,21,[2025-08-15 2:37:08 PM] - Jakob Pelletier was added to Philadelphia Flyers.
+513,28,[2025-08-15 2:37:08 PM] - Josh Doan was added to Utah Mammoth.
+514,28,[2025-08-15 2:37:08 PM] - Michael Carcone was added to Utah Mammoth.
+515,27,[2025-08-15 2:37:08 PM] - Pontus Holmberg was added to Toronto Maple Leafs.
+516,5,[2025-08-15 2:37:08 PM] - Jalen Chatfield was added to Carolina Hurricanes.
+517,17,[2025-08-15 2:37:08 PM] - Tomas Tatar was added to New Jersey Devils.
+518,18,[2025-08-15 2:37:08 PM] - Casey Cizikas was added to New York Islanders.
+519,6,[2025-08-15 2:37:08 PM] - Jason Dickinson was added to Chicago Blackhawks.
+520,8,[2025-08-15 2:37:08 PM] - Yegor Chinakhov was added to Columbus Blue Jackets.
+521,14,[2025-08-15 2:37:08 PM] - Yakov Trenin was added to Minnesota Wild.
+522,6,[2025-08-15 2:37:08 PM] - Philipp Kurashev was added to Chicago Blackhawks.
+523,29,[2025-08-15 2:37:08 PM] - Dakota Joshua was added to Vancouver Canucks.
+524,12,[2025-08-15 2:37:08 PM] - Nico Sturm was added to Florida Panthers.
+525,13,[2025-08-15 2:37:08 PM] - Tanner Jeannot was added to Los Angeles Kings.
+526,29,[2025-08-15 2:37:08 PM] - Aatu Raty was added to Vancouver Canucks.
+527,18,[2025-08-15 2:37:08 PM] - Anthony Duclair was added to New York Islanders.
+528,15,[2025-08-15 2:37:08 PM] - Lane Hutson was added to Montreal Canadiens.
+529,26,[2025-08-15 2:37:08 PM] - Darren Raddysh was added to Tampa Bay Lightning.
+530,15,[2025-08-15 2:37:08 PM] - Mike Matheson was added to Montreal Canadiens.
+531,5,[2025-08-15 2:37:08 PM] - Brent Burns was added to Carolina Hurricanes.
+532,5,[2025-08-15 2:37:08 PM] - Dmitry Orlov was added to Carolina Hurricanes.
+533,5,[2025-08-15 2:37:08 PM] - Jaccob Slavin was added to Carolina Hurricanes.
+534,8,[2025-08-15 2:37:08 PM] - Damon Severson was added to Columbus Blue Jackets.
+535,9,[2025-08-15 2:37:08 PM] - Sam Steel was added to Dallas Stars.
+536,29,[2025-08-15 2:37:08 PM] - Tyler Myers was added to Vancouver Canucks.
+537,13,[2025-08-15 2:37:08 PM] - Mikey Anderson was added to Los Angeles Kings.
+538,17,[2025-08-15 2:37:08 PM] - Cody Glass was added to New Jersey Devils.
+539,12,[2025-08-15 2:37:08 PM] - Niko Mikkola was added to Florida Panthers.
+540,19,[2025-08-15 2:37:08 PM] - Braden Schneider was added to New York Rangers.
+541,18,[2025-08-15 2:37:08 PM] - Mathew Barzal was added to New York Islanders.
+542,32,[2025-08-15 2:37:08 PM] - Dylan Samberg was added to Winnipeg Jets.
+543,25,[2025-08-15 2:37:08 PM] - Oskar Sundqvist was added to St. Louis Blues.
+544,13,[2025-08-15 2:37:08 PM] - Joel Edmundson was added to Los Angeles Kings.
+545,19,[2025-08-15 2:37:08 PM] - Sam Carrick was added to New York Rangers.
+546,26,[2025-08-15 2:37:08 PM] - Nick Perbix was added to Tampa Bay Lightning.
+547,15,[2025-08-15 2:37:08 PM] - Kaiden Guhle was added to Montreal Canadiens.
+548,9,[2025-08-15 2:37:08 PM] - Colin Blackwell was added to Dallas Stars.
+549,23,[2025-08-15 2:37:08 PM] - Timothy Liljegren was added to San Jose Sharks.
+550,12,[2025-08-15 2:37:08 PM] - A.J. Greer was added to Florida Panthers.
+551,8,[2025-08-15 2:37:08 PM] - Sean Kuraly was added to Columbus Blue Jackets.
+552,19,[2025-08-15 2:37:08 PM] - Juuso Parssinen was added to New York Rangers.
+553,20,[2025-08-15 2:37:08 PM] - Nick Cousins was added to Ottawa Senators.
+554,11,[2025-08-15 2:37:08 PM] - Kasperi Kapanen was added to Edmonton Oilers.
+555,16,[2025-08-15 2:37:08 PM] - Justin Barron was added to Nashville Predators.
+556,24,[2025-08-15 2:37:08 PM] - Tye Kartye was added to Seattle Kraken.
+557,13,[2025-08-15 2:37:08 PM] - Trevor Lewis was added to Los Angeles Kings.
+558,25,[2025-08-15 2:37:08 PM] - Alexandre Texier was added to St. Louis Blues.
+559,4,[2025-08-15 2:37:08 PM] - Adam Klapka was added to Calgary Flames.
+560,19,[2025-08-15 2:37:08 PM] - Brett Berard was added to New York Rangers.
+561,31,[2025-08-15 2:37:08 PM] - John Carlson was added to Washington Capitals.
+562,29,[2025-08-15 2:37:08 PM] - Filip Hronek was added to Vancouver Canucks.
+563,11,[2025-08-15 2:37:08 PM] - Darnell Nurse was added to Edmonton Oilers.
+564,2,[2025-08-15 2:37:08 PM] - Mason Lohrei was added to Boston Bruins.
+565,13,[2025-08-15 2:37:08 PM] - Brandt Clarke was added to Los Angeles Kings.
+566,13,[2025-08-15 2:37:08 PM] - Vladislav Gavrikov was added to Los Angeles Kings.
+567,9,[2025-08-15 2:37:08 PM] - Esa Lindell was added to Dallas Stars.
+568,9,[2025-08-15 2:37:08 PM] - Miro Heiskanen was added to Dallas Stars.
+569,24,[2025-08-15 2:37:08 PM] - Ryker Evans was added to Seattle Kraken.
+570,18,[2025-08-15 2:37:08 PM] - Ryan Pulock was added to New York Islanders.
+571,30,[2025-08-15 2:37:08 PM] - Brayden McNabb was added to Vegas Golden Knights.
+572,1,[2025-08-15 2:37:08 PM] - Pavel Mintyukov was added to Anaheim Ducks.
+573,12,[2025-08-15 2:37:08 PM] - Nate Schmidt was added to Florida Panthers.
+574,1,[2025-08-15 2:37:08 PM] - Brett Leason was added to Anaheim Ducks.
+575,23,[2025-08-15 2:37:08 PM] - Mario Ferraro was added to San Jose Sharks.
+576,5,[2025-08-15 2:37:08 PM] - Sean Walker was added to Carolina Hurricanes.
+577,16,[2025-08-15 2:37:08 PM] - Zachary L'Heureux was added to Nashville Predators.
+578,25,[2025-08-15 2:37:08 PM] - Radek Faksa was added to St. Louis Blues.
+579,7,[2025-08-15 2:37:08 PM] - Sam Malinski was added to Colorado Avalanche.
+580,19,[2025-08-15 2:37:08 PM] - Will Borgen was added to New York Rangers.
+581,2,[2025-08-15 2:37:08 PM] - Mark Kastelic was added to Boston Bruins.
+582,16,[2025-08-15 2:37:08 PM] - Michael McCarron was added to Nashville Predators.
+583,27,[2025-08-15 2:37:08 PM] - Max Pacioretty was added to Toronto Maple Leafs.
+584,27,[2025-08-15 2:37:08 PM] - David Kampf was added to Toronto Maple Leafs.
+585,6,[2025-08-15 2:37:08 PM] - Alec Martinez was added to Chicago Blackhawks.
+586,30,[2025-08-15 2:37:08 PM] - Nicolas Hague was added to Vegas Golden Knights.
+587,2,[2025-08-15 2:37:08 PM] - Marat Khusnutdinov was added to Boston Bruins.
+588,22,[2025-08-15 2:37:08 PM] - Noel Acciari was added to Pittsburgh Penguins.
+589,23,[2025-08-15 2:37:08 PM] - Collin Graf was added to San Jose Sharks.
+590,2,[2025-08-15 2:37:08 PM] - Jakub Lauko was added to Boston Bruins.
+591,14,[2025-08-15 2:37:08 PM] - Vinnie Hinostroza was added to Minnesota Wild.
+592,4,[2025-08-15 2:37:08 PM] - Kevin Rooney was added to Calgary Flames.
+593,19,[2025-08-15 2:37:08 PM] - Adam Edstrom was added to New York Rangers.
+594,7,[2025-08-15 2:37:08 PM] - Ivan Ivan was added to Colorado Avalanche.
+595,7,[2025-08-15 2:37:08 PM] - Jimmy Vesey was added to Colorado Avalanche.
+596,32,[2025-08-15 2:37:08 PM] - Rasmus Kupari was added to Winnipeg Jets.
+597,23,[2025-08-15 2:37:08 PM] - Barclay Goodrow was added to San Jose Sharks.
+598,30,[2025-08-15 2:37:08 PM] - Alex Pietrangelo was added to Vegas Golden Knights.
+599,25,[2025-08-15 2:37:08 PM] - Justin Faulk was added to St. Louis Blues.
+600,26,[2025-08-15 2:37:08 PM] - Ryan McDonagh was added to Tampa Bay Lightning.
+601,6,[2025-08-15 2:37:08 PM] - Alex Vlasic was added to Chicago Blackhawks.
+602,31,[2025-08-15 2:37:08 PM] - Rasmus Sandin was added to Washington Capitals.
+603,27,[2025-08-15 2:37:08 PM] - Oliver Ekman-Larsson was added to Toronto Maple Leafs.
+604,29,[2025-08-15 2:37:08 PM] - Marcus Pettersson was added to Vancouver Canucks.
+605,13,[2025-08-15 2:37:08 PM] - Jordan Spence was added to Los Angeles Kings.
+606,4,[2025-08-15 2:37:08 PM] - Martin Pospisil was added to Calgary Flames.
+607,9,[2025-08-15 2:37:08 PM] - Cody Ceci was added to Dallas Stars.
+608,7,[2025-08-15 2:37:08 PM] - Ryan Lindgren was added to Colorado Avalanche.
+609,2,[2025-08-15 2:37:08 PM] - Nikita Zadorov was added to Boston Bruins.
+610,14,[2025-08-15 2:37:08 PM] - Jonas Brodin was added to Minnesota Wild.
+611,18,[2025-08-15 2:37:08 PM] - Alexander Romanov was added to New York Islanders.
+612,18,[2025-08-15 2:37:08 PM] - Tony DeAngelo was added to New York Islanders.
+613,21,[2025-08-15 2:37:08 PM] - Rasmus Ristolainen was added to Philadelphia Flyers.
+614,12,[2025-08-15 2:37:08 PM] - Uvis Balinskis was added to Florida Panthers.
+615,25,[2025-08-15 2:37:08 PM] - Alexey Toropchenko was added to St. Louis Blues.
+616,13,[2025-08-15 2:37:08 PM] - Drew Doughty was added to Los Angeles Kings.
+617,21,[2025-08-15 2:37:08 PM] - Cam York was added to Philadelphia Flyers.
+618,24,[2025-08-15 2:37:08 PM] - Jamie Oleksiak was added to Seattle Kraken.
+619,16,[2025-08-15 2:37:08 PM] - Nick Blankenburg was added to Nashville Predators.
+620,14,[2025-08-15 2:37:08 PM] - Zach Bogosian was added to Minnesota Wild.
+621,32,[2025-08-15 2:37:08 PM] - Colin Miller was added to Winnipeg Jets.
+622,1,[2025-08-15 2:37:08 PM] - Isac Lundestrom was added to Anaheim Ducks.
+623,18,[2025-08-15 2:37:08 PM] - Adam Boqvist was added to New York Islanders.
+624,25,[2025-08-15 2:37:08 PM] - Mathieu Joseph was added to St. Louis Blues.
+625,3,[2025-08-15 2:37:08 PM] - Mattias Samuelsson was added to Buffalo Sabres.
+626,8,[2025-08-15 2:37:08 PM] - Denton Mateychuk was added to Columbus Blue Jackets.
+627,1,[2025-08-15 2:37:08 PM] - Drew Helleson was added to Anaheim Ducks.
+628,12,[2025-08-15 2:37:08 PM] - Dmitry Kulikov was added to Florida Panthers.
+629,30,[2025-08-15 2:37:08 PM] - Zach Whitecloud was added to Vegas Golden Knights.
+630,19,[2025-08-15 2:37:08 PM] - Carson Soucy was added to New York Rangers.
+631,10,[2025-08-15 2:37:08 PM] - Ben Chiarot was added to Detroit Red Wings.
+632,30,[2025-08-15 2:37:08 PM] - Alexander Holtz was added to Vegas Golden Knights.
+633,16,[2025-08-15 2:37:08 PM] - Cole Smith was added to Nashville Predators.
+634,10,[2025-08-15 2:37:08 PM] - Elmer Soderblom was added to Detroit Red Wings.
+635,28,[2025-08-15 2:37:08 PM] - Sean Durzi was added to Utah Mammoth.
+636,5,[2025-08-15 2:37:08 PM] - William Carrier was added to Carolina Hurricanes.
+637,18,[2025-08-15 2:37:08 PM] - Kyle MacLean was added to New York Islanders.
+638,12,[2025-08-15 2:37:08 PM] - Jesse Puljujarvi was added to Florida Panthers.
+639,23,[2025-08-15 2:37:08 PM] - Jack Thompson was added to San Jose Sharks.
+640,16,[2025-08-15 2:37:08 PM] - Jordan Oesterle was added to Nashville Predators.
+641,22,[2025-08-15 2:37:08 PM] - Connor Dewar was added to Pittsburgh Penguins.
+642,17,[2025-08-15 2:37:08 PM] - Nathan Bastian was added to New Jersey Devils.
+643,3,[2025-08-15 2:37:08 PM] - Beck Malenstyn was added to Buffalo Sabres.
+644,20,[2025-08-15 2:37:08 PM] - Tyler Kleven was added to Ottawa Senators.
+645,9,[2025-08-15 2:37:08 PM] - Lian Bichsel was added to Dallas Stars.
+646,26,[2025-08-15 2:37:08 PM] - Cam Atkinson was added to Tampa Bay Lightning.
+647,5,[2025-08-15 2:37:08 PM] - Tyson Jost was added to Carolina Hurricanes.
+648,10,[2025-08-15 2:37:08 PM] - Tyler Motte was added to Detroit Red Wings.
+649,17,[2025-08-15 2:37:08 PM] - Seamus Casey was added to New Jersey Devils.
+650,1,[2025-08-15 2:37:08 PM] - Brock McGinn was added to Anaheim Ducks.
+651,7,[2025-08-15 2:37:08 PM] - Miles Wood was added to Colorado Avalanche.
+652,6,[2025-08-15 2:37:08 PM] - Wyatt Kaiser was added to Chicago Blackhawks.
+653,4,[2025-08-15 2:37:08 PM] - Anthony Mantha was added to Calgary Flames.
+654,31,[2025-08-15 2:37:08 PM] - Ethen Frank was added to Washington Capitals.
+655,8,[2025-08-15 2:37:08 PM] - Mikael Pyyhtia was added to Columbus Blue Jackets.
+656,13,[2025-08-15 2:37:08 PM] - Samuel Helenius was added to Los Angeles Kings.
+657,23,[2025-08-15 2:37:08 PM] - Noah Gregor was added to San Jose Sharks.
+658,3,[2025-08-15 2:37:08 PM] - Sam Lafferty was added to Buffalo Sabres.
+659,26,[2025-08-15 2:37:08 PM] - Luke Glendening was added to Tampa Bay Lightning.
+660,1,[2025-08-15 2:37:08 PM] - Nikita Nesterenko was added to Anaheim Ducks.
+661,12,[2025-08-15 2:37:08 PM] - Jonah Gadjovich was added to Florida Panthers.
+662,12,[2025-08-15 2:37:08 PM] - Aaron Ekblad was added to Florida Panthers.
+663,15,[2025-08-15 2:37:08 PM] - Alexandre Carrier was added to Montreal Canadiens.
+664,31,[2025-08-15 2:37:08 PM] - Matt Roy was added to Washington Capitals.
+665,7,[2025-08-15 2:37:08 PM] - Samuel Girard was added to Colorado Avalanche.
+666,17,[2025-08-15 2:37:08 PM] - Brian Dumoulin was added to New Jersey Devils.
+667,20,[2025-08-15 2:37:08 PM] - Nick Jensen was added to Ottawa Senators.
+668,26,[2025-08-15 2:37:08 PM] - Erik Cernak was added to Tampa Bay Lightning.
+669,4,[2025-08-15 2:37:08 PM] - Kevin Bahl was added to Calgary Flames.
+670,21,[2025-08-15 2:37:08 PM] - Nick Seeler was added to Philadelphia Flyers.
+671,32,[2025-08-15 2:37:08 PM] - Dylan DeMelo was added to Winnipeg Jets.
+672,27,[2025-08-15 2:37:08 PM] - Chris Tanev was added to Toronto Maple Leafs.
+673,17,[2025-08-15 2:37:08 PM] - Brett Pesce was added to New Jersey Devils.
+674,21,[2025-08-15 2:37:08 PM] - Egor Zamula was added to Philadelphia Flyers.
+675,22,[2025-08-15 2:37:08 PM] - Conor Timmins was added to Pittsburgh Penguins.
+676,4,[2025-08-15 2:37:08 PM] - Ryan Lomberg was added to Calgary Flames.
+677,4,[2025-08-15 2:37:08 PM] - Brayden Pachal was added to Calgary Flames.
+678,2,[2025-08-15 2:37:08 PM] - John Beecher was added to Boston Bruins.
+679,17,[2025-08-15 2:37:08 PM] - Dennis Cholowski was added to New Jersey Devils.
+680,2,[2025-08-15 2:37:08 PM] - Henri Jokiharju was added to Boston Bruins.
+681,23,[2025-08-15 2:37:08 PM] - Jan Rutta was added to San Jose Sharks.
+682,23,[2025-08-15 2:37:08 PM] - Carl Grundstrom was added to San Jose Sharks.
+683,10,[2025-08-15 2:37:08 PM] - Albert Johansson was added to Detroit Red Wings.
+684,18,[2025-08-15 2:37:08 PM] - Scott Mayfield was added to New York Islanders.
+685,29,[2025-08-15 2:37:08 PM] - Erik Brannstrom was added to Vancouver Canucks.
+686,3,[2025-08-15 2:37:08 PM] - Jordan Greenway was added to Buffalo Sabres.
+687,19,[2025-08-15 2:37:08 PM] - Matt Rempe was added to New York Rangers.
+688,2,[2025-08-15 2:37:08 PM] - Hampus Lindholm was added to Boston Bruins.
+689,29,[2025-08-15 2:37:08 PM] - Max Sasson was added to Vancouver Canucks.
+690,25,[2025-08-15 2:37:08 PM] - Tyler Tucker was added to St. Louis Blues.
+691,11,[2025-08-15 2:37:08 PM] - Troy Stecher was added to Edmonton Oilers.
+692,24,[2025-08-15 2:37:08 PM] - Jani Nyman was added to Seattle Kraken.
+693,29,[2025-08-15 2:37:08 PM] - Linus Karlsson was added to Vancouver Canucks.
+694,2,[2025-08-15 2:37:08 PM] - Oliver Wahlstrom was added to Boston Bruins.
+695,2,[2025-08-15 2:37:08 PM] - Fraser Minten was added to Boston Bruins.
+696,3,[2025-08-15 2:37:08 PM] - Tyson Kozak was added to Buffalo Sabres.
+697,2,[2025-08-15 2:37:08 PM] - Vinni Lettieri was added to Boston Bruins.
+698,19,[2025-08-15 2:37:08 PM] - Arthur Kaliyev was added to New York Rangers.
+699,6,[2025-08-15 2:37:08 PM] - Louis Crevier was added to Chicago Blackhawks.
+700,10,[2025-08-15 2:37:08 PM] - Austin Watson was added to Detroit Red Wings.
+701,27,[2025-08-15 2:37:08 PM] - Jake McCabe was added to Toronto Maple Leafs.
+702,6,[2025-08-15 2:37:08 PM] - Connor Murphy was added to Chicago Blackhawks.
+703,10,[2025-08-15 2:37:08 PM] - Erik Gustafsson was added to Detroit Red Wings.
+704,11,[2025-08-15 2:37:08 PM] - Mattias Janmark was added to Edmonton Oilers.
+705,19,[2025-08-15 2:37:08 PM] - Urho Vaakanainen was added to New York Rangers.
+706,17,[2025-08-15 2:37:08 PM] - Brenden Dillon was added to New Jersey Devils.
+707,25,[2025-08-15 2:37:08 PM] - Ryan Suter was added to St. Louis Blues.
+708,26,[2025-08-15 2:37:08 PM] - J.J. Moser was added to Tampa Bay Lightning.
+709,20,[2025-08-15 2:37:08 PM] - Artem Zub was added to Ottawa Senators.
+710,15,[2025-08-15 2:37:08 PM] - Jayden Struble was added to Montreal Canadiens.
+711,11,[2025-08-15 2:37:08 PM] - Ty Emberson was added to Edmonton Oilers.
+712,8,[2025-08-15 2:37:08 PM] - Kevin Labanc was added to Columbus Blue Jackets.
+713,23,[2025-08-15 2:37:08 PM] - Henry Thrun was added to San Jose Sharks.
+714,14,[2025-08-15 2:37:08 PM] - Declan Chisholm was added to Minnesota Wild.
+715,29,[2025-08-15 2:37:08 PM] - Derek Forbort was added to Vancouver Canucks.
+716,6,[2025-08-15 2:37:08 PM] - TJ Brodie was added to Chicago Blackhawks.
+717,23,[2025-08-15 2:37:08 PM] - Shakir Mukhamadullin was added to San Jose Sharks.
+718,18,[2025-08-15 2:37:08 PM] - Scott Perunovich was added to New York Islanders.
+719,4,[2025-08-15 2:37:08 PM] - Daniil Miromanov was added to Calgary Flames.
+720,16,[2025-08-15 2:37:08 PM] - Marc Del Gaizo was added to Nashville Predators.
+721,4,[2025-08-15 2:37:08 PM] - Joel Hanley was added to Calgary Flames.
+722,17,[2025-08-15 2:37:08 PM] - Jonas Siegenthaler was added to New Jersey Devils.
+723,8,[2025-08-15 2:37:08 PM] - Luca Del Bel Belluz was added to Columbus Blue Jackets.
+724,4,[2025-08-15 2:37:08 PM] - Justin Kirkland was added to Calgary Flames.
+725,29,[2025-08-15 2:37:08 PM] - Victor Mancini was added to Vancouver Canucks.
+726,3,[2025-08-15 2:37:08 PM] - Jacob Bernard-Docker was added to Buffalo Sabres.
+727,10,[2025-08-15 2:37:08 PM] - Justin Holl was added to Detroit Red Wings.
+728,6,[2025-08-15 2:37:08 PM] - Colton Dach was added to Chicago Blackhawks.
+729,17,[2025-08-15 2:37:08 PM] - Daniel Sprong was added to New Jersey Devils.
+730,22,[2025-08-15 2:37:08 PM] - Vladislav Kolyachonok was added to Pittsburgh Penguins.
+731,17,[2025-08-15 2:37:08 PM] - Justin Dowling was added to New Jersey Devils.
+732,4,[2025-08-15 2:37:08 PM] - Jake Bean was added to Calgary Flames.
+733,21,[2025-08-15 2:37:08 PM] - Anthony Richard was added to Philadelphia Flyers.
+734,6,[2025-08-15 2:37:08 PM] - Ethan Del Mastro was added to Chicago Blackhawks.
+735,6,[2025-08-15 2:37:08 PM] - Landon Slaggert was added to Chicago Blackhawks.
+736,32,[2025-08-15 2:37:08 PM] - David Gustafsson was added to Winnipeg Jets.
+737,20,[2025-08-15 2:37:08 PM] - Matthew Highmore was added to Ottawa Senators.
+738,1,[2025-08-15 2:37:08 PM] - Jansen Harkins was added to Anaheim Ducks.
+739,14,[2025-08-15 2:37:08 PM] - Jon Merrill was added to Minnesota Wild.
+740,26,[2025-08-15 2:37:08 PM] - Zemgus Girgensons was added to Tampa Bay Lightning.
+741,21,[2025-08-15 2:37:08 PM] - Rodrigo Abols was added to Philadelphia Flyers.
+742,14,[2025-08-15 2:37:08 PM] - Liam Ohgren was added to Minnesota Wild.
+743,25,[2025-08-15 2:37:08 PM] - Nick Leddy was added to St. Louis Blues.
+744,7,[2025-08-15 2:37:08 PM] - Erik Johnson was added to Colorado Avalanche.
+745,27,[2025-08-15 2:37:08 PM] - Philippe Myers was added to Toronto Maple Leafs.
+746,22,[2025-08-15 2:37:08 PM] - Ryan Shea was added to Pittsburgh Penguins.
+747,17,[2025-08-15 2:37:08 PM] - Curtis Lazar was added to New Jersey Devils.
+748,15,[2025-08-15 2:37:08 PM] - Logan Mailloux was added to Montreal Canadiens.
+749,16,[2025-08-15 2:37:08 PM] - Kieffer Bellows was added to Nashville Predators.
+750,17,[2025-08-15 2:37:08 PM] - Simon Nemec was added to New Jersey Devils.
+751,18,[2025-08-15 2:37:08 PM] - Hudson Fasching was added to New York Islanders.
+752,32,[2025-08-15 2:37:08 PM] - Nikita Chibrikov was added to Winnipeg Jets.
+753,23,[2025-08-15 2:37:08 PM] - Cam Lund was added to San Jose Sharks.
+754,28,[2025-08-15 2:37:08 PM] - Kailer Yamamoto was added to Utah Mammoth.
+755,22,[2025-08-15 2:37:08 PM] - Valtteri Puustinen was added to Pittsburgh Penguins.
+756,17,[2025-08-15 2:37:08 PM] - Marc McLaughlin was added to New Jersey Devils.
+757,20,[2025-08-15 2:37:08 PM] - Zack MacEwen was added to Ottawa Senators.
+758,23,[2025-08-15 2:37:08 PM] - Walker Duehr was added to San Jose Sharks.
+759,21,[2025-08-15 2:37:08 PM] - Nicolas Deslauriers was added to Philadelphia Flyers.
+760,15,[2025-08-15 2:37:08 PM] - Joshua Roy was added to Montreal Canadiens.
+761,22,[2025-08-15 2:37:08 PM] - Matt Grzelcyk was added to Pittsburgh Penguins.
+762,31,[2025-08-15 2:37:08 PM] - Trevor van Riemsdyk was added to Washington Capitals.
+763,26,[2025-08-15 2:37:08 PM] - Emil Lilleberg was added to Tampa Bay Lightning.
+764,2,[2025-08-15 2:37:08 PM] - Andrew Peeke was added to Boston Bruins.
+765,17,[2025-08-15 2:37:08 PM] - Johnathan Kovacevic was added to New Jersey Devils.
+766,28,[2025-08-15 2:37:08 PM] - Ian Cole was added to Utah Mammoth.
+767,3,[2025-08-15 2:37:08 PM] - Connor Clifton was added to Buffalo Sabres.
+768,1,[2025-08-15 2:37:08 PM] - Radko Gudas was added to Anaheim Ducks.
+769,7,[2025-08-15 2:37:08 PM] - Josh Manson was added to Colorado Avalanche.
+770,15,[2025-08-15 2:37:08 PM] - David Savard was added to Montreal Canadiens.
+771,28,[2025-08-15 2:37:08 PM] - John Marino was added to Utah Mammoth.
+772,32,[2025-08-15 2:37:08 PM] - Logan Stanley was added to Winnipeg Jets.
+773,1,[2025-08-15 2:37:08 PM] - Jacob Trouba was added to Anaheim Ducks.
+774,9,[2025-08-15 2:37:08 PM] - Ilya Lyubushkin was added to Dallas Stars.
+775,27,[2025-08-15 2:37:08 PM] - Brandon Carlo was added to Toronto Maple Leafs.
+776,2,[2025-08-15 2:37:08 PM] - Matthew Poitras was added to Boston Bruins.
+777,19,[2025-08-15 2:37:08 PM] - Zac Jones was added to New York Rangers.
+778,9,[2025-08-15 2:37:08 PM] - Mathew Dumba was added to Dallas Stars.
+779,27,[2025-08-15 2:37:08 PM] - Simon Benoit was added to Toronto Maple Leafs.
+780,12,[2025-08-15 2:37:08 PM] - Tomas Nosek was added to Florida Panthers.
+781,30,[2025-08-15 2:37:08 PM] - Cole Schwindt was added to Vegas Golden Knights.
+782,6,[2025-08-15 2:37:08 PM] - Nolan Allan was added to Chicago Blackhawks.
+783,10,[2025-08-15 2:37:08 PM] - Jeff Petry was added to Detroit Red Wings.
+784,13,[2025-08-15 2:37:08 PM] - Jacob Moverare was added to Los Angeles Kings.
+785,8,[2025-08-15 2:37:08 PM] - Jake Christiansen was added to Columbus Blue Jackets.
+786,23,[2025-08-15 2:37:08 PM] - Ty Dellandrea was added to San Jose Sharks.
+787,27,[2025-08-15 2:37:08 PM] - Calle Jarnkrok was added to Toronto Maple Leafs.
+788,23,[2025-08-15 2:37:08 PM] - Klim Kostin was added to San Jose Sharks.
+789,21,[2025-08-15 2:37:08 PM] - Emil Andrae was added to Philadelphia Flyers.
+790,8,[2025-08-15 2:37:08 PM] - Christian Fischer was added to Columbus Blue Jackets.
+791,2,[2025-08-15 2:37:08 PM] - Parker Wotherspoon was added to Boston Bruins.
+792,20,[2025-08-15 2:37:08 PM] - Travis Hamonic was added to Ottawa Senators.
+793,32,[2025-08-15 2:37:08 PM] - Luke Schenn was added to Winnipeg Jets.
+794,5,[2025-08-15 2:37:08 PM] - Scott Morrow was added to Carolina Hurricanes.
+795,29,[2025-08-15 2:37:08 PM] - Nils Aman was added to Vancouver Canucks.
+796,29,[2025-08-15 2:37:08 PM] - Phillip Di Giuseppe was added to Vancouver Canucks.
+797,28,[2025-08-15 2:37:08 PM] - Nick DeSimone was added to Utah Mammoth.
+798,9,[2025-08-15 2:37:08 PM] - Brendan Smith was added to Dallas Stars.
+799,11,[2025-08-15 2:37:08 PM] - Derek Ryan was added to Edmonton Oilers.
+800,15,[2025-08-15 2:37:08 PM] - Arber Xhekaj was added to Montreal Canadiens.
+801,1,[2025-08-15 2:37:08 PM] - Oliver Kylington was added to Anaheim Ducks.
+802,16,[2025-08-15 2:37:08 PM] - Adam Wilsby was added to Nashville Predators.
+803,8,[2025-08-15 2:37:08 PM] - Jordan Harris was added to Columbus Blue Jackets.
+804,18,[2025-08-15 2:37:08 PM] - Isaiah George was added to New York Islanders.
+805,14,[2025-08-15 2:37:08 PM] - Devin Shore was added to Minnesota Wild.
+806,11,[2025-08-15 2:37:08 PM] - John Klingberg was added to Edmonton Oilers.
+807,23,[2025-08-15 2:37:08 PM] - Lucas Carlsson was added to San Jose Sharks.
+808,31,[2025-08-15 2:37:08 PM] - Ivan Miroshnichenko was added to Washington Capitals.
+809,20,[2025-08-15 2:37:08 PM] - Nikolas Matinpalo was added to Ottawa Senators.
+810,1,[2025-08-15 2:37:08 PM] - Ross Johnston was added to Anaheim Ducks.
+811,23,[2025-08-15 2:37:08 PM] - Zack Ostapchuk was added to San Jose Sharks.
+812,22,[2025-08-15 2:37:08 PM] - Ryan Graves was added to Pittsburgh Penguins.
+813,22,[2025-08-15 2:37:08 PM] - Rutger McGroarty was added to Pittsburgh Penguins.
+814,14,[2025-08-15 2:37:08 PM] - David Jiricek was added to Minnesota Wild.
+815,2,[2025-08-15 2:37:08 PM] - Fabian Lysell was added to Boston Bruins.
+816,4,[2025-08-15 2:37:08 PM] - Tyson Barrie was added to Calgary Flames.
+817,28,[2025-08-15 2:37:08 PM] - Maveric Lamoureux was added to Utah Mammoth.
+818,13,[2025-08-15 2:37:08 PM] - Andre Lee was added to Los Angeles Kings.
+819,13,[2025-08-15 2:37:08 PM] - Akil Thomas was added to Los Angeles Kings.
+820,22,[2025-08-15 2:37:08 PM] - Owen Pickering was added to Pittsburgh Penguins.
+821,23,[2025-08-15 2:37:08 PM] - Marc-Edouard Vlasic was added to San Jose Sharks.
+822,24,[2025-08-15 2:37:08 PM] - Mitchell Stephens was added to Seattle Kraken.
+823,29,[2025-08-15 2:37:08 PM] - Elias Pettersson was added to Vancouver Canucks.
+824,22,[2025-08-15 2:37:08 PM] - Matt Nieto was added to Pittsburgh Penguins.
+825,16,[2025-08-15 2:37:08 PM] - Andreas Englund was added to Nashville Predators.
+826,5,[2025-08-15 2:37:08 PM] - Justin Robidas was added to Carolina Hurricanes.
+827,31,[2025-08-15 2:37:08 PM] - Michael Sgarbossa was added to Washington Capitals.
+828,27,[2025-08-15 2:37:08 PM] - Alex Steeves was added to Toronto Maple Leafs.
+829,5,[2025-08-15 2:37:08 PM] - Ty Smith was added to Carolina Hurricanes.
+830,6,[2025-08-15 2:37:08 PM] - Kevin Korchinski was added to Chicago Blackhawks.
+831,20,[2025-08-15 2:37:08 PM] - Cole Reinhardt was added to Ottawa Senators.
+832,24,[2025-08-15 2:37:08 PM] - John Hayden was added to Seattle Kraken.
+833,19,[2025-08-15 2:37:08 PM] - Nicolas Aube-Kubel was added to New York Rangers.
+834,11,[2025-08-15 2:37:08 PM] - Max Jones was added to Edmonton Oilers.
+835,12,[2025-08-15 2:37:08 PM] - Justin Sourdif was added to Florida Panthers.
+836,2,[2025-08-15 2:37:08 PM] - John Farinacci was added to Boston Bruins.
+837,4,[2025-08-15 2:37:08 PM] - Sam Morton was added to Calgary Flames.
+838,13,[2025-08-15 2:37:08 PM] - Taylor Ward was added to Los Angeles Kings.
+839,26,[2025-08-15 2:37:08 PM] - Dylan Duke was added to Tampa Bay Lightning.
+840,7,[2025-08-15 2:37:08 PM] - Wyatt Aamodt was added to Colorado Avalanche.
+841,5,[2025-08-15 2:37:08 PM] - Skyler Brind'Amour was added to Carolina Hurricanes.
+842,6,[2025-08-15 2:37:08 PM] - Isaak Phillips was added to Chicago Blackhawks.
+843,26,[2025-08-15 2:37:08 PM] - Declan Carlile was added to Tampa Bay Lightning.
+844,32,[2025-08-15 2:37:08 PM] - Parker Ford was added to Winnipeg Jets.
+845,23,[2025-08-15 2:37:08 PM] - Ethan Cardwell was added to San Jose Sharks.
+846,4,[2025-08-15 2:37:08 PM] - Clark Bishop was added to Calgary Flames.
+847,15,[2025-08-15 2:37:08 PM] - Lucas Condotta was added to Montreal Canadiens.
+848,30,[2025-08-15 2:37:08 PM] - Callahan Burke was added to Vegas Golden Knights.
+849,6,[2025-08-15 2:37:08 PM] - Andreas Athanasiou was added to Chicago Blackhawks.
+850,30,[2025-08-15 2:37:08 PM] - Tanner Laczynski was added to Vegas Golden Knights.
+851,22,[2025-08-15 2:37:08 PM] - Joona Koppanen was added to Pittsburgh Penguins.
+852,29,[2025-08-15 2:37:08 PM] - Arshdeep Bains was added to Vancouver Canucks.
+853,22,[2025-08-15 2:37:08 PM] - Bokondji Imama was added to Pittsburgh Penguins.
+854,23,[2025-08-15 2:37:08 PM] - Patrick Giles was added to San Jose Sharks.
+855,2,[2025-08-15 2:37:08 PM] - Michael Callahan was added to Boston Bruins.
+856,7,[2025-08-15 2:37:08 PM] - Chris Wagner was added to Colorado Avalanche.
+857,32,[2025-08-15 2:37:08 PM] - Connor Hellebuyck was added to Winnipeg Jets.
+858,26,[2025-08-15 2:37:08 PM] - Andrei Vasilevskiy was added to Tampa Bay Lightning.
+859,9,[2025-08-15 2:37:08 PM] - Jake Oettinger was added to Dallas Stars.
+860,12,[2025-08-15 2:37:08 PM] - Sergei Bobrovsky was added to Florida Panthers.
+861,30,[2025-08-15 2:37:08 PM] - Adin Hill was added to Vegas Golden Knights.
+862,15,[2025-08-15 2:37:08 PM] - Sam Montembeault was added to Montreal Canadiens.
+863,13,[2025-08-15 2:37:08 PM] - Darcy Kuemper was added to Los Angeles Kings.
+864,14,[2025-08-15 2:37:08 PM] - Filip Gustavsson was added to Minnesota Wild.
+865,31,[2025-08-15 2:37:08 PM] - Logan Thompson was added to Washington Capitals.
+866,18,[2025-08-15 2:37:08 PM] - Ilya Sorokin was added to New York Islanders.
+867,4,[2025-08-15 2:37:08 PM] - Dustin Wolf was added to Calgary Flames.
+868,7,[2025-08-15 2:37:08 PM] - Mackenzie Blackwood was added to Colorado Avalanche.
+869,25,[2025-08-15 2:37:08 PM] - Jordan Binnington was added to St. Louis Blues.
+870,19,[2025-08-15 2:37:08 PM] - Igor Shesterkin was added to New York Rangers.
+871,24,[2025-08-15 2:37:08 PM] - Joey Daccord was added to Seattle Kraken.
+872,5,[2025-08-15 2:37:08 PM] - Pyotr Kochetkov was added to Carolina Hurricanes.
+873,27,[2025-08-15 2:37:08 PM] - Joseph Woll was added to Toronto Maple Leafs.
+874,28,[2025-08-15 2:37:08 PM] - Karel Vejmelka was added to Utah Mammoth.
+875,17,[2025-08-15 2:37:08 PM] - Jacob Markstrom was added to New Jersey Devils.
+876,8,[2025-08-15 2:37:08 PM] - Elvis Merzlikins was added to Columbus Blue Jackets.
+877,11,[2025-08-15 2:37:08 PM] - Stuart Skinner was added to Edmonton Oilers.
+878,29,[2025-08-15 2:37:08 PM] - Kevin Lankinen was added to Vancouver Canucks.
+879,20,[2025-08-15 2:37:08 PM] - Linus Ullmark was added to Ottawa Senators.
+880,3,[2025-08-15 2:37:08 PM] - Ukko-Pekka Luukkonen was added to Buffalo Sabres.
+881,1,[2025-08-15 2:37:08 PM] - Lukas Dostal was added to Anaheim Ducks.
+882,2,[2025-08-15 2:37:08 PM] - Jeremy Swayman was added to Boston Bruins.
+883,21,[2025-08-15 2:37:08 PM] - Samuel Ersson was added to Philadelphia Flyers.
+884,11,[2025-08-15 2:37:08 PM] - Calvin Pickard was added to Edmonton Oilers.
+885,10,[2025-08-15 2:37:08 PM] - Cam Talbot was added to Detroit Red Wings.
+886,27,[2025-08-15 2:37:08 PM] - Anthony Stolarz was added to Toronto Maple Leafs.
+887,16,[2025-08-15 2:37:08 PM] - Juuse Saros was added to Nashville Predators.
+888,31,[2025-08-15 2:37:08 PM] - Charlie Lindgren was added to Washington Capitals.
+889,6,[2025-08-15 2:37:08 PM] - Spencer Knight was added to Chicago Blackhawks.
+890,22,[2025-08-15 2:37:08 PM] - Tristan Jarry was added to Pittsburgh Penguins.
+891,30,[2025-08-15 2:37:08 PM] - Ilya Samsonov was added to Vegas Golden Knights.
+892,25,[2025-08-15 2:37:08 PM] - Joel Hofer was added to St. Louis Blues.
+893,13,[2025-08-15 2:37:08 PM] - David Rittich was added to Los Angeles Kings.
+894,23,[2025-08-15 2:37:08 PM] - Alexandar Georgiev was added to San Jose Sharks.
+895,16,[2025-08-15 2:37:08 PM] - Justus Annunen was added to Nashville Predators.
+896,22,[2025-08-15 2:37:08 PM] - Alex Nedeljkovic was added to Pittsburgh Penguins.
+897,9,[2025-08-15 2:37:08 PM] - Casey DeSmith was added to Dallas Stars.
+898,7,[2025-08-15 2:37:08 PM] - Scott Wedgewood was added to Colorado Avalanche.
+899,10,[2025-08-15 2:37:08 PM] - Alex Lyon was added to Detroit Red Wings.
+900,14,[2025-08-15 2:37:08 PM] - Marc-Andre Fleury was added to Minnesota Wild.
+901,17,[2025-08-15 2:37:08 PM] - Jake Allen was added to New Jersey Devils.
+902,5,[2025-08-15 2:37:08 PM] - Frederik Andersen was added to Carolina Hurricanes.
+903,4,[2025-08-15 2:37:08 PM] - Dan Vladar was added to Calgary Flames.
+904,10,[2025-08-15 2:37:08 PM] - Petr Mrazek was added to Detroit Red Wings.
+905,20,[2025-08-15 2:37:08 PM] - Anton Forsberg was added to Ottawa Senators.
+906,2,[2025-08-15 2:37:08 PM] - Joonas Korpisalo was added to Boston Bruins.
+907,1,[2025-08-15 2:37:08 PM] - John Gibson was added to Anaheim Ducks.
+908,19,[2025-08-15 2:37:08 PM] - Jonathan Quick was added to New York Rangers.
+909,6,[2025-08-15 2:37:08 PM] - Arvid Soderblom was added to Chicago Blackhawks.
+910,29,[2025-08-15 2:37:08 PM] - Thatcher Demko was added to Vancouver Canucks.
+911,3,[2025-08-15 2:37:08 PM] - James Reimer was added to Buffalo Sabres.
+912,28,[2025-08-15 2:37:08 PM] - Connor Ingram was added to Utah Mammoth.
+913,26,[2025-08-15 2:37:08 PM] - Jonas Johansson was added to Tampa Bay Lightning.
+914,32,[2025-08-15 2:37:08 PM] - Eric Comrie was added to Winnipeg Jets.
+915,24,[2025-08-15 2:37:08 PM] - Philipp Grubauer was added to Seattle Kraken.
+916,15,[2025-08-15 2:37:08 PM] - Jakub Dobes was added to Montreal Canadiens.
+917,8,[2025-08-15 2:37:08 PM] - Daniil Tarasov was added to Columbus Blue Jackets.
+918,8,[2025-08-15 2:37:08 PM] - Jet Greaves was added to Columbus Blue Jackets.
+919,21,[2025-08-15 2:37:08 PM] - Ivan Fedotov was added to Philadelphia Flyers.
+920,12,[2025-08-15 2:37:08 PM] - Vitek Vanecek was added to Florida Panthers.
+921,21,[2025-08-15 2:37:08 PM] - Aleksei Kolosov was added to Philadelphia Flyers.
+922,23,[2025-08-15 2:37:08 PM] - Yaroslav Askarov was added to San Jose Sharks.
+923,22,[2025-08-15 2:37:08 PM] - Joel Blomqvist was added to Pittsburgh Penguins.
+924,5,[2025-08-15 2:37:08 PM] - Dustin Tokarski was added to Carolina Hurricanes.
+925,18,[2025-08-15 2:37:08 PM] - Semyon Varlamov was added to New York Islanders.
+926,5,[2025-08-15 2:37:08 PM] - Spencer Martin was added to Carolina Hurricanes.
+927,27,[2025-08-15 2:37:08 PM] - Dennis Hildeby was added to Toronto Maple Leafs.
+928,17,[2025-08-15 2:37:08 PM] - Nico Daws was added to New Jersey Devils.
+929,18,[2025-08-15 2:37:08 PM] - Marcus Hogberg was added to New York Islanders.
+930,1,[2025-08-15 2:37:08 PM] - Ville Husso was added to Anaheim Ducks.
+931,15,[2025-08-15 2:37:08 PM] - Cayden Primeau was added to Montreal Canadiens.
+932,29,[2025-08-15 2:37:08 PM] - Arturs Silovs was added to Vancouver Canucks.
+933,28,[2025-08-15 2:37:08 PM] - Jaxson Stauber was added to Utah Mammoth.
+934,30,[2025-08-15 2:37:08 PM] - Akira Schmid was added to Vegas Golden Knights.
+935,3,[2025-08-15 2:37:08 PM] - Devon Levi was added to Buffalo Sabres.
+936,20,[2025-08-15 2:37:08 PM] - Mads Sogaard was added to Ottawa Senators.
+937,27,[2025-08-15 2:37:08 PM] - Matt Murray was added to Toronto Maple Leafs.
+938,29,[2025-08-15 2:37:08 PM] - Nikita Tolopilo was added to Vancouver Canucks.
+939,13,[2025-08-15 2:37:08 PM] - Erik Portillo was added to Los Angeles Kings.
+940,10,[2025-08-15 2:37:08 PM] - Sebastian Cossa was added to Detroit Red Wings.
+941,19,[2025-08-15 2:37:08 PM] - Louis Domingue was added to New York Rangers.
+942,28,[2025-08-15 2:37:08 PM] - Matt Villalta was added to Utah Mammoth.
+943,24,[2025-08-15 5:10:28 PM] - Sammy Blais was added to Seattle Kraken.
+944,31,[2025-08-15 5:11:52 PM] - Travis Dermott was added to Washington Capitals.
+945,24,[2025-08-15 5:12:54 PM] - Seattle Kraken paid $0 to release Sammy Blais.
+946,24,[2025-08-15 5:12:54 PM] - Sammy Blais was released.
+947,24,[2025-08-15 5:13:36 PM] - Scott Harrington was added to Seattle Kraken.
+948,27,[2025-08-15 5:14:36 PM] - Toronto Marlies hired John Gruden for $1 for 1 year(s).
+949,2,[2025-08-15 5:15:55 PM] - Providence Bruins hired Ryan Mougenel for $1 for 1 year(s).
+950,6,[2025-08-15 5:16:47 PM] - Rockford IceHogs hired Mark Eaton for $1 for 1 year(s).
+951,13,[2025-08-15 5:17:35 PM] - Ontario Reign hired Jack Capuano for $1 for 1 year(s).
+952,12,[2025-08-15 5:18:06 PM] - Jacksonville Barons hired Cam Abbott for $1 for 1 year(s).
+953,12,[2025-08-15 5:18:14 PM] - New Record for Team's Most Goals (7) in 1 Game for Florida Panthers!
+954,12,[2025-08-15 5:18:14 PM] - New Record for Team's Most Assists (13) in 1 Game for Florida Panthers!
+955,12,[2025-08-15 5:18:14 PM] - New Record for Team's Most Points (20) in 1 Game for Florida Panthers!
+956,12,[2025-08-15 5:18:14 PM] - New Record for Team's Most Shots (28) in 1 Game for Florida Panthers!
+957,12,[2025-08-15 5:18:14 PM] - New Record for Team's Most Shots Blocked (7) in 1 Game for Florida Panthers!
+958,12,[2025-08-15 5:18:14 PM] - New Record for Team's Most Hits (16) in 1 Game for Florida Panthers!
+959,12,[2025-08-15 5:18:14 PM] - New Record for Team's Most Goals (7) in 1 Game for Florida Panthers!
+960,12,[2025-08-15 5:18:14 PM] - New Record for Team's Most Assists (13) in 1 Game for Florida Panthers!
+961,12,[2025-08-15 5:18:14 PM] - New Record for Team's Most Points (20) in 1 Game for Florida Panthers!
+962,12,[2025-08-15 5:18:14 PM] - New Record for Team's Most Shots (28) in 1 Game for Florida Panthers!
+963,12,[2025-08-15 5:18:14 PM] - New Record for Team's Most Shots Blocked (7) in 1 Game for Florida Panthers!
+964,12,[2025-08-15 5:18:14 PM] - New Record for Team's Most Hits (16) in 1 Game for Florida Panthers!
+965,6,[2025-08-15 5:18:14 PM] - New Record for Team's Most Shots (30) in 1 Game for Chicago Blackhawks!
+966,6,[2025-08-15 5:18:14 PM] - New Record for Team's Most Penalties Minutes (8) in 1 Game for Chicago Blackhawks!
+967,6,[2025-08-15 5:18:14 PM] - New Record for Team's Most Hits (18) in 1 Game for Chicago Blackhawks!
+968,6,[2025-08-15 5:18:14 PM] - New Record for Team's Most Goals (1) in 1 Game for Chicago Blackhawks!
+969,6,[2025-08-15 5:18:14 PM] - New Record for Team's Most Assists (2) in 1 Game for Chicago Blackhawks!
+970,6,[2025-08-15 5:18:14 PM] - New Record for Team's Most Points (3) in 1 Game for Chicago Blackhawks!
+971,6,[2025-08-15 5:18:14 PM] - New Record for Team's Most Shots (30) in 1 Game for Chicago Blackhawks!
+972,6,[2025-08-15 5:18:14 PM] - New Record for Team's Most Shots Blocked (4) in 1 Game for Chicago Blackhawks!
+973,6,[2025-08-15 5:18:14 PM] - New Record for Team's Most Penalties Minutes (8) in 1 Game for Chicago Blackhawks!
+974,6,[2025-08-15 5:18:14 PM] - New Record for Team's Most Hits (18) in 1 Game for Chicago Blackhawks!
+975,19,[2025-08-15 5:18:14 PM] - New Record for Team's Most Shots Blocked (11) in 1 Game for New York Rangers!
+976,19,[2025-08-15 5:18:14 PM] - New Record for Team's Most Penalties Minutes (14) in 1 Game for New York Rangers!
+977,19,[2025-08-15 5:18:14 PM] - New Record for Team's Most Goals (5) in 1 Game for New York Rangers!
+978,19,[2025-08-15 5:18:14 PM] - New Record for Team's Most Assists (9) in 1 Game for New York Rangers!
+979,19,[2025-08-15 5:18:14 PM] - New Record for Team's Most Points (14) in 1 Game for New York Rangers!
+980,19,[2025-08-15 5:18:14 PM] - New Record for Team's Most Shots (25) in 1 Game for New York Rangers!
+981,19,[2025-08-15 5:18:14 PM] - New Record for Team's Most Shots Blocked (11) in 1 Game for New York Rangers!
+982,19,[2025-08-15 5:18:14 PM] - New Record for Team's Most Penalties Minutes (14) in 1 Game for New York Rangers!
+983,19,[2025-08-15 5:18:14 PM] - New Record for Team's Most Hits (16) in 1 Game for New York Rangers!
+984,22,[2025-08-15 5:18:14 PM] - New Record for Team's Most Shots (32) in 1 Game for Pittsburgh Penguins!
+985,22,[2025-08-15 5:18:14 PM] - New Record for Team's Most Goals (3) in 1 Game for Pittsburgh Penguins!
+986,22,[2025-08-15 5:18:14 PM] - New Record for Team's Most Assists (4) in 1 Game for Pittsburgh Penguins!
+987,22,[2025-08-15 5:18:14 PM] - New Record for Team's Most Points (7) in 1 Game for Pittsburgh Penguins!
+988,22,[2025-08-15 5:18:14 PM] - New Record for Team's Most Shots (32) in 1 Game for Pittsburgh Penguins!
+989,22,[2025-08-15 5:18:14 PM] - New Record for Team's Most Shots Blocked (7) in 1 Game for Pittsburgh Penguins!
+990,22,[2025-08-15 5:18:14 PM] - New Record for Team's Most Penalties Minutes (10) in 1 Game for Pittsburgh Penguins!
+991,22,[2025-08-15 5:18:14 PM] - New Record for Team's Most Hits (12) in 1 Game for Pittsburgh Penguins!
+992,13,[2025-08-15 5:18:14 PM] - New Record for Team's Most Shots (34) in 1 Game for Los Angeles Kings!
+993,13,[2025-08-15 5:18:14 PM] - New Record for Team's Most Shots Blocked (17) in 1 Game for Los Angeles Kings!
+994,13,[2025-08-15 5:18:14 PM] - New Record for Team's Most Goals (6) in 1 Game for Los Angeles Kings!
+995,13,[2025-08-15 5:18:14 PM] - New Record for Team's Most Assists (9) in 1 Game for Los Angeles Kings!
+996,13,[2025-08-15 5:18:14 PM] - New Record for Team's Most Points (15) in 1 Game for Los Angeles Kings!
+997,13,[2025-08-15 5:18:14 PM] - New Record for Team's Most Shots (34) in 1 Game for Los Angeles Kings!
+998,13,[2025-08-15 5:18:14 PM] - New Record for Team's Most Shots Blocked (17) in 1 Game for Los Angeles Kings!
+999,13,[2025-08-15 5:18:14 PM] - New Record for Team's Most Penalties Minutes (8) in 1 Game for Los Angeles Kings!
+1000,13,[2025-08-15 5:18:14 PM] - New Record for Team's Most Hits (15) in 1 Game for Los Angeles Kings!
+1001,7,[2025-08-15 5:18:14 PM] - New Record for Team's Most Shots (39) in 1 Game for Colorado Avalanche!
+1002,7,[2025-08-15 5:18:14 PM] - New Record for Team's Most Hits (22) in 1 Game for Colorado Avalanche!
+1003,7,[2025-08-15 5:18:14 PM] - New Record for Team's Most Goals (4) in 1 Game for Colorado Avalanche!
+1004,7,[2025-08-15 5:18:14 PM] - New Record for Team's Most Assists (7) in 1 Game for Colorado Avalanche!
+1005,7,[2025-08-15 5:18:14 PM] - New Record for Team's Most Points (11) in 1 Game for Colorado Avalanche!
+1006,7,[2025-08-15 5:18:14 PM] - New Record for Team's Most Shots (39) in 1 Game for Colorado Avalanche!
+1007,7,[2025-08-15 5:18:14 PM] - New Record for Team's Most Shots Blocked (12) in 1 Game for Colorado Avalanche!
+1008,7,[2025-08-15 5:18:14 PM] - New Record for Team's Most Penalties Minutes (8) in 1 Game for Colorado Avalanche!
+1009,7,[2025-08-15 5:18:14 PM] - New Record for Team's Most Hits (22) in 1 Game for Colorado Avalanche!
+1010,27,[2025-08-15 5:18:14 PM] - New Record for Team's Most Goals (7) in 1 Game for Toronto Maple Leafs!
+1011,27,[2025-08-15 5:18:14 PM] - New Record for Team's Most Assists (9) in 1 Game for Toronto Maple Leafs!
+1012,27,[2025-08-15 5:18:14 PM] - New Record for Team's Most Points (16) in 1 Game for Toronto Maple Leafs!
+1013,27,[2025-08-15 5:18:14 PM] - New Record for Team's Most Shots (27) in 1 Game for Toronto Maple Leafs!
+1014,27,[2025-08-15 5:18:14 PM] - New Record for Team's Most Shots Blocked (16) in 1 Game for Toronto Maple Leafs!
+1015,27,[2025-08-15 5:18:14 PM] - New Record for Team's Most Penalties Minutes (8) in 1 Game for Toronto Maple Leafs!
+1016,27,[2025-08-15 5:18:14 PM] - New Record for Team's Most Hits (18) in 1 Game for Toronto Maple Leafs!
+1017,15,[2025-08-15 5:18:14 PM] - New Record for Team's Most Goals (1) in 1 Game for Montreal Canadiens!
+1018,15,[2025-08-15 5:18:14 PM] - New Record for Team's Most Assists (2) in 1 Game for Montreal Canadiens!
+1019,15,[2025-08-15 5:18:14 PM] - New Record for Team's Most Points (3) in 1 Game for Montreal Canadiens!
+1020,15,[2025-08-15 5:18:14 PM] - New Record for Team's Most Shots (32) in 1 Game for Montreal Canadiens!
+1021,15,[2025-08-15 5:18:14 PM] - New Record for Team's Most Shots Blocked (11) in 1 Game for Montreal Canadiens!
+1022,15,[2025-08-15 5:18:14 PM] - New Record for Team's Most Penalties Minutes (4) in 1 Game for Montreal Canadiens!
+1023,15,[2025-08-15 5:18:14 PM] - New Record for Team's Most Hits (16) in 1 Game for Montreal Canadiens!
+1024,31,[2025-08-15 5:18:14 PM] - New Record for Team's Most Goals (6) in 1 Game for Washington Capitals!
+1025,31,[2025-08-15 5:18:14 PM] - New Record for Team's Most Assists (11) in 1 Game for Washington Capitals!
+1026,31,[2025-08-15 5:18:14 PM] - New Record for Team's Most Points (17) in 1 Game for Washington Capitals!
+1027,31,[2025-08-15 5:18:14 PM] - New Record for Team's Most Shots (34) in 1 Game for Washington Capitals!
+1028,31,[2025-08-15 5:18:14 PM] - New Record for Team's Most Shots Blocked (9) in 1 Game for Washington Capitals!
+1029,31,[2025-08-15 5:18:14 PM] - New Record for Team's Most Penalties Minutes (8) in 1 Game for Washington Capitals!
+1030,31,[2025-08-15 5:18:14 PM] - New Record for Team's Most Hits (15) in 1 Game for Washington Capitals!
+1031,2,[2025-08-15 5:18:14 PM] - New Record for Team's Most Goals (4) in 1 Game for Boston Bruins!
+1032,2,[2025-08-15 5:18:14 PM] - New Record for Team's Most Assists (5) in 1 Game for Boston Bruins!
+1033,2,[2025-08-15 5:18:14 PM] - New Record for Team's Most Points (9) in 1 Game for Boston Bruins!
+1034,2,[2025-08-15 5:18:14 PM] - New Record for Team's Most Shots (34) in 1 Game for Boston Bruins!
+1035,2,[2025-08-15 5:18:14 PM] - New Record for Team's Most Shots Blocked (10) in 1 Game for Boston Bruins!
+1036,2,[2025-08-15 5:18:14 PM] - New Record for Team's Most Penalties Minutes (12) in 1 Game for Boston Bruins!
+1037,2,[2025-08-15 5:18:14 PM] - New Record for Team's Most Hits (5) in 1 Game for Boston Bruins!
+1038,11,[2025-08-15 5:18:14 PM] - New Record for Team's Most Goals (9) in 1 Game for Edmonton Oilers!
+1039,11,[2025-08-15 5:18:14 PM] - New Record for Team's Most Hits (24) in 1 Game for Edmonton Oilers!
+1040,11,[2025-08-15 5:18:14 PM] - New Record for Team's Most Goals (9) in 1 Game for Edmonton Oilers!
+1041,11,[2025-08-15 5:18:14 PM] - New Record for Team's Most Assists (11) in 1 Game for Edmonton Oilers!
+1042,11,[2025-08-15 5:18:14 PM] - New Record for Team's Most Points (20) in 1 Game for Edmonton Oilers!
+1043,11,[2025-08-15 5:18:14 PM] - New Record for Team's Most Shots (32) in 1 Game for Edmonton Oilers!
+1044,11,[2025-08-15 5:18:14 PM] - New Record for Team's Most Shots Blocked (9) in 1 Game for Edmonton Oilers!
+1045,11,[2025-08-15 5:18:14 PM] - New Record for Team's Most Penalties Minutes (2) in 1 Game for Edmonton Oilers!
+1046,11,[2025-08-15 5:18:14 PM] - New Record for Team's Most Hits (24) in 1 Game for Edmonton Oilers!
+1047,4,[2025-08-15 5:18:14 PM] - New Record for Team's Most Goals (1) in 1 Game for Calgary Flames!
+1048,4,[2025-08-15 5:18:14 PM] - New Record for Team's Most Assists (1) in 1 Game for Calgary Flames!
+1049,4,[2025-08-15 5:18:14 PM] - New Record for Team's Most Points (2) in 1 Game for Calgary Flames!
+1050,4,[2025-08-15 5:18:14 PM] - New Record for Team's Most Shots (22) in 1 Game for Calgary Flames!
+1051,4,[2025-08-15 5:18:14 PM] - New Record for Team's Most Shots Blocked (9) in 1 Game for Calgary Flames!
+1052,4,[2025-08-15 5:18:14 PM] - New Record for Team's Most Penalties Minutes (14) in 1 Game for Calgary Flames!
+1053,4,[2025-08-15 5:18:14 PM] - New Record for Team's Most Hits (10) in 1 Game for Calgary Flames!
+1054,30,[2025-08-15 5:18:15 PM] - New Record for Team's Most Goals (2) in 1 Game for Vegas Golden Knights!
+1055,30,[2025-08-15 5:18:15 PM] - New Record for Team's Most Assists (2) in 1 Game for Vegas Golden Knights!
+1056,30,[2025-08-15 5:18:15 PM] - New Record for Team's Most Points (4) in 1 Game for Vegas Golden Knights!
+1057,30,[2025-08-15 5:18:15 PM] - New Record for Team's Most Shots (39) in 1 Game for Vegas Golden Knights!
+1058,30,[2025-08-15 5:18:15 PM] - New Record for Team's Most Shots Blocked (8) in 1 Game for Vegas Golden Knights!
+1059,30,[2025-08-15 5:18:15 PM] - New Record for Team's Most Penalties Minutes (4) in 1 Game for Vegas Golden Knights!
+1060,30,[2025-08-15 5:18:15 PM] - New Record for Team's Most Hits (14) in 1 Game for Vegas Golden Knights!
+1061,13,[2025-08-15 5:18:15 PM] - New Record for Team's Most Hits (21) in 1 Game for Los Angeles Kings!
+1062,2,[2025-08-15 5:18:15 PM] - New Record for Team's Most Hits (25) in 1 Game for Boston Bruins!
+1063,2,[2025-08-15 5:18:15 PM] - New Record for Team's Most Shots Blocked (11) in 1 Game for Boston Bruins!
+1064,2,[2025-08-15 5:18:15 PM] - New Record for Team's Most Hits (25) in 1 Game for Boston Bruins!
+1065,6,[2025-08-15 5:18:15 PM] - New Record for Team's Most Goals (3) in 1 Game for Chicago Blackhawks!
+1066,6,[2025-08-15 5:18:15 PM] - New Record for Team's Most Assists (6) in 1 Game for Chicago Blackhawks!
+1067,6,[2025-08-15 5:18:15 PM] - New Record for Team's Most Points (9) in 1 Game for Chicago Blackhawks!
+1068,6,[2025-08-15 5:18:15 PM] - New Record for Team's Most Shots Blocked (9) in 1 Game for Chicago Blackhawks!
+1069,6,[2025-08-15 5:18:15 PM] - New Record for Team's Most Penalties Minutes (12) in 1 Game for Chicago Blackhawks!
+1070,6,[2025-08-15 5:18:15 PM] - New Record for Team's Most Hits (24) in 1 Game for Chicago Blackhawks!
+1071,3,[2025-08-15 5:18:15 PM] - New Record for Team's Most Shots (45) in 1 Game for Buffalo Sabres!
+1072,3,[2025-08-15 5:18:15 PM] - New Record for Team's Most Goals (8) in 1 Game for Buffalo Sabres!
+1073,3,[2025-08-15 5:18:15 PM] - New Record for Team's Most Assists (12) in 1 Game for Buffalo Sabres!
+1074,3,[2025-08-15 5:18:15 PM] - New Record for Team's Most Points (20) in 1 Game for Buffalo Sabres!
+1075,3,[2025-08-15 5:18:15 PM] - New Record for Team's Most Shots (45) in 1 Game for Buffalo Sabres!
+1076,3,[2025-08-15 5:18:15 PM] - New Record for Team's Most Shots Blocked (14) in 1 Game for Buffalo Sabres!
+1077,3,[2025-08-15 5:18:15 PM] - New Record for Team's Most Penalties Minutes (10) in 1 Game for Buffalo Sabres!
+1078,3,[2025-08-15 5:18:15 PM] - New Record for Team's Most Hits (18) in 1 Game for Buffalo Sabres!
+1079,19,[2025-08-15 5:18:15 PM] - New Record for Team's Most Goals (6) in 1 Game for New York Rangers!
+1080,19,[2025-08-15 5:18:15 PM] - New Record for Team's Most Assists (11) in 1 Game for New York Rangers!
+1081,19,[2025-08-15 5:18:15 PM] - New Record for Team's Most Points (17) in 1 Game for New York Rangers!
+1082,19,[2025-08-15 5:18:15 PM] - New Record for Team's Most Shots (34) in 1 Game for New York Rangers!
+1083,19,[2025-08-15 5:18:15 PM] - New Record for Team's Most Shots Blocked (17) in 1 Game for New York Rangers!
+1084,10,[2025-08-15 5:18:15 PM] - New Record for Team's Most Goals (5) in 1 Game for Detroit Red Wings!
+1085,10,[2025-08-15 5:18:15 PM] - New Record for Team's Most Assists (10) in 1 Game for Detroit Red Wings!
+1086,10,[2025-08-15 5:18:15 PM] - New Record for Team's Most Points (15) in 1 Game for Detroit Red Wings!
+1087,10,[2025-08-15 5:18:15 PM] - New Record for Team's Most Shots (33) in 1 Game for Detroit Red Wings!
+1088,10,[2025-08-15 5:18:15 PM] - New Record for Team's Most Shots Blocked (12) in 1 Game for Detroit Red Wings!
+1089,10,[2025-08-15 5:18:15 PM] - New Record for Team's Most Penalties Minutes (6) in 1 Game for Detroit Red Wings!
+1090,10,[2025-08-15 5:18:15 PM] - New Record for Team's Most Hits (16) in 1 Game for Detroit Red Wings!
+1091,15,[2025-08-15 5:18:15 PM] - New Record for Team's Most Penalties Minutes (16) in 1 Game for Montreal Canadiens!
+1092,15,[2025-08-15 5:18:15 PM] - New Record for Team's Most Goals (3) in 1 Game for Montreal Canadiens!
+1093,15,[2025-08-15 5:18:15 PM] - New Record for Team's Most Assists (4) in 1 Game for Montreal Canadiens!
+1094,15,[2025-08-15 5:18:15 PM] - New Record for Team's Most Points (7) in 1 Game for Montreal Canadiens!
+1095,15,[2025-08-15 5:18:15 PM] - New Record for Team's Most Shots Blocked (12) in 1 Game for Montreal Canadiens!
+1096,15,[2025-08-15 5:18:15 PM] - New Record for Team's Most Penalties Minutes (16) in 1 Game for Montreal Canadiens!
+1097,15,[2025-08-15 5:18:15 PM] - New Record for Team's Most Hits (18) in 1 Game for Montreal Canadiens!
+1098,26,[2025-08-15 5:18:15 PM] - New Record for Team's Most Goals (5) in 1 Game for Tampa Bay Lightning!
+1099,26,[2025-08-15 5:18:15 PM] - New Record for Team's Most Assists (7) in 1 Game for Tampa Bay Lightning!
+1100,26,[2025-08-15 5:18:15 PM] - New Record for Team's Most Points (12) in 1 Game for Tampa Bay Lightning!
+1101,26,[2025-08-15 5:18:15 PM] - New Record for Team's Most Shots (32) in 1 Game for Tampa Bay Lightning!
+1102,26,[2025-08-15 5:18:15 PM] - New Record for Team's Most Shots Blocked (4) in 1 Game for Tampa Bay Lightning!
+1103,26,[2025-08-15 5:18:15 PM] - New Record for Team's Most Penalties Minutes (4) in 1 Game for Tampa Bay Lightning!
+1104,26,[2025-08-15 5:18:15 PM] - New Record for Team's Most Hits (25) in 1 Game for Tampa Bay Lightning!
+1105,20,[2025-08-15 5:18:15 PM] - New Record for Team's Most Goals (4) in 1 Game for Ottawa Senators!
+1106,20,[2025-08-15 5:18:15 PM] - New Record for Team's Most Assists (4) in 1 Game for Ottawa Senators!
+1107,20,[2025-08-15 5:18:15 PM] - New Record for Team's Most Points (8) in 1 Game for Ottawa Senators!
+1108,20,[2025-08-15 5:18:15 PM] - New Record for Team's Most Shots (34) in 1 Game for Ottawa Senators!
+1109,20,[2025-08-15 5:18:15 PM] - New Record for Team's Most Shots Blocked (13) in 1 Game for Ottawa Senators!
+1110,20,[2025-08-15 5:18:15 PM] - New Record for Team's Most Penalties Minutes (14) in 1 Game for Ottawa Senators!
+1111,20,[2025-08-15 5:18:15 PM] - New Record for Team's Most Hits (20) in 1 Game for Ottawa Senators!
+1112,12,[2025-08-15 5:18:15 PM] - New Record for Team's Most Shots Blocked (18) in 1 Game for Florida Panthers!
+1113,12,[2025-08-15 5:18:15 PM] - New Record for Team's Most Shots (32) in 1 Game for Florida Panthers!
+1114,12,[2025-08-15 5:18:15 PM] - New Record for Team's Most Shots Blocked (18) in 1 Game for Florida Panthers!
+1115,12,[2025-08-15 5:18:15 PM] - New Record for Team's Most Penalties Minutes (12) in 1 Game for Florida Panthers!
+1116,12,[2025-08-15 5:18:15 PM] - New Record for Team's Most Hits (20) in 1 Game for Florida Panthers!
+1117,21,[2025-08-15 5:18:15 PM] - New Record for Team's Most Goals (6) in 1 Game for Philadelphia Flyers!
+1118,21,[2025-08-15 5:18:15 PM] - New Record for Team's Most Assists (8) in 1 Game for Philadelphia Flyers!
+1119,21,[2025-08-15 5:18:15 PM] - New Record for Team's Most Points (14) in 1 Game for Philadelphia Flyers!
+1120,21,[2025-08-15 5:18:15 PM] - New Record for Team's Most Shots (41) in 1 Game for Philadelphia Flyers!
+1121,21,[2025-08-15 5:18:15 PM] - New Record for Team's Most Shots Blocked (8) in 1 Game for Philadelphia Flyers!
+1122,21,[2025-08-15 5:18:15 PM] - New Record for Team's Most Penalties Minutes (4) in 1 Game for Philadelphia Flyers!
+1123,21,[2025-08-15 5:18:15 PM] - New Record for Team's Most Hits (14) in 1 Game for Philadelphia Flyers!
+1124,22,[2025-08-15 5:18:15 PM] - New Record for Team's Most Assists (5) in 1 Game for Pittsburgh Penguins!
+1125,22,[2025-08-15 5:18:15 PM] - New Record for Team's Most Points (8) in 1 Game for Pittsburgh Penguins!
+1126,22,[2025-08-15 5:18:15 PM] - New Record for Team's Most Shots Blocked (13) in 1 Game for Pittsburgh Penguins!
+1127,22,[2025-08-15 5:18:15 PM] - New Record for Team's Most Hits (15) in 1 Game for Pittsburgh Penguins!
+1128,18,[2025-08-15 5:18:15 PM] - New Record for Team's Most Goals (2) in 1 Game for New York Islanders!
+1129,18,[2025-08-15 5:18:15 PM] - New Record for Team's Most Assists (3) in 1 Game for New York Islanders!
+1130,18,[2025-08-15 5:18:15 PM] - New Record for Team's Most Points (5) in 1 Game for New York Islanders!
+1131,18,[2025-08-15 5:18:15 PM] - New Record for Team's Most Shots (41) in 1 Game for New York Islanders!
+1132,18,[2025-08-15 5:18:15 PM] - New Record for Team's Most Shots Blocked (7) in 1 Game for New York Islanders!
+1133,18,[2025-08-15 5:18:15 PM] - New Record for Team's Most Penalties Minutes (8) in 1 Game for New York Islanders!
+1134,18,[2025-08-15 5:18:15 PM] - New Record for Team's Most Hits (23) in 1 Game for New York Islanders!
+1135,5,[2025-08-15 5:18:15 PM] - New Record for Team's Most Hits (26) in 1 Game for Carolina Hurricanes!
+1136,5,[2025-08-15 5:18:15 PM] - New Record for Team's Most Goals (1) in 1 Game for Carolina Hurricanes!
+1137,5,[2025-08-15 5:18:15 PM] - New Record for Team's Most Assists (1) in 1 Game for Carolina Hurricanes!
+1138,5,[2025-08-15 5:18:15 PM] - New Record for Team's Most Points (2) in 1 Game for Carolina Hurricanes!
+1139,5,[2025-08-15 5:18:15 PM] - New Record for Team's Most Shots (30) in 1 Game for Carolina Hurricanes!
+1140,5,[2025-08-15 5:18:15 PM] - New Record for Team's Most Shots Blocked (17) in 1 Game for Carolina Hurricanes!
+1141,5,[2025-08-15 5:18:15 PM] - New Record for Team's Most Penalties Minutes (2) in 1 Game for Carolina Hurricanes!
+1142,5,[2025-08-15 5:18:15 PM] - New Record for Team's Most Hits (26) in 1 Game for Carolina Hurricanes!
+1143,17,[2025-08-15 5:18:15 PM] - New Record for Team's Most Goals (5) in 1 Game for New Jersey Devils!
+1144,17,[2025-08-15 5:18:15 PM] - New Record for Team's Most Assists (8) in 1 Game for New Jersey Devils!
+1145,17,[2025-08-15 5:18:15 PM] - New Record for Team's Most Points (13) in 1 Game for New Jersey Devils!
+1146,17,[2025-08-15 5:18:15 PM] - New Record for Team's Most Shots (28) in 1 Game for New Jersey Devils!
+1147,17,[2025-08-15 5:18:15 PM] - New Record for Team's Most Shots Blocked (12) in 1 Game for New Jersey Devils!
+1148,17,[2025-08-15 5:18:15 PM] - New Record for Team's Most Penalties Minutes (6) in 1 Game for New Jersey Devils!
+1149,17,[2025-08-15 5:18:15 PM] - New Record for Team's Most Hits (20) in 1 Game for New Jersey Devils!
+1150,25,[2025-08-15 5:18:16 PM] - New Record for Team's Most Goals (2) in 1 Game for St. Louis Blues!
+1151,25,[2025-08-15 5:18:16 PM] - New Record for Team's Most Assists (3) in 1 Game for St. Louis Blues!
+1152,25,[2025-08-15 5:18:16 PM] - New Record for Team's Most Points (5) in 1 Game for St. Louis Blues!
+1153,25,[2025-08-15 5:18:16 PM] - New Record for Team's Most Shots (35) in 1 Game for St. Louis Blues!
+1154,25,[2025-08-15 5:18:16 PM] - New Record for Team's Most Shots Blocked (9) in 1 Game for St. Louis Blues!
+1155,25,[2025-08-15 5:18:16 PM] - New Record for Team's Most Penalties Minutes (6) in 1 Game for St. Louis Blues!
+1156,25,[2025-08-15 5:18:16 PM] - New Record for Team's Most Hits (19) in 1 Game for St. Louis Blues!
+1157,14,[2025-08-15 5:18:16 PM] - New Record for Team's Most Goals (7) in 1 Game for Minnesota Wild!
+1158,14,[2025-08-15 5:18:16 PM] - New Record for Team's Most Assists (8) in 1 Game for Minnesota Wild!
+1159,14,[2025-08-15 5:18:16 PM] - New Record for Team's Most Points (15) in 1 Game for Minnesota Wild!
+1160,14,[2025-08-15 5:18:16 PM] - New Record for Team's Most Shots (26) in 1 Game for Minnesota Wild!
+1161,14,[2025-08-15 5:18:16 PM] - New Record for Team's Most Shots Blocked (17) in 1 Game for Minnesota Wild!
+1162,14,[2025-08-15 5:18:16 PM] - New Record for Team's Most Penalties Minutes (6) in 1 Game for Minnesota Wild!
+1163,14,[2025-08-15 5:18:16 PM] - New Record for Team's Most Hits (21) in 1 Game for Minnesota Wild!
+1164,16,[2025-08-15 5:18:16 PM] - New Record for Team's Most Goals (3) in 1 Game for Nashville Predators!
+1165,16,[2025-08-15 5:18:16 PM] - New Record for Team's Most Assists (4) in 1 Game for Nashville Predators!
+1166,16,[2025-08-15 5:18:16 PM] - New Record for Team's Most Points (7) in 1 Game for Nashville Predators!
+1167,16,[2025-08-15 5:18:16 PM] - New Record for Team's Most Shots (25) in 1 Game for Nashville Predators!
+1168,16,[2025-08-15 5:18:16 PM] - New Record for Team's Most Shots Blocked (16) in 1 Game for Nashville Predators!
+1169,16,[2025-08-15 5:18:16 PM] - New Record for Team's Most Penalties Minutes (6) in 1 Game for Nashville Predators!
+1170,16,[2025-08-15 5:18:16 PM] - New Record for Team's Most Hits (21) in 1 Game for Nashville Predators!
+1171,8,[2025-08-15 5:18:16 PM] - New Record for Team's Most Goals (1) in 1 Game for Columbus Blue Jackets!
+1172,8,[2025-08-15 5:18:16 PM] - New Record for Team's Most Assists (2) in 1 Game for Columbus Blue Jackets!
+1173,8,[2025-08-15 5:18:16 PM] - New Record for Team's Most Points (3) in 1 Game for Columbus Blue Jackets!
+1174,8,[2025-08-15 5:18:16 PM] - New Record for Team's Most Shots (41) in 1 Game for Columbus Blue Jackets!
+1175,8,[2025-08-15 5:18:16 PM] - New Record for Team's Most Shots Blocked (8) in 1 Game for Columbus Blue Jackets!
+1176,8,[2025-08-15 5:18:16 PM] - New Record for Team's Most Penalties Minutes (16) in 1 Game for Columbus Blue Jackets!
+1177,8,[2025-08-15 5:18:16 PM] - New Record for Team's Most Hits (9) in 1 Game for Columbus Blue Jackets!
+1178,32,[2025-08-15 5:18:16 PM] - New Record for Team's Most Goals (3) in 1 Game for Winnipeg Jets!
+1179,32,[2025-08-15 5:18:16 PM] - New Record for Team's Most Assists (5) in 1 Game for Winnipeg Jets!
+1180,32,[2025-08-15 5:18:16 PM] - New Record for Team's Most Points (8) in 1 Game for Winnipeg Jets!
+1181,32,[2025-08-15 5:18:16 PM] - New Record for Team's Most Shots (31) in 1 Game for Winnipeg Jets!
+1182,32,[2025-08-15 5:18:16 PM] - New Record for Team's Most Shots Blocked (9) in 1 Game for Winnipeg Jets!
+1183,32,[2025-08-15 5:18:16 PM] - New Record for Team's Most Penalties Minutes (6) in 1 Game for Winnipeg Jets!
+1184,32,[2025-08-15 5:18:16 PM] - New Record for Team's Most Hits (5) in 1 Game for Winnipeg Jets!
+1185,9,[2025-08-15 5:18:16 PM] - New Record for Team's Most Goals (4) in 1 Game for Dallas Stars!
+1186,9,[2025-08-15 5:18:16 PM] - New Record for Team's Most Assists (7) in 1 Game for Dallas Stars!
+1187,9,[2025-08-15 5:18:16 PM] - New Record for Team's Most Points (11) in 1 Game for Dallas Stars!
+1188,9,[2025-08-15 5:18:16 PM] - New Record for Team's Most Shots (33) in 1 Game for Dallas Stars!
+1189,9,[2025-08-15 5:18:16 PM] - New Record for Team's Most Shots Blocked (14) in 1 Game for Dallas Stars!
+1190,9,[2025-08-15 5:18:16 PM] - New Record for Team's Most Hits (10) in 1 Game for Dallas Stars!
+1191,7,[2025-08-15 5:18:16 PM] - New Record for Team's Most Goals (7) in 1 Game for Colorado Avalanche!
+1192,7,[2025-08-15 5:18:16 PM] - New Record for Team's Most Assists (10) in 1 Game for Colorado Avalanche!
+1193,7,[2025-08-15 5:18:16 PM] - New Record for Team's Most Points (17) in 1 Game for Colorado Avalanche!
+1194,28,[2025-08-15 5:18:16 PM] - New Record for Team's Most Goals (2) in 1 Game for Utah Mammoth!
+1195,28,[2025-08-15 5:18:16 PM] - New Record for Team's Most Assists (4) in 1 Game for Utah Mammoth!
+1196,28,[2025-08-15 5:18:16 PM] - New Record for Team's Most Points (6) in 1 Game for Utah Mammoth!
+1197,28,[2025-08-15 5:18:16 PM] - New Record for Team's Most Shots (27) in 1 Game for Utah Mammoth!
+1198,28,[2025-08-15 5:18:16 PM] - New Record for Team's Most Shots Blocked (15) in 1 Game for Utah Mammoth!
+1199,28,[2025-08-15 5:18:16 PM] - New Record for Team's Most Penalties Minutes (16) in 1 Game for Utah Mammoth!
+1200,28,[2025-08-15 5:18:16 PM] - New Record for Team's Most Hits (16) in 1 Game for Utah Mammoth!
+1201,29,[2025-08-15 5:18:16 PM] - New Record for Team's Most Goals (6) in 1 Game for Vancouver Canucks!
+1202,29,[2025-08-15 5:18:16 PM] - New Record for Team's Most Assists (11) in 1 Game for Vancouver Canucks!
+1203,29,[2025-08-15 5:18:16 PM] - New Record for Team's Most Points (17) in 1 Game for Vancouver Canucks!
+1204,29,[2025-08-15 5:18:16 PM] - New Record for Team's Most Shots (36) in 1 Game for Vancouver Canucks!
+1205,29,[2025-08-15 5:18:16 PM] - New Record for Team's Most Shots Blocked (11) in 1 Game for Vancouver Canucks!
+1206,29,[2025-08-15 5:18:16 PM] - New Record for Team's Most Penalties Minutes (8) in 1 Game for Vancouver Canucks!
+1207,29,[2025-08-15 5:18:16 PM] - New Record for Team's Most Hits (20) in 1 Game for Vancouver Canucks!
+1208,4,[2025-08-15 5:18:16 PM] - New Record for Team's Most Goals (2) in 1 Game for Calgary Flames!
+1209,4,[2025-08-15 5:18:16 PM] - New Record for Team's Most Assists (4) in 1 Game for Calgary Flames!
+1210,4,[2025-08-15 5:18:16 PM] - New Record for Team's Most Points (6) in 1 Game for Calgary Flames!
+1211,4,[2025-08-15 5:18:16 PM] - New Record for Team's Most Shots (27) in 1 Game for Calgary Flames!
+1212,4,[2025-08-15 5:18:16 PM] - New Record for Team's Most Shots Blocked (12) in 1 Game for Calgary Flames!
+1213,4,[2025-08-15 5:18:16 PM] - New Record for Team's Most Hits (15) in 1 Game for Calgary Flames!
+1214,23,[2025-08-15 5:18:16 PM] - New Record for Team's Most Goals (3) in 1 Game for San Jose Sharks!
+1215,23,[2025-08-15 5:18:16 PM] - New Record for Team's Most Assists (5) in 1 Game for San Jose Sharks!
+1216,23,[2025-08-15 5:18:16 PM] - New Record for Team's Most Points (8) in 1 Game for San Jose Sharks!
+1217,23,[2025-08-15 5:18:16 PM] - New Record for Team's Most Shots (29) in 1 Game for San Jose Sharks!
+1218,23,[2025-08-15 5:18:16 PM] - New Record for Team's Most Shots Blocked (13) in 1 Game for San Jose Sharks!
+1219,23,[2025-08-15 5:18:16 PM] - New Record for Team's Most Penalties Minutes (4) in 1 Game for San Jose Sharks!
+1220,23,[2025-08-15 5:18:16 PM] - New Record for Team's Most Hits (16) in 1 Game for San Jose Sharks!
+1221,30,[2025-08-15 5:18:16 PM] - New Record for Team's Most Shots Blocked (10) in 1 Game for Vegas Golden Knights!
+1222,30,[2025-08-15 5:18:16 PM] - New Record for Team's Most Hits (23) in 1 Game for Vegas Golden Knights!
+1223,24,[2025-08-15 5:18:16 PM] - New Record for Team's Most Goals (4) in 1 Game for Seattle Kraken!
+1224,24,[2025-08-15 5:18:16 PM] - New Record for Team's Most Assists (7) in 1 Game for Seattle Kraken!
+1225,24,[2025-08-15 5:18:16 PM] - New Record for Team's Most Points (11) in 1 Game for Seattle Kraken!
+1226,24,[2025-08-15 5:18:16 PM] - New Record for Team's Most Shots (35) in 1 Game for Seattle Kraken!
+1227,24,[2025-08-15 5:18:16 PM] - New Record for Team's Most Shots Blocked (16) in 1 Game for Seattle Kraken!
+1228,24,[2025-08-15 5:18:16 PM] - New Record for Team's Most Penalties Minutes (6) in 1 Game for Seattle Kraken!
+1229,24,[2025-08-15 5:18:16 PM] - New Record for Team's Most Hits (13) in 1 Game for Seattle Kraken!
+1230,1,[2025-08-15 5:18:16 PM] - New Record for Team's Most Goals (2) in 1 Game for Anaheim Ducks!
+1231,1,[2025-08-15 5:18:16 PM] - New Record for Team's Most Assists (4) in 1 Game for Anaheim Ducks!
+1232,1,[2025-08-15 5:18:16 PM] - New Record for Team's Most Points (6) in 1 Game for Anaheim Ducks!
+1233,1,[2025-08-15 5:18:16 PM] - New Record for Team's Most Shots (40) in 1 Game for Anaheim Ducks!
+1234,1,[2025-08-15 5:18:16 PM] - New Record for Team's Most Shots Blocked (12) in 1 Game for Anaheim Ducks!
+1235,1,[2025-08-15 5:18:16 PM] - New Record for Team's Most Penalties Minutes (10) in 1 Game for Anaheim Ducks!
+1236,1,[2025-08-15 5:18:16 PM] - New Record for Team's Most Hits (20) in 1 Game for Anaheim Ducks!
+1237,31,[2025-08-16 3:42:05 AM] - Pierre-Olivier Joseph was added to Washington Capitals.
+1238,32,[2025-08-16 3:42:46 AM] - New Record for Team's Most Goals (7) in 1 Game for Winnipeg Jets!
+1239,32,[2025-08-16 3:42:46 AM] - New Record for Team's Most Assists (13) in 1 Game for Winnipeg Jets!
+1240,32,[2025-08-16 3:42:46 AM] - New Record for Team's Most Points (20) in 1 Game for Winnipeg Jets!
+1241,32,[2025-08-16 3:42:46 AM] - New Record for Team's Most Shots (33) in 1 Game for Winnipeg Jets!
+1242,32,[2025-08-16 3:42:46 AM] - New Record for Team's Most Shots Blocked (11) in 1 Game for Winnipeg Jets!
+1243,32,[2025-08-16 3:42:46 AM] - New Record for Team's Most Penalties Minutes (10) in 1 Game for Winnipeg Jets!
+1244,32,[2025-08-16 3:42:46 AM] - New Record for Team's Most Hits (21) in 1 Game for Winnipeg Jets!
+1245,13,[2025-08-16 3:42:46 AM] - New Record for Team's Most Penalties Minutes (10) in 1 Game for Los Angeles Kings!
+1246,13,[2025-08-16 3:42:46 AM] - New Record for Team's Most Hits (24) in 1 Game for Los Angeles Kings!
+1247,4,[2025-08-16 3:42:46 AM] - New Record for Team's Most Goals (5) in 1 Game for Calgary Flames!
+1248,4,[2025-08-16 3:42:46 AM] - New Record for Team's Most Assists (8) in 1 Game for Calgary Flames!
+1249,4,[2025-08-16 3:42:46 AM] - New Record for Team's Most Points (13) in 1 Game for Calgary Flames!
+1250,4,[2025-08-16 3:42:46 AM] - New Record for Team's Most Shots (34) in 1 Game for Calgary Flames!
+1251,4,[2025-08-16 3:42:46 AM] - New Record for Team's Most Shots Blocked (13) in 1 Game for Calgary Flames!
+1252,4,[2025-08-16 3:42:46 AM] - New Record for Team's Most Hits (22) in 1 Game for Calgary Flames!
+1253,25,[2025-08-16 3:42:46 AM] - New Record for Team's Most Penalties Minutes (20) in 1 Game for St. Louis Blues!
+1254,25,[2025-08-16 3:42:46 AM] - New Record for Team's Most Goals (3) in 1 Game for St. Louis Blues!
+1255,25,[2025-08-16 3:42:46 AM] - New Record for Team's Most Assists (5) in 1 Game for St. Louis Blues!
+1256,25,[2025-08-16 3:42:46 AM] - New Record for Team's Most Points (8) in 1 Game for St. Louis Blues!
+1257,25,[2025-08-16 3:42:46 AM] - New Record for Team's Most Penalties Minutes (20) in 1 Game for St. Louis Blues!
+1258,25,[2025-08-16 3:42:46 AM] - New Record for Team's Most Hits (25) in 1 Game for St. Louis Blues!
+1259,3,[2025-08-16 3:42:46 AM] - New Record for Team's Most Shots Blocked (18) in 1 Game for Buffalo Sabres!
+1260,3,[2025-08-16 3:42:46 AM] - New Record for Team's Most Hits (23) in 1 Game for Buffalo Sabres!
+1261,10,[2025-08-16 3:42:46 AM] - New Record for Team's Most Shots Blocked (13) in 1 Game for Detroit Red Wings!
+1262,10,[2025-08-16 3:42:46 AM] - New Record for Team's Most Penalties Minutes (12) in 1 Game for Detroit Red Wings!
+1263,10,[2025-08-16 3:42:46 AM] - New Record for Team's Most Hits (17) in 1 Game for Detroit Red Wings!
+1264,27,[2025-08-16 3:42:46 AM] - New Record for Team's Most Shots (35) in 1 Game for Toronto Maple Leafs!
+1265,27,[2025-08-16 3:42:46 AM] - New Record for Team's Most Penalties Minutes (10) in 1 Game for Toronto Maple Leafs!
+1266,27,[2025-08-16 3:42:46 AM] - New Record for Team's Most Hits (20) in 1 Game for Toronto Maple Leafs!
+1267,26,[2025-08-16 3:42:46 AM] - New Record for Team's Most Goals (7) in 1 Game for Tampa Bay Lightning!
+1268,26,[2025-08-16 3:42:46 AM] - New Record for Team's Most Points (14) in 1 Game for Tampa Bay Lightning!
+1269,26,[2025-08-16 3:42:46 AM] - New Record for Team's Most Shots (33) in 1 Game for Tampa Bay Lightning!
+1270,26,[2025-08-16 3:42:46 AM] - New Record for Team's Most Shots Blocked (5) in 1 Game for Tampa Bay Lightning!
+1271,26,[2025-08-16 3:42:46 AM] - New Record for Team's Most Penalties Minutes (10) in 1 Game for Tampa Bay Lightning!
+1272,12,[2025-08-16 3:42:46 AM] - New Record for Team's Most Penalties Minutes (25) in 1 Game for Florida Panthers!
+1273,12,[2025-08-16 3:42:46 AM] - New Record for Team's Most Penalties Minutes (25) in 1 Game for Florida Panthers!
+1274,20,[2025-08-16 3:42:46 AM] - New Record for Team's Most Hits (31) in 1 Game for Ottawa Senators!
+1275,20,[2025-08-16 3:42:46 AM] - New Record for Team's Most Assists (5) in 1 Game for Ottawa Senators!
+1276,20,[2025-08-16 3:42:46 AM] - New Record for Team's Most Points (9) in 1 Game for Ottawa Senators!
+1277,20,[2025-08-16 3:42:46 AM] - New Record for Team's Most Penalties Minutes (15) in 1 Game for Ottawa Senators!
+1278,20,[2025-08-16 3:42:46 AM] - New Record for Team's Most Hits (31) in 1 Game for Ottawa Senators!
+1279,18,[2025-08-16 3:42:46 AM] - New Record for Team's Most Goals (3) in 1 Game for New York Islanders!
+1280,18,[2025-08-16 3:42:46 AM] - New Record for Team's Most Assists (6) in 1 Game for New York Islanders!
+1281,18,[2025-08-16 3:42:46 AM] - New Record for Team's Most Points (9) in 1 Game for New York Islanders!
+1282,18,[2025-08-16 3:42:46 AM] - New Record for Team's Most Shots Blocked (14) in 1 Game for New York Islanders!
+1283,18,[2025-08-16 3:42:46 AM] - New Record for Team's Most Penalties Minutes (14) in 1 Game for New York Islanders!
+1284,31,[2025-08-16 3:42:46 AM] - New Record for Team's Most Shots (35) in 1 Game for Washington Capitals!
+1285,31,[2025-08-16 3:42:46 AM] - New Record for Team's Most Hits (18) in 1 Game for Washington Capitals!
+1286,22,[2025-08-16 3:42:46 AM] - New Record for Team's Most Shots (35) in 1 Game for Pittsburgh Penguins!
+1287,22,[2025-08-16 3:42:46 AM] - New Record for Team's Most Hits (17) in 1 Game for Pittsburgh Penguins!
+1288,5,[2025-08-16 3:42:46 AM] - New Record for Team's Most Goals (7) in 1 Game for Carolina Hurricanes!
+1289,5,[2025-08-16 3:42:46 AM] - New Record for Team's Most Assists (10) in 1 Game for Carolina Hurricanes!
+1290,5,[2025-08-16 3:42:46 AM] - New Record for Team's Most Points (17) in 1 Game for Carolina Hurricanes!
+1291,5,[2025-08-16 3:42:46 AM] - New Record for Team's Most Penalties Minutes (6) in 1 Game for Carolina Hurricanes!
+1292,21,[2025-08-16 3:42:46 AM] - New Record for Team's Most Penalties Minutes (8) in 1 Game for Philadelphia Flyers!
+1293,21,[2025-08-16 3:42:46 AM] - New Record for Team's Most Hits (16) in 1 Game for Philadelphia Flyers!
+1294,6,[2025-08-16 3:42:47 AM] - New Record for Team's Most Shots Blocked (13) in 1 Game for Chicago Blackhawks!
+1295,15,[2025-08-16 3:42:47 AM] - New Record for Team's Most Assists (6) in 1 Game for Montreal Canadiens!
+1296,15,[2025-08-16 3:42:47 AM] - New Record for Team's Most Points (9) in 1 Game for Montreal Canadiens!
+1297,15,[2025-08-16 3:42:47 AM] - New Record for Team's Most Shots Blocked (15) in 1 Game for Montreal Canadiens!
+1298,16,[2025-08-16 3:42:47 AM] - New Record for Team's Most Assists (5) in 1 Game for Nashville Predators!
+1299,16,[2025-08-16 3:42:47 AM] - New Record for Team's Most Points (8) in 1 Game for Nashville Predators!
+1300,16,[2025-08-16 3:42:47 AM] - New Record for Team's Most Shots (30) in 1 Game for Nashville Predators!
+1301,16,[2025-08-16 3:42:47 AM] - New Record for Team's Most Penalties Minutes (8) in 1 Game for Nashville Predators!
+1302,28,[2025-08-16 3:42:47 AM] - New Record for Team's Most Goals (4) in 1 Game for Utah Mammoth!
+1303,28,[2025-08-16 3:42:47 AM] - New Record for Team's Most Assists (7) in 1 Game for Utah Mammoth!
+1304,28,[2025-08-16 3:42:47 AM] - New Record for Team's Most Points (11) in 1 Game for Utah Mammoth!
+1305,28,[2025-08-16 3:42:47 AM] - New Record for Team's Most Shots (33) in 1 Game for Utah Mammoth!
+1306,28,[2025-08-16 3:42:47 AM] - New Record for Team's Most Hits (19) in 1 Game for Utah Mammoth!
+1307,14,[2025-08-16 3:42:47 AM] - New Record for Team's Most Shots (33) in 1 Game for Minnesota Wild!
+1308,8,[2025-08-16 3:42:47 AM] - New Record for Team's Most Goals (5) in 1 Game for Columbus Blue Jackets!
+1309,8,[2025-08-16 3:42:47 AM] - New Record for Team's Most Assists (7) in 1 Game for Columbus Blue Jackets!
+1310,8,[2025-08-16 3:42:47 AM] - New Record for Team's Most Points (12) in 1 Game for Columbus Blue Jackets!
+1311,8,[2025-08-16 3:42:47 AM] - New Record for Team's Most Shots Blocked (9) in 1 Game for Columbus Blue Jackets!
+1312,8,[2025-08-16 3:42:47 AM] - New Record for Team's Most Hits (16) in 1 Game for Columbus Blue Jackets!
+1313,7,[2025-08-16 3:42:47 AM] - New Record for Team's Most Shots (43) in 1 Game for Colorado Avalanche!
+1314,7,[2025-08-16 3:42:47 AM] - New Record for Team's Most Penalties Minutes (12) in 1 Game for Colorado Avalanche!
+1315,9,[2025-08-16 3:42:47 AM] - New Record for Team's Most Goals (5) in 1 Game for Dallas Stars!
+1316,9,[2025-08-16 3:42:47 AM] - New Record for Team's Most Assists (8) in 1 Game for Dallas Stars!
+1317,9,[2025-08-16 3:42:47 AM] - New Record for Team's Most Points (13) in 1 Game for Dallas Stars!
+1318,9,[2025-08-16 3:42:47 AM] - New Record for Team's Most Penalties Minutes (8) in 1 Game for Dallas Stars!
+1319,9,[2025-08-16 3:42:47 AM] - New Record for Team's Most Hits (16) in 1 Game for Dallas Stars!
+1320,11,[2025-08-16 3:42:47 AM] - New Record for Team's Most Penalties Minutes (12) in 1 Game for Edmonton Oilers!
+1321,29,[2025-08-16 3:42:47 AM] - New Record for Team's Most Penalties Minutes (16) in 1 Game for Vancouver Canucks!
+1322,23,[2025-08-16 3:42:47 AM] - New Record for Team's Most Penalties Minutes (6) in 1 Game for San Jose Sharks!
+1323,23,[2025-08-16 3:42:47 AM] - New Record for Team's Most Hits (27) in 1 Game for San Jose Sharks!
+1324,1,[2025-08-16 3:42:47 AM] - New Record for Team's Most Goals (3) in 1 Game for Anaheim Ducks!
+1325,1,[2025-08-16 3:42:47 AM] - New Record for Team's Most Assists (5) in 1 Game for Anaheim Ducks!
+1326,1,[2025-08-16 3:42:47 AM] - New Record for Team's Most Points (8) in 1 Game for Anaheim Ducks!
+1327,1,[2025-08-16 3:42:47 AM] - New Record for Team's Most Shots Blocked (15) in 1 Game for Anaheim Ducks!
+1328,1,[2025-08-16 3:42:47 AM] - New Record for Team's Most Penalties Minutes (14) in 1 Game for Anaheim Ducks!
+1329,30,[2025-08-16 3:42:47 AM] - New Record for Team's Most Goals (8) in 1 Game for Vegas Golden Knights!
+1330,30,[2025-08-16 3:42:47 AM] - New Record for Team's Most Assists (12) in 1 Game for Vegas Golden Knights!
+1331,30,[2025-08-16 3:42:47 AM] - New Record for Team's Most Points (20) in 1 Game for Vegas Golden Knights!
+1332,30,[2025-08-16 3:42:47 AM] - New Record for Team's Most Shots Blocked (15) in 1 Game for Vegas Golden Knights!
+1333,30,[2025-08-16 3:42:47 AM] - New Record for Team's Most Penalties Minutes (10) in 1 Game for Vegas Golden Knights!
+1334,31,[2025-08-16 3:42:48 AM] - New Record for Team's Most Shots (36) in 1 Game for Washington Capitals!
+1335,31,[2025-08-16 3:42:48 AM] - New Record for Team's Most Shots Blocked (10) in 1 Game for Washington Capitals!
+1336,31,[2025-08-16 3:42:48 AM] - New Record for Team's Most Hits (25) in 1 Game for Washington Capitals!
+1337,3,[2025-08-18 6:00:26 PM] - New Record for Team's Most Penalties Minutes (14) in 1 Game for Buffalo Sabres!
+1338,7,[2025-08-18 6:00:26 PM] - New Record for Team's Most Goals (8) in 1 Game for Colorado Avalanche!
+1339,7,[2025-08-18 6:00:26 PM] - New Record for Team's Most Assists (12) in 1 Game for Colorado Avalanche!
+1340,7,[2025-08-18 6:00:26 PM] - New Record for Team's Most Points (20) in 1 Game for Colorado Avalanche!
+1341,26,[2025-08-18 6:00:26 PM] - New Record for Team's Most Shots (42) in 1 Game for Tampa Bay Lightning!
+1342,26,[2025-08-18 6:00:26 PM] - New Record for Team's Most Shots Blocked (16) in 1 Game for Tampa Bay Lightning!
+1343,26,[2025-08-18 6:00:26 PM] - New Record for Team's Most Hits (28) in 1 Game for Tampa Bay Lightning!
+1344,16,[2025-08-18 6:00:27 PM] - New Record for Team's Most Goals (5) in 1 Game for Nashville Predators!
+1345,16,[2025-08-18 6:00:27 PM] - New Record for Team's Most Assists (8) in 1 Game for Nashville Predators!
+1346,16,[2025-08-18 6:00:27 PM] - New Record for Team's Most Points (13) in 1 Game for Nashville Predators!
+1347,16,[2025-08-18 6:00:27 PM] - New Record for Team's Most Shots (32) in 1 Game for Nashville Predators!
+1348,18,[2025-08-18 6:00:27 PM] - New Record for Team's Most Goals (5) in 1 Game for New York Islanders!
+1349,18,[2025-08-18 6:00:27 PM] - New Record for Team's Most Assists (7) in 1 Game for New York Islanders!
+1350,18,[2025-08-18 6:00:27 PM] - New Record for Team's Most Points (12) in 1 Game for New York Islanders!
+1351,32,[2025-08-18 6:00:27 PM] - New Record for Team's Most Shots Blocked (12) in 1 Game for Winnipeg Jets!
+1352,32,[2025-08-18 6:00:27 PM] - New Record for Team's Most Penalties Minutes (12) in 1 Game for Winnipeg Jets!
+1353,10,[2025-08-18 6:00:27 PM] - New Record for Team's Most Penalties Minutes (14) in 1 Game for Detroit Red Wings!
+1354,10,[2025-08-18 6:00:27 PM] - New Record for Team's Most Hits (23) in 1 Game for Detroit Red Wings!
+1355,21,[2025-08-18 6:00:27 PM] - New Record for Team's Most Shots Blocked (10) in 1 Game for Philadelphia Flyers!
+1356,21,[2025-08-18 6:00:27 PM] - New Record for Team's Most Penalties Minutes (12) in 1 Game for Philadelphia Flyers!
+1357,21,[2025-08-18 6:00:27 PM] - New Record for Team's Most Hits (17) in 1 Game for Philadelphia Flyers!
+1358,8,[2025-08-18 6:00:27 PM] - New Record for Team's Most Shots Blocked (12) in 1 Game for Columbus Blue Jackets!
+1359,17,[2025-08-18 6:00:27 PM] - New Record for Team's Most Shots (33) in 1 Game for New Jersey Devils!
+1360,29,[2025-08-18 6:00:27 PM] - New Record for Team's Most Hits (23) in 1 Game for Vancouver Canucks!
+1361,25,[2025-08-18 6:00:27 PM] - New Record for Team's Most Goals (4) in 1 Game for St. Louis Blues!
+1362,25,[2025-08-18 6:00:27 PM] - New Record for Team's Most Points (9) in 1 Game for St. Louis Blues!
+1363,25,[2025-08-18 6:00:27 PM] - New Record for Team's Most Shots Blocked (12) in 1 Game for St. Louis Blues!
+1364,14,[2025-08-18 6:00:27 PM] - New Record for Team's Most Assists (10) in 1 Game for Minnesota Wild!
+1365,14,[2025-08-18 6:00:27 PM] - New Record for Team's Most Points (16) in 1 Game for Minnesota Wild!
+1366,14,[2025-08-18 6:00:27 PM] - New Record for Team's Most Penalties Minutes (10) in 1 Game for Minnesota Wild!
+1367,13,[2025-08-18 6:00:27 PM] - New Record for Team's Most Shots (38) in 1 Game for Los Angeles Kings!
+1368,28,[2025-08-18 6:00:27 PM] - New Record for Team's Most Hits (23) in 1 Game for Utah Mammoth!
+1369,27,[2025-08-18 6:00:28 PM] - New Record for Team's Most Hits (21) in 1 Game for Toronto Maple Leafs!
+1370,24,[2025-08-18 6:00:28 PM] - New Record for Team's Most Penalties Minutes (10) in 1 Game for Seattle Kraken!
+1371,24,[2025-08-18 6:00:28 PM] - New Record for Team's Most Hits (23) in 1 Game for Seattle Kraken!
+1372,19,[2025-08-18 6:00:28 PM] - New Record for Team's Most Hits (25) in 1 Game for New York Rangers!
+1373,11,[2025-08-18 6:00:28 PM] - New Record for Team's Most Goals (10) in 1 Game for Edmonton Oilers!
+1374,11,[2025-08-18 6:00:28 PM] - New Record for Team's Most Assists (19) in 1 Game for Edmonton Oilers!
+1375,11,[2025-08-18 6:00:28 PM] - New Record for Team's Most Points (29) in 1 Game for Edmonton Oilers!
+1376,11,[2025-08-18 6:00:28 PM] - New Record for Team's Most Goals (10) in 1 Game for Edmonton Oilers!
+1377,11,[2025-08-18 6:00:28 PM] - New Record for Team's Most Assists (19) in 1 Game for Edmonton Oilers!
+1378,11,[2025-08-18 6:00:28 PM] - New Record for Team's Most Points (29) in 1 Game for Edmonton Oilers!
+1379,11,[2025-08-18 6:00:28 PM] - New Record for Team's Most Shots (34) in 1 Game for Edmonton Oilers!
+1380,11,[2025-08-18 6:00:28 PM] - New Record for Team's Most Shots Blocked (15) in 1 Game for Edmonton Oilers!
+1381,31,[2025-08-18 6:00:28 PM] - New Record for Team's Most Goals (7) in 1 Game for Washington Capitals!
+1382,31,[2025-08-18 6:00:28 PM] - New Record for Team's Most Points (18) in 1 Game for Washington Capitals!
+1383,26,[2025-08-18 6:00:28 PM] - New Record for Team's Most Assists (10) in 1 Game for Tampa Bay Lightning!
+1384,26,[2025-08-18 6:00:28 PM] - New Record for Team's Most Points (15) in 1 Game for Tampa Bay Lightning!
+1385,26,[2025-08-18 6:00:28 PM] - New Record for Team's Most Penalties Minutes (14) in 1 Game for Tampa Bay Lightning!
+1386,4,[2025-08-18 6:00:29 PM] - New Record for Team's Most Hits (29) in 1 Game for Calgary Flames!
+1387,9,[2025-08-18 6:00:29 PM] - New Record for Team's Most Goals (7) in 1 Game for Dallas Stars!
+1388,9,[2025-08-18 6:00:29 PM] - New Record for Team's Most Assists (10) in 1 Game for Dallas Stars!
+1389,9,[2025-08-18 6:00:29 PM] - New Record for Team's Most Points (17) in 1 Game for Dallas Stars!
+1390,9,[2025-08-18 6:00:29 PM] - New Record for Team's Most Shots Blocked (18) in 1 Game for Dallas Stars!
+1391,9,[2025-08-18 6:00:29 PM] - New Record for Team's Most Hits (23) in 1 Game for Dallas Stars!
+1392,23,[2025-08-18 6:00:29 PM] - New Record for Team's Most Shots Blocked (18) in 1 Game for San Jose Sharks!
+1393,23,[2025-08-18 6:00:29 PM] - New Record for Team's Most Penalties Minutes (8) in 1 Game for San Jose Sharks!
+1394,23,[2025-08-18 6:00:29 PM] - New Record for Team's Most Hits (28) in 1 Game for San Jose Sharks!
+1395,5,[2025-08-18 6:00:29 PM] - New Record for Team's Most Shots (33) in 1 Game for Carolina Hurricanes!
+1396,5,[2025-08-18 6:00:29 PM] - New Record for Team's Most Penalties Minutes (8) in 1 Game for Carolina Hurricanes!
+1397,1,[2025-08-18 6:00:29 PM] - New Record for Team's Most Penalties Minutes (27) in 1 Game for Anaheim Ducks!
+1398,1,[2025-08-18 6:00:29 PM] - New Record for Team's Most Goals (5) in 1 Game for Anaheim Ducks!
+1399,1,[2025-08-18 6:00:29 PM] - New Record for Team's Most Assists (9) in 1 Game for Anaheim Ducks!
+1400,1,[2025-08-18 6:00:29 PM] - New Record for Team's Most Points (14) in 1 Game for Anaheim Ducks!
+1401,1,[2025-08-18 6:00:29 PM] - New Record for Team's Most Penalties Minutes (27) in 1 Game for Anaheim Ducks!
+1402,22,[2025-08-18 6:00:29 PM] - New Record for Team's Most Goals (7) in 1 Game for Pittsburgh Penguins!
+1403,22,[2025-08-18 6:00:29 PM] - New Record for Team's Most Assists (13) in 1 Game for Pittsburgh Penguins!
+1404,22,[2025-08-18 6:00:29 PM] - New Record for Team's Most Points (20) in 1 Game for Pittsburgh Penguins!
+1405,22,[2025-08-18 6:00:29 PM] - New Record for Team's Most Hits (19) in 1 Game for Pittsburgh Penguins!
+1406,20,[2025-08-18 6:00:30 PM] - New Record for Team's Most Shots Blocked (14) in 1 Game for Ottawa Senators!
+1407,20,[2025-08-18 6:00:30 PM] - New Record for Team's Most Penalties Minutes (20) in 1 Game for Ottawa Senators!
+1408,10,[2025-08-18 6:00:30 PM] - New Record for Team's Most Shots (35) in 1 Game for Detroit Red Wings!
+1409,10,[2025-08-18 6:00:30 PM] - New Record for Team's Most Shots Blocked (14) in 1 Game for Detroit Red Wings!
+1410,12,[2025-08-18 6:00:30 PM] - New Record for Team's Most Shots (33) in 1 Game for Florida Panthers!
+1411,25,[2025-08-18 6:00:30 PM] - New Record for Team's Most Goals (5) in 1 Game for St. Louis Blues!
+1412,25,[2025-08-18 6:00:30 PM] - New Record for Team's Most Assists (7) in 1 Game for St. Louis Blues!
+1413,25,[2025-08-18 6:00:30 PM] - New Record for Team's Most Points (12) in 1 Game for St. Louis Blues!
+1414,25,[2025-08-18 6:00:30 PM] - New Record for Team's Most Shots Blocked (15) in 1 Game for St. Louis Blues!
+1415,28,[2025-08-18 6:00:30 PM] - New Record for Team's Most Shots Blocked (16) in 1 Game for Utah Mammoth!
+1416,27,[2025-08-23 1:03:03 PM] - TRADE : From Toronto Maple Leafs to Vegas Golden Knights : Mitch Marner (78).
+1417,30,[2025-08-23 1:03:03 PM] - TRADE : From Toronto Maple Leafs to Vegas Golden Knights : Mitch Marner (78).
+1418,30,[2025-08-23 1:03:03 PM] - TRADE : From Vegas Golden Knights to Toronto Maple Leafs : Nicolas Roy (71).
+1419,27,[2025-08-23 1:03:03 PM] - TRADE : From Vegas Golden Knights to Toronto Maple Leafs : Nicolas Roy (71).
+1420,11,[2025-08-23 1:04:04 PM] - TRADE : From Edmonton Oilers to Boston Bruins : Viktor Arvidsson (69).
+1421,2,[2025-08-23 1:04:04 PM] - TRADE : From Edmonton Oilers to Boston Bruins : Viktor Arvidsson (69).
+1422,2,[2025-08-23 1:04:04 PM] - TRADE : From Boston Bruins to Edmonton Oilers : Y:3-RND:5-BOS.
+1423,11,[2025-08-23 1:04:04 PM] - TRADE : From Boston Bruins to Edmonton Oilers : Y:3-RND:5-BOS.
+1424,25,[2025-08-23 1:04:44 PM] - TRADE : From St. Louis Blues to Montreal Canadiens : Zack Bolduc (67).
+1425,15,[2025-08-23 1:04:44 PM] - TRADE : From St. Louis Blues to Montreal Canadiens : Zack Bolduc (67).
+1426,15,[2025-08-23 1:04:44 PM] - TRADE : From Montreal Canadiens to St. Louis Blues : Logan Mailloux (67).
+1427,25,[2025-08-23 1:04:44 PM] - TRADE : From Montreal Canadiens to St. Louis Blues : Logan Mailloux (67).
+1428,21,[2025-08-23 3:02:32 PM] - Felix Sandstrom was added to Philadelphia Flyers.
+1429,21,[2025-08-23 3:02:32 PM] - Felix Sandstrom signed with Philadelphia Flyers for $800-000 for 2 year(s).

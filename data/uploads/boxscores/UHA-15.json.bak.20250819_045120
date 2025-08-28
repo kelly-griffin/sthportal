@@ -1,0 +1,19 @@
+{
+    "gwg": "",
+    "winningGoalie": "Pavel Buchnevich",
+    "firstStar": "",
+    "secondStar": "",
+    "thirdStar": "",
+    "gameNumber": 15,
+    "visitor": {
+        "name": "Minnesota Wild",
+        "score": 0,
+        "abbr": "MIN"
+    },
+    "home": {
+        "name": "St. Louis Blues",
+        "score": 0,
+        "abbr": "STL"
+    },
+    "date": ""
+}

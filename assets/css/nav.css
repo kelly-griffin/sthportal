@@ -1,0 +1,358 @@
+/* ========= UHA Portal — NAV & GLOBAL ========= */
+
+/* ---- Global variables (you can move to variables.css later) ---- */
+:root {
+    /* site surface palette (homepage blocks still use these) */
+    --bg: #444;
+    --surface: #777;
+    --surface-2: #666;
+    --surface-3: #888;
+    --surface-4: #555;
+    --ink: #111;
+    --ink-inverse: #eee;
+    --line: #333;
+    --chip: #bbb;
+    --chip-line: #888;
+
+    /* ticker behavior */
+    --ticker-height: 32px;
+    --ticker-duration: 90s;
+
+    /* brand accents for header gradients; these get swapped per league/team by JS */
+    --brand: #1e88e5;
+    /* primary */
+    --brand-2: #0d47a1;
+    /* darker */
+    --brand-3: #64b5f6;
+    /* light */
+
+    /* layout */
+    --site-width: 1200px;
+}
+
+* {
+    box-sizing: border-box
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0
+}
+
+body {
+    background: var(--bg);
+    color: var(--ink);
+    font: 16px/1.4 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+.site {
+    width: var(--site-width);
+    margin: 0 auto;
+    background: var(--surface);
+    min-height: 100vh
+}
+
+/* ---------------- Portal Header + Dropdown Nav ---------------- */
+.portal-header {
+    background: linear-gradient(180deg, var(--brand-2), var(--brand));
+    border-bottom: 1px solid rgba(0, 0, 0, .35);
+}
+
+.portal-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 16px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: .6rem
+}
+
+.brand .logo {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    background: radial-gradient(circle at 30% 30%, #fff6, #0000 60%), var(--brand-3);
+    border: 1px solid #ffffff20;
+}
+
+.brand .title {
+    font-weight: 800;
+    letter-spacing: .2px;
+    color: #fff
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: .6rem
+}
+
+.profile .btn {
+    padding: .35rem .6rem;
+    border: 1px solid #ffffff2a;
+    border-radius: 8px;
+    color: #fff;
+    text-decoration: none
+}
+
+.profile .btn:hover {
+    background: #ffffff14
+}
+
+.main-nav {
+    display: flex;
+    gap: .25rem;
+    flex-wrap: wrap;
+    align-items: center
+}
+
+.nav-wrap {
+    background: #0e141dcc;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 6px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, .35);
+}
+
+.nav-item {
+    position: relative
+}
+
+.nav-btn {
+    color: #eaf1ff;
+    padding: .5rem .7rem;
+    border-radius: 8px;
+    display: inline-flex;
+    gap: .35rem;
+    align-items: center;
+    text-decoration: none
+}
+
+.nav-btn:hover {
+    background: #ffffff0d
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 240px;
+    z-index: 10;
+    background: #0f151ecc;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, .55);
+}
+
+.dropdown a {
+    display: block;
+    padding: .55rem .7rem;
+    color: #dfe9ff;
+    text-decoration: none
+}
+
+.dropdown a:hover {
+    background: #ffffff0a
+}
+
+.nav-item:hover .dropdown {
+    display: block
+}
+
+/* ---------------- Context Header (league/team) ---------------- */
+.context-header {
+    background: linear-gradient(180deg,
+            color-mix(in oklab, var(--brand) 92%, #000 8%),
+            color-mix(in oklab, var(--brand-2) 85%, #000 15%));
+    border-top: 1px solid #ffffff18;
+    border-bottom: 1px solid #000;
+    box-shadow: inset 0 -1px 0 #ffffff0a;
+}
+
+.context-inner {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px
+}
+
+.context-logo {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: var(--brand-3);
+    border: 2px solid #ffffff2a
+}
+
+.context-titles .kicker {
+    font-size: 12px;
+    color: #f0f6ffcc;
+    letter-spacing: .2px;
+    text-transform: uppercase
+}
+
+.context-titles .h1 {
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: .2px;
+    color: #fff
+}
+
+.subnav {
+    display: flex;
+    gap: .35rem;
+    flex-wrap: wrap;
+    margin-top: 8px
+}
+
+.pill {
+    padding: .35rem .65rem;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: #0b1118;
+    color: #cfe1ff;
+    text-decoration: none
+}
+
+.pill.active {
+    background: var(--brand);
+    border-color: transparent;
+    color: #fff;
+}
+
+/* ---------------- Score Ticker ---------------- */
+.score-ticker {
+    background: var(--surface-4);
+    color: var(--ink-inverse);
+    height: var(--ticker-height);
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    position: relative
+}
+
+.ticker-viewport {
+    width: 100%;
+    overflow: hidden
+}
+
+.ticker-track {
+    display: inline-block;
+    white-space: nowrap;
+    animation: ticker var(--ticker-duration) linear infinite
+}
+
+.ticker-item {
+    display: inline-block;
+    padding: 0 20px;
+    font-weight: 800
+}
+
+@keyframes ticker {
+    0% {
+        transform: translateX(0)
+    }
+
+    100% {
+        transform: translateX(-50%)
+    }
+}
+/* === NAV: kill header hairlines globally (beats earlier rules) === */
+.portal-header {
+  border-bottom: 0 !important;
+  box-shadow: none !important;
+}
+
+.context-header {
+  border-top: 0 !important;
+  border-bottom: 0 !important;
+  box-shadow: none !important;
+}
+/* === R2 tuck: make leaguebar sit slightly under the top bar === */
+.portal-header {            /* keep the top bar on top of the overlap */
+  position: relative;
+  z-index: 20;
+}
+.context-inner {            /* avoid the pills/text getting clipped by the tuck */
+  padding-top: 14px;
+}
+/* Hide leaguebar title & pills on non-league pages */
+.context-header.is-nonleague .context-title,
+.context-header.is-nonleague .context-pills {
+  display: none !important;
+}
+
+/* ensure the shell keeps its spacing even when hidden */
+.context-header.is-nonleague .context-inner {
+  min-height: 12px;
+  padding-top: 12px;
+}
+
+/* ============================
+   THEME: Leaguebar (add-on)
+   ============================ */
+
+/* Tokens (dark defaults) */
+:root{
+  --lb-bg:               #0f1420;
+  --lb-ink:              #e8eef8;
+  --lb-border:           #ffffff1a;
+
+  --lb-pill-bg:          #182234;
+  --lb-pill-ink:         #cfe3ff;
+  --lb-pill-border:      #23324a;
+
+  --lb-pill-active-bg:   #185a9d;
+  --lb-pill-active-ink:  #ffffff;
+  --lb-pill-active-border:#185a9d;
+}
+
+/* Light overrides */
+:root[data-theme="light"]{
+  --lb-bg:               #f6f9ff;
+  --lb-ink:              #0f1420;
+  --lb-border:           #0000001a;
+
+  --lb-pill-bg:          #eaf2ff;
+  --lb-pill-ink:         #0f1420;
+  --lb-pill-border:      #c9d7ea;
+
+  --lb-pill-active-bg:   #185a9d;
+  --lb-pill-active-ink:  #ffffff;
+  --lb-pill-active-border:#185a9d;
+}
+
+/* Apply to the leaguebar container (support both id and class) */
+#leaguebar, .leaguebar{
+  background: var(--lb-bg);
+  color: var(--lb-ink);
+  border-color: var(--lb-border);
+}
+
+/* Subnav pills – works with your existing #ctxSubnav and .pill classes */
+#ctxSubnav a,
+.leaguebar .pill{
+  background: var(--lb-pill-bg);
+  color: var(--lb-pill-ink);
+  border: 1px solid var(--lb-pill-border);
+}
+
+/* Active / current pill */
+#ctxSubnav a.active,
+.leaguebar .pill.active{
+  background: var(--lb-pill-active-bg);
+  color: var(--lb-pill-active-ink);
+  border-color: var(--lb-pill-active-border);
+}
+
+/* Hover focus (nice but subtle) */
+#ctxSubnav a:hover,
+.leaguebar .pill:hover{
+  filter: brightness(1.08);
+}

@@ -1,0 +1,19 @@
+{
+    "gwg": "",
+    "winningGoalie": "Simon Benoit",
+    "firstStar": "",
+    "secondStar": "",
+    "thirdStar": "",
+    "gameNumber": 49,
+    "visitor": {
+        "name": "Toronto Maple Leafs",
+        "score": 0,
+        "abbr": "TOR"
+    },
+    "home": {
+        "name": "Nashville Predators",
+        "score": 0,
+        "abbr": "NSH"
+    },
+    "date": ""
+}

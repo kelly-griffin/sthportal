@@ -1,0 +1,18 @@
+<?php
+// --- MINIMAL CONFIG (TEMP) ---
+define('DB_HOST', 'localhost');
+define('DB_USER', 'admin');
+define('DB_PASS', '?5ab43c2de1!');
+define('DB_NAME', 'sthportal');
+
+// Generate once: echo password_hash('YourExactPassword', PASSWORD_DEFAULT);
+define('ADMIN_PASSWORD_HASH', '$2y$10$WuyYOlPVzfgom51Zd6Hp7OBdFMgpa4iyNTYHcJTa0Di.9hXaG.9Fi');
+
+define('LICENSE_KEY', 'PORTAL-1234-5678-ABCD');
+
+date_default_timezone_set('America/Toronto');  // keep PHP consistent
+
+// Secret for HMAC (DON’T commit real value)
+define('PORTAL_SECRET', 'cdbab67767983d3cc9ddb48a8afc32ee7e86cfcb74a2888c49daa398cc95707a');
+define('LICENSE_EXPIRES_AT', '2026-08-09 13:14:08');
+define('LICENSE_DOMAIN', 'testhockey,com');

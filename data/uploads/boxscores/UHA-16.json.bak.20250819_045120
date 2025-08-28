@@ -1,0 +1,19 @@
+{
+    "gwg": "",
+    "winningGoalie": "Mathieu Olivier",
+    "firstStar": "",
+    "secondStar": "",
+    "thirdStar": "",
+    "gameNumber": 16,
+    "visitor": {
+        "name": "Columbus Blue Jackets",
+        "score": 0,
+        "abbr": "CBJ"
+    },
+    "home": {
+        "name": "Nashville Predators",
+        "score": 0,
+        "abbr": "NSH"
+    },
+    "date": ""
+}

@@ -1,0 +1,16 @@
+{
+    "gwg": "",
+    "winningGoalie": "",
+    "firstStar": "",
+    "secondStar": "",
+    "thirdStar": "",
+    "gameNumber": 60,
+    "visitor": {
+        "name": "",
+        "score": 0
+    },
+    "home": {
+        "name": "",
+        "score": 0
+    }
+}

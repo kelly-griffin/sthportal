@@ -1,0 +1,19 @@
+{
+    "gwg": "",
+    "winningGoalie": "Connor Murphy",
+    "firstStar": "",
+    "secondStar": "",
+    "thirdStar": "",
+    "gameNumber": 1,
+    "visitor": {
+        "name": "Chicago Blackhawks",
+        "score": 0,
+        "abbr": "CHI"
+    },
+    "home": {
+        "name": "Florida Panthers",
+        "score": 0,
+        "abbr": "FLA"
+    },
+    "date": ""
+}

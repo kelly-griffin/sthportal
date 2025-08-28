@@ -1,0 +1,19 @@
+{
+    "gwg": "",
+    "winningGoalie": "Timo Meier",
+    "firstStar": "",
+    "secondStar": "",
+    "thirdStar": "",
+    "gameNumber": 14,
+    "visitor": {
+        "name": "New Jersey Devils",
+        "score": 0,
+        "abbr": "NJD"
+    },
+    "home": {
+        "name": "Carolina Hurricanes",
+        "score": 0,
+        "abbr": "CAR"
+    },
+    "date": ""
+}

@@ -1,0 +1,19 @@
+{
+    "gwg": "",
+    "winningGoalie": "Danton Heinen",
+    "firstStar": "",
+    "secondStar": "",
+    "thirdStar": "",
+    "gameNumber": 56,
+    "visitor": {
+        "name": "Anaheim Ducks",
+        "score": 0,
+        "abbr": "ANA"
+    },
+    "home": {
+        "name": "Pittsburgh Penguins",
+        "score": 0,
+        "abbr": "PIT"
+    },
+    "date": ""
+}

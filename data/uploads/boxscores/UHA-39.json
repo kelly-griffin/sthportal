@@ -1,0 +1,19 @@
+{
+    "gwg": "",
+    "winningGoalie": "Devon Toews",
+    "firstStar": "",
+    "secondStar": "",
+    "thirdStar": "",
+    "gameNumber": 39,
+    "visitor": {
+        "name": "Buffalo Sabres",
+        "score": 0,
+        "abbr": "BUF"
+    },
+    "home": {
+        "name": "Colorado Avalanche",
+        "score": 0,
+        "abbr": "COL"
+    },
+    "date": ""
+}

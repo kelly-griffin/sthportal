@@ -1,0 +1,186 @@
+/* =========================
+   TWEAK KNOBS (edit here)
+   ========================= */
+:root{
+  /* Feature area */
+  --feature-headline-size: 22px;   /* TWEAK: main headline font-size */
+  --feature-dek-size:      13px;   /* TWEAK: deck/lead paragraph size */
+  --feature-padding:       10px;   /* TWEAK: padding inside overlay */
+
+  /* Scores card */
+  --scores-team-name:      12px;   /* TWEAK: team name size */
+  --scores-score-size:     20px;   /* TWEAK: big numbers */
+  --scores-badge-size:     10px;   /* TWEAK: "FINAL"/status size */
+  --scores-sog-size:       11px;   /* TWEAK: SOG text size */
+  --scores-btn-size:       11px;   /* TWEAK: "Box Score"/"Game Log" */
+
+  /* Headlines cards */
+  --headline-title-size:   13px;   /* TWEAK: headline card title */
+  --headline-meta-size:    11px;   /* TWEAK: team tag + time ago */
+
+  /* Standings */
+  --st-row-gap:            4px;    /* TWEAK: vertical gap between rows */
+  --st-font:               12px;   /* TWEAK: default font size */
+  --st-team-font:          12px;   /* TWEAK: team nickname size */
+
+  /* Leaders (left stack) */
+  --leaders-font:          12px;   /* TWEAK: general size */
+}
+
+/* =========================
+   Feature block tweaks
+   ========================= */
+.feature .overlay{
+  padding: var(--feature-padding);
+}
+.feature .overlay h2{
+  font-size: var(--feature-headline-size);
+  font-weight: 900;
+  margin: 0 0 6px;
+}
+.feature .overlay p{
+  font-size: var(--feature-dek-size);
+  margin: 0;
+}
+
+/* =========================
+   Headlines block
+   ========================= */
+.top-headlines{ display:block; }
+.th-card .th-title{ font-size: var(--headline-title-size); }
+.th-card .th-meta { font-size: var(--headline-meta-size); }
+
+/* =========================
+   Scores card
+   ========================= */
+#scoresCard .status-badge{ font-size: var(--scores-badge-size); }
+#scoresCard .team .name{ font-size: var(--scores-team-name); }
+#scoresCard .team .big-score{ font-size: var(--scores-score-size); }
+#scoresCard .team .sog{ font-size: var(--scores-sog-size); }
+#scoresCard .links .btn{ font-size: var(--scores-btn-size); padding: .3rem .5rem; }
+
+/* Pager dots smaller */
+#scoresCard .goal-pager .pager-dot{ width:10px; height:10px; }
+
+/* =========================
+   Standings: remove blue/underline + tighten rows
+   ========================= */
+.standings a{ color:inherit; text-decoration:none; }
+.standings .st-conf-head .st-link{ color:#9fb0ff; text-decoration:none; }
+.standings .st-conf-head .st-link:hover{ text-decoration:underline; }
+
+.standings .team-inner{ color:inherit; text-decoration:none; }
+.standings .st-row{ margin-bottom: var(--st-row-gap); font-size: var(--st-font); }
+.standings .st-row .col.team .name{ font-size: var(--st-team-font); }
+
+/* =========================
+   Leaders (left stack)
+   ========================= */
+.leadersStack{ font-size: var(--leaders-font); }
+
+/* =========================
+   COMPACT STANDINGS (SIDEBAR)
+   - keeps nickname-only
+   - tighter rows
+   - adjustable numeric column widths
+   - optional: hide OT column
+   ========================= */
+
+/* TWEAK KNOBS for numeric columns */
+:root{
+  --st-col-rank: 12px;   /* # column */
+  --st-col-gp:   30px;   /* GP */
+  --st-col-w:    28px;   /* W  */
+  --st-col-l:    28px;   /* L  */
+  --st-col-ot:   26px;   /* OT (set to 0px to hide) */
+  --st-col-pts:  36px;   /* PTS (keep a bit wider) */
+
+  --st-team-font: 11.5px; /* team nickname size in sidebar */
+  --st-font:       11px;  /* general font size in rows */
+  --st-row-gap:     1px;  /* space between rows */
+}
+
+/* Apply only when standings are in the right sidebar */
+.sidebar-right .standings.wild-card{
+  /* shrink overall text */
+  font-size: var(--st-font);
+}
+
+/* Row becomes a grid so we can control exact column widths */
+.sidebar-right .standings.wild-card .st-row{
+  display: grid;
+  grid-template-columns:
+    var(--st-col-rank)
+    minmax(0,1fr)
+    var(--st-col-gp)
+    var(--st-col-w)
+    var(--st-col-l)
+    var(--st-col-ot)
+    var(--st-col-pts);
+  align-items: center;
+  gap: 0px;
+  padding: 2px 2px;
+  margin-bottom: var(--st-row-gap);
+}
+
+/* Header row matches the same grid */
+.sidebar-right .standings.wild-card .st-head{
+  font-weight: 800;
+  opacity: .85;
+}
+
+/* Team cell tightening */
+.sidebar-right .standings.wild-card .col.team .logo img{ width:16px; height:16px; border-radius:4px; }
+.sidebar-right .standings.wild-card .col.team .logo.badge{ width:16px; height:16px; font-size:8px; }
+.sidebar-right .standings.wild-card .col.team .name{
+  font-size: var(--st-team-font);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Kill default link styling (keep your theme) */
+.standings a{ color: inherit; text-decoration: none; }
+.standings .team-inner{ color: inherit; text-decoration: none; }
+
+/* Division headers & “Full Standings” link tighter */
+.sidebar-right .standings.wild-card .st-conf-head{ padding: 2px 4px; }
+.sidebar-right .standings.wild-card .st-div-title{
+  font-size: 10px;
+  padding: 2px 3px;
+  opacity: .9;
+}
+
+/* Wildcard cut line subtle */
+.sidebar-right .standings.wild-card .st-wc-cut{
+  grid-column: 1 / -1;
+  height: 1px;
+  background: rgba(255,255,255,.06);
+  margin: 2px 0;
+}
+
+/* OPTIONAL: Hide the OT column completely.
+   Comment OUT the next two rules if you want to keep OT visible.
+.sidebar-right .standings.wild-card{
+  --st-col-ot: 0px;  /* 0 width effectively removes it
+}
+.sidebar-right .standings.wild-card .col.ot{ display:none; }*/
+
+/* Remove logos from sidebar standings only */
+.sidebar-right .standings.wild-card .col.team .logo {
+  display: none;
+}
+
+/* Optional: tighten team name padding now that logo is gone */
+.sidebar-right .standings.wild-card .col.team .name {
+  padding-left: 0;
+}
+/* Sidebar standings team name fit */
+.sidebar-right .standings.wild-card .col.team .name {
+  font-size: 0.78rem;  /* smaller text */
+  line-height: 1.1;
+  padding-left: 0;     /* from logo removal */
+  white-space: nowrap; /* prevent wrapping */
+  overflow: hidden;
+  text-overflow: ellipsis; /* still trims if absurdly long */
+}

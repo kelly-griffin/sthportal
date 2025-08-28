@@ -1,0 +1,19 @@
+{
+    "gwg": "Dylan Larkin",
+    "winningGoalie": "Cam Talbot",
+    "firstStar": "",
+    "secondStar": "",
+    "thirdStar": "",
+    "gameNumber": 10,
+    "visitor": {
+        "name": "Montreal Canadiens",
+        "score": 0,
+        "abbr": "MTL"
+    },
+    "home": {
+        "name": "Detroit Red Wings",
+        "score": 0,
+        "abbr": "DET"
+    },
+    "date": ""
+}

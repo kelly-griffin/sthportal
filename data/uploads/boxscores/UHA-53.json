@@ -1,0 +1,19 @@
+{
+    "gwg": "",
+    "winningGoalie": "Blake Coleman",
+    "firstStar": "",
+    "secondStar": "",
+    "thirdStar": "",
+    "gameNumber": 53,
+    "visitor": {
+        "name": "Calgary Flames",
+        "score": 0,
+        "abbr": "CGY"
+    },
+    "home": {
+        "name": "Vegas Golden Knights",
+        "score": 0,
+        "abbr": "VGK"
+    },
+    "date": ""
+}

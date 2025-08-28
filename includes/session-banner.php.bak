@@ -1,0 +1,56 @@
+<?php
+// includes/session-banner.php — force-visible countdown banner (no enforcement)
+
+if (session_status() !== PHP_SESSION_ACTIVE) @session_start();
+
+// Use app constants if they exist; otherwise sensible defaults
+$__SB_TTL  = defined('SESSION_IDLE_TIMEOUT_SECONDS') ? (int)SESSION_IDLE_TIMEOUT_SECONDS : 1800; // 30m
+$__SB_SHOW = defined('AUTH_SHOW_BANNER') ? (bool)AUTH_SHOW_BANNER : true;
+
+// Compute seconds remaining purely from last_activity; initialize if missing
+if (!isset($_SESSION['last_activity']) || !is_int($_SESSION['last_activity'])) {
+    $_SESSION['last_activity'] = time();
+}
+$__SB_SEC = max(0, $__SB_TTL - (time() - (int)$_SESSION['last_activity']));
+
+// Always define/override a simple renderer (unique name to avoid collisions)
+if (!function_exists('session-banner_html')) {
+    function session_banner_html(): string {
+        global $__SB_TTL, $__SB_SHOW, $__SB_SEC;
+        if (!$__SB_SHOW) return '';
+        $ttl = $__SB_TTL > 0 ? $__SB_TTL : 1800;
+        $sec = (int)$__SB_SEC;
+
+        // Render banner + ticking JS
+        ob_start(); ?>
+        <div id="sgBanner"
+             style="margin:.6rem 0;padding:8px 10px;border:1px solid #c7d2fe;background:#eef2ff;border-radius:8px;display:flex;gap:.6rem;align-items:center">
+          <div><strong>Session</strong> will auto-expire after inactivity.</div>
+          <div>Time left: <span class="sgTime" style="font-feature-settings:'tnum' 1; font-variant-numeric:tabular-nums">--:--</span></div>
+          <div style="margin-left:auto;display:flex;gap:.4rem;align-items:center">
+            <button type="button" id="sgRefresh"
+                    style="padding:.3rem .6rem;border:1px solid #6366f1;border-radius:6px;background:#fff;cursor:pointer">
+              Refresh
+            </button>
+          </div>
+        </div>
+        <script>
+        (function(){
+          var wrap = document.getElementById('sgBanner'); if(!wrap) return;
+          var el = wrap.querySelector('.sgTime');
+          var sec = <?= $sec ?>;
+          function fmt(s){ var m=Math.floor(s/60), ss=s%60; return m+':'+('0'+ss).slice(-2); }
+          function tick(){
+            try { el.textContent = fmt(sec); } catch(e){}
+            if (sec <= 0) { return; } // stop at zero; your guard can handle redirect
+            sec -= 1; setTimeout(tick, 1000);
+          }
+          tick();
+          var btn = document.getElementById('sgRefresh');
+          if (btn) btn.addEventListener('click', function(){ window.location.reload(); });
+        })();
+        </script>
+        <?php
+        return (string)ob_get_clean();
+    }
+}

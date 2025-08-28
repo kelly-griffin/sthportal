@@ -1,0 +1,19 @@
+{
+    "gwg": "",
+    "winningGoalie": "Pavel Buchnevich",
+    "firstStar": "",
+    "secondStar": "",
+    "thirdStar": "",
+    "gameNumber": 46,
+    "visitor": {
+        "name": "St. Louis Blues",
+        "score": 0,
+        "abbr": "STL"
+    },
+    "home": {
+        "name": "Vancouver Canucks",
+        "score": 0,
+        "abbr": "VAN"
+    },
+    "date": ""
+}

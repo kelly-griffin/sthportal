@@ -1,0 +1,19 @@
+{
+    "gwg": "Auston Matthews",
+    "winningGoalie": "Anthony Stolarz",
+    "firstStar": "",
+    "secondStar": "",
+    "thirdStar": "",
+    "gameNumber": 4,
+    "visitor": {
+        "name": "Toronto Maple Leafs",
+        "score": 0,
+        "abbr": "TOR"
+    },
+    "home": {
+        "name": "Montreal Canadiens",
+        "score": 0,
+        "abbr": "MTL"
+    },
+    "date": ""
+}

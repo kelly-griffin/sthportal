@@ -1,0 +1,19 @@
+{
+    "gwg": "",
+    "winningGoalie": "Rasmus Sandin",
+    "firstStar": "",
+    "secondStar": "",
+    "thirdStar": "",
+    "gameNumber": 52,
+    "visitor": {
+        "name": "Tampa Bay Lightning",
+        "score": 0,
+        "abbr": "TBL"
+    },
+    "home": {
+        "name": "Washington Capitals",
+        "score": 0,
+        "abbr": "WSH"
+    },
+    "date": ""
+}

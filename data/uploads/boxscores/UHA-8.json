@@ -1,0 +1,19 @@
+{
+    "gwg": "Charlie McAvoy",
+    "winningGoalie": "Jeremy Swayman",
+    "firstStar": "",
+    "secondStar": "",
+    "thirdStar": "",
+    "gameNumber": 8,
+    "visitor": {
+        "name": "Boston Bruins",
+        "score": 0,
+        "abbr": "BOS"
+    },
+    "home": {
+        "name": "Chicago Blackhawks",
+        "score": 0,
+        "abbr": "CHI"
+    },
+    "date": ""
+}
