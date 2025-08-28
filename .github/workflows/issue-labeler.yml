@@ -5,14 +5,37 @@ on:
 permissions:
   contents: read
   issues: write
+
 jobs:
-  triage:
+  label:
     runs-on: ubuntu-latest
     steps:
-      - uses: github/issue-labeler@v3
+      - name: Auto-label by keywords
+        uses: actions/github-script@v7
         with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
-          configuration-path: .github/issue-labeler.yml
-          enable-versioned-regex: true
-          include-title: true
-          include-body: true
+          script: |
+            const title = context.payload.issue.title || '';
+            const body  = context.payload.issue.body  || '';
+            const text  = `${title}\n${body}`;
+
+            const patterns = {
+              bug: [/\b(bug|error|exception|stack trace|crash|fail(?:ing|ed|s)?|broken|doesn.?t work|not working)\b/i],
+              enhancement: [/\b(feature|enhancement|request|idea|improvement)\b/i],
+              documentation: [/\b(doc|docs|readme|documentation)\b/i],
+              question: [/\b(question|how do i|what is|why|help with)\b/i],
+              frontend: [/\b(ui|css|style|layout|javascript|client|frontend)\b/i],
+              PHP: [/\b(php|backend|server|api|mysql|query|session|auth|authorization|login|signin|signup)\b/i],
+            };
+
+            const labels = Object.entries(patterns)
+              .filter(([, regs]) => regs.some(rx => rx.test(text)))
+              .map(([label]) => label);
+
+            if (labels.length) {
+              await github.rest.issues.addLabels({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                labels
+              });
+            }
