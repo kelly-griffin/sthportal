@@ -1,0 +1,79 @@
+name: CodeQL alerts → issues
+
+on:
+  # runs after your CodeQL workflow finishes
+  workflow_run:
+    workflows: ["CodeQL"]  # ← change if your CodeQL workflow has a different name
+    types: [completed]
+  # run on a schedule too (every 12 hours)
+  schedule:
+    - cron: "0 */12 * * *"
+  # allow manual run
+  workflow_dispatch: {}
+
+permissions:
+  security-events: read
+  issues: write
+  contents: read
+
+jobs:
+  file_issues:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/github-script@v7
+        with:
+          script: |
+            const owner = context.repo.owner;
+            const repo  = context.repo.repo;
+
+            let page = 1, created = 0;
+            while (true) {
+              const { data: alerts } = await github.rest.codeScanning.listAlertsForRepo({
+                owner, repo, state: 'open', per_page: 100, page
+              });
+              if (!alerts.length) break;
+
+              for (const a of alerts) {
+                const sev = String(a.rule?.security_severity_level || a.rule?.severity || '').toLowerCase();
+                if (!['high','critical'].includes(sev)) continue; // only file issues for high/critical
+
+                const inst = a.most_recent_instance || {};
+                const loc  = inst.location || {};
+                const path = loc.path || 'unknown';
+                const line = loc.start_line ?? loc.start_row ?? 0;
+                const rule = a.rule?.id || a.rule?.name || 'Unknown rule';
+                const id   = a.number; // unique per alert
+                const title = `[CodeQL][${sev.toUpperCase()}] ${rule} in ${path}:${line}`;
+
+                // de-dupe by unique marker in body
+                const marker = `codeql-alert-id:${id}`;
+                const search = await github.rest.search.issuesAndPullRequests({
+                  q: `repo:${owner}/${repo} "${marker}" in:body is:issue is:open`
+                });
+                if (search.data.total_count > 0) continue;
+
+                const ext = (path.split('.').pop() || '').toLowerCase();
+                const extra = ext === 'php' ? ['PHP'] : ['frontend'];
+                const labels = ['bug', ...extra];
+
+                const body = [
+                  `<!-- ${marker} -->`,
+                  `**Rule:** ${rule}`,
+                  `**Severity:** ${sev}`,
+                  `**File:** \`${path}\`:\`${line}\``,
+                  `**Alert:** ${a.html_url}`,
+                  '',
+                  '### Remediation',
+                  '- Replace dangerous DOM HTML APIs (`innerHTML`, `$.html()`, `insertAdjacentHTML`) with safe text APIs (`textContent`, `$.text()`), or',
+                  '- Sanitize allowed HTML with DOMPurify before inserting.',
+                  '',
+                  '> Opened automatically from a CodeQL alert.'
+                ].join('\n');
+
+                await github.rest.issues.create({ owner, repo, title, labels, body });
+                created++;
+              }
+              page++;
+            }
+            core.notice(`Created ${created} issue(s).`);
