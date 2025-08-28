@@ -1,12 +1,17 @@
 ﻿bug:
   - "(?i)\\b(bug|error|exception|stack trace|crash|fails?)\\b"
-feature:
+
+enhancement:
   - "(?i)\\b(feature|enhancement|request|idea|improvement)\\b"
-docs:
+
+documentation:
   - "(?i)\\b(doc|docs|readme|documentation)\\b"
-ci:
-  - "(?i)\\b(ci|workflow|github actions|pipeline)\\b"
+
+question:
+  - "(?i)\\b(question|how do i|what is|why|help with)\\b"
+
 frontend:
-  - "(?i)\\b(ui|css|style|layout|javascript|client|react|frontend)\\b"
-backend:
-  - "(?i)\\b(api|php|mysql|query|server|backend)\\b"
+  - "(?i)\\b(ui|css|style|layout|javascript|client|frontend)\\b"
+
+PHP:
+  - "(?i)\\b(php|backend|server|api|mysql|query|session|auth)\\b"

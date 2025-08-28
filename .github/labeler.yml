@@ -1,13 +1,9 @@
 ﻿PHP:
   - "**/*.php"
-Frontend:
+
+frontend:
   - "assets/**/*.{css,js,ts,tsx}"
   - "public/**/*.{css,js,ts,tsx}"
-CSS:
-  - "**/*.css"
-JavaScript:
-  - "**/*.js"
-Workflows:
-  - ".github/workflows/**/*"
-Docs:
+
+documentation:
   - "**/*.md"
