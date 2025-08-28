@@ -10,8 +10,14 @@ categories:
     labels: ["documentation","ci","chore"]
 
 change-template: "- $TITLE (#$NUMBER) by @$AUTHOR"
+
 version-resolver:
   major: { labels: ["semver:major"] }
   minor: { labels: ["enhancement"] }
   patch: { labels: ["bug","documentation","ci"] }
   default: patch
+
+# ✅ Required: overall release notes template
+template: |
+  ## What's Changed
+  $CHANGES
