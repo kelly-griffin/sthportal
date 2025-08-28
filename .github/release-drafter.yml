@@ -1,5 +1,6 @@
-﻿name-template: "v$NEXT_PATCH_VERSION"
-tag-template: "v$NEXT_PATCH_VERSION"
+﻿name-template: "v$RESOLVED_VERSION"
+tag-template: "v$RESOLVED_VERSION"
+
 categories:
   - title: "🚀 Features"
     labels: ["enhancement","frontend"]
@@ -7,6 +8,7 @@ categories:
     labels: ["bug","PHP"]
   - title: "🧰 Maintenance"
     labels: ["documentation","ci","chore"]
+
 change-template: "- $TITLE (#$NUMBER) by @$AUTHOR"
 version-resolver:
   major: { labels: ["semver:major"] }
