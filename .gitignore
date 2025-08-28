@@ -5,5 +5,7 @@ Thumbs.db
 uploads/
 logs/
 backups/
+data/uploads/
+boxscores/
 
 .gitmessage.txt
