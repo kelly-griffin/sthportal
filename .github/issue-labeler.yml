@@ -1,0 +1,12 @@
+﻿bug:
+  - "(?i)\\b(bug|error|exception|stack trace|crash|fails?)\\b"
+feature:
+  - "(?i)\\b(feature|enhancement|request|idea|improvement)\\b"
+docs:
+  - "(?i)\\b(doc|docs|readme|documentation)\\b"
+ci:
+  - "(?i)\\b(ci|workflow|github actions|pipeline)\\b"
+frontend:
+  - "(?i)\\b(ui|css|style|layout|javascript|client|react|frontend)\\b"
+backend:
+  - "(?i)\\b(api|php|mysql|query|server|backend)\\b"
