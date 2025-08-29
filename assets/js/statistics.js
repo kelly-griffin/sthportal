@@ -227,33 +227,6 @@
           img.src = String(remote2);
         }
       };
-        add(`${base}${safeId}.png`);
-        add(`${base}${safeId}.jpg`);
-        if (teamNum) add(`${base}${teamNum}/${safeId}.png`);
-        add(`${base}${cleanTeam}/${safeId}.png`);
-      }
-
-      // Build both remote URLs from the same sanitized ID
-      const remote1 = mugsUrl(team, safeId);
-      const remote2 = cmsUrl(safeId);
-
-      let idx = 0;
-      const tryNext = () => {
-        if (idx < sources.length) {
-          img.onerror = tryNext;
-          // codeql[js/xss-through-dom]: assigning a URL to an <img> attribute; not parsing HTML.
-          img.src = String(sources[idx++]);
-        } else if (idx === sources.length) {
-          idx++;
-          // codeql[js/xss-through-dom]: league-controlled URL; attribute assignment only.
-          img.src = String(remote1);
-          img.onerror = tryNext;
-        } else {
-          img.onerror = null;
-          // codeql[js/xss-through-dom]: final fallback URL; attribute assignment only.
-          img.src = String(remote2);
-        }
-      };
 
       tryNext();
       img.alt = name + ' headshot';
