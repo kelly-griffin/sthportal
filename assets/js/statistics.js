@@ -35,9 +35,9 @@
     UTA: '#000000', CHI: '#CF0A2C'
   };
 
-// Pure string replacement; no DOM parsing or HTML interpretation.
-// codeql[js/xss-through-dom]  lgtm[js/xss-through-dom]
-const decodeEntities = (s) => String(s ?? '').replace(/&(amp|#38);/g, '&');
+  // Pure string replacement; no DOM parsing or HTML interpretation.
+  // codeql[js/xss-through-dom]  lgtm[js/xss-through-dom]
+  const decodeEntities = (s) => String(s ?? '').replace(/&(amp|#38);/g, '&');
   const extractNhlId = raw => { const m = String(raw || '').match(/(\d{6,8})/); return m ? m[1] : ''; };
   function getSeasonSlug(d = new Date()) { const y = d.getFullYear(), m = d.getMonth() + 1; const start = (m >= 7) ? y : (y - 1), end = start + 1; return '' + start + end; }
   const mugsUrl = (team, id, season) => `https://assets.nhle.com/mugs/nhl/${season || getSeasonSlug()}/${(team || '').toUpperCase().replace(/[^A-Z]/g, '')}/${id}.png`;
@@ -193,51 +193,80 @@ const decodeEntities = (s) => String(s ?? '').replace(/&(amp|#38);/g, '&');
     const av = feature.querySelector('[data-avatar]');
     if (!av) return;
     const { img, init } = ensureAvatarChildren(av);
-    const id = extractNhlId(decodeEntities(li.getAttribute('data-photo') || ''));
+    const safeId = extractNhlId(decodeEntities(li.getAttribute('data-photo') || ''));
 
-    if (id) {
+    if (safeId) {
       const cleanTeam = (team || '').toUpperCase().replace(/[^A-Z]/g, '');
       const sources = [];
       const add = (p) => { if (!p) return; sources.push(/^https?:\/\//i.test(p) ? p : assetURL(p)); };
       for (const base of BASES) {
-        add(`${base}${id}.png`);
-        add(`${base}${id}.jpg`);
-        if (teamNum) add(`${base}${teamNum}/${id}.png`);
-        add(`${base}${cleanTeam}/${id}.png`);
+        add(`${base}${safeId}.png`);
+        add(`${base}${safeId}.jpg`);
+        if (teamNum) add(`${base}${teamNum}/${safeId}.png`);
+        add(`${base}${cleanTeam}/${safeId}.png`);
       }
-const remote1 = mugsUrl(team, id);
 
-// Default (non-breaking): keep only digits, max 8 for cmsUrl()
-const safeId  = String(id ?? '').replace(/\D/g, '').slice(0, 8);
-const remote2 = safeId ? cmsUrl(safeId) : '';
+      // Build both remote URLs from the same sanitized ID
+      const remote1 = mugsUrl(team, safeId);
+      const remote2 = cmsUrl(safeId);
 
-let idx = 0;
-const tryNext = () => {
-  if (idx < sources.length) {
-    img.onerror = tryNext;
-    // codeql[js/xss-through-dom]: assigning URL to <img> attribute; not parsing HTML.
-    img.src = String(sources[idx++]);
-  } else if (idx === sources.length) {
-    idx++;
-    // codeql[js/xss-through-dom]: league-controlled URL; attribute assignment only.
-    img.src = String(remote1);
-    img.onerror = tryNext;
-  } else {
-    img.onerror = null;
-    // codeql[js/xss-through-dom]: final fallback URL; attribute assignment only.
-    img.src = String(remote2);
-  }
-};
+      let idx = 0;
+      const tryNext = () => {
+        if (idx < sources.length) {
+          img.onerror = tryNext;
+          // codeql[js/xss-through-dom]: assigning a URL to an <img> attribute; not parsing HTML.
+          img.src = String(sources[idx++]);
+        } else if (idx === sources.length) {
+          idx++;
+          // codeql[js/xss-through-dom]: league-controlled URL; attribute assignment only.
+          img.src = String(remote1);
+          img.onerror = tryNext;
+        } else {
+          img.onerror = null;
+          // codeql[js/xss-through-dom]: final fallback URL; attribute assignment only.
+          img.src = String(remote2);
+        }
+      };
+        add(`${base}${safeId}.png`);
+        add(`${base}${safeId}.jpg`);
+        if (teamNum) add(`${base}${teamNum}/${safeId}.png`);
+        add(`${base}${cleanTeam}/${safeId}.png`);
+      }
+
+      // Build both remote URLs from the same sanitized ID
+      const remote1 = mugsUrl(team, safeId);
+      const remote2 = cmsUrl(safeId);
+
+      let idx = 0;
+      const tryNext = () => {
+        if (idx < sources.length) {
+          img.onerror = tryNext;
+          // codeql[js/xss-through-dom]: assigning a URL to an <img> attribute; not parsing HTML.
+          img.src = String(sources[idx++]);
+        } else if (idx === sources.length) {
+          idx++;
+          // codeql[js/xss-through-dom]: league-controlled URL; attribute assignment only.
+          img.src = String(remote1);
+          img.onerror = tryNext;
+        } else {
+          img.onerror = null;
+          // codeql[js/xss-through-dom]: final fallback URL; attribute assignment only.
+          img.src = String(remote2);
+        }
+      };
 
       tryNext();
       img.alt = name + ' headshot';
       av.classList.add('has-photo');
       init.textContent = '';
     } else {
+      img.onerror = null;                 // optional: stop retrying if src is removed
       img.removeAttribute('src');
+      img.alt = initials(name) + ' logo'; // optional: better alt when no mug
       av.classList.remove('has-photo');
       init.textContent = initials(name);
     }
+
   }
 
   document.querySelectorAll('.leaders-card').forEach(card => {
