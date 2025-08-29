@@ -1,19 +1,24 @@
-﻿name: PHP Lint
+﻿name: php-lint
 
 on:
+  pull_request:
+    branches: [ dev, main ]
+    paths:
+      - '**/*.php'
+      - '.github/workflows/php-lint.yml'
+  push:
+    branches: [ dev ]   # runs when you push directly to dev
+    paths:
+      - '**/*.php'
+      - '.github/workflows/php-lint.yml'
   workflow_dispatch:
 
-# 👇 Explicit least-privilege token permissions (recommended)
 permissions:
   contents: read
 
 jobs:
   php-lint:
     runs-on: ubuntu-latest
-    # (optional redundancy) keep at job level too
-    permissions:
-      contents: read
-
     steps:
       - uses: actions/checkout@v4
       - uses: shivammathur/setup-php@v2
