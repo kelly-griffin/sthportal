@@ -1,15 +1,24 @@
 ﻿name: PHP Lint
+
 on:
-  push: { branches: [ main ] }
-  pull_request: { branches: [ main ] }
   workflow_dispatch:
+
+# 👇 Explicit least-privilege token permissions (recommended)
+permissions:
+  contents: read
+
 jobs:
   php-lint:
     runs-on: ubuntu-latest
+    # (optional redundancy) keep at job level too
+    permissions:
+      contents: read
+
     steps:
       - uses: actions/checkout@v4
       - uses: shivammathur/setup-php@v2
-        with: { php-version: "8.2" }
+        with:
+          php-version: '8.2'
       - name: Syntax check
         run: |
           find . -type f -name "*.php" -not -path "./vendor/*" -print0 | xargs -0 -n1 -P 4 php -l
