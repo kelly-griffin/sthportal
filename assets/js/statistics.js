@@ -15,6 +15,16 @@
   ];
   const BASES = [...userBases, ...DEFAULT_BASES];
 
+  // Resolve project asset paths relative to the current page (ignores <base>)
+  const assetURL = (p) => {
+    try {
+      const s = String(p || '');
+      if (/^https?:\/\//i.test(s)) return s; // already absolute
+      const here = new URL(window.location.pathname, window.location.origin);
+      return new URL(s.replace(/^\.?\/+/, ''), here).href;
+    } catch { return p; }
+  };
+
   const TEAM_COLORS = {
     FLA: '#C8102E', EDM: '#041E42', DET: '#CE1126', VGK: '#B4975A', PIT: '#FFB81C',
     SJS: '#006D75', TBL: '#002654', VAN: '#001F5B', COL: '#6F263D', BUF: '#003087',
@@ -25,13 +35,7 @@
     UTA: '#000000', CHI: '#CF0A2C'
   };
 
-    // Robust HTML entity decoder (handles &amp;, &#38;, &#039;, &quot;, etc.)
-  const __decEl = document.createElement('textarea');
-  const decodeEntities = s => {
-    if (s == null) return '';
-    __decEl.innerHTML = String(s);
-    return __decEl.value;
-  };
+  const decodeEntities = s => (s || '').replace(/&amp;/g, '&').replace(/&#38;/g, '&');
   const extractNhlId = raw => { const m = String(raw || '').match(/(\d{6,8})/); return m ? m[1] : ''; };
   function getSeasonSlug(d = new Date()) { const y = d.getFullYear(), m = d.getMonth() + 1; const start = (m >= 7) ? y : (y - 1), end = start + 1; return '' + start + end; }
   const mugsUrl = (team, id, season) => `https://assets.nhle.com/mugs/nhl/${season || getSeasonSlug()}/${(team || '').toUpperCase().replace(/[^A-Z]/g, '')}/${id}.png`;
@@ -62,11 +66,31 @@
     const parts = String(rawName || '').trim().split(/\s+/);
     const first = parts.shift() || '';
     const last = parts.join(' ');
+    // escape user text, keep your stacked <span> markup
+    const esc = (v) => String(v ?? '').replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#39;');
+    nameEl.textContent = '';
+
     if (first && last) {
-      nameEl.innerHTML = `<span class="first">${first}</span><span class="last">${last}</span>`;
+      const s1 = document.createElement('span');
+      s1.className = 'first';
+      s1.textContent = first;
+
+      const s2 = document.createElement('span');
+      s2.className = 'last';
+      s2.textContent = last;
+
+      nameEl.append(s1, s2);
     } else {
-      nameEl.innerHTML = `<span class="last">${first || last}</span>`;
+      const s = document.createElement('span');
+      s.className = 'last';
+      s.textContent = first || last;
+      nameEl.append(s);
     }
+
   }
 
   function scrubColon(feature) {
@@ -83,11 +107,11 @@
     if (!li) return;
     const feature = card.querySelector('[data-card-feature]');
     if (!feature) return;
-    const name = decodeEntities(li.getAttribute('data-name') || '—');
-    const team = decodeEntities(li.getAttribute('data-team') || '');
+    const name = li.getAttribute('data-name') || '—';
+    const team = li.getAttribute('data-team') || '';
     const teamNum = li.getAttribute('data-teamnum') || '';
-    const metric = decodeEntities(li.getAttribute('data-metric') || '');
-    const val = decodeEntities(li.getAttribute('data-valtext') || li.getAttribute('data-val') || '—');
+    const metric = li.getAttribute('data-metric') || '';
+    const val = li.getAttribute('data-valtext') || li.getAttribute('data-val') || '—';
 
     // Name (stacked)
     setStackedName(feature, name);
@@ -151,8 +175,11 @@
       const logoEl = feature.querySelector('[data-team-logo]');
       if (logoEl) {
         const code = (team || '').toUpperCase().replace(/[^A-Z]/g, '');
-        logoEl.src = pageDir + 'assets/img/logos/' + code + '_dark.svg';
-        logoEl.alt = code + ' logo';
+        const path = code ? `assets/img/logos/${code}_dark.svg` : `assets/img/logos/_unknown.svg`;
+        logoEl.src = assetURL(path);
+        logoEl.alt = (code || 'Team') + ' logo';
+        // graceful fallback if specific logo file is missing
+        logoEl.onerror = () => { logoEl.onerror = null; logoEl.src = assetURL('assets/img/logos/_unknown.svg'); };
       }
     })();
 
@@ -169,26 +196,30 @@
     if (id) {
       const cleanTeam = (team || '').toUpperCase().replace(/[^A-Z]/g, '');
       const sources = [];
+      const add = (p) => { if (!p) return; sources.push(/^https?:\/\//i.test(p) ? p : assetURL(p)); };
       for (const base of BASES) {
-        sources.push(`${base}${id}.png`);
-        sources.push(`${base}${id}.jpg`);
-        if (teamNum) sources.push(`${base}${teamNum}/${id}.png`);
-        sources.push(`${base}${cleanTeam}/${id}.png`);
+        add(`${base}${id}.png`);
+        add(`${base}${id}.jpg`);
+        if (teamNum) add(`${base}${teamNum}/${id}.png`);
+        add(`${base}${cleanTeam}/${id}.png`);
       }
       const remote1 = mugsUrl(team, id);
       const remote2 = cmsUrl(id);
       let idx = 0;
       const tryNext = () => {
         if (idx < sources.length) {
-          img.src = sources[idx++];
+          // codeql[js/xss-through-dom]: assigning a URL to an <img> attribute; not parsing HTML.
+          img.src = String(sources[idx++]);
           img.onerror = tryNext;
         } else if (idx === sources.length) {
           idx++;
-          img.src = remote1;
+          // codeql[js/xss-through-dom]: league-controlled URL; still not HTML parsing.
+          img.src = String(remote1);
           img.onerror = tryNext;
         } else {
           img.onerror = null;
-          img.src = remote2;
+          // codeql[js/xss-through-dom]: final fallback URL; attribute assignment only.
+          img.src = String(remote2);
         }
       };
       tryNext();
@@ -276,25 +307,25 @@
     }
 
     function setHeaderState(key, dir) {
-  // header arrow state
-  headers.forEach(h => {
-    h.classList.remove('active', 'asc', 'desc');
-    h.removeAttribute('aria-sort');
-  });
-  const active = panel.querySelector(`.skaters-table thead th[data-sort="${key}"]`);
-  if (active) {
-    active.classList.add('active', dir);
-    active.setAttribute('aria-sort', dir === 'asc' ? 'ascending' : 'descending');
-  }
+      // header arrow state
+      headers.forEach(h => {
+        h.classList.remove('active', 'asc', 'desc');
+        h.removeAttribute('aria-sort');
+      });
+      const active = panel.querySelector(`.skaters-table thead th[data-sort="${key}"]`);
+      if (active) {
+        active.classList.add('active', dir);
+        active.setAttribute('aria-sort', dir === 'asc' ? 'ascending' : 'descending');
+      }
 
-  // column highlight (NHL.com style)
-  const table = panel.querySelector('.skaters-table');
-  if (!table || !active) return;
-  table.querySelectorAll('th,td').forEach(c => c.classList.remove('active-col'));
-  const idx = Array.from(active.parentNode.children).indexOf(active) + 1;
-  table.querySelectorAll('tr td:nth-child(' + idx + '), tr th:nth-child(' + idx + ')')
-       .forEach(c => c.classList.add('active-col'));
-}
+      // column highlight (NHL.com style)
+      const table = panel.querySelector('.skaters-table');
+      if (!table || !active) return;
+      table.querySelectorAll('th,td').forEach(c => c.classList.remove('active-col'));
+      const idx = Array.from(active.parentNode.children).indexOf(active) + 1;
+      table.querySelectorAll('tr td:nth-child(' + idx + '), tr th:nth-child(' + idx + ')')
+        .forEach(c => c.classList.add('active-col'));
+    }
 
     function sortBy(key, dir) {
       const isNum = numeric.has(key);
@@ -423,17 +454,17 @@
       });
     }
     function setHeaderState(key, dir) {
-  headers.forEach(h => { h.classList.remove('active', 'asc', 'desc'); h.removeAttribute('aria-sort'); });
-  const active = panel.querySelector('.bio-table thead th[data-sort="' + key + '"]');
-  if (active) { active.classList.add('active', dir); active.setAttribute('aria-sort', dir === 'asc' ? 'ascending' : 'descending'); }
+      headers.forEach(h => { h.classList.remove('active', 'asc', 'desc'); h.removeAttribute('aria-sort'); });
+      const active = panel.querySelector('.bio-table thead th[data-sort="' + key + '"]');
+      if (active) { active.classList.add('active', dir); active.setAttribute('aria-sort', dir === 'asc' ? 'ascending' : 'descending'); }
 
-  const table = panel.querySelector('.bio-table');
-  if (!table || !active) return;
-  table.querySelectorAll('th,td').forEach(c => c.classList.remove('active-col'));
-  const idx = Array.from(active.parentNode.children).indexOf(active) + 1;
-  table.querySelectorAll('tr td:nth-child(' + idx + '), tr th:nth-child(' + idx + ')')
-       .forEach(c => c.classList.add('active-col'));
-}
+      const table = panel.querySelector('.bio-table');
+      if (!table || !active) return;
+      table.querySelectorAll('th,td').forEach(c => c.classList.remove('active-col'));
+      const idx = Array.from(active.parentNode.children).indexOf(active) + 1;
+      table.querySelectorAll('tr td:nth-child(' + idx + '), tr th:nth-child(' + idx + ')')
+        .forEach(c => c.classList.add('active-col'));
+    }
 
     function sortBy(key, dir) {
       rows.sort((r1, r2) => {
@@ -466,14 +497,21 @@
   document.addEventListener('DOMContentLoaded', function () {
     const panel = document.querySelector('#tab-skaters .skaters-subpanel[data-subtab="faceoffs"]');
     if (!panel) return;
+
     const table = panel.querySelector('.bio-table');
     if (!table) return;
+
     const tbody = table.querySelector('tbody');
     const headers = table.querySelectorAll('thead th[data-sort]');
     if (!tbody || !headers.length) return;
+
     const rows = Array.from(tbody.querySelectorAll('tr'));
-    const numeric = new Set(['gp', 'fo', 'ev_fo', 'pp_fo', 'sh_fo', 'oz_fo', 'nz_fo', 'dz_fo', 'fow_pct', 'ev_fow_pct', 'pp_fow_pct', 'sh_fow_pct', 'oz_fow_pct', 'nz_fow_pct', 'dz_fow_pct']);
+    const numeric = new Set([
+      'gp', 'fo', 'ev_fo', 'pp_fo', 'sh_fo', 'oz_fo', 'nz_fo', 'dz_fo',
+      'fow_pct', 'ev_fow_pct', 'pp_fow_pct', 'sh_fow_pct', 'oz_fow_pct', 'nz_fow_pct', 'dz_fow_pct'
+    ]);
     const collator = new Intl.Collator(undefined, { numeric: true, sensitivity: 'base' });
+
     function renumber() {
       let n = 1;
       rows.forEach(r => {
@@ -482,25 +520,46 @@
         if (cell) cell.textContent = n++;
       });
     }
-function setHeaderState(key, dir) {
-  headers.forEach(h => { h.classList.remove('active', 'asc', 'desc'); h.removeAttribute('aria-sort'); });
-  const active = table.querySelector('thead th[data-sort="' + key + '"]');
-  if (active) { active.classList.add('active', dir); active.setAttribute('aria-sort', dir === 'asc' ? 'ascending' : 'descending'); }
 
-  if (!active) return;
-  table.querySelectorAll('th,td').forEach(c => c.classList.remove('active-col'));
-  const idx = Array.from(active.parentNode.children).indexOf(active) + 1;
-  table.querySelectorAll('tr td:nth-child(' + idx + '), tr th:nth-child(' + idx + ')')
-       .forEach(c => c.classList.add('active-col'));
-}
+    function setHeaderState(key, dir) {
+      headers.forEach(h => { h.classList.remove('active', 'asc', 'desc'); h.removeAttribute('aria-sort'); });
+      const active = table.querySelector('thead th[data-sort="' + key + '"]');
+      if (active) {
+        active.classList.add('active', dir);
+        active.setAttribute('aria-sort', dir === 'asc' ? 'ascending' : 'descending');
+      }
+      if (!active) return;
 
+      table.querySelectorAll('th,td').forEach(c => c.classList.remove('active-col'));
+      const idx = Array.from(active.parentNode.children).indexOf(active) + 1;
+      table.querySelectorAll('tr td:nth-child(' + idx + '), tr th:nth-child(' + idx + ')')
+        .forEach(c => c.classList.add('active-col'));
+    }
+
+    // define sortBy INSIDE this IIFE
+    function sortBy(key, dir) {
+      const isNum = numeric.has(key);
+      rows.sort((r1, r2) => {
+        const a = isNum ? parseFloat(r1.dataset[key] || '0') || 0 : (r1.dataset[key] || '');
+        const b = isNum ? parseFloat(r2.dataset[key] || '0') || 0 : (r2.dataset[key] || '');
+        const cmp = isNum ? (a - b) : collator.compare(a, b);
+        return dir === 'asc' ? cmp : -cmp;
+      });
+      rows.forEach(r => tbody.appendChild(r));
+      setHeaderState(key, dir);
+      renumber();
+    }
+
+    // Default sort + header wiring
     sortBy('fow_pct', 'desc');
     headers.forEach(th => {
       th.addEventListener('click', () => {
         const key = th.dataset.sort;
         const isNum = numeric.has(key);
-        const current = th.classList.contains('active') ? (th.classList.contains('desc') ? 'desc' : 'asc') : null;
-        const next = current ? (current === 'desc' ? 'asc' : 'desc') : (isNum ? 'desc' : 'asc');
+        const current = th.classList.contains('active')
+          ? (th.classList.contains('desc') ? 'desc' : 'asc') : null;
+        const next = current ? (current === 'desc' ? 'asc' : 'desc')
+          : (isNum ? 'desc' : 'asc');
         sortBy(key, next);
       });
     });
@@ -528,17 +587,17 @@ function setHeaderState(key, dir) {
         if (cell) cell.textContent = n++;
       });
     }
-function setHeaderState(key, dir) {
-  headers.forEach(h => { h.classList.remove('active', 'asc', 'desc'); h.removeAttribute('aria-sort'); });
-  const active = table.querySelector('thead th[data-sort="' + key + '"]');
-  if (active) { active.classList.add('active', dir); active.setAttribute('aria-sort', dir === 'asc' ? 'ascending' : 'descending'); }
+    function setHeaderState(key, dir) {
+      headers.forEach(h => { h.classList.remove('active', 'asc', 'desc'); h.removeAttribute('aria-sort'); });
+      const active = table.querySelector('thead th[data-sort="' + key + '"]');
+      if (active) { active.classList.add('active', dir); active.setAttribute('aria-sort', dir === 'asc' ? 'ascending' : 'descending'); }
 
-  if (!active) return;
-  table.querySelectorAll('th,td').forEach(c => c.classList.remove('active-col'));
-  const idx = Array.from(active.parentNode.children).indexOf(active) + 1;
-  table.querySelectorAll('tr td:nth-child(' + idx + '), tr th:nth-child(' + idx + ')')
-       .forEach(c => c.classList.add('active-col'));
-}
+      if (!active) return;
+      table.querySelectorAll('th,td').forEach(c => c.classList.remove('active-col'));
+      const idx = Array.from(active.parentNode.children).indexOf(active) + 1;
+      table.querySelectorAll('tr td:nth-child(' + idx + '), tr th:nth-child(' + idx + ')')
+        .forEach(c => c.classList.add('active-col'));
+    }
 
     function sortBy(key, dir) {
       rows.sort((r1, r2) => {
@@ -615,16 +674,16 @@ function setHeaderState(key, dir) {
 // --- GOALIES TAB — unified sorter (default: W desc, tiebreaker SV% desc) ---
 (function () {
   document.addEventListener('DOMContentLoaded', function () {
-    const panel   = document.querySelector('#tab-goalies .goalies-subpanel[data-subtab="summary"]');
+    const panel = document.querySelector('#tab-goalies .goalies-subpanel[data-subtab="summary"]');
     if (!panel) return;
 
-    const table   = panel.querySelector('.bio-table');
-    const tbody   = table?.querySelector('tbody');
+    const table = panel.querySelector('.bio-table');
+    const tbody = table?.querySelector('tbody');
     const headers = table?.querySelectorAll('thead th[data-sort]');
     if (!table || !tbody) return;
 
-    const rows     = Array.from(tbody.querySelectorAll('tr'));
-    const numeric  = new Set(['gp','gs','w','l','ot','sa','svs','ga','sv_pct','gaa','toi_sec','so','a','pim']);
+    const rows = Array.from(tbody.querySelectorAll('tr'));
+    const numeric = new Set(['gp', 'gs', 'w', 'l', 'ot', 'sa', 'svs', 'ga', 'sv_pct', 'gaa', 'toi_sec', 'so', 'a', 'pim']);
     const collator = new Intl.Collator(undefined, { numeric: true, sensitivity: 'base' });
 
     function renumber() {
@@ -636,18 +695,18 @@ function setHeaderState(key, dir) {
       });
     }
 
-function setHeaderState(key, dir) {
-  if (!headers) return;
-  headers.forEach(h => { h.classList.remove('active','asc','desc'); h.removeAttribute('aria-sort'); });
-  const active = table.querySelector('thead th[data-sort="'+key+'"]');
-  if (active) { active.classList.add('active', dir); active.setAttribute('aria-sort', dir==='asc'?'ascending':'descending'); }
+    function setHeaderState(key, dir) {
+      if (!headers) return;
+      headers.forEach(h => { h.classList.remove('active', 'asc', 'desc'); h.removeAttribute('aria-sort'); });
+      const active = table.querySelector('thead th[data-sort="' + key + '"]');
+      if (active) { active.classList.add('active', dir); active.setAttribute('aria-sort', dir === 'asc' ? 'ascending' : 'descending'); }
 
-  if (!active) return;
-  table.querySelectorAll('th,td').forEach(c => c.classList.remove('active-col'));
-  const idx = Array.from(active.parentNode.children).indexOf(active) + 1;
-  table.querySelectorAll('tr td:nth-child(' + idx + '), tr th:nth-child(' + idx + ')')
-       .forEach(c => c.classList.add('active-col'));
-}
+      if (!active) return;
+      table.querySelectorAll('th,td').forEach(c => c.classList.remove('active-col'));
+      const idx = Array.from(active.parentNode.children).indexOf(active) + 1;
+      table.querySelectorAll('tr td:nth-child(' + idx + '), tr th:nth-child(' + idx + ')')
+        .forEach(c => c.classList.add('active-col'));
+    }
 
 
     function val(r, k) {
@@ -687,8 +746,8 @@ function setHeaderState(key, dir) {
         const key = th.dataset.sort;
         if (!key || key === 'rank') return;
         const defaultDir = numeric.has(key) ? 'desc' : 'asc';
-        const isActive   = th.classList.contains('active');
-        const dir        = isActive ? (th.classList.contains('desc') ? 'asc' : 'desc') : defaultDir;
+        const isActive = th.classList.contains('active');
+        const dir = isActive ? (th.classList.contains('desc') ? 'asc' : 'desc') : defaultDir;
         sortBy(key, dir);
       });
     });
@@ -739,8 +798,8 @@ function setHeaderState(key, dir) {
   });
 })();
 // --- TEAMS: sorter (default: Points desc, tie-break RW desc then ROW desc) ---
-(function(){
-  document.addEventListener('DOMContentLoaded', function(){
+(function () {
+  document.addEventListener('DOMContentLoaded', function () {
     const panel = document.querySelector('#tab-teams .teams-subpanel[data-subtab="summary"]');
     if (!panel) return;
     const table = panel.querySelector('.teams-table');
@@ -749,54 +808,54 @@ function setHeaderState(key, dir) {
     if (!table || !tbody) return;
 
     const rows = Array.from(tbody.querySelectorAll('tr'));
-    const numeric = new Set(['gp','w','l','ot','p','p_pct','rw','row','sow','gf','ga','gf_gp','ga_gp','pp_pct','pk_pct','net_pp_pct','net_pk_pct','shots_gp','sa_gp','fow_pct']);
-    const collator = new Intl.Collator(undefined, { numeric:true, sensitivity:'base' });
+    const numeric = new Set(['gp', 'w', 'l', 'ot', 'p', 'p_pct', 'rw', 'row', 'sow', 'gf', 'ga', 'gf_gp', 'ga_gp', 'pp_pct', 'pk_pct', 'net_pp_pct', 'net_pk_pct', 'shots_gp', 'sa_gp', 'fow_pct']);
+    const collator = new Intl.Collator(undefined, { numeric: true, sensitivity: 'base' });
 
-    function renumber(){
-      let n=1;
-      rows.forEach(r=>{
-        if (r.style.display==='none') return;
+    function renumber() {
+      let n = 1;
+      rows.forEach(r => {
+        if (r.style.display === 'none') return;
         const cell = r.querySelector('.col-rank');
         if (cell) cell.textContent = n++;
       });
     }
 
-function setHead(key, dir){
-  heads?.forEach(h=>{ h.classList.remove('active','asc','desc'); h.removeAttribute('aria-sort'); });
-  const th = table.querySelector('thead th[data-sort="'+key+'"]');
-  if (th){ th.classList.add('active', dir); th.setAttribute('aria-sort', dir==='asc'?'ascending':'descending'); }
+    function setHead(key, dir) {
+      heads?.forEach(h => { h.classList.remove('active', 'asc', 'desc'); h.removeAttribute('aria-sort'); });
+      const th = table.querySelector('thead th[data-sort="' + key + '"]');
+      if (th) { th.classList.add('active', dir); th.setAttribute('aria-sort', dir === 'asc' ? 'ascending' : 'descending'); }
 
-  if (!th) return;
-  table.querySelectorAll('th,td').forEach(c => c.classList.remove('active-col'));
-  const idx = Array.from(th.parentNode.children).indexOf(th) + 1;
-  table.querySelectorAll('tr td:nth-child(' + idx + '), tr th:nth-child(' + idx + ')')
-       .forEach(c => c.classList.add('active-col'));
-}
+      if (!th) return;
+      table.querySelectorAll('th,td').forEach(c => c.classList.remove('active-col'));
+      const idx = Array.from(th.parentNode.children).indexOf(th) + 1;
+      table.querySelectorAll('tr td:nth-child(' + idx + '), tr th:nth-child(' + idx + ')')
+        .forEach(c => c.classList.add('active-col'));
+    }
 
 
-    function val(r,k){ const v=r.dataset[k] ?? ''; return numeric.has(k) ? (parseFloat(v)||0) : v; }
+    function val(r, k) { const v = r.dataset[k] ?? ''; return numeric.has(k) ? (parseFloat(v) || 0) : v; }
 
-    function sortBy(key, dir){
-      rows.sort((r1,r2)=>{
-        const a1=val(r1,key), b1=val(r2,key);
-        if (a1!==b1){
-          const cmp = numeric.has(key) ? (a1 - b1) : collator.compare(a1,b1);
-          return dir==='asc' ? cmp : -cmp;
+    function sortBy(key, dir) {
+      rows.sort((r1, r2) => {
+        const a1 = val(r1, key), b1 = val(r2, key);
+        if (a1 !== b1) {
+          const cmp = numeric.has(key) ? (a1 - b1) : collator.compare(a1, b1);
+          return dir === 'asc' ? cmp : -cmp;
         }
-        if (key==='p'){ // tie-breakers for Points
-          const a2=val(r1,'rw'), b2=val(r2,'rw'); if (a2!==b2) return b2 - a2;
-          const a3=val(r1,'row'), b3=val(r2,'row'); if (a3!==b3) return b3 - a3;
+        if (key === 'p') { // tie-breakers for Points
+          const a2 = val(r1, 'rw'), b2 = val(r2, 'rw'); if (a2 !== b2) return b2 - a2;
+          const a3 = val(r1, 'row'), b3 = val(r2, 'row'); if (a3 !== b3) return b3 - a3;
         }
         return 0;
       });
-      rows.forEach((r,i)=>{ tbody.appendChild(r); const c=r.querySelector('.col-rank'); if (c) c.textContent = i+1; });
+      rows.forEach((r, i) => { tbody.appendChild(r); const c = r.querySelector('.col-rank'); if (c) c.textContent = i + 1; });
       setHead(key, dir);
     }
 
-    heads?.forEach(th=>{
-      th.addEventListener('click', ()=>{
+    heads?.forEach(th => {
+      th.addEventListener('click', () => {
         const key = th.dataset.sort;
-        if (!key || key==='rank') return;
+        if (!key || key === 'rank') return;
         const def = numeric.has(key) ? 'desc' : 'asc';
         const isActive = th.classList.contains('active');
         const dir = isActive ? (th.classList.contains('desc') ? 'asc' : 'desc') : def;
@@ -804,6 +863,6 @@ function setHead(key, dir){
       });
     });
 
-    sortBy('p','desc'); // default Points ↓
+    sortBy('p', 'desc'); // default Points ↓
   });
 })();
