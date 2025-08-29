@@ -15,6 +15,15 @@
   ];
   const BASES = [...userBases, ...DEFAULT_BASES];
 
+  const isHttpLike = (u) => {
+  try {
+    const x = new URL(String(u), window.location.href); // supports relative
+    return x.protocol === 'http:' || x.protocol === 'https:';
+  } catch {
+    return false;
+  }
+};
+
   // Resolve project asset paths relative to the current page (ignores <base>)
   const assetURL = (p) => {
     try {
@@ -205,8 +214,17 @@ const decodeEntities = (s) => String(s ?? '').replace(/&(amp|#38);/g, '&');
         if (teamNum) add(`${base}${teamNum}/${id}.png`);
         add(`${base}${cleanTeam}/${id}.png`);
       }
-      const remote1 = mugsUrl(team, id);
-      const remote2 = cmsUrl(id);
+const remote1 = mugsUrl(team, id);
+
+// Pick ONE safeId strategy (use the first one below unless your CMS enforces 6–8 digits)
+
+// ✅ Default (non-breaking): keep only digits, max 8
+const safeId = String(id ?? '').replace(/\D/g, '').slice(0, 8);
+
+// 🔒 Stricter (optional): require exactly 6–8 digits
+// const safeId = /^\d{6,8}$/.test(String(id)) ? String(id) : '';
+
+const remote2 = safeId ? cmsUrl(safeId) : '';
       let idx = 0;
       const tryNext = () => {
         if (idx < sources.length) {
@@ -220,8 +238,12 @@ const decodeEntities = (s) => String(s ?? '').replace(/&(amp|#38);/g, '&');
           img.onerror = tryNext;
         } else {
           img.onerror = null;
-          // codeql[js/xss-through-dom]: final fallback URL; attribute assignment only.
+          // codeql[js/xss-through-dom]: attribute assignment only; no HTML parsing.
+          if (remote2 && isHttpLike(remote2)) {
           img.src = String(remote2);
+          } else {
+        img.removeAttribute('src'); // nothing acceptable to load
+                  }
         }
       };
       tryNext();
