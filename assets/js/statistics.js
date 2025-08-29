@@ -15,15 +15,6 @@
   ];
   const BASES = [...userBases, ...DEFAULT_BASES];
 
-  const isHttpLike = (u) => {
-  try {
-    const x = new URL(String(u), window.location.href); // supports relative
-    return x.protocol === 'http:' || x.protocol === 'https:';
-  } catch {
-    return false;
-  }
-};
-
   // Resolve project asset paths relative to the current page (ignores <base>)
   const assetURL = (p) => {
     try {
@@ -216,36 +207,28 @@ const decodeEntities = (s) => String(s ?? '').replace(/&(amp|#38);/g, '&');
       }
 const remote1 = mugsUrl(team, id);
 
-// Pick ONE safeId strategy (use the first one below unless your CMS enforces 6–8 digits)
-
-// ✅ Default (non-breaking): keep only digits, max 8
-const safeId = String(id ?? '').replace(/\D/g, '').slice(0, 8);
-
-// 🔒 Stricter (optional): require exactly 6–8 digits
-// const safeId = /^\d{6,8}$/.test(String(id)) ? String(id) : '';
-
+// Default (non-breaking): keep only digits, max 8 for cmsUrl()
+const safeId  = String(id ?? '').replace(/\D/g, '').slice(0, 8);
 const remote2 = safeId ? cmsUrl(safeId) : '';
-      let idx = 0;
-      const tryNext = () => {
-        if (idx < sources.length) {
-          // codeql[js/xss-through-dom]: assigning a URL to an <img> attribute; not parsing HTML.
-          img.src = String(sources[idx++]);
-          img.onerror = tryNext;
-        } else if (idx === sources.length) {
-          idx++;
-          // codeql[js/xss-through-dom]: league-controlled URL; still not HTML parsing.
-          img.src = String(remote1);
-          img.onerror = tryNext;
-        } else {
-          img.onerror = null;
-          // codeql[js/xss-through-dom]: attribute assignment only; no HTML parsing.
-          if (remote2 && isHttpLike(remote2)) {
-          img.src = String(remote2);
-          } else {
-        img.removeAttribute('src'); // nothing acceptable to load
-                  }
-        }
-      };
+
+let idx = 0;
+const tryNext = () => {
+  if (idx < sources.length) {
+    img.onerror = tryNext;
+    // codeql[js/xss-through-dom]: assigning URL to <img> attribute; not parsing HTML.
+    img.src = String(sources[idx++]);
+  } else if (idx === sources.length) {
+    idx++;
+    // codeql[js/xss-through-dom]: league-controlled URL; attribute assignment only.
+    img.src = String(remote1);
+    img.onerror = tryNext;
+  } else {
+    img.onerror = null;
+    // codeql[js/xss-through-dom]: final fallback URL; attribute assignment only.
+    img.src = String(remote2);
+  }
+};
+
       tryNext();
       img.alt = name + ' headshot';
       av.classList.add('has-photo');
