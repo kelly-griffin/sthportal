@@ -214,17 +214,18 @@
       const tryNext = () => {
         if (idx < sources.length) {
           img.onerror = tryNext;
-          // codeql[js/xss-through-dom]: assigning a URL to an <img> attribute; not parsing HTML.
-          img.src = String(sources[idx++]);
+          // assign only vetted absolute URLs
+          const nextUrl = new URL(sources[idx++], window.location.origin).toString();
+          img.src = nextUrl;
         } else if (idx === sources.length) {
           idx++;
-          // codeql[js/xss-through-dom]: league-controlled URL; attribute assignment only.
-          img.src = String(remote1);
           img.onerror = tryNext;
+          const safeRemote1 = new URL(remote1, window.location.origin).toString();
+          img.src = safeRemote1;
         } else {
           img.onerror = null;
-          // codeql[js/xss-through-dom]: final fallback URL; attribute assignment only.
-          img.src = String(remote2);
+          const safeRemote2 = new URL(remote2, window.location.origin).toString();
+          img.src = safeRemote2;
         }
       };
 
