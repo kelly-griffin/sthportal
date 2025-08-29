@@ -1,15 +1,29 @@
-﻿name: PHP Lint
+﻿name: php-lint
+
 on:
-  push: { branches: [ main ] }
-  pull_request: { branches: [ main ] }
+  pull_request:
+    branches: [ dev, main ]
+    paths:
+      - '**/*.php'
+      - '.github/workflows/php-lint.yml'
+  push:
+    branches: [ dev ]   # runs when you push directly to dev
+    paths:
+      - '**/*.php'
+      - '.github/workflows/php-lint.yml'
   workflow_dispatch:
+
+permissions:
+  contents: read
+
 jobs:
   php-lint:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: shivammathur/setup-php@v2
-        with: { php-version: "8.2" }
+        with:
+          php-version: '8.2'
       - name: Syntax check
         run: |
           find . -type f -name "*.php" -not -path "./vendor/*" -print0 | xargs -0 -n1 -P 4 php -l
