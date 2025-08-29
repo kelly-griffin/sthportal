@@ -1,12 +1,23 @@
-﻿desktop.ini
+﻿# runtime dirs – keep the folder, ignore contents
+/uploads/**
+!/uploads/.gitkeep
+
+/data/uploads/**
+!/data/uploads/.gitkeep
+
+/boxscores/**
+!/boxscores/.gitkeep
+
+/logs/**
+!/logs/.gitkeep
+
+/backups/**
+!/backups/.gitkeep
+
+desktop.ini
+
 Thumbs.db
+
 *_tmp.driveupload
-
-uploads/
-logs/
-backups/
-data/uploads/
-boxscores/
-
 
 .gitmessage.txt

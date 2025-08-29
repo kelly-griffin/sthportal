@@ -1,0 +1,27 @@
+name: Sync dev from main
+
+on:
+  push:
+    branches: [ main ]          # fires after merges to main (including the weekly one)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Configure bot identity
+        run: |
+          git config user.name  "gh-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+      - name: Merge main → dev and push
+        run: |
+          git fetch origin
+          git checkout dev
+          git merge --no-edit --no-ff origin/main || true
+          git push origin dev
