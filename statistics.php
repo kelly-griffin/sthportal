@@ -1,6 +1,42 @@
 <?php
 require_once __DIR__ . '/includes/bootstrap.php';
 
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+// where PHP *thinks* it is
+echo "<!-- CWD: " . getcwd() . "  DIR: " . __DIR__ . " -->";
+
+// absolute roots (works no matter the URL mount)
+define('PORTAL_ROOT', str_replace('\\','/', realpath(__DIR__)));
+define('DATA_DIR',    PORTAL_ROOT . '/data');
+define('UPLOADS_DIR', PORTAL_ROOT . '/uploads');
+
+// check the files the stats page typically needs
+$probes = [
+  'leaders'        => DATA_DIR . '/derived/leaders.json',
+  'skaters_summary'=> DATA_DIR . '/derived/skaters_summary.json',
+  'goalies_summary'=> DATA_DIR . '/derived/goalies_summary.json',
+  'teams_summary'  => DATA_DIR . '/derived/teams_summary.json',
+];
+
+foreach ($probes as $k => $p) {
+  echo "<!-- probe:$k ".(is_file($p) ? "OK $p" : "MISSING $p")." -->";
+}
+
+// check the files the stats page typically needs
+$probes = [
+  'leaders'        => DATA_DIR . '/derived/leaders.json',
+  'skaters_summary'=> DATA_DIR . '/derived/skaters_summary.json',
+  'goalies_summary'=> DATA_DIR . '/derived/goalies_summary.json',
+  'teams_summary'  => DATA_DIR . '/derived/teams_summary.json',
+];
+
+foreach ($probes as $k => $p) {
+  echo "<!-- probe:$k ".(is_file($p) ? "OK $p" : "MISSING $p")." -->";
+}
+
 /**
  * statistics.php — v1.6 (home leaders)
  * - Skaters (PTS/G/A), Defense (PTS/G/A), Goalies (GAA/SV%/SO)
@@ -1193,8 +1229,6 @@ if (!function_exists('load_team_full_to_code')) {
 }
 ?>
 
-
-
 <?php if (!empty($_GET['debug'])): ?>
 <?php
   // Pick any player you see in the table (using your example)
@@ -1214,10 +1248,6 @@ if (!function_exists('load_team_full_to_code')) {
   }
 ?>
 <?php endif; ?>
-
-
-
-
 
 <!--Skaters - Face-off Percentages Sub-Tab -->
 <?php /* build FO_PBP data lives just above this panel */ ?>
