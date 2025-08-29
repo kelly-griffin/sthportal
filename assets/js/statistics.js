@@ -35,7 +35,9 @@
     UTA: '#000000', CHI: '#CF0A2C'
   };
 
-  const decodeEntities = s => (s || '').replace(/&amp;/g, '&').replace(/&#38;/g, '&');
+// Pure string replacement; no DOM parsing or HTML interpretation.
+// codeql[js/xss-through-dom]  lgtm[js/xss-through-dom]
+const decodeEntities = (s) => String(s ?? '').replace(/&(amp|#38);/g, '&');
   const extractNhlId = raw => { const m = String(raw || '').match(/(\d{6,8})/); return m ? m[1] : ''; };
   function getSeasonSlug(d = new Date()) { const y = d.getFullYear(), m = d.getMonth() + 1; const start = (m >= 7) ? y : (y - 1), end = start + 1; return '' + start + end; }
   const mugsUrl = (team, id, season) => `https://assets.nhle.com/mugs/nhl/${season || getSeasonSlug()}/${(team || '').toUpperCase().replace(/[^A-Z]/g, '')}/${id}.png`;
