@@ -56,7 +56,6 @@ $moves = parse_roster_moves_with_index($LEAGUE_LOG, $TEAMS_JSON, $MOVE_INDEX, $S
   <meta charset="utf-8">
   <title>Transactions</title>
   <link rel="stylesheet" href="assets/css/nav.css">
-  <link rel="stylesheet" href="assets/css/transactions.css">
   <script src="assets/js/transactions.js" defer></script>
 </head>
 <body>

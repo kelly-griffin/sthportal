@@ -5,6 +5,8 @@ declare(strict_types=1);
 require_once __DIR__ . '/config.php';
 require_once __DIR__ . '/db.php';
 require_once __DIR__ . '/functions.php';          // expects $db = new mysqli(...)
+require_once __DIR__ . '/session-guard.php';
+
 // Normalize DB handle to $db for all pages
 if (!isset($db) || !($db instanceof mysqli)) {
     if (isset($mysqli) && $mysqli instanceof mysqli) {
@@ -34,4 +36,19 @@ if (!function_exists('h')) {
   function h($s){ return htmlspecialchars((string)$s, ENT_QUOTES|ENT_SUBSTITUTE, 'UTF-8'); }
 }
 ?>
-<link rel="stylesheet" href="/sthportal/assets/css/global.css">
+<?php
+  // bootstrap.php — CSS entrypoint
+  $cssVer = getenv('ASSET_VER') ?: date('YmdHis'); // simple cache-buster
+
+  echo '<link rel="stylesheet" href="/assets/css/global.css?v=' . htmlspecialchars($cssVer) . '">';
+
+  // Optional theme override (safe if missing)
+  if (file_exists(__DIR__ . '/../assets/css/theme-override.css')) {
+    echo '<link rel="stylesheet" href="/assets/css/theme-override.css?v=' . htmlspecialchars($cssVer) . '">';
+  }
+
+  // TEMP: legacy shim to keep old classnames alive while we prune
+  if (file_exists(__DIR__ . '/../assets/css/legacy-shim.css')) {
+    echo '<link rel="stylesheet" href="/assets/css/legacy-shim.css?v=' . htmlspecialchars($cssVer) . '">';
+  }
+?>

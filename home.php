@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=1280, initial-scale=1" />
   <title>United Hockey Association - NHL Home</title>
   <link rel="stylesheet" href="assets/css/nav.css">
-  <link rel="stylesheet" href="assets/css/home.css">
 </head>
 <body>
   <div class="site">

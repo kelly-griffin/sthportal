@@ -19,9 +19,6 @@ if ($abs && is_file($abs)) {
 <meta charset="utf-8">
 <title>Boxscore <?= h($gid ?: '') ?></title>
 <link rel="stylesheet" href="assets/css/nav.css">
-<link rel="stylesheet" href="assets/css/schedule.css">
-<link rel="stylesheet" href="assets/css/schedule-polish.css">
-<link rel="stylesheet" href="assets/css/game.css">
 <style>
   .box-wrap{max-width:1200px;margin:20px auto}
   .box-embed .card{max-width:unset}

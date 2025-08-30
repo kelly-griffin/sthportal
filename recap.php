@@ -20,9 +20,6 @@ if ($abs && is_file($abs)) {
 <meta charset="utf-8">
 <title>Recap <?= h($gid ?: '') ?></title>
 <link rel="stylesheet" href="assets/css/nav.css">
-<link rel="stylesheet" href="assets/css/schedule.css">
-<link rel="stylesheet" href="assets/css/schedule-polish.css">
-<link rel="stylesheet" href="assets/css/game.css">
 <style>
   .recap-wrap{max-width:1100px;margin:20px auto}
   .recap-embed .card{max-width:unset}

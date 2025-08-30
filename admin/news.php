@@ -1,9 +1,8 @@
 <?php
 // admin/news.php — manage stories
 declare(strict_types=1);
-require_once __DIR__ . '/../includes/db.php';
-require_once __DIR__ . '/../includes/auth.php';
-require_once __DIR__ . '/../includes/session-guard.php';
+require_once __DIR__ . '/../includes/bootstrap.php';
+
 require_admin();
 
 $dbc = null;
@@ -21,8 +20,6 @@ $rows = $res ? $res->fetch_all(MYSQLI_ASSOC) : [];
   <meta charset="utf-8">
   <meta name="viewport" content="width=1280, initial-scale=1"><title>Manage News — Admin</title>
   <link rel="stylesheet" href="../../assets/css/nav.css">
-  <link rel="stylesheet" href="../../assets/css/home.css">
-  <link rel="stylesheet" href="../../assets/css/hotfix-portal.css">
   <style>
     table{width:100%;border-collapse:collapse}
     th,td{border:1px solid #cfd6e4;padding:6px 8px;text-align:left}

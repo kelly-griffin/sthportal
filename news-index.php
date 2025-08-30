@@ -1,8 +1,8 @@
 <?php
 // news-index.php — list of published stories
 declare(strict_types=1);
-require_once __DIR__ . '/includes/db.php';
-require_once __DIR__ . '/includes/auth.php';
+require_once __DIR__ . '/includes/bootstrap.php';
+
 
 $page = max(1, (int)($_GET['page'] ?? 1));
 $per  = 12;
@@ -47,8 +47,6 @@ $rows = $res ? $res->fetch_all(MYSQLI_ASSOC) : [];
   <meta name="viewport" content="width=1280, initial-scale=1">
   <title>News — UHA</title>
   <link rel="stylesheet" href="assets/css/nav.css">
-  <link rel="stylesheet" href="assets/css/home.css">
-  <link rel="stylesheet" href="assets/css/hotfix-portal.css">
   <style>
     .news-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px}
     .news-card{background:#fff;border:1px solid #cfd6e4;border-radius:10px;overflow:hidden;display:flex;flex-direction:column}

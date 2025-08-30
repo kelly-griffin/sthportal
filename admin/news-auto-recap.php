@@ -1,9 +1,7 @@
 <?php
 // admin/news-auto-recap.php — paste STHS play-by-play → generate + save auto recap
 declare(strict_types=1);
-require_once __DIR__ . '/../includes/db.php';
-require_once __DIR__ . '/../includes/auth.php';
-require_once __DIR__ . '/../includes/session-guard.php';
+require_once __DIR__ . '/../includes/bootstrap.php';
 require_admin();
 
 $dbc = null;
@@ -177,8 +175,6 @@ if ($mode === 'save') {
   <meta charset="utf-8">
   <meta name="viewport" content="width=1280, initial-scale=1"><title>Auto Recap — Admin</title>
   <link rel="stylesheet" href="../../assets/css/nav.css">
-  <link rel="stylesheet" href="../../assets/css/home.css">
-  <link rel="stylesheet" href="../../assets/css/hotfix-portal.css">
   <style>
     .form{display:grid;gap:10px;max-width:1000px}
     textarea{width:100%;min-height:220px;padding:8px;border:1px solid #cfd6e4;border-radius:8px}

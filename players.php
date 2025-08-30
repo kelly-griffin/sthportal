@@ -9,7 +9,6 @@ require_once __DIR__ . '/includes/bootstrap.php';
   <meta charset="utf-8">
   <title>Players in the UHA</title>
   <link rel="stylesheet" href="assets/css/nav.css">
-  <link rel="stylesheet" href="assets/css/players.css">
   <script src="assets/js/leagues.js" defer></script>
 </head>
 
