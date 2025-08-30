@@ -1,0 +1,27 @@
+/* assets/css/legacy-shim.css — temporary bridge during migration */
+
+/* Map legacy tokens to your global.css variables */
+:root{
+  --surface: var(--color-bg);
+  --surface-2: var(--color-card);
+  --text: var(--color-ink);
+  --muted: var(--color-ink-soft);
+  --accent: var(--color-accent);
+  --accent-hover: var(--color-accent-hover);
+  --border: var(--color-border);
+}
+
+/* Common old helpers -> new tokens */
+.bg-dark,.page-bg{background:var(--surface);}
+.card,.pod{background:var(--surface-2);border-radius:var(--radius-lg);box-shadow:var(--shadow-card);} /* mirrors .card */ 
+.text,.copy{color:var(--text);}
+.muted{color:var(--muted);}
+.link,a{color:var(--accent);}
+a:hover{color:var(--accent-hover);text-decoration:underline;}
+
+/* Spacing approximations */
+.mt-10{margin-top:10px;} .mb-10{margin-bottom:10px;} .p-10{padding:10px;}
+
+/* Tables (gentle so we don't fight global.css) */
+table thead th{color:var(--muted);font-weight:600;}
+table tbody tr:hover{background:color-mix(in srgb, var(--surface-2) 85%, white 15%);}

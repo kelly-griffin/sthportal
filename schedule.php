@@ -100,8 +100,6 @@ foreach ($allByDate as $d => $list) {
   <meta charset="utf-8">
   <title>League Schedule & Results</title>
   <link rel="stylesheet" href="assets/css/nav.css">
-  <link rel="stylesheet" href="assets/css/schedule.css">
-  <link rel="stylesheet" href="assets/css/schedule-polish.css">
   <style>
   /* day-ribbon inline guard */
   .day-ribbon{display:flex;gap:12px;overflow-x:auto;padding:8px 0 14px;margin:0 0 8px}

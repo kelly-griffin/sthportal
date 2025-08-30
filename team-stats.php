@@ -1,7 +1,7 @@
 <?php
 // /sthportal/team-stats.php
 declare(strict_types=1);
-require_once __DIR__ . '/includes/config.php';
+require_once __DIR__ . '/includes/bootstrap.php';
 if (session_status() !== PHP_SESSION_ACTIVE) @session_start();
 
 // URL params
@@ -26,95 +26,9 @@ $title = "Team Statistics — " . ucfirst($cat);
   <title><?= htmlspecialchars($title) ?></title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="assets/css/nav.css">
-  <link rel="stylesheet" href="assets/css/stats.css">
 </head>
 <body>
   <div class="site">
-    <!-- Portal header + nav (same shell as home/player-stats) -->
-    <header class="portal-header">
-      <div class="portal-top">
-        <div class="brand">
-          <div class="logo" title="Portal Logo"></div>
-          <div class="title" id="portal-title">UHA Hockey Portal</div>
-        </div>
-        <nav class="main-nav nav-wrap" aria-label="Primary">
-          <div class="nav-item"><a class="nav-btn" href="home.php">Home</a></div>
-
-          <div class="nav-item">
-            <a class="nav-btn" href="#">Teams</a>
-            <div class="dropdown">
-              <a href="#">My Team Dashboard</a>
-              <a href="#">All Teams</a>
-              <a href="team-stats.php">Team Statistics</a>
-              <a href="#">Depth Charts</a>
-            </div>
-          </div>
-
-          <div class="nav-item">
-            <a class="nav-btn" href="#">Leagues ▾</a>
-            <div class="dropdown">
-              <a href="?league=uha">UHA (Main)</a>
-              <a href="?league=farm">Farm League (AHL)</a>
-              <a href="?league=echl">ECHL (Optional)</a>
-              <a href="?league=intl">International (Optional)</a>
-              <a href="?league=juniors">Junior Leagues (Optional)</a>
-            </div>
-          </div>
-
-          <div class="nav-item">
-            <a class="nav-btn" href="#">Players</a>
-            <div class="dropdown">
-              <a href="player-stats.php?view=skaters&stat=PTS">Player Statistics</a>
-              <a href="player-stats.php?view=goalies&stat=GAA">Goalie Leaders</a>
-              <a href="player-stats.php?view=rookies&stat=PTS">Rookie Leaders</a>
-            </div>
-          </div>
-
-          <div class="nav-item">
-            <a class="nav-btn" href="#">Stats ▾</a>
-            <div class="dropdown">
-              <a href="player-stats.php?view=skaters&stat=PTS">Player Statistics</a>
-              <a href="team-stats.php">Team Statistics</a>
-              <a href="#">Milestones</a>
-              <a href="#">Special Teams</a>
-              <a href="#">Attendance &amp; Financials</a>
-            </div>
-          </div>
-
-          <div class="nav-item"><a class="nav-btn" href="#">Front Office</a></div>
-          <div class="nav-item"><a class="nav-btn" href="#">Draft</a></div>
-          <div class="nav-item"><a class="nav-btn" href="#">Tournaments</a></div>
-          <div class="nav-item"><a class="nav-btn" href="#">Media</a></div>
-
-          <div class="nav-item">
-            <a class="nav-btn" href="options.php">Options</a>
-            <div class="dropdown">
-              <a href="download.php?what=league">Download Latest League File</a>
-              <a href="options.php"><strong>Full Options Page</strong></a>
-            </div>
-          </div>
-
-          <div class="nav-item"><a class="nav-btn" href="#">Admin</a></div>
-        </nav>
-        <div class="profile"><a class="btn" href="#">Login</a></div>
-      </div>
-    </header>
-
-    <!-- Context header -->
-    <div class="context-header">
-      <div class="context-inner">
-        <div class="context-logo" aria-hidden="true"></div>
-        <div class="context-titles">
-          <div class="kicker">UHA League</div>
-          <div class="h1">Team Statistics</div>
-          <div class="subnav">
-            <a class="pill" href="home.php">Home</a>
-            <a class="pill active" href="team-stats.php">Overview</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <!-- Filters & Table -->
     <main class="stats-main">
       <div class="filters">

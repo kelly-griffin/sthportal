@@ -577,7 +577,6 @@ if (!function_exists('parse_faceoffs_from_pbp')) {
   <meta name="viewport" content="width=1280, initial-scale=1" />
   <title>Statistics</title>
   <link rel="stylesheet" href="assets/css/nav.css" />
-  <link rel="stylesheet" href="assets/css/statistics.css" />
 </head>
 
 <body>

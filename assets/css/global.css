@@ -63,3 +63,11 @@ input:focus, select:focus, textarea:focus {
   outline: 2px solid var(--color-accent);
   border-color: var(--color-accent);
 }
+
+/* Prevent visited links from turning purple/underlined globally */
+a:visited { color: var(--color-accent); text-decoration: none; }
+
+/* Mild table defaults (play nice with page styles) */
+table { width:100%; border-collapse: collapse; }
+th, td { padding: 8px 10px; border-bottom: 1px solid var(--color-border); }
+thead th { color: var(--color-ink); font-weight:600; }

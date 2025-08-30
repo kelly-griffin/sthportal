@@ -8,7 +8,6 @@ require_once __DIR__ . '/includes/bootstrap.php';
   <meta charset="utf-8">
   <title>Front Office Operations</title>
   <link rel="stylesheet" href="assets/css/nav.css">
-  <link rel="stylesheet" href="assets/css/front-office.css">
   <script src="assets/js/front-office.js" defer></script>
 </head>
 <body>

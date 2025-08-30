@@ -1,9 +1,7 @@
 <?php
 // admin/news-new.php — create/edit story (simple WYSIWYG baseline)
 declare(strict_types=1);
-require_once __DIR__ . '/../includes/db.php';
-require_once __DIR__ . '/../includes/auth.php';
-require_once __DIR__ . '/../includes/session-guard.php';
+require_once __DIR__ . '/../includes/bootstrap.php';
 require_admin();
 
 $dbc = null;
@@ -78,8 +76,6 @@ if ($_SERVER['REQUEST_METHOD']==='POST') {
   <meta charset="utf-8">
   <meta name="viewport" content="width=1280, initial-scale=1"><title><?= $id? 'Edit':'New' ?> Article — Admin</title>
   <link rel="stylesheet" href="../../assets/css/nav.css">
-  <link rel="stylesheet" href="../../assets/css/home.css">
-  <link rel="stylesheet" href="../../assets/css/hotfix-portal.css">
   <style>
     .form{display:grid;gap:8px;max-width:900px}
     label b{display:block;margin-bottom:4px}

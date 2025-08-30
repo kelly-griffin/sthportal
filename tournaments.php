@@ -8,7 +8,6 @@ require_once __DIR__ . '/includes/bootstrap.php';
   <meta charset="utf-8">
   <title>Tournaments in the UHA</title>
   <link rel="stylesheet" href="assets/css/nav.css">
-  <link rel="stylesheet" href="assets/css/tournaments.css">
   <script src="assets/js/tournaments.js" defer></script>
 </head>
 <body>

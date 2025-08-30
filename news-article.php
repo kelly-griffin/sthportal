@@ -42,8 +42,6 @@ $hero = !empty($story['hero_image_url']) ? $story['hero_image_url'] : placeholde
   <meta name="viewport" content="width=1280, initial-scale=1">
   <title><?= htmlspecialchars($story['title']) ?> — UHA</title>
   <link rel="stylesheet" href="assets/css/nav.css">
-  <link rel="stylesheet" href="assets/css/home.css">
-  <link rel="stylesheet" href="assets/css/hotfix-portal.css">
   <style>
     .story-wrap{max-width:960px;margin:0 auto}
     .story-hero{aspect-ratio:16/9;background:#eef4ff;border:1px solid #cfd6e4;border-radius:10px;overflow:hidden}

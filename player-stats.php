@@ -1,7 +1,7 @@
 <?php
 // /sthportal/player-stats.php
 declare(strict_types=1);
-require_once __DIR__ . '/includes/config.php';
+require_once __DIR__ . '/includes/bootstrap.php';
 if (session_status() !== PHP_SESSION_ACTIVE) @session_start();
 
 /* ------- Read query params ------- */
@@ -43,7 +43,6 @@ $title = "Player Statistics — " . ucfirst($view) . " — " . strtoupper($stat)
   <title><?= htmlspecialchars($title) ?></title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="assets/css/nav.css">
-  <link rel="stylesheet" href="assets/css/stats.css">
 </head>
 <body>
   <div class="site">

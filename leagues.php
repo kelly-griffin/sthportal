@@ -8,7 +8,6 @@ require_once __DIR__ . '/includes/bootstrap.php';
   <meta charset="utf-8">
   <title>Leagues in the UHA</title>
   <link rel="stylesheet" href="assets/css/nav.css">
-  <link rel="stylesheet" href="assets/css/leagues.css">
   <style>
     .badge-warn{
       display:inline-block; padding:2px 6px; font-size:11px; line-height:1;
