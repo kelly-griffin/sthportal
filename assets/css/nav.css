@@ -228,7 +228,7 @@ body {
 
 /* ---------------- Score Ticker ---------------- */
 .score-ticker {
-    background: var(--surface-4);
+    background: var(--color-card);
     color: var(--ink-inverse);
     height: var(--ticker-height);
     display: flex;
@@ -356,3 +356,50 @@ body {
 .leaguebar .pill:hover{
   filter: brightness(1.08);
 }
+
+/* --- Header link/button overrides (wins over global a{...}) --- */
+.portal-header a,
+.nav-wrap a,
+.profile .btn {
+  color: #eaf1ff !important;
+  text-decoration: none !important;
+}
+
+/* Primary nav buttons */
+.portal-header .nav-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  padding: .5rem .7rem;
+  border-radius: 8px;
+  border: 1px solid #ffffff2a;
+  background: #ffffff12;
+  color: #eaf1ff !important;
+  text-decoration: none !important;
+}
+.portal-header .nav-btn:hover { background: #ffffff1d; }
+
+/* Dropdown items */
+.portal-header .dropdown a {
+  color: #dfe9ff !important;
+  text-decoration: none !important;
+}
+/* Fix: keep dropdown above leaguebar + add a small gap */
+.nav-wrap{ overflow: visible; }                 /* don’t clip the dropdown */
+.nav-item{ position: relative; }                /* anchor for absolute dropdown */
+
+.dropdown{
+  top: calc(100% + 6px);                        /* visual breathing room */
+  z-index: 5000;                                /* sit over the leaguebar */
+}
+/* place this near the other .dropdown rules in nav.css */
+.portal-header .dropdown .menu-group{
+  padding: 6px 12px;
+  color: #cbd6e9;
+  font-size: 12px;
+  text-transform: uppercase;
+  background: #0b111a;
+  border-top: 1px solid #00000040;
+  border-bottom: 1px solid #00000040;
+}
+.portal-header .dropdown .divider{ height:1px; background:#00000040; margin:0; }
