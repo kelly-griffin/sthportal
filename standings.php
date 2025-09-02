@@ -7,7 +7,6 @@ require_once __DIR__ . '/includes/bootstrap.php';
 <head>
   <meta charset="utf-8">
   <title>UHA: NHL Standings</title>
-  <link rel="stylesheet" href="assets/css/nav.css">
   <style>.table-title, .conf-h { font-weight: 800; }</style>
   <script src="assets/js/standings.js" defer></script>
 </head>

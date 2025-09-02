@@ -2,10 +2,6 @@
 if (!function_exists('u')) {
   require_once __DIR__ . '/bootstrap.php';
 }
-if (!defined('NAV_CSS_LOADED')) {
-  define('NAV_CSS_LOADED', true);
-  echo '<link rel="stylesheet" href="/sthportal/assets/css/nav.css?v=1">';
-}
 ?>
 <script>
   (function () {
@@ -98,17 +94,17 @@ $navCss = $BASE . '/assets/css/nav.css';
             <a class="nav-btn" href="<?= u('media-hub.php') ?>">Media ▾</a>
             <div class="dropdown">
               <div class="menu-group">Media</div>
-              <a class="nav-btn" href="<?= u('media-hub.php') ?>">Media Hub</a>
-              <a class="nav-btn" href="<?= u('media/news.php') ?>">News</a>
-              <a class="nav-btn" href="<?= u('media/press-releases.php') ?>">Press Releases</a>
-              <a class="nav-btn" href="<?= u('media/weekly-recaps.php') ?>">Weekly Recaps</a>
-              <a class="nav-btn" href="<?= u('media/power-rankings.php') ?>">Power Rankings</a>
-              <a class="nav-btn" href="<?= u('media/player-of-the-week.php') ?>">Player of the Week</a>
-              <a class="nav-btn" href="<?= u('media/team-of-the-week.php') ?>">Team of the Week</a>
+              <a href="<?= u('media-hub.php') ?>">Media Hub</a>
+              <a href="<?= u('media/news.php') ?>">News</a>
+              <a href="<?= u('media/press-releases.php') ?>">Press Releases</a>
+              <a href="<?= u('media/weekly-recaps.php') ?>">Weekly Recaps</a>
+              <a href="<?= u('media/power-rankings.php') ?>">Power Rankings</a>
+              <a href="<?= u('media/player-of-the-week.php') ?>">Player of the Week</a>
+              <a href="<?= u('media/team-of-the-week.php') ?>">Team of the Week</a>
               <div class="menu-group">Social</div>
-              <a class="nav-btn" href="<?= u('media/social.php') ?>">Social Hub</a>
-              <a class="nav-btn" href="<?= u('media/chat.php') ?>">Chat</a>
-              <a class="nav-btn" href="<?= u('media/messages.php') ?>">Direct Messaging</a>
+              <a href="<?= u('media/social.php') ?>">Social Hub</a>
+              <a href="<?= u('media/chat.php') ?>">Chat</a>
+              <a href="<?= u('media/messages.php') ?>">Direct Messaging</a>
             </div>
           </div>
 

@@ -15,7 +15,6 @@
 declare(strict_types=1);
 
 require_once __DIR__ . '/../includes/bootstrap.php';
-require_once __DIR__ . '/../includes/db.php';
 require_once __DIR__ . '/../includes/auth.php';
 @include_once __DIR__ . '/../includes/admin-helpers.php';
 
@@ -133,163 +132,6 @@ function ago($ts)
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Data Pipeline Hub</title>
-  <!-- R2: Admin Surface (local-only) -->
-  <style>
-    :root {
-      --stage: #585858ff;
-      /* translucent light gray center */
-      --card: #0D1117;
-      /* dark card */
-      --card-border: #FFFFFF1A;
-      --ink: #E8EEF5;
-      --ink-muted: #A9BACB;
-      --ink-soft: #95A3B4;
-      --accent: #6AA1FF;
-      --site-width: 1200px;
-    }
-
-    body {
-      margin: 0;
-      background: #202428;
-      color: var(--ink);
-      font: 14px/1.5 system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-    }
-
-    /* stage shell (matches Front Office/Assets Hub) */
-    .site {
-      width: var(--site-width);
-      margin: 0 auto;
-      min-height: 100vh;
-      background: transparent;
-    }
-
-    .canvas {
-      padding: 0 16px 40px;
-    }
-
-    .wrap {
-      max-width: 1000px;
-      margin: 20px auto;
-    }
-
-    /* light-gray page surface */
-    .page-surface {
-      margin: 12px 0 32px;
-      padding: 16px 16px 24px;
-      background: var(--stage);
-      border-radius: 16px;
-      box-shadow: inset 0 1px 0 rgba(255, 255, 255, .05), 0 0 0 1px rgba(255, 255, 255, .06);
-      min-height: calc(100vh - 220px);
-    }
-
-    /* common cards/typography (safe to reuse) */
-    h1 {
-      font-size: 38px;
-      margin: 8px 0 10px;
-      letter-spacing: .2px;
-      color: #F2F6FF;
-    }
-
-    h2 {
-      font-size: 18px;
-      margin: 0 0 10px;
-      color: #DFE8F5;
-    }
-
-    .muted {
-      color: var(--ink-soft);
-    }
-
-    .card {
-      background: var(--card);
-      border: 1px solid var(--card-border);
-      border-radius: 14px;
-      padding: 14px;
-      margin: 18px 0;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      color: inherit;
-    }
-
-    th,
-    td {
-      padding: 10px 12px;
-      border-bottom: 1px solid #FFFFFF14;
-      vertical-align: middle;
-    }
-
-    th {
-      text-align: left;
-      font-weight: 700;
-      color: #DFE8F5;
-    }
-
-    .tool-title {
-      font-weight: 700;
-      color: #E6EEF8;
-    }
-
-    .tool-sub {
-      font-size: 12px;
-      color: #9FB0C2;
-    }
-
-    .actions {
-      display: flex;
-      gap: 10px;
-      align-items: center;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 6px 10px;
-      border-radius: 10px;
-      border: 1px solid #2F3F53;
-      background: #1B2431;
-      color: #E6EEF8;
-      text-decoration: none;
-    }
-
-    .btn:hover {
-      background: #223349;
-      border-color: #3D5270;
-    }
-
-    .btn.run {
-      border-color: #2EA043;
-    }
-
-    .btn.run.danger {
-      border-color: #D14;
-    }
-
-    .btn.mark {
-      border-color: #3D5270;
-    }
-
-    .note-input {
-      width: 220px;
-      padding: 6px 8px;
-      border-radius: 8px;
-      border: 1px solid #2F3F53;
-      background: #0F1621;
-      color: #E6EEF8;
-    }
-
-    .note-input::placeholder {
-      color: #9FB0C2;
-    }
-
-    .note-input:focus {
-      outline: none;
-      border-color: #6AA1FF;
-      box-shadow: 0 0 0 2px #6AA1FF33;
-    }
-  </style>
-
 </head>
 
 <body>
@@ -297,19 +139,19 @@ function ago($ts)
     <?php include __DIR__ . '/../includes/topbar.php'; ?>
     <?php include __DIR__ . '/../includes/leaguebar.php'; ?>
     <div class="canvas">
-      <div class="wrap">
-        <div class="page-surface">
+      <div class="pipe-container">
+        <div class="pipe-card">
           <h1>Data Pipeline Hub</h1>
-          <p class="muted">Open a task in a new tab to run it. When it finishes and looks good, return here and click
+          <p class="pipe-muted">Open a task in a new tab to run it. When it finishes and looks good, return here and click
             <em>Mark Done</em> so we log the timestamp. Tasks marked <strong class="note">danger</strong> will show a
             confirmation modal.
           </p>
 
-          <div class="grid">
+          <div class="pipe-grid">
             <?php foreach ($groups as $groupName => $tasks): ?>
-              <div class="card">
+              <div class="pipe-card">
                 <h2><?= h($groupName) ?></h2>
-                <table>
+                <table class="pipe-table">
                   <thead>
                     <tr>
                       <th style="width:38%">Tool</th>
@@ -335,19 +177,19 @@ function ago($ts)
                         <td>
                           <div><strong><?= h($t['label']) ?></strong></div>
                           <?php if (!empty($note)): ?>
-                            <div class="note"><?= h($note) ?></div><?php endif; ?>
-                          <div class="muted" style="font-size:.85em"><?= h($t['path']) ?></div>
+                            <div class="pipe-note"><?= h($note) ?></div><?php endif; ?>
+                          <div class="pipe-muted" style="font-size:.85em"><?= h($t['path']) ?></div>
                         </td>
                         <td class="last"><?= h(ago($ts)) ?></td>
                         <td><?= h($statusText) ?></td>
                         <td>
-                          <div class="actions">
+                          <div class="pipe=actions">
                             <a class="btn run<?= !empty($t['danger']) ? ' danger' : '' ?>" href="<?= h($t['path']) ?>"
                               target="_blank" data-danger="<?= !empty($t['danger']) ? '1' : '0' ?>">Run</a>
-                            <form method="post" class="mark-form" onsubmit="return true">
+                            <form method="post" class="pipe-form" onsubmit="return true">
                               <input type="hidden" name="action" value="mark">
                               <input type="hidden" name="task" value="<?= h($sid) ?>">
-                              <input type="text" name="note" placeholder="Optional note…" value="">
+                              <input type="text" name="note" class="pipe-note" placeholder="Optional note…" value="">
                               <button class="btn" type="submit" title="Record timestamp">Mark Done</button>
                             </form>
                             </div>
@@ -362,14 +204,14 @@ function ago($ts)
           
 
 
-      <p class="muted" style="margin-top:14px">Status file: <code><?= h($STATUS_FILE ?? '(unavailable)') ?></code></p>
+      <p class="pipe-muted" style="margin-top:14px">Status file: <code><?= h($STATUS_FILE ?? '(unavailable)') ?></code></p>
 
-  <div class="modal" id="dangerModal" role="dialog" aria-modal="true" aria-hidden="true">
+  <div class="pipe-modal" id="dangerModal" role="dialog" aria-modal="true" aria-hidden="true">
     <div class="box">
       <h3>Confirm heavy/destructive run</h3>
       <p>This task may be slow or modify existing artifacts. Make sure you have a fresh backup before proceeding.</p>
-      <p class="muted">Tip: run it in a separate tab; verify results; then come back and click <em>Mark Done</em>.</p>
-      <div class="actions" style="margin-top:10px">
+      <p class="pipe-muted">Tip: run it in a separate tab; verify results; then come back and click <em>Mark Done</em>.</p>
+      <div class="pipe-actions" style="margin-top:10px">
         <a href="#" class="btn" id="dangerCancel">Cancel</a>
         <a href="#" class="btn danger" id="dangerProceed" target="_blank" rel="noopener">Proceed</a>
               </div>              

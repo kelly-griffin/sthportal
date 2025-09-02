@@ -7,6 +7,7 @@ require_once __DIR__ . '/db.php';
 require_once __DIR__ . '/functions.php';          // expects $db = new mysqli(...)
 require_once __DIR__ . '/session-guard.php';
 
+
 // Normalize DB handle to $db for all pages
 if (!isset($db) || !($db instanceof mysqli)) {
     if (isset($mysqli) && $mysqli instanceof mysqli) {
@@ -37,18 +38,21 @@ if (!function_exists('h')) {
 }
 ?>
 <?php
-  // bootstrap.php — CSS entrypoint
-  $cssVer = getenv('ASSET_VER') ?: date('YmdHis'); // simple cache-buster
+// bootstrap.php — CSS entrypoint (root-aware)
+$cssVer = getenv('ASSET_VER') ?: date('YmdHis'); // cache-buster
 
-  echo '<link rel="stylesheet" href="/assets/css/global.css?v=' . htmlspecialchars($cssVer) . '">';
+// Rooted URLs via u() so nested pages don't 404
+echo '<link rel="stylesheet" href="' . htmlspecialchars(u('assets/css/global.css'), ENT_QUOTES, 'UTF-8') . '?v=' . htmlspecialchars($cssVer) . '">';
 
-  // Optional theme override (safe if missing)
-  if (file_exists(__DIR__ . '/../assets/css/theme-override.css')) {
-    echo '<link rel="stylesheet" href="/assets/css/theme-override.css?v=' . htmlspecialchars($cssVer) . '">';
-  }
+// Optional theme override (safe if missing)
+if (file_exists(__DIR__ . '/../assets/css/theme-override.css')) {
+  echo '<link rel="stylesheet" href="' . htmlspecialchars(u('assets/css/theme-override.css'), ENT_QUOTES, 'UTF-8') . '?v=' . htmlspecialchars($cssVer) . '">';
+}
 
-  // TEMP: legacy shim to keep old classnames alive while we prune
-  if (file_exists(__DIR__ . '/../assets/css/legacy-shim.css')) {
-    echo '<link rel="stylesheet" href="/assets/css/legacy-shim.css?v=' . htmlspecialchars($cssVer) . '">';
-  }
+// TEMP: legacy shim to keep old classnames alive while we prune
+if (file_exists(__DIR__ . '/../assets/css/legacy-shim.css')) {
+  echo '<link rel="stylesheet" href="' . htmlspecialchars(u('assets/css/legacy-shim.css'), ENT_QUOTES, 'UTF-8') . '?v=' . htmlspecialchars($cssVer) . '">';
+}
+
+echo '<script src="' . htmlspecialchars(u('assets/js/auto-logos.js'), ENT_QUOTES, 'UTF-8') . '?v=' . htmlspecialchars($cssVer) . '"></script>';
 ?>

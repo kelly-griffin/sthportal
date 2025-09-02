@@ -1,52 +1,79 @@
 <?php
 require_once __DIR__ . '/../includes/bootstrap.php';
 $title = 'Team of the Week';
+
+$firstTeam  = $firstTeam  ?? null;   // expect keys: LW, C, RW, D1, D2, G
+$secondTeam = $secondTeam ?? null;
+
+function renderTowCard(?array $team, string $label){?>
+  <section class="tow-section">
+    <h2><?= htmlspecialchars($label) ?></h2>
+    <div class="tow-grid">
+      <div class="tow-line forwards">
+        <?= renderTowPlayer($team['LW'] ?? null, 'LW') ?>
+        <?= renderTowPlayer($team['C']  ?? null, 'C')  ?>
+        <?= renderTowPlayer($team['RW'] ?? null, 'RW') ?>
+      </div>
+      <div class="tow-line defense">
+        <?= renderTowPlayer($team['D1'] ?? null, 'D') ?>
+        <?= renderTowPlayer($team['D2'] ?? null, 'D') ?>
+      </div>
+      <div class="tow-line goalie">
+        <?= renderTowPlayer($team['G'] ?? null, 'G') ?>
+      </div>
+    </div>
+  </section>
+  <?php
+}
+
+function renderTowPlayer(?array $p, string $role){
+  // graceful stub if missing
+  $team = htmlspecialchars($p['team'] ?? 'WSH');
+  $name = htmlspecialchars($p['name'] ?? 'Sample Player');
+  $num  = htmlspecialchars($p['num']  ?? '00');
+  $pos  = htmlspecialchars($p['pos']  ?? $role);
+  $photo= $p['photo'] ?? null;
+  ?>
+  <article class="tow-player" data-team="<?= $team ?>">
+    <span class="role"><?= htmlspecialchars($role) ?></span>
+    <div class="avatar"><?php if ($photo): ?><img src="<?= htmlspecialchars($photo) ?>" alt=""><?php endif; ?></div>
+    <div>
+      <div class="name"><?= $name ?></div>
+      <div class="sub">
+        <img src="<?= '../assets/img/logos/'.$team.'_light.svg' ?>" alt="">
+        <span>#<?= $num ?></span>
+        <span><?= $pos ?></span>
+      </div>
+      <?php if (!empty($p['note'])): ?>
+        <span class="mini-pill"><?= htmlspecialchars($p['note']) ?></span>
+      <?php endif; ?>
+    </div>
+  </article>
+  <?php
+}
 ?>
-<!doctype html><html lang="en"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title><?= h($title) ?> — UHA Portal</title>
-<style>
-:root{--stage:#585858ff;--card:#0D1117;--card-border:#FFFFFF1A;--ink:#E8EEF5;--ink-soft:#95A3B4;--site-width:1200px}
-body{margin:0;background:#202428;color:var(--ink);font:14px/1.5 system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
-.site{width:var(--site-width);margin:0 auto;min-height:100vh}.canvas{padding:0 16px 40px}.wrap{max-width:1000px;margin:20px auto}
-.page-surface{margin:12px 0 32px;padding:16px;background:var(--stage);border-radius:16px;box-shadow:inset 0 1px 0 #ffffff0d,0 0 0 1px #ffffff0f;min-height:calc(100vh - 220px)}
-h1{margin:0 0 6px;font-size:28px}.muted{color:var(--ink-soft)}
-.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}@media(max-width:920px){.grid2{grid-template-columns:1fr}}
-.card{background:var(--card);border:1px solid var(--card-border);border-radius:16px;padding:16px;box-shadow:inset 0 1px 0 #ffffff12}
-.card h2{margin:0 0 8px}.list{display:grid;gap:8px}.slot{display:flex;gap:8px;align-items:center}
-.badge{min-width:28px;height:28px;border-radius:8px;background:#1B2431;border:1px solid #2F3F53;display:flex;align-items:center;justify-content:center;font-weight:800}
-</style>
-</head><body>
-<div class="site">
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title><?= htmlspecialchars($title) ?> — UHA Portal</title>
+</head>
+<body>
   <?php include __DIR__ . '/../includes/topbar.php'; ?>
   <?php include __DIR__ . '/../includes/leaguebar.php'; ?>
-  <div class="canvas"><div class="wrap"><div class="page-surface">
-    <h1><?= h($title) ?></h1>
-    <p class="muted">First & Second teams by position.</p>
 
-    <div class="grid2">
-      <section class="card">
-        <h2>First Team</h2>
-        <div class="list">
-          <div class="slot"><div class="badge">C</div> Center — Team (placeholder)</div>
-          <div class="slot"><div class="badge">LW</div> Left Wing — Team</div>
-          <div class="slot"><div class="badge">RW</div> Right Wing — Team</div>
-          <div class="slot"><div class="badge">D</div> Defense — Team</div>
-          <div class="slot"><div class="badge">G</div> Goalie — Team</div>
-        </div>
-      </section>
+  <div class="canvas">
+    <div class="tow-container">
+      <div class="tow-card">
+        <h1><?= htmlspecialchars($title) ?></h1>
+        <p class="tow-lead">First and Second units by position.</p>
 
-      <section class="card">
-        <h2>Second Team</h2>
-        <div class="list">
-          <div class="slot"><div class="badge">C</div> Center — Team</div>
-          <div class="slot"><div class="badge">LW</div> Left Wing — Team</div>
-          <div class="slot"><div class="badge">RW</div> Right Wing — Team</div>
-          <div class="slot"><div class="badge">D</div> Defense — Team</div>
-          <div class="slot"><div class="badge">G</div> Goalie — Team</div>
+        <div class="tow-wrap">
+          <?php renderTowCard(is_array($firstTeam)  ? $firstTeam  : null, 'First Team'); ?>
+          <?php renderTowCard(is_array($secondTeam) ? $secondTeam : null, 'Second Team'); ?>
         </div>
-      </section>
+      </div>
     </div>
-  </div></div></div>
-</div>
-</body></html>
+  </div>
+</body>
+</html>

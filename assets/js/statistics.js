@@ -94,6 +94,21 @@
     }
 
   }
+  
+  function setStatsTabTitle() {
+    const active = document.querySelector('.stats-subnav .tab-link.active');
+    const title = document.getElementById('statsTabTitle');
+    if (!title) return;
+    title.textContent = active ? active.textContent.trim() === 'Home' ? 'Statistics Home' : active.textContent.trim() : 'Statistics';
+  }
+
+  // on load + after any tab click/toggle
+  document.addEventListener('DOMContentLoaded', () => {
+    setStatsTabTitle();
+    document.querySelectorAll('.stats-subnav .tab-link').forEach(a => {
+      a.addEventListener('click', () => setTimeout(setStatsTabTitle, 0));
+    });
+  });
 
   function scrubColon(feature) {
     const box = feature.querySelector('.feat-metric');
@@ -262,11 +277,84 @@
 // --- Main tabs: Home / Skaters / Goalies / Teams ---
 (function () {
   function activate(tab) {
-    const links = document.querySelectorAll('.stats-subnav .tab-link');
-    const panels = document.querySelectorAll('.tab-panel');
-    links.forEach(a => a.classList.toggle('active', a.dataset.tab === tab));
-    panels.forEach(p => p.classList.toggle('active', p.id === ('tab-' + tab)));
-  }
+  const links = document.querySelectorAll('.stats-subnav .tab-link');
+  const panels = document.querySelectorAll('.tab-panel');
+  links.forEach(a => a.classList.toggle('active', a.dataset.tab === tab));
+  panels.forEach(p => {
+    const on = p.id === ('tab-' + tab);
+    p.classList.toggle('active', on);
+    p.toggleAttribute('hidden', !on);   // <-- ensure non-active panels are hidden
+  });
+}
+// --- Goalies subtab router (e.g., Summary / Bio / Advanced, etc.) ---
+(function () {
+  document.addEventListener('DOMContentLoaded', function () {
+    const root = document.querySelector('#tab-goalies');
+    if (!root) return;
+
+    const select = root.querySelector('#goalies-subtab');
+    const panels = root.querySelectorAll('.goalies-subpanel');
+    const label  = root.querySelector('.goalies-toolbar .label');
+
+    function setLabel(which) {
+      if (!label) return;
+      // tweak as you add real report names
+      const map = { summary: 'Summary' };
+      label.textContent = map[which] || (which || '').replace(/-/g,' ').replace(/\b\w/g, c => c.toUpperCase());
+    }
+
+    function show(which) {
+      panels.forEach(p => {
+        const on = p.getAttribute('data-subtab') === which;
+        p.toggleAttribute('hidden', !on);
+      });
+      setLabel(which);
+      if (typeof window.__applyGoaliesRows === 'function') window.__applyGoaliesRows();
+    }
+
+    if (select) {
+      show(select.value || 'summary');
+      select.addEventListener('change', () => show(select.value));
+    } else {
+      show('summary');
+    }
+  });
+})();
+
+// --- Teams subtab router (if/when you add more than Summary) ---
+(function () {
+  document.addEventListener('DOMContentLoaded', function () {
+    const root = document.querySelector('#tab-teams');
+    if (!root) return;
+
+    const select = root.querySelector('#teams-subtab');
+    const panels = root.querySelectorAll('.teams-subpanel');
+    const label  = root.querySelector('.teams-toolbar .label');
+
+    function setLabel(which) {
+      if (!label) return;
+      const map = { summary: 'Summary' };
+      label.textContent = map[which] || (which || '').replace(/-/g,' ').replace(/\b\w/g, c => c.toUpperCase());
+    }
+
+    function show(which) {
+      panels.forEach(p => {
+        const on = p.getAttribute('data-subtab') === which;
+        p.toggleAttribute('hidden', !on);
+      });
+      setLabel(which);
+      // if you add a window.__applyTeamsRows later, call it here
+    }
+
+    if (select) {
+      show(select.value || 'summary');
+      select.addEventListener('change', () => show(select.value));
+    } else {
+      show('summary');
+    }
+  });
+})();
+
   document.addEventListener('DOMContentLoaded', function () {
     const links = document.querySelectorAll('.stats-subnav .tab-link');
     if (!links.length) return;

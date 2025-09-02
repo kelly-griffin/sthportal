@@ -1,45 +1,81 @@
 <?php
 require_once __DIR__ . '/../includes/bootstrap.php';
 $title = 'Power Rankings';
+// Guard: if controller didn't pass $rankings, keep it a safe empty array
+$rankings = (isset($rankings) && is_array($rankings)) ? $rankings : [];
 ?>
-<!doctype html><html lang="en"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title><?= h($title) ?> — UHA Portal</title>
-<style>
-:root{--stage:#585858ff;--card:#0D1117;--card-border:#FFFFFF1A;--ink:#E8EEF5;--ink-soft:#95A3B4;--site-width:1200px}
-body{margin:0;background:#202428;color:var(--ink);font:14px/1.5 system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
-.site{width:var(--site-width);margin:0 auto;min-height:100vh}.canvas{padding:0 16px 40px}.wrap{max-width:1000px;margin:20px auto}
-.page-surface{margin:12px 0 32px;padding:16px;background:var(--stage);border-radius:16px;box-shadow:inset 0 1px 0 #ffffff0d,0 0 0 1px #ffffff0f;min-height:calc(100vh - 220px)}
-h1{margin:0 0 6px;font-size:28px}.muted{color:var(--ink-soft)}
-.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin:6px 0 12px}
-select{background:#0f1420;color:#e6eef8;border:1px solid #2F3F53;border-radius:8px;padding:6px 8px}
-.list{display:grid;gap:10px}
-.rank{background:var(--card);border:1px solid var(--card-border);border-radius:12px;padding:12px;display:flex;gap:10px;align-items:center}
-.badge{min-width:34px;height:34px;border-radius:8px;background:#1B2431;border:1px solid #2F3F53;display:flex;align-items:center;justify-content:center;font-weight:800}
-.team{font-weight:700}.note{color:#CFE1F3}
-</style>
-</head><body>
-<div class="site">
-  <?php include __DIR__ . '/../includes/topbar.php'; ?>
-  <?php include __DIR__ . '/../includes/leaguebar.php'; ?>
-  <div class="canvas"><div class="wrap"><div class="page-surface">
-    <h1><?= h($title) ?></h1>
-    <p class="muted">Manual/auto weekly rankings with notes.</p>
+<!doctype html>
+<html lang="en">
 
-    <div class="toolbar">
-      <select aria-label="Week"><option>Week 1</option><option>Week 2</option></select>
-      <select aria-label="Scope"><option>League</option><option>Pro</option><option>Farm</option></select>
-    </div>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title><?= h($title) ?> — UHA Portal</title>
+</head>
 
-    <div class="list">
-      <?php for($i=1;$i<=10;$i++): ?>
-      <div class="rank">
-        <div class="badge"><?= $i ?></div>
-        <div class="team">Team <?= $i ?></div>
-        <div class="note">— placeholder note for Team <?= $i ?>.</div>
+<body>
+  <div class="site">
+    <?php include __DIR__ . '/../includes/topbar.php'; ?>
+    <?php include __DIR__ . '/../includes/leaguebar.php'; ?>
+    <div class="canvas">
+      <div class="pr-container">
+        <div class="pr-card">
+          <h1><?= h($title) ?></h1>
+          <p class="pr-lead">Manual/auto weekly rankings with notes.</p>
+
+          <div class="pr-toolbar">
+            <div class="spacer"></div>
+            <label>Week
+              <select id="pr-week">
+                <option value="">This Week</option>
+                <option value="next">Next Week</option>
+              </select>
+            </label>
+            <label>Search
+              <input id="pr-q" type="search" placeholder="team / note">
+            </label>
+          </div>
+        
+          <ul class="pr-board">
+            <!-- Example row so layout is visible even with no data -->
+            <li class="pr-row">
+              <div class="pr-rank">1</div>
+              <div class="pr-team">
+                <img class="crest" src="<?= u('assets/img/logos/BOS_dark.svg') ?>" alt="Boston Bruins">
+                <div class="name">Boston Bruins</div>
+              </div>
+              <div class="pr-record">12-2-1</div>
+              <div class="pr-delta up">
+                <span class="arrow">▲</span>
+                <span class="chip">+3</span>
+              </div>
+              <div class="pr-notes">Placeholder note for team.</div>
+            </li>
+
+            <?php if (!empty($rankings)): ?>
+              <?php foreach ($rankings as $i => $row):
+                $trend = ($row['delta'] ?? 0) > 0 ? 'up' : (($row['delta'] ?? 0) < 0 ? 'down' : 'even');
+              ?>
+                <li class="pr-row">
+                  <div class="pr-rank"><?= (int)($i + 1) ?></div>
+                  <div class="pr-team">
+                    <img class="crest" src="<?= u('assets/img/logos/' . h($row['team']) . '_dark.svg') ?>" alt="">
+                    <div class="name"><?= h($row['team_name'] ?? $row['team'] ?? 'Team') ?></div>
+                  </div>
+                  <div class="pr-record"><?= h($row['record'] ?? '') ?></div>
+                  <div class="pr-delta <?= $trend ?>">
+                    <span class="arrow"><?= $trend === 'up' ? '▲' : ($trend === 'down' ? '▼' : '–') ?></span>
+                    <span class="chip"><?= (($row['delta'] ?? 0) > 0 ? '+' : '') . (int)($row['delta'] ?? 0) ?></span>
+                  </div>
+                  <div class="pr-notes"><?= h($row['note'] ?? '') ?></div>
+                </li>
+              <?php endforeach; ?>
+            <?php endif; ?>
+          </ul>
+        </div>
       </div>
-      <?php endfor; ?>
     </div>
-  </div></div></div>
-</div>
-</body></html>
+  </div>
+</body>
+
+</html>
