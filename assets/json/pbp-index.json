@@ -1,0 +1,13 @@
+{
+    "version": "1.2.0",
+    "generatedAt": "2025-08-23T04:15:02+00:00",
+    "inputs": {
+        "dir": "data/uploads",
+        "files": ["*.html"]
+    },
+    "outputs": {
+        "players": "assets/json/pbp-faceoffs-players.json",
+        "teams": "assets/json/pbp-faceoffs-teams.json",
+        "events": "assets/json/pbp-faceoffs-events.json"
+    }
+}

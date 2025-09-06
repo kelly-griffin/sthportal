@@ -1,7 +1,8 @@
 <?php
-if (!function_exists('u')) {
-  require_once __DIR__ . '/bootstrap.php';
-}
+// topbar.php
+declare(strict_types=1);
+require_once __DIR__ . '/bootstrap.php'; // safe, no output
+
 ?>
 <script>
   (function () {
@@ -16,17 +17,6 @@ if (!function_exists('u')) {
     } catch (e) { }
   })();
 </script>
-
-<?php
-$scriptPath = str_replace('\\', '/', $_SERVER['SCRIPT_NAME'] ?? '');
-$BASE = preg_replace('~/(admin|tools|options|media)(/.*)?$~', '', $scriptPath);
-if (!$BASE || $BASE === $scriptPath) {
-  $BASE = rtrim(dirname($scriptPath), '/');
-}
-$BASE = rtrim($BASE, '/');
-$navCss = $BASE . '/assets/css/nav.css';
-?>
-<link rel="stylesheet" href="<?= htmlspecialchars($navCss, ENT_QUOTES, 'UTF-8') ?>">
 
 <header class="portal-header">
   <div class="header-frame">

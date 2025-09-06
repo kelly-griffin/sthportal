@@ -38,8 +38,8 @@ if ($abs && is_file($abs)) {
 
 <?php
 // ---------- Tiny header with logos + Final line ----------
-$teamsDb = __DIR__ . '/data/uploads/teams.json';
-$schedDb = __DIR__ . '/data/uploads/schedule-current.json';
+$teamsDb = __DIR__ . '/assets/json/teams.json';
+$schedDb = __DIR__ . '/assets/json/schedule-current.json';
 $meta = null; $teamsMeta = [];
 if (is_file($teamsDb)) {
   $td = json_decode((string)file_get_contents($teamsDb), true);

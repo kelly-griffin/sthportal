@@ -1,58 +1,57 @@
 <?php
 declare(strict_types=1);
 
-// Common bootstrap for every page.
-require_once __DIR__ . '/config.php';
-require_once __DIR__ . '/db.php';
-require_once __DIR__ . '/functions.php';          // expects $db = new mysqli(...)
-require_once __DIR__ . '/session-guard.php';
+/**
+ * includes/bootstrap.php
+ * Minimal, no-output bootstrap:
+ *  - Loads helpers then config
+ *  - Establishes a single mysqli handle
+ *  - Exposes get_db(): mysqli
+ *  - No license/auth guards here (admin-only)
+ *  - No CSS/JS output here
+ */
 
+if (!defined('APP_BASE')) {
+  define('APP_BASE', str_replace('\\','/', dirname(__DIR__)));
+}
 
-// Normalize DB handle to $db for all pages
-if (!isset($db) || !($db instanceof mysqli)) {
-    if (isset($mysqli) && $mysqli instanceof mysqli) {
-        $db = $mysqli;
-    } elseif (isset($conn) && $conn instanceof mysqli) {
-        $db = $conn;
+// 1) Helpers first (so anyone can safely call h()/asset()/url_root())
+$func = APP_BASE . '/includes/functions.php';
+if (is_file($func)) { require_once $func; }
+
+// 2) Config — DB constants
+$cfg = APP_BASE . '/includes/config.php';
+if (!is_file($cfg)) {
+  throw new RuntimeException('Missing includes/config.php');
+}
+require_once $cfg;
+
+// 3) Create (or reuse) a single mysqli; expose accessor
+if (!isset($GLOBALS['mysqli']) || !($GLOBALS['mysqli'] instanceof mysqli)) {
+  $conn = @new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+  if ($conn->connect_errno) {
+    throw new RuntimeException('DB connect failed: ' . $conn->connect_error);
+  }
+  $GLOBALS['mysqli'] = $conn;
+}
+
+if (!function_exists('get_db')) {
+  function get_db(): mysqli {
+    if (isset($GLOBALS['mysqli']) && $GLOBALS['mysqli'] instanceof mysqli) {
+      return $GLOBALS['mysqli'];
     }
-}
-require_once __DIR__ . '/license.php';     // keep any helpers you already have
-
-// Optional: license guard if you added it
-if (file_exists(__DIR__ . '/license_guard.php')) {
-    require_once __DIR__ . '/license_guard.php';
-}
-// --- Base URL helper (handles subfolder like /sthportal) ---
-if (!defined('BASE_URL')) {
-  $sn    = $_SERVER['SCRIPT_NAME'] ?? '';
-  $parts = explode('/', trim($sn, '/'));
-  $first = $parts[0] ?? '';
-  // If app is deployed under /sthportal/... first segment = 'sthportal'
-  define('BASE_URL', ($first && $first !== 'index.php') ? ('/' . $first) : '');
-}
-if (!function_exists('u')) {
-  function u(string $p): string { return BASE_URL . '/' . ltrim($p, '/'); }
-}
-if (!function_exists('h')) {
-  function h($s){ return htmlspecialchars((string)$s, ENT_QUOTES|ENT_SUBSTITUTE, 'UTF-8'); }
-}
-?>
-<?php
-// bootstrap.php — CSS entrypoint (root-aware)
-$cssVer = getenv('ASSET_VER') ?: date('YmdHis'); // cache-buster
-
-// Rooted URLs via u() so nested pages don't 404
-echo '<link rel="stylesheet" href="' . htmlspecialchars(u('assets/css/global.css'), ENT_QUOTES, 'UTF-8') . '?v=' . htmlspecialchars($cssVer) . '">';
-
-// Optional theme override (safe if missing)
-if (file_exists(__DIR__ . '/../assets/css/theme-override.css')) {
-  echo '<link rel="stylesheet" href="' . htmlspecialchars(u('assets/css/theme-override.css'), ENT_QUOTES, 'UTF-8') . '?v=' . htmlspecialchars($cssVer) . '">';
+    // Rebuild if needed
+    require_once APP_BASE . '/includes/config.php';
+    $conn = @new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+    if ($conn->connect_errno) {
+      throw new RuntimeException('DB connect failed: ' . $conn->connect_error);
+    }
+    $GLOBALS['mysqli'] = $conn;
+    return $conn;
+  }
 }
 
-// TEMP: legacy shim to keep old classnames alive while we prune
-if (file_exists(__DIR__ . '/../assets/css/legacy-shim.css')) {
-  echo '<link rel="stylesheet" href="' . htmlspecialchars(u('assets/css/legacy-shim.css'), ENT_QUOTES, 'UTF-8') . '?v=' . htmlspecialchars($cssVer) . '">';
-}
-
-echo '<script src="' . htmlspecialchars(u('assets/js/auto-logos.js'), ENT_QUOTES, 'UTF-8') . '?v=' . htmlspecialchars($cssVer) . '"></script>';
-?>
+/* NOTE:
+ * License/Auth are admin-only. Do NOT include license_guard.php or user-auth here.
+ * Admin pages should include them explicitly.
+ */

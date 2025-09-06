@@ -10,10 +10,10 @@ error_reporting(E_ALL);
 ini_set('display_errors','1');
 
 $root         = dirname(__DIR__);
-$schedPath    = $root . '/data/uploads/schedule-current.json';
-$teamsPath    = $root . '/data/uploads/teams.json';
+$schedPath    = $root . '/assets/json/schedule-current.json';
+$teamsPath    = $root . '/assets/json/teams.json';
 $uploadsDir   = $root . '/data/uploads';
-$reportCsv    = $root . '/data/uploads/repair-boxlinks-report.csv';
+$reportCsv    = $root . '/data/repair-boxlinks-report.csv';
 
 function jload(string $p){ return file_exists($p) ? json_decode((string) file_get_contents($p), true) : null; }
 function jsave(string $p, $data){ file_put_contents($p, json_encode($data, JSON_PRETTY_JSON|JSON_UNESCAPED_SLASHES)); }

@@ -11,7 +11,7 @@ declare(strict_types=1);
 
 $ROOT        = dirname(__DIR__);
 $UPLOAD_DIR  = $ROOT . '/data/uploads';
-$DERIVED_DIR = $ROOT . '/data/derived';
+$DERIVED_DIR = $ROOT . '/assets/json';
 
 $VERSION = '1.1.0';
 $NOW     = gmdate('c');
@@ -177,7 +177,7 @@ natsort($files); $files = array_values($files);
 $players = [];
 $events  = [];
 $summary = ['files' => [], 'skipped' => 0, 'skippedByWhitelist' => []];
-$PRO_TEAMS_FILE = $UPLOAD_DIR . '/teams.json';
+$PRO_TEAMS_FILE = 'assets/json/teams.json';
 $PRO_TEAMS = load_pro_teams($PRO_TEAMS_FILE);
 
 foreach ($files as $file) {

@@ -7,10 +7,10 @@ error_reporting(E_ALL);
 ini_set('display_errors','1');
 
 $root      = dirname(__DIR__);
-$schedPath = $root . '/data/uploads/schedule-current.json';
-$teamsPath = $root . '/data/uploads/teams.json';
-$boxDir    = $root . '/data/uploads/boxscores';
-$reportCsv = $root . '/data/uploads/fix-schedule-links-report.csv';
+$schedPath = $root . '/assets/json/schedule-current.json';
+$teamsPath = $root . '/assets/json/teams.json';
+$boxDir    = $root . '/data/uploads';
+$reportCsv = $root . '/data/fix-schedule-links-report.csv';
 
 $ARG_ALL    = in_array('--all', $argv ?? [], true);
 $ARG_UNLINK = in_array('--unlink-mismatched', $argv ?? [], true);

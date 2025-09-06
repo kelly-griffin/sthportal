@@ -201,7 +201,7 @@ function lookupDerivedOtg(string $name, string $teamAbbr, ?array $mapExact = nul
 }
 
 /* Optional team id->abbr mapping (JSON) */
-$teamsJson = __DIR__ . '/data/uploads/teams.json';
+$teamsJson = __DIR__ . '/assets/json/teams.json';
 $teamAbbrFromId = [];
 if (is_readable($teamsJson)) {
   $json = json_decode((string) file_get_contents($teamsJson), true);
@@ -1229,15 +1229,13 @@ if (!function_exists('parse_faceoffs_from_pbp')) {
                 }
               }
 
-              $TEAM_FULL_TO_CODE = load_team_full_to_code(__DIR__ . '/data/uploads/teams.json'); // optional for OZ/DZ
+              $TEAM_FULL_TO_CODE = load_team_full_to_code(__DIR__ . '/assets/json/teams.json'); // optional for OZ/DZ
               $ROSTER_MAP = make_roster_map_from_rows($players_arr, $aliases_arr, $teamAbbrFromId ?? null);
               $__pbp_files = find_pbp_files([
-                __DIR__ . '/data/uploads',
-                __DIR__ . '/data/uploads/boxscores',
-                __DIR__ . '/uploads/pbp',
-                __DIR__ . '/uploads/boxscores',
+                __DIR__ . '/data/uploads'
+
               ]);
-              $DERIVED_PBP = __DIR__ . '/data/derived/pbp-faceoffs-players.json';
+              $DERIVED_PBP = __DIR__ . '/assets/json/pbp-faceoffs-players.json';
               $FO_PBP = [];
               if (is_readable($DERIVED_PBP)) {
                 $FO_PBP = json_decode((string) file_get_contents($DERIVED_PBP), true) ?: [];

@@ -1,79 +1,100 @@
 <?php
-// news-article.php — single story view
 declare(strict_types=1);
-require_once __DIR__ . '/includes/db.php';
+require_once __DIR__ . '/../includes/bootstrap.php';
+/** @var mysqli $db */
+$db = get_db();
 
-$dbc = null;
-if (isset($db) && $db instanceof mysqli)             { $dbc = $db; }
-elseif (isset($conn) && $conn instanceof mysqli)     { $dbc = $conn; }
-elseif (isset($mysqli) && $mysqli instanceof mysqli) { $dbc = $mysqli; }
-if (!$dbc) { die('Database not available'); }
 
-function placeholder_img(?string $teamCode): string {
-  $teamCode = strtoupper(trim((string)$teamCode));
-  $docRoot = rtrim($_SERVER['DOCUMENT_ROOT'] ?? '', '/');
-  if ($teamCode !== '') {
-    $path = "/assets/logos/{{TEAM}}.png";
-    $path = str_replace("{{TEAM}}", $teamCode, $path);
-    if ($docRoot && file_exists($docRoot.$path)) return $path;
-  }
-  $fallback = "/assets/img/news-placeholder.png";
-  return ($docRoot && file_exists($docRoot.$fallback)) ? $fallback : "data:image/gif;base64,R0lGODlhAQABAAAAACw=";
+function h(string $s): string { return htmlspecialchars($s, ENT_QUOTES, 'UTF-8'); }
+
+$id   = isset($_GET['id']) ? (int)$_GET['id'] : 0;
+$slug = isset($_GET['slug']) ? trim((string)$_GET['slug']) : '';
+
+if ($id > 0) {
+  $sql = "SELECT * FROM stories WHERE status='published' AND id=? LIMIT 1";
+  $stmt = $db->prepare($sql);
+  $stmt->bind_param('i', $id);
+} else {
+  $sql = "SELECT * FROM stories WHERE status='published' AND slug=? LIMIT 1";
+  $stmt = $db->prepare($sql);
+  $stmt->bind_param('s', $slug);
 }
-
-$id = (int)($_GET['id'] ?? 0);
-if ($id <= 0) { http_response_code(404); echo 'Not found'; exit; }
-
-$stmt = $dbc->prepare("SELECT id, title, summary, body, hero_image_url, team_code, published_at
-                       FROM stories
-                       WHERE id=? AND status IN ('published','draft')");
-$stmt->bind_param('i', $id);
 $stmt->execute();
 $res = $stmt->get_result();
-$story = $res ? $res->fetch_assoc() : null;
-if (!$story) { http_response_code(404); echo 'Not found'; exit; }
+$story = $res->fetch_assoc();
+$stmt->close();
 
-$hero = !empty($story['hero_image_url']) ? $story['hero_image_url'] : placeholder_img($story['team_code'] ?? '');
+if (!$story) {
+  http_response_code(404);
+  echo "Story not found.";
+  exit;
+}
+
+$title   = (string)($story['title'] ?? '');
+$summary = (string)($story['summary'] ?? '');
+$body    = (string)($story['body'] ?? '');
+$hero    = trim((string)($story['hero_image_url'] ?? ''));
+$team    = (string)($story['team_code'] ?? '');
+$pub     = (string)($story['published_at'] ?? '');
+
+function dateLong(?string $ts): string {
+  if (!$ts) return '';
+  $t = strtotime($ts);
+  return $t > 0 ? date('F j, Y g:ia', $t) : '';
+}
 ?>
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=1280, initial-scale=1">
-  <title><?= htmlspecialchars($story['title']) ?> — UHA</title>
-  <link rel="stylesheet" href="assets/css/nav.css">
+  <title><?= h($title) ?> — News — UHA Portal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preload" href="<?= h(asset('assets/css/global.css')) ?>" as="style">
+  <link rel="stylesheet" href="<?= h(asset('assets/css/global.css')) ?>">
+  <link rel="stylesheet" href="<?= h(asset('assets/css/nav.css')) ?>">
+  <script defer src="<?= h(asset('assets/js/auto-logos.js')) ?>"></script>
   <style>
-    .story-wrap{max-width:960px;margin:0 auto}
-    .story-hero{aspect-ratio:16/9;background:#eef4ff;border:1px solid #cfd6e4;border-radius:10px;overflow:hidden}
-    .story-hero img{display:block;width:100%;object-fit:cover}
-    .story-title{font-size:28px;font-weight:900;margin:10px 0 6px}
-    .story-meta{color:#6c7a93;font-size:12px;margin-bottom:8px}
-    .story-summary{font-weight:600;margin-bottom:10px}
-    .story-body{line-height:1.5}
-    .story-body img{max-width:100%}
+    .news-article-wrap{ max-width:960px; margin:24px auto; padding:0 16px; }
+    .article-head{ margin:0 0 12px; }
+    .article-title{ font-weight:900; font-size:32px; line-height:1.1; margin:0 0 8px; color:var(--color-ink); }
+    .article-meta{ display:flex; align-items:center; gap:12px; font-size:13px; color:var(--color-ink-3); }
+    .article-hero{ margin:18px 0; width:100%; height:380px; background-size:cover; background-position:50% 50%; border-radius:16px; background-color:var(--color-elev-1); display:block; }
+    .article-hero.logo{ display:flex; align-items:center; justify-content:center; }
+    .article-hero.logo img{ width:120px; height:120px; object-fit:contain; }
+    .article-body{ color:var(--color-ink-1); font-size:16px; line-height:1.6; }
+    .article-body p{ margin:0 0 1em; }
+    @media (max-width:700px){ .article-title{ font-size:26px; } .article-hero{ height:240px; } }
   </style>
 </head>
-<body>
-<div class="site">
-  <?php require_once __DIR__ . '/includes/topbar.php'; ?>
-  <main class="content">
-    <section class="content-col">
-      <div class="story-wrap">
-        <div class="story-hero">
-          <?php if (strpos($hero, 'data:image/') !== 0): ?>
-            <img src="<?= htmlspecialchars($hero) ?>" alt="">
-          <?php endif; ?>
-        </div>
-        <h1 class="story-title"><?= htmlspecialchars($story['title']) ?></h1>
-        <div class="story-meta"><?= htmlspecialchars(date('M j, Y g:ia', strtotime($story['published_at']))) ?></div>
-        <p class="story-summary"><?= htmlspecialchars($story['summary']) ?></p>
-        <article class="story-body">
-          <?= $story['body'] ? $story['body'] : '' ?>
-        </article>
-      </div>
-    </section>
-  </main>
-</div>
-<script src="assets/js/urls.js"></script>
+<body class="news-article-canvas">
+<?php
+require_once __DIR__ . '/includes/leaguebar.php';
+require_once __DIR__ . '/includes/topbar.php';
+?>
+<main class="news-article-wrap">
+  <header class="article-head">
+    <h1 class="article-title"><?= h($title) ?></h1>
+    <div class="article-meta">
+      <?php if ($team): ?><span class="tag"><?= h($team) ?></span><?php endif; ?>
+      <?php $dl = dateLong($pub); if ($dl): ?><time datetime="<?= h($pub) ?>"><?= h($dl) ?></time><?php endif; ?>
+    </div>
+  </header>
+
+  <?php if ($hero !== ''): ?>
+    <div class="article-hero" style="background-image:url('<?= h($hero) ?>')"></div>
+  <?php else: ?>
+    <div class="article-hero logo">
+      <img class="logo" data-abbr="<?= h($team) ?>" alt="<?= h($team) ?>">
+    </div>
+  <?php endif; ?>
+
+  <?php if ($summary): ?>
+    <p class="article-dek" style="font-size:18px; color:var(--color-ink-2); margin:0 0 12px;"><?= h($summary) ?></p>
+  <?php endif; ?>
+
+  <article class="article-body">
+    <?= $body /* assume sanitized on save */ ?>
+  </article>
+</main>
 </body>
 </html>

@@ -44,38 +44,41 @@
         <div class="col rank">#</div>
         <div class="col team">Team</div>
         <div class="col gp">GP</div>
-        <div class="col w">W</div>
-        <div class="col l">L</div>
-        <div class="col ot">OT</div>
+        <div class="col gr">GR</div>
         <div class="col pts">PTS</div>
       </div>`;
   }
 
   function teamCell(t){
-    const cls = 'logo ' + (t.logo ? 'img' : 'badge');
-    const logo = t.logo ? `<img src="${t.logo}" alt="${t.name || t.abbr || ''}" />` : (t.abbr || '—');
-    const clinch = t.clinch ? `<span class="clinch">${t.clinch}</span>` : '';
-    const shown = displayName(t);
-    const title = (t.name || t.abbr || shown);
-    const href = (window.URLS ? URLS.team(t.abbr, 'pro') : '#');
-    return `<a class="team-inner" title="${title}" href="${href}">
-      <div class="${cls}">${logo}</div>
-      <div class="name">${shown}${clinch}</div>
-    </a>`;
-  }
+  const title = (t.name || t.abbr || '');
+  const shown = displayName(t);
+  const clinch = t.clinch ? `<span class="clinch">${t.clinch}</span>` : '';
+  const href = (window.URLS ? URLS.team(t.abbr, 'pro') : '#');
+  // use data-abbr instead of a src so auto-logos can pick dark/light
+  const logo = `<img class="logo" data-abbr="${t.abbr || ''}" alt="${title}" />`;
+  return `<a class="team-inner" title="${title}" href="${href}">
+    <div class="logo">${logo}</div>
+    <div class="name">${shown}${clinch}</div>
+  </a>`;
+}
 
-  function row(rank, t){
-    return `
-      <div class="st-row">
-        <div class="col rank">${rank}</div>
-        <div class="col team">${teamCell(t)}</div>
-        <div class="col gp">${fmt(t.gp)}</div>
-        <div class="col w">${fmt(t.w)}</div>
-        <div class="col l">${fmt(t.l)}</div>
-        <div class="col ot">${fmt(t.ot)}</div>
-        <div class="col pts">${fmt(t.pts)}</div>
-      </div>`;
-  }
+function row(rank, t){
+  // get the season length straight from the card attribute
+  const card = document.getElementById('standingsCard');
+  const seasonGames = parseInt(card?.getAttribute('data-season-games'), 10) || 82;
+
+  const gr = Math.max(0, seasonGames - (t.gp ?? 0));
+
+  return `
+    <div class="st-row">
+      <div class="col rank">${rank}</div>
+      <div class="col team">${teamCell(t)}</div>
+      <div class="col gp">${fmt(t.gp)}</div>
+      <div class="col gr">${fmt(gr)}</div>
+      <div class="col pts">${fmt(t.pts)}</div>
+    </div>`;
+}
+
 
   function splitTop3(divTeams){
     const arr = [...divTeams].sort((a,b)=> (b.pts??0)-(a.pts??0));
@@ -118,18 +121,23 @@
     return html;
   }
 
-  function render(){
-    const east = DATA.east || {};
-    const west = DATA.west || {};
-    mount.innerHTML = `
-      <div class="standings wild-card">
-        ${buildConference('east','Eastern', east)}
-        ${buildConference('west','Western', west)}
-        <div class="st-bottom-link"><a href="${LINK_BASE}">Full Standings</a></div>
-      </div>
-    `;
-  }
+function render(){
+  const east = DATA.east || {};
+  const west = DATA.west || {};
 
+  mount.innerHTML = `
+    <div class="standings wild-card">
+      ${buildConference('east','Eastern', east)}
+      ${buildConference('west','Western', west)}
+      <div class="st-bottom-link"><a href="${LINK_BASE}">Full Standings</a></div>
+    </div>
+  `;
+
+  // run AFTER HTML is in the DOM
+  if (typeof window.UHA_applyLogoVariants === 'function') {
+    try { window.UHA_applyLogoVariants(mount); } catch {}
+  }
+}
   render();
 
   function demoData(){

@@ -17,11 +17,11 @@ error_reporting(E_ALL);
 ini_set('display_errors','1');
 
 $root        = dirname(__DIR__);
-$schedPath   = $root . '/data/uploads/schedule-current.json';
-$teamsPath   = $root . '/data/uploads/teams.json';
+$schedPath   = $root . '/assets/json/schedule-current.json';
+$teamsPath   = $root . '/assets/json/teams.json';
 $uploadDir   = $root . '/data/uploads';
-$boxJsonDir  = $uploadDir . '/boxscores';
-$reportCsv   = $root . '/data/uploads/reconcile-report.csv';
+$boxJsonDir  = $uploadDir . '/boxscores-json';
+$reportCsv   = $root . '/data/reconcile-report.csv';
 
 $args = $argv ?? [];
 $dryRun = in_array('--dry-run', $args, true);

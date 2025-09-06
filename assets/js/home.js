@@ -3,16 +3,20 @@
 
 (() => {
   const U = (window.UHA = window.UHA || {});
-  const qs  = (s, el=document) => el.querySelector(s);
-  const qsa = (s, el=document) => Array.from(el.querySelectorAll(s));
-  const esc = (s) => String(s ?? '').replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+  const qs = (s, el = document) => el.querySelector(s);
+  const qsa = (s, el = document) => Array.from(el.querySelectorAll(s));
+  const esc = (s) => String(s ?? '').replace(/[&<>"']/g, m => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[m]));
+
+  if (typeof U.leadersCompactN !== 'number') U.leadersCompactN = 5;
+  if (typeof U.topNLeaders !== 'number') U.topNLeaders = 10;
+
 
   /* -------------------- Normalize “Game Log” links (safe) -------------------- */
-  (function normalizeLogLinks(){
+  (function normalizeLogLinks() {
     const root = document.getElementById('scoresCard');
     if (!root) return;
 
-    const fileByScope = { pro:'ProGameLog.php', farm:'FarmGameLog.php', echl:'ECHLGameLog.php', juniors:'JuniorsGameLog.php' };
+    const fileByScope = { pro: 'ProGameLog.php', farm: 'FarmGameLog.php', echl: 'ECHLGameLog.php', juniors: 'JuniorsGameLog.php' };
     const getScope = () => (document.getElementById('scoresScope')?.value || 'pro').toLowerCase();
 
     function rewrite(scope) {
@@ -48,35 +52,35 @@
   }
 
   /* -------------------- Feature (hero) -------------------- */
-  function setText(sel, v){ const el = qs(sel); if (el) el.textContent = String(v ?? ''); }
-  function initFeature(){
+  function setText(sel, v) { const el = qs(sel); if (el) el.textContent = String(v ?? ''); }
+  function initFeature() {
     const f = U.feature || {};
     setText('#feature-team-abbr', f.teamAbbr || f.abbr || '');
     setText('#feature-team-name', f.teamName || f.team || '');
-    setText('#feature-headline',  f.headline || 'Welcome to the Portal');
-    setText('#feature-dek',       f.dek || f.summary || 'Live data will appear as soon as uploads/DB are wired.');
-    setText('#feature-time',      f.time || f.when || 'just now');
+    setText('#feature-headline', f.headline || 'Welcome to the Portal');
+    setText('#feature-dek', f.dek || f.summary || 'Live data will appear as soon as uploads/DB are wired.');
+    setText('#feature-time', f.time || f.when || 'just now');
   }
 
   /* -------------------- Leaders -------------------- */
   const STAT_ALIASES = {
-    'Points': ['PTS','Points','points','pt'],
-    'Goals':  ['G','Goals','goals'],
-    'Assists':['A','Assists','assists'],
-    'GAA':    ['GAA','gaa'],
-    'SV%':    ['SV%','SVPct','Save%','svp','sv%'],
-    'SO':     ['SO','Shutouts','shutouts'],
-    'W':      ['W','Wins','wins'],
+    'Points': ['PTS', 'Points', 'points', 'pt'],
+    'Goals': ['G', 'Goals', 'goals'],
+    'Assists': ['A', 'Assists', 'assists'],
+    'GAA': ['GAA', 'gaa'],
+    'SV%': ['SV%', 'SVPct', 'Save%', 'svp', 'sv%'],
+    'SO': ['SO', 'Shutouts', 'shutouts'],
+    'W': ['W', 'Wins', 'wins'],
   };
   function statsRoot() {
     if (U.statsDataByScope && U.statsDataByScope[U.activeScope]) return U.statsDataByScope[U.activeScope];
     return U.statsData || {};
   }
-  function resolveSection(key){
+  function resolveSection(key) {
     const r = statsRoot();
     return key === 'defense' ? (r.defense || r.defensemen || r.defenders || null) : (r[key] || null);
   }
-  function pickStatArray(sectionObj, prettyKey){
+  function pickStatArray(sectionObj, prettyKey) {
     if (!sectionObj) return [];
     const keys = STAT_ALIASES[prettyKey] || [prettyKey];
     for (const k of keys) if (Array.isArray(sectionObj[k])) return sectionObj[k];
@@ -87,8 +91,8 @@
     }
     return [];
   }
-  let currentMetric = '';
-  function valueFor(row){
+
+  function valueFor(row) {
     let v = row?.val ?? row?.value ?? row?.stat;
     if (v == null) return '';
     const n = Number(v);
@@ -97,16 +101,17 @@
     if (currentMetric === 'GAA') return (Math.round(n * 100) / 100).toFixed(2);
     return String(n);
   }
-  function buildLeadersPanel(title, sectionKey, metrics){
+  function buildLeadersPanel(title, sectionKey, metrics) {
     const sectionObj = resolveSection(sectionKey);
     const BASE_N = Number(U.leadersCompactN ?? 5);
     const FULL_N = Number(U.topNLeaders ?? 10);
-    let expanded = false;
+    let expanded = true;
+    let currentMetric = metrics[0]; // <-- panel-local
 
     const card = document.createElement('section'); card.className = 'leadersCard';
     const header = document.createElement('div'); header.className = 'leadersHeader';
     header.innerHTML = `<div class="leadersTitle">${esc(title)}</div>
-      <div class="leadersHeaderActions"><button type="button" class="leadersExpand" aria-pressed="false">Show ${FULL_N}</button></div>`;
+    <div class="leadersHeaderActions"><button type="button" class="leadersExpand" aria-pressed="true">Show ${BASE_N}</button></div>`;
     card.appendChild(header);
 
     const tabs = document.createElement('div'); tabs.className = 'leadersTabs'; card.appendChild(tabs);
@@ -116,11 +121,12 @@
     card.appendChild(footer);
 
     const expandBtn = header.querySelector('.leadersExpand');
+    expandBtn.setAttribute('aria-pressed', 'true'); // reflect expanded default
     expandBtn.addEventListener('click', () => {
       expanded = !expanded;
       expandBtn.setAttribute('aria-pressed', expanded ? 'true' : 'false');
       expandBtn.textContent = expanded ? `Show ${BASE_N}` : `Show ${FULL_N}`;
-      render(currentMetric);
+      render(currentMetric); // <-- re-render with THIS panel’s metric
     });
 
     if (U.leadersCollapsible === true) {
@@ -128,21 +134,33 @@
       header.querySelector('.leadersTitle').addEventListener('click', () => card.classList.toggle('is-collapsed'));
     }
 
-    function render(metricPretty){
+    // local formatter so SV%/GAA render nicely without relying on a global
+    function valueForLocal(row) {
+      let v = row?.val ?? row?.value ?? row?.stat;
+      if (v == null) return '';
+      const n = Number(v);
+      if (!Number.isFinite(n)) return String(v);
+      if (currentMetric === 'SV%') return (Math.round(n * 1000) / 1000).toFixed(3);
+      if (currentMetric === 'GAA') return (Math.round(n * 100) / 100).toFixed(2);
+      return String(n);
+    }
+
+    function render(metricPretty) {
       currentMetric = metricPretty;
       qsa('.leadersTab', tabs).forEach(b => b.classList.toggle('active', b.dataset.metric === metricPretty));
-      const rows = pickStatArray(sectionObj, metricPretty).slice(0, expanded ? FULL_N : BASE_N);
+      const rows = pickStatArray(sectionObj, metricPretty)
+        .slice(0, Math.min(expanded ? FULL_N : BASE_N, Number.MAX_SAFE_INTEGER));
       list.innerHTML = rows.map((row, i) => {
         const name = esc(row?.name ?? '');
         const team = esc(row?.team ?? row?.tm ?? '');
-        const val  = valueFor(row);
+        const val = valueForLocal(row);
         const rank = row?.rank ?? (i + 1);
         const tTie = (row?.tied === true || String(rank).startsWith('T')) ? 'T' : '';
-        return `<div class="leadersItem${i<1?' top':''}">
-          <div class="leadersRank">${esc(String(rank))}</div>
-          <div class="leadersName">${tTie ? 'T. ' : ''}${name}${team ? `<small>${team}</small>` : ''}</div>
-          <div class="leadersValue">${esc(val)}</div>
-        </div>`;
+        return `<div class="leadersItem${i < 1 ? ' top' : ''}">
+        <div class="leadersRank">${esc(String(rank))}</div>
+        <div class="leadersName">${tTie ? 'T. ' : ''}${name}${team ? `<small>${team}</small>` : ''}</div>
+        <div class="leadersValue">${esc(val)}</div>
+      </div>`;
       }).join('') || `<div class="leadersItem"><div class="leadersName">—</div></div>`;
     }
 
@@ -156,59 +174,125 @@
       tabs.appendChild(btn);
     });
 
-    render(metrics[0]);
+    render(currentMetric);
     return card;
   }
-  function initLeaders(){
+
+  function initLeaders() {
     const root = document.getElementById('leadersStack');
     if (!root) return;
     const frag = document.createDocumentFragment();
-    frag.appendChild(buildLeadersPanel('Skaters',    'skaters', ['Points','Goals','Assists']));
-    frag.appendChild(buildLeadersPanel('Defensemen','defense', ['Points','Goals','Assists']));
-    frag.appendChild(buildLeadersPanel('Goalies',    'goalies', ['GAA','SV%','SO','W']));
-    frag.appendChild(buildLeadersPanel('Rookies',    'rookies', ['Points','Goals','Assists']));
+    frag.appendChild(buildLeadersPanel('Skaters', 'skaters', ['Points', 'Goals', 'Assists']));
+    frag.appendChild(buildLeadersPanel('Defensemen', 'defense', ['Points', 'Goals', 'Assists']));
+    frag.appendChild(buildLeadersPanel('Goalies', 'goalies', ['GAA', 'SV%', 'SO', 'W']));
+    frag.appendChild(buildLeadersPanel('Rookies', 'rookies', ['Points', 'Goals', 'Assists']));
     root.replaceChildren(frag);
   }
 
-  /* -------------------- Transactions 25/50 toggle -------------------- */
-  (function txToggle(){
-    const root = document.getElementById('homeTransactions');
-    if (!root) return;
-    const rows = qsa('.tx-mini-row', root);
-    const pills = qsa('.tx-pill', root);
-    if (!pills.length) return;
+// Initialize Transactions
 
-    function apply(limit){
-      rows.forEach((li, i) => i < limit ? li.removeAttribute('data-hidden')
-                                        : li.setAttribute('data-hidden', 'true'));
-      pills.forEach(btn => btn.setAttribute('aria-pressed', btn.dataset.limit == limit ? 'true' : 'false'));
-    }
-    pills.forEach(btn => btn.addEventListener('click', () => apply(parseInt(btn.dataset.limit, 10) || 25)));
-  })();
+function initTransactions() {
+  const root = document.getElementById('homeTransactions');
+  if (!root) return;
+  const list = root.querySelector('.tx-mini-list');
+  if (!list) return;
+
+  const U = (window.UHA = window.UHA || {});
+  const items = (U.transactions && Array.isArray(U.transactions.items)) ? U.transactions.items : [];
+  const esc = (s) => String(s ?? '').replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+  const logo = (code) => code ? `<img class="txm-logo" src="assets/img/logos/${esc(code)}_dark.svg" alt="">` : '';
+
+  const html = items.map(it => {
+    const type = esc(it.type || 'other');
+    const whoL = esc(it.whoL || '');         // abbrev
+    const whoR = esc(it.whoR || '');         // abbrev (trade only)
+    const from = esc(it.fromCode || '');     // raw code for logo
+    const to   = esc(it.toCode   || '');
+    const team = esc(it.teamCode || '');
+    const desc = esc(it.headline || '');
+    const dt   = esc(it.date || '');
+    const chip = type.toUpperCase();
+
+    const whoHTML = (type === 'trade')
+      ? `<div class="who">
+           ${logo(from)}
+           <span class="txm-abbr">${whoL}</span>
+           <span class="txm-sep">↔</span>
+           <span class="txm-abbr">${whoR}</span>
+           ${logo(to)}
+         </div>`
+      : `<div class="who">
+           ${logo(team || from || to)}
+           <span class="txm-abbr">${whoL}</span>
+         </div>`;
+
+    return `<li class="tx-mini-row tx-${type}" data-text="${desc}">
+      ${whoHTML}
+      <a class="tx-chip" href="transactions.php?type=${encodeURIComponent(type)}">${chip}</a>
+      <div class="desc">${desc}</div>
+      <div class="date">${dt}</div>
+    </li>`;
+  }).join('');
+
+  list.innerHTML = html || `<li class="tx-mini-empty">No recent transactions.</li>`;
+
+  // keep your default limit behavior
+  const pills = Array.from(root.querySelectorAll('.tx-pill'));
+  const limit = parseInt((pills.find(b => b.getAttribute('aria-pressed') === 'true')?.dataset.limit) || '25', 10);
+  const rows = Array.from(root.querySelectorAll('.tx-mini-row'));
+  rows.forEach((li, i) => i < limit ? li.removeAttribute('data-hidden') : li.setAttribute('data-hidden', 'true'));
+}
+
+function applyTxLimit(root, limit) {
+  const rows = Array.from(root.querySelectorAll('.tx-mini-row'));
+  const pills = Array.from(root.querySelectorAll('.tx-pill'));
+  rows.forEach((li, i) => i < limit ? li.removeAttribute('data-hidden') : li.setAttribute('data-hidden', 'true'));
+  pills.forEach(btn => btn.setAttribute('aria-pressed', btn.dataset.limit == limit ? 'true' : 'false'));
+}
+
+/* -------------------- Transactions 25/50 toggle -------------------- */
+(function txToggle() {
+  const root = document.getElementById('homeTransactions');
+  if (!root) return;
+  const pills = qsa('.tx-pill', root);
+  if (!pills.length) return;
+
+  function apply(limit) {
+    const rows = qsa('.tx-mini-row', root); // re-query after render
+    rows.forEach((li, i) => i < limit ? li.removeAttribute('data-hidden')
+      : li.setAttribute('data-hidden', 'true'));
+    pills.forEach(btn => btn.setAttribute('aria-pressed', btn.dataset.limit == limit ? 'true' : 'false'));
+  }
+  pills.forEach(btn => btn.addEventListener('click', () => apply(parseInt(btn.dataset.limit, 10) || 25)));
+})();
+
 
   /* -------------------- Boot -------------------- */
-  document.addEventListener('DOMContentLoaded', () => {
-    initTicker();
-    initFeature();
-    initLeaders();
-  });
+document.addEventListener('DOMContentLoaded', () => {
+  initTicker();
+  initFeature();
+  initLeaders();
+  initTransactions();        // <-- render rows from U.transactions.items
+  initScoresRail();      // <-- render scores from U.scores.games
+});
+
 })();
 /* ===== Home-only: SOG hydrator (reads totals from Box Score page) ===== */
 (() => {
   const wrap = document.getElementById('scoresCard');
   if (!wrap) return;
 
-  const qsa = (s, el=document) => Array.from(el.querySelectorAll(s));
-  const up  = s => String(s ?? '').trim().toUpperCase();
+  const qsa = (s, el = document) => Array.from(el.querySelectorAll(s));
+  const up = s => String(s ?? '').trim().toUpperCase();
 
-  function getCardTeams(card){
+  function getCardTeams(card) {
     // we’ll match by the nickname text shown in the card (“Avalanche”, “Sabres”…)
     const blocks = card.querySelectorAll('.team');
     const nameOf = el => (el?.querySelector('.meta .name, .name')?.textContent || '').trim();
     return { away: nameOf(blocks[0]), home: nameOf(blocks[1]) };
   }
 
-  function findSOGNode(card){
+  function findSOGNode(card) {
     // common class hooks first
     let el = card.querySelector('.sog, .sog-line, .meta .sog');
     if (el) return el;
@@ -217,7 +301,7 @@
       .find(n => /^\s*SOG\b/i.test(n.textContent || '')) || null;
   }
 
-  function makeAbsolute(href){
+  function makeAbsolute(href) {
     if (!href) return '';
     if (/^https?:\/\//i.test(href)) return href;
     const { origin } = window.location;
@@ -225,7 +309,7 @@
     return origin + (href.startsWith('/') ? href : (base + href));
   }
 
-  function parseShotsFromBoxHTML(html, awayNick, homeNick){
+  function parseShotsFromBoxHTML(html, awayNick, homeNick) {
     const doc = new DOMParser().parseFromString(html, 'text/html');
 
     // find a <th> with “Shots”, then grab its table
@@ -268,14 +352,16 @@
     return { aSOG, hSOG };
   }
 
-  function applySOG(card, aSOG, hSOG){
-    const el = findSOGNode(card);
-    if (!el) return;
-    el.textContent = `SOG: ${aSOG} — ${hSOG}`;
-    card.setAttribute('data-has-sog', '1'); // helpful if you want CSS to hide empty rows
-  }
+// home.js — replace applySOG with this
+function applySOG(card, aSOG, hSOG) {
+  const awayEl = card.querySelector('.team.away .sog');
+  const homeEl = card.querySelector('.team.home .sog');
+  if (awayEl) awayEl.textContent = `SOG: ${aSOG}`;
+  if (homeEl) homeEl.textContent = `SOG: ${hSOG}`;
+  card.setAttribute('data-has-sog', '1');
+}
 
-  async function hydrateCard(card){
+  async function hydrateCard(card) {
     if (card.__sogDone) return;
     card.__sogDone = true;
 
@@ -293,16 +379,61 @@
       const html = await r.text();
       const shots = parseShotsFromBoxHTML(html, away, home);
       if (shots) applySOG(card, shots.aSOG, shots.hSOG);
-    } catch {}
+    } catch { }
   }
 
-  function run(){
+  function run() {
     qsa('#scoresCard .game-card').forEach(hydrateCard);
   }
 
   const list = wrap.querySelector('.scores-list') || wrap;
-  new MutationObserver(run).observe(list, { childList:true, subtree:true });
-  document.getElementById('scoresScope')?.addEventListener('change', () => setTimeout(run,0));
-  document.getElementById('scoresDates')?.addEventListener('click',  () => setTimeout(run,0));
-  window.addEventListener('load', () => setTimeout(run,0));
+  new MutationObserver(run).observe(list, { childList: true, subtree: true });
+  document.getElementById('scoresScope')?.addEventListener('change', () => setTimeout(run, 0));
+  document.getElementById('scoresDates')?.addEventListener('click', () => setTimeout(run, 0));
+  window.addEventListener('load', () => setTimeout(run, 0));
 })();
+
+// INITIALIZE INJURIES
+
+function initInjuries() {
+  const root = document.getElementById('injuries-card');
+  if (!root) return;
+
+  const statusEl = root.querySelector('#inj-status');
+  const list = root.querySelector('#inj-list');
+  if (!list) return;
+
+  const U = (window.UHA = window.UHA || {});
+  const items = (U.injuries && Array.isArray(U.injuries.items)) ? U.injuries.items : [];
+
+  const logo = (code) => code ? `<img class="txm-logo" src="assets/img/logos/${esc(code)}_dark.svg" alt="">` : '';
+
+  if (!items.length) {
+    if (statusEl) statusEl.textContent = 'No injuries reported.';
+    list.innerHTML = '';
+    return;
+  }
+
+  if (statusEl) statusEl.textContent = ''; // clear "Loading…"
+
+  list.innerHTML = items.map(it => {
+    const code = esc(it.teamCode || '');
+    const abbr = esc(it.teamAbbr || '');
+    const player = esc(it.player || '');
+    const detail = esc(it.detail || '');
+    const term = esc(it.term || '');
+    const dt = esc(it.date || '');
+
+    // Layout mirrors your rails: who | desc | date
+    const whoHTML = `<div class="who">${logo(code)}<span class="txm-abbr">${abbr}</span></div>`;
+    const descHTML = `<div class="desc"><strong>${player}</strong>${detail ? ` — ${detail}` : ''}${term ? ` (${term})` : ''}</div>`;
+    const dateHTML = `<div class="date">${dt}</div>`;
+
+    return `<li class="inj-row tx-mini-row">${whoHTML}${descHTML}${dateHTML}</li>`;
+  }).join('');
+}
+
+// INITIALIZE SCORES 
+
+function initScoresRail() {}
+

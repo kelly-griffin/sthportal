@@ -5,8 +5,8 @@ error_reporting(E_ALL);
 ini_set('display_errors','1');
 
 $root   = dirname(__DIR__);
-$boxDir = $root . '/data/uploads/boxscores';
-$teams  = json_decode((string)@file_get_contents($root.'/data/uploads/teams.json'), true);
+$boxDir = $root . '/data/uploads/json-boxscores';
+$teams  = json_decode((string)@file_get_contents($root.'/assets/json/teams.json'), true);
 
 function readJsonFlexible(string $path) {
   if (!is_file($path)) return null;

@@ -2,7 +2,7 @@
 // includes/sim_clock.php
 declare(strict_types=1);
 
-define('SIM_CLOCK_PATH', __DIR__ . '/../data/state/sim_clock.json');
+define('SIM_CLOCK_PATH', __DIR__ . '/../assets/json/sim_clock.json');
 
 function sim_clock_read(): array {
   if (!is_file(SIM_CLOCK_PATH)) {
