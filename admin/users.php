@@ -7,7 +7,7 @@ require_once __DIR__ . '/../includes/auth.php';
 @include_once __DIR__ . '/../includes/admin-helpers.php';
 
 if (!defined('TEAMS_JSON_PATH')) {
-  define('TEAMS_JSON_PATH', __DIR__ . '/../data/uploads/teams.json'); // <-- update if different
+  define('TEAMS_JSON_PATH', __DIR__ . '/../assets/json/teams.json'); // <-- update if different
 }
 
 // Resolve a team name by id (tries common tables; falls back to "Team #id")

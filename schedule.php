@@ -2,9 +2,9 @@
 require_once __DIR__ . '/includes/bootstrap.php';
 
 /* ---------- load data ---------- */
-$weekFile  = __DIR__ . '/data/uploads/schedule-full.json';
-$weekFileFallback = __DIR__ . '/data/uploads/schedule-current.json';
-$teamsFile = __DIR__ . '/data/uploads/teams.json';
+$weekFile  = __DIR__ . '/assets/json/schedule-full.json';
+$weekFileFallback = __DIR__ . '/assets/json/schedule-current.json';
+$teamsFile = __DIR__ . '/assets/json/teams.json';
 
 $weekData  = is_file($weekFile) ? json_decode((string)file_get_contents($weekFile), true) : [];
 if (empty($weekData) || empty($weekData['games'])) { $weekData = is_file($weekFileFallback) ? json_decode((string)file_get_contents($weekFileFallback), true) : []; }

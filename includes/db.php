@@ -1,7 +1,12 @@
 <?php
-require_once __DIR__.'/config.php';
-$mysqli = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
-if ($mysqli->connect_errno) {
-    die('Database connection failed: '.$mysqli->connect_error);
+declare(strict_types=1);
+/**
+ * includes/db.php
+ * Legacy shim so older pages that required this still work.
+ */
+require_once __DIR__ . '/bootstrap.php';
+
+// Provide legacy $mysqli for old code paths
+if (!isset($mysqli) || !($mysqli instanceof mysqli)) {
+  $mysqli = get_db();
 }
-?>

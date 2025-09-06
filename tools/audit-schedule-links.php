@@ -7,9 +7,9 @@ error_reporting(E_ALL);
 ini_set('display_errors','1');
 
 $root      = dirname(__DIR__);
-$schedPath = $root . '/data/uploads/schedule-current.json';
-$teamsPath = $root . '/data/uploads/teams.json';
-$boxDir    = $root . '/data/uploads/boxscores';
+$schedPath = $root . '/assets/json/schedule-current.json';
+$teamsPath = $root . '/assets/json/teams.json';
+$boxDir    = $root . '/data/uploads/';
 
 /* ---- utils ---- */
 function jload(string $p){ return file_exists($p) ? json_decode((string)file_get_contents($p), true) : null; }

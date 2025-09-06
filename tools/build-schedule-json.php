@@ -7,11 +7,12 @@ error_reporting(E_ALL);
 ini_set('display_errors', '1');
 
 $uploadDir    = __DIR__ . '/../data/uploads/';
+$jsonDir = __DIR__ . '/../assets/json/';
 $csvFile      = $uploadDir . 'UHA-V3ProSchedule.csv'; // master schedule
-$tickerFile   = $uploadDir . 'ticker-current.json';
-$outputFile   = $uploadDir . 'schedule-current.json';
-$teamsFile    = $uploadDir . 'teams.json';
-$timeMapFile  = $uploadDir . 'time-map.json';
+$tickerFile   = $jsonDir . 'ticker-current.json';
+$outputFile   = $jsonDir . 'schedule-current.json';
+$teamsFile    = $jsonDir . 'teams.json';
+$timeMapFile  = $jsonDir . 'time-map.json';
 
 $seasonStart = new DateTime("2025-10-07");
 

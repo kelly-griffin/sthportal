@@ -11,7 +11,7 @@ require_once __DIR__ . '/../includes/auth.php';
 
 // --- Teams JSON path (change if your file lives elsewhere) ---
 if (!defined('TEAMS_JSON_PATH')) {
-    define('TEAMS_JSON_PATH', __DIR__ . '/../data/uploads/teams.json');
+    define('TEAMS_JSON_PATH', __DIR__ . '/../assets/json/teams.json');
 }
 
 /**

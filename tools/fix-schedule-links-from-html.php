@@ -10,11 +10,11 @@ error_reporting(E_ALL);
 ini_set('display_errors','1');
 
 $root    = dirname(__DIR__);
-$schedP  = $root . '/data/uploads/schedule-current.json';
-$teamsP  = $root . '/data/uploads/teams.json';
+$schedP  = $root . '/assets/json/schedule-current.json';
+$teamsP  = $root . '/assets/json/teams.json';
 $htmlDir = $root . '/data/uploads';
-$jsonDir = $root . '/data/uploads/boxscores';
-$report  = $root . '/data/uploads/fix-from-html-report.csv';
+$jsonDir = $root . '/assets/json';
+$report  = $root . '/data/fix-from-html-report.csv';
 
 $write = isset($_GET['write']) && $_GET['write'] === '1';
 

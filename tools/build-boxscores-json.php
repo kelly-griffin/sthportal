@@ -1,7 +1,7 @@
 <?php
 // tools/build-boxscores-json.php — simple text/regex scraper (no DOM)
 // Source of truth: boxscore HTML + fallback to PBP HTML (UHA-###-PBP.html)
-// Output: data/uploads/boxscores/UHA-###.json
+// Output: data/uploads/boxscores-json/UHA-###.json
 
 declare(strict_types=1);
 error_reporting(E_ALL);
@@ -10,8 +10,8 @@ ini_set('display_errors','1');
 $root      = dirname(__DIR__);
 $uploadDir = $root . '/data/uploads';
 $pattern   = $uploadDir . '/UHA-*.html';
-$outDir    = $uploadDir . '/boxscores';
-$teamsMapP = $uploadDir . '/teams.json';
+$outDir    = $uploadDir . '/boxscores-json';
+$teamsMapP = 'assets/json/teams.json';
 
 if (!is_dir($outDir)) mkdir($outDir, 0775, true);
 

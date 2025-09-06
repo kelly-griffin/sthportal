@@ -11,11 +11,11 @@ error_reporting(E_ALL);
 ini_set('display_errors','1');
 
 $root           = dirname(__DIR__);
-$schedulePath   = $root . '/data/uploads/schedule-current.json';
-$rulesPath      = $root . '/data/uploads/broadcasters-rules.json';
-$overridesPath  = $root . '/data/uploads/broadcasters-overrides.json';
-$teamsPath      = $root . '/data/uploads/teams.json';
-$boxscoresDir   = $root . '/data/uploads/boxscores';
+$schedulePath   = $root . '/assets/json/schedule-current.json';
+$rulesPath      = $root . '/assets/json/broadcasters-rules.json';
+$overridesPath  = $root . '/assets/json/broadcasters-overrides.json';
+$teamsPath      = $root . '/assets/json/teams.json';
+$boxscoresDir   = $root . '/assets/json/boxscores';
 
 // Toggle to allow global defaults from rules.defaults when no other rule hits.
 $USE_DEFAULTS = false;

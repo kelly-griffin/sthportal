@@ -437,7 +437,10 @@ cursor: pointer; padding: 0; text-decoration: underline;
 .home-canvas #scoresCard .scores-list .game-card .goal-card { padding: 6px 8px; border-radius: 8px; background: var(--color-panel); }
 .home-canvas #scoresCard .scores-list .game-card .goal-body .headshot { width: 28px; height: 28px; border-radius: 50%; }
 
+
 /* === Home — Standings (Wild Card) in right rail === */
+
+
 .home-canvas #standingsCard .standings.wild-card{ font-size: 12px; color: var(--color-ink); }
 
 /* conference header row (title + link) */
@@ -460,70 +463,100 @@ background: color-mix(in srgb, var(--color-card) 82%, black 18%);
 color: var(--color-ink);
 padding: 4px 6px; border-radius: 6px; margin: 0 0 4px; font-size: 14px;
 }
-
-/* header + rows */
-.home-canvas #standingsCard{ --st-gap: 10px; --st-pad-y: 2px; --st-logo: 32px; --st-col: 24px; --st-pts: 32px; }
-.home-canvas #standingsCard .st-head{ padding: 4px 6px; border-bottom: 1px solid var(--color-border); background: color-mix(in srgb, var(--color-card) 86%, black 14%); border-radius: 6px; }
-.home-canvas #standingsCard .st-head .col{ font-weight: 800; color: var(--color-ink); font-size: 14px; letter-spacing: .2px; }
-
-/* rows: compact grid */
-.home-canvas #standingsCard .st-row{
-gap: var(--st-gap);
-padding: var(--st-pad-y) 6px var(--st-pad-y) 8px; /* fixed var name */
-border-bottom: 1px dashed var(--color-border);
-display: grid; align-items: center;
-grid-template-columns:
-8px         /* # */
-1fr         /* team */
-var(--st-col)/* GP */
-var(--st-col)/* W  */
-var(--st-col)/* L  */
-var(--st-col)/* OT */
-var(--st-pts)/* PTS \*/;
+.home-canvas #standingsCard .standings.wild-card .st-row,
+.home-canvas #standingsCard .standings.wild-card .st-row.st-head{
+  display: grid !important;
+  grid-template-columns: 22px minmax(0,1fr) max-content max-content max-content !important;
+  column-gap: 10px !important;
+  align-items: center;
 }
-.home-canvas #standingsCard .st-row:last-child{ border-bottom: none; }
-
-.home-canvas #standingsCard .col.rank{ text-align: left; font-weight: 800; opacity: .9; font-size: 16px; gap: 10px; }
-.home-canvas #standingsCard .col.team{ width: 210px !important; max-width: 220px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.home-canvas #standingsCard .col.gp,
-.home-canvas #standingsCard .col.gr,
-.home-canvas #standingsCard .col.w,
-.home-canvas #standingsCard .col.l,
-.home-canvas #standingsCard .col.ot{ text-align: center; font-variant-numeric: tabular-nums; font-size: 16px; }
-.home-canvas #standingsCard .col.pts{ text-align: center; font-variant-numeric: tabular-nums; font-weight: 900; font-size: 16px; color: #fff; }
-
-/* team cell (logo + name) */
-.home-canvas #standingsCard .team-inner{ display: grid; grid-template-columns: 32px 1fr; align-items: center; gap: 8px; color: inherit; text-decoration: none; min-width: 0; }
-.home-canvas #standingsCard .name{ white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-weight: 800; color: var(--color-ink); }
-
-/* ——— Standings: authoritative logo cell layout ——— */
-.home-canvas #standingsCard .team-inner .logo-link,
-.home-canvas #standingsCard .team-inner .logo{ width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; border-radius: 6px; overflow: hidden; }
-.home-canvas #standingsCard .team-inner .logo img,
-.home-canvas #standingsCard .team-inner img.logo{ display: block; max-width: 100%; max-height: 100%; object-fit: contain; line-height: 1; }
-.home-canvas #standingsCard .logo.badge{ display: flex; align-items: center; justify-content: center; background: color-mix(in srgb, var(--color-card) 92%, white 8%); border: 1px solid var(--color-border); font-weight: 900; color: var(--color-ink); }
-
-/* clinch tag */
-.home-canvas #standingsCard .clinch{ margin-left: 6px; padding: 2px 6px; border-radius: 999px; border: 1px solid var(--color-border); background: color-mix(in srgb, var(--color-card) 88%, black 12%); color:#fff; font-weight: 800; font-size: 10px; text-transform: uppercase; }
-
-/* wild card cut line */
-.home-canvas #standingsCard .st-wc-cut{ height: 0; border-top: 2px solid color-mix(in srgb, var(--color-border) 60%, #fff 40%); margin: 4px 0; }
-
-/* bottom full-standings link */
-.home-canvas #standingsCard .st-bottom-link{ display: flex; justify-content: flex-end; margin-top: 6px; }
-.home-canvas #standingsCard .st-bottom-link a{ font-weight: 800; font-size: 12px; text-decoration: underline; color: var(--color-ink); }
-
-/* Home — Standings: GP | GR | PTS layout (compact, home-only) */
-.home-canvas #standingsCard.gp-gr-pts .st-head,
-.home-canvas #standingsCard.gp-gr-pts .st-row{
-grid-template-columns:
-var(--st-rank,18px)   /* # */
-minmax(0,1fr)         /* team */
-var(--st-col,32px)    /* GP  */
-var(--st-col,32px)    /* GR  */
-var(--st-pts,32px);   /* PTS \*/
+.home-canvas #standingsCard .standings.wild-card .col.team{
+  min-width: 0;
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
 }
-.home-canvas #standingsCard.gp-gr-pts .col.gr{ text-align: center; font-variant-numeric: tabular-nums; font-size: 16px; }
+.home-canvas #standingsCard .standings.wild-card .col.gp,
+.home-canvas #standingsCard .standings.wild-card .col.gr,
+.home-canvas #standingsCard .standings.wild-card .col.pts{
+  text-align: right; justify-self: end;
+}
+/* Force header row and data rows in standings card to share the same 5-col grid */
+.home-canvas #standingsCard .standings.wild-card .st-row,
+.home-canvas #standingsCard .standings.wild-card .st-row.st-head {
+  grid-template-columns: 24px minmax(0,1fr) 40px 40px 44px !important;
+}
+/* Home — Standings: team cell = logo + name side-by-side */
+.home-canvas #standingsCard .standings.wild-card .col.team .team-inner{
+  display: flex;                /* row */
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;        /* keep links clean */
+}
+
+.home-canvas #standingsCard .standings.wild-card .col.team .logo{
+  width: 20px;
+  height: 20px;
+  flex: 0 0 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-canvas #standingsCard .standings.wild-card .col.team .logo img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.home-canvas #standingsCard .standings.wild-card .col.team .name{
+  min-width: 0;                 /* allow shrink */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* === Scores rail: compact Goals block (v2) === */
+.home-canvas .game-card .goals-v2 { 
+  margin-top: 6px; padding: 6px; border: 1px solid var(--color-hairline,#e5e7eb); border-radius: 8px;
+}
+.home-canvas .game-card .goals-v2-title {
+  font-weight: 800; font-size: 12px; margin-bottom: 6px;
+}
+.home-canvas .game-card .goals-v2-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 8px;
+  font-size: 12px; line-height: 1.2;
+}
+.home-canvas .goals-v2-col { min-width: 0; }
+.home-canvas .goals-v2-list { list-style: none; margin: 0; padding: 0; }
+.home-canvas .goals-v2-item { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.home-canvas .goals-v2-toggle { 
+  margin-top: 4px; font-size: 12px; font-weight: 600; background: none; border: 0; cursor: pointer;
+  color: var(--color-accent,#2563eb);
+}
+/* Goals — spotlight */
+.goals-v3 { border: 1px solid var(--color-border, #2a2f3a); border-radius: 8px; padding: 10px; margin: 8px 0 6px; background: var(--color-card, #0f1218); }
+.goals-v3 .g3-spot { display: grid; grid-template-columns: 52px 1fr; gap: 10px; align-items: center; }
+.goals-v3 .g3-av { width: 52px; height: 52px; border-radius: 50%; overflow: hidden; background: #111; display: grid; place-items: center; }
+.goals-v3 .g3-av img { width: 100%; height: 100%; object-fit: cover; }
+.goals-v3 .g3-ph { width: 100%; height: 100%; display: grid; place-items: center; font-weight: 800; font-size: 14px; color: #fff; opacity: .95; }
+
+.goals-v3 .g3-text { display: grid; gap: 2px; font-size: 12px; line-height: 1.25; color: var(--color-ink, #d6deff); }
+.goals-v3 .g3-row1 { font-weight: 800; font-size: 13px; display: flex; align-items: center; gap: 6px; }
+.goals-v3 .g3-row1 .g3-total { opacity: .9; font-weight: 700; }
+.goals-v3 .g3-row2 { opacity: .9; }
+.goals-v3 .g3-row3 { opacity: .85; }
+
+.goals-v3 .g3-nav { display: grid; grid-template-columns: 24px 1fr 24px; align-items: center; gap: 8px; margin-top: 8px; }
+.goals-v3 .g3-prev, .goals-v3 .g3-next { height: 24px; width: 24px; border-radius: 6px; background: var(--color-chip, #1a2030); color: inherit; border: 1px solid var(--color-border, #2a2f3a); cursor: pointer; }
+.goals-v3 .g3-prev:hover, .goals-v3 .g3-next:hover { filter: brightness(1.1); }
+.goals-v3 .g3-ticks { display: flex; justify-content: center; gap: 6px; flex-wrap: wrap; overflow: hidden; }
+.goals-v3 .g3-tick { width: 10px; height: 3px; border-radius: 3px; background: var(--color-border, #2a2f3a); cursor: pointer; }
+.goals-v3 .g3-tick.is-active { background: var(--color-accent, #4da3ff); }
+.goals-v3 .g3-badge{margin-left:8px;padding:2px 6px;border-radius:6px;font-size:10px;font-weight:800;letter-spacing:.3px;line-height:1}
+.goals-v3 .g3-badge.is-ppg{background:#e53935;color:#fff}
+.goals-v3 .g3-badge.is-shg{background:#f39c12;color:#111}
+.goals-v3 .g3-badge.is-en{background:#7f8c8d;color:#fff}
+.goals-v3 .g3-badge.is-ps{background:#8e44ad;color:#fff}
+
 
 /* ==== Home — Transactions mini list (latest 10) ==== */
 .home-canvas #homeTransactions .tx-mini-list{ list-style:none; padding:0; margin:0; border-top:1px solid var(--color-border); }
@@ -663,8 +696,55 @@ var(--st-pts,32px);   /* PTS \*/
   .home-canvas #homeTransactions .tx-chip{ display: none; }
 }
 
+/* === HOME: INJURIES === */ 
 
+.home-canvas .card-injuries{
+  background: var(--color-card);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;  
+  box-shadow: var(--shadow-card);
+}
+.home-canvas .card-header h2{
+          font-weight: 900;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: .3px;
+    background: 
+ color-mix(in srgb, var(--color-card) 75%, black 25%);
+    color: var(--color-ink);
+    padding: 6px 8px;
+    border-radius: 6px;
 
+}
+/* Home — Injuries rows (compact, matches rail spacing) */
+.home-canvas #injuries-card .inj-list{ list-style:none; margin:0; padding:0; border-top:1px solid var(--color-border); }
+.home-canvas #injuries-card .inj-mini-row{
+  display:grid;
+  grid-template-columns: auto 1fr auto; /* who | desc | date */
+  align-items:center;
+  gap:10px;
+  padding:8px 6px;
+  border-bottom:1px dashed var(--color-border);
+}
+.home-canvas #injuries-card .inj-mini-row:last-child{ border-bottom:none; }
+
+.home-canvas #injuries-card .who{ display:flex; align-items:center; gap:6px; min-width:0; }
+.home-canvas #injuries-card .inj-logo{ width:24px; height:24px; object-fit:contain; }
+.home-canvas #injuries-card .inj-abbr{ font-weight:800; font-size:12px; color: var(--color-ink); }
+
+.home-canvas #injuries-card .desc{
+  font-size:12px; color: var(--color-ink);
+  white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+}
+.home-canvas #injuries-card .date{ font-size:11px; color: var(--color-ink-soft); white-space:nowrap; }
+
+/* optional: light badge for DTD/IR/LTIR */
+.home-canvas #injuries-card .inj-badge{
+  margin-left:6px; padding:2px 6px; border-radius:999px;
+  font: 900 10px/1 system-ui, sans-serif; letter-spacing:.35px; text-transform: uppercase;
+  color:#fff; border:1px solid var(--color-border);
+  background: color-mix(in srgb, var(--color-card) 86%, black 14%);
+}
 
 /* === Standings === */
 

@@ -55,27 +55,27 @@ $statuses = read_statuses($STATUS_FILE ?? '');
 // ---- TASKS (buttons) ----
 $groups = [
   'Schedule & Data' => [
-    ['id' => 'build-schedule-json', 'path' => '../tools/build-schedule-json.php', 'label' => 'Update Schedule', 'danger' => false, 'notes' => '+ builds schedule-current.json', 'outputs' => ['../data/uploads/schedule-current.json']],
-    ['id' => 'build-schedule-full', 'path' => '../tools/build-schedule-full.php', 'label' => 'Build Schedule (Full)', 'danger' => false, 'notes' => 'full season artifact', 'outputs' => ['../data/uploads/schedule-full.json', '../data/uploads/schedule.json']],
+    ['id' => 'build-schedule-json', 'path' => '../tools/build-schedule-json.php', 'label' => 'Update Schedule', 'danger' => false, 'notes' => '+ builds schedule-current.json', 'outputs' => ['../assets/json/schedule-current.json']],
+    ['id' => 'build-schedule-full', 'path' => '../tools/build-schedule-full.php', 'label' => 'Build Schedule (Full)', 'danger' => false, 'notes' => 'full season artifact', 'outputs' => ['../assets/json/schedule-full.json', '../assets/json/schedule.json']],
     ['id' => 'enrich-schedule', 'path' => '../tools/enrich-schedule.php', 'label' => 'Enrich Schedule', 'danger' => false, 'notes' => 'adds links/flags', 'outputs' => []],
     ['id' => 'reconcile-schedule', 'path' => '../tools/reconcile-schedule-from-boxscores.php', 'label' => 'Reconcile Schedule', 'danger' => true, 'notes' => 'align from boxscores', 'outputs' => []],
-    ['id' => 'audit-schedule-links', 'path' => '../tools/audit-schedule-links.php', 'label' => 'Audit Schedule Links', 'danger' => false, 'notes' => 'report only', 'outputs' => ['../data/logs/audit-schedule-links.json', '../data/logs/audit-schedule-links.csv']],
+    ['id' => 'audit-schedule-links', 'path' => '../tools/audit-schedule-links.php', 'label' => 'Audit Schedule Links', 'danger' => false, 'notes' => 'report only', 'outputs' => ['../assets/json/audit-schedule-links.json', '../assets/json/audit-schedule-links.csv']],
     ['id' => 'fix-schedule-links', 'path' => '../tools/fix-schedule-links.php', 'label' => 'Fix Schedule Links', 'danger' => true, 'notes' => 'edits schedule links', 'outputs' => []],
     ['id' => 'patch-box-teams', 'path' => '../tools/patch-boxscores-teams-from-schedule.php', 'label' => 'Patch Boxscores Teams', 'danger' => true, 'notes' => 'team name sync', 'outputs' => []],
-    ['id' => 'build-box-json', 'path' => '../tools/build-boxscores-json.php', 'label' => 'Build Boxscores JSON', 'danger' => false, 'notes' => 'fast build from sources', 'outputs' => ['../data/uploads/boxscores/index.json']],
-    ['id' => 'rebuild-boxjson-html', 'path' => '../tools/rebuild-boxjson-from-html.php', 'label' => 'Rebuild Box JSON (from HTML)', 'danger' => true, 'notes' => 'heavy/slow reparse', 'outputs' => ['../data/uploads/boxscores/index.json']],
-    ['id' => 'build-pbp-stats', 'path' => '../tools/build-pbp-stats.php', 'label' => 'Build PBP Stats', 'danger' => false, 'notes' => 'derived stats', 'outputs' => ['../data/uploads/pbp/derived.json']],
+    ['id' => 'build-box-json', 'path' => '../tools/build-boxscores-json.php', 'label' => 'Build Boxscores JSON', 'danger' => false, 'notes' => 'fast build from sources', 'outputs' => ['../assets/json/index.json']],
+    ['id' => 'rebuild-boxjson-html', 'path' => '../tools/rebuild-boxjson-from-html.php', 'label' => 'Rebuild Box JSON (from HTML)', 'danger' => true, 'notes' => 'heavy/slow reparse', 'outputs' => ['../assets/json/index.json']],
+    ['id' => 'build-pbp-stats', 'path' => '../tools/build-pbp-stats.php', 'label' => 'Build PBP Stats', 'danger' => false, 'notes' => 'derived stats', 'outputs' => ['../assets/json/.json']],
     ['id' => 'sths-importer', 'path' => './sths-importer.php', 'label' => 'STHS Importer', 'danger' => false, 'notes' => 'league ingest', 'outputs' => []],
   ],
   'Content' => [
-    ['id' => 'generate-recaps', 'path' => '../tools/generate-recaps.php', 'label' => 'Generate Recaps', 'danger' => false, 'notes' => 'draft stories', 'outputs' => ['../data/uploads/recaps/last-run.json']],
-    ['id' => 'build-home-json', 'path' => '../tools/build-home-json.php', 'label' => 'Build Home JSON', 'danger' => false, 'notes' => 'home widgets', 'outputs' => ['../data/uploads/home.json']],
-    ['id' => 'build-ticker-json', 'path' => '../tools/build-ticker-json.php', 'label' => 'Build Ticker JSON', 'danger' => false, 'notes' => 'header ticker', 'outputs' => ['../data/uploads/ticker.json']],
+    ['id' => 'generate-recaps', 'path' => '../tools/generate-recaps.php', 'label' => 'Generate Recaps', 'danger' => false, 'notes' => 'draft stories', 'outputs' => ['../assets/json/last-run.json']],
+    ['id' => 'build-home-json', 'path' => '../tools/build-home-json.php', 'label' => 'Build Home JSON', 'danger' => false, 'notes' => 'home widgets', 'outputs' => ['../assets/json/home.json']],
+    ['id' => 'build-ticker-json', 'path' => '../tools/build-ticker-json.php', 'label' => 'Build Ticker JSON', 'danger' => false, 'notes' => 'header ticker', 'outputs' => ['../assets/json/ticker.json']],
   ],
   'Assets' => [
     ['id' => 'cache-headshots', 'path' => '../tools/cache_headshots.php', 'label' => 'Headshots Cache', 'danger' => false, 'notes' => 'refresh cache', 'outputs' => ['../assets/img/mugs/.sentinel']],
     ['id' => 'fetch-headshots-bulk', 'path' => '../tools/fetch_headshots_bulk.php', 'label' => 'Fetch Headshots (Bulk)', 'danger' => true, 'notes' => 'network heavy', 'outputs' => []],
-    ['id' => 'build-team-map', 'path' => '../tools/build-team-map.php', 'label' => 'Build Team Map', 'danger' => false, 'notes' => 'abbr/city mapping', 'outputs' => ['../data/uploads/teams.json', '../data/uploads/team-map.json']],
+    ['id' => 'build-team-map', 'path' => '../tools/build-team-map.php', 'label' => 'Build Team Map', 'danger' => false, 'notes' => 'abbr/city mapping', 'outputs' => ['../assets/json/teams.json', '../assets/json/team-map.json']],
   ],
 ];
 

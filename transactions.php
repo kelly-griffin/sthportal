@@ -11,11 +11,11 @@ require_once __DIR__ . '/includes/tx_helpers.php';   // <- helpers (no duplicate
 require_once __DIR__ . '/includes/sim_clock.php';     // <- site-wide sim date
 
 /* ---------- Paths ---------- */
-$TEAMS_JSON = __DIR__ . '/data/uploads/teams.json';
+$TEAMS_JSON = __DIR__ . '/assets/json/teams.json';
 $LEAGUE_LOG = __DIR__ . '/data/uploads/UHA-V3LeagueLog.csv';
-$TRADE_INDEX = __DIR__ . '/data/state/trade_dates.json';  // sticky index
-$SIGNING_INDEX = __DIR__ . '/data/state/signing_dates.json';
-$MOVE_INDEX = __DIR__ . '/data/state/move_dates.json';
+$TRADE_INDEX = __DIR__ . '/assets/json/trade_dates.json';  // sticky index
+$SIGNING_INDEX = __DIR__ . '/assets/json/signing_dates.json';
+$MOVE_INDEX = __DIR__ . '/assets/json/move_dates.json';
 /* ---------- Current "sim date" (stamps new trades) ---------- */
 $SIM_DATE = sim_clock_now();
 

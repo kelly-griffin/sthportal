@@ -16,7 +16,7 @@ if (empty($_SESSION['csrf'])) {
 }
 
 // --- config ---
-$STATUS_FILE = __DIR__ . '/../data/logs/pipeline-status.json';
+$STATUS_FILE = __DIR__ . '/../assets/json/pipeline-status.json';
 
 // ---- TASK DEFINITIONS (restored) ----
 $groups = [
@@ -45,7 +45,7 @@ $groups = [
       'path'   => '../tools/build-team-map.php',
       'notes'  => 'abbr/city mapping',
       'danger' => false,
-      'outputs'=> ['../data/uploads/teams.json','../data/uploads/team-map.json']
+      'outputs'=> ['../assets/json/teams.json','../assets/json/team-map.json']
     ],
   ],
 ];

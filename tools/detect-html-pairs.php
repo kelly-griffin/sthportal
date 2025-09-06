@@ -7,7 +7,7 @@ error_reporting(E_ALL);
 ini_set('display_errors','1');
 
 $root   = dirname(__DIR__);
-$teamsP = $root . '/data/uploads/teams.json';
+$teamsP = $root . '/assets/json/teams.json';
 $htmlDir= $root . '/data/uploads';
 
 function h($s){ return htmlspecialchars((string)$s,ENT_QUOTES,'UTF-8'); }

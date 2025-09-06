@@ -14,8 +14,8 @@ ini_set('display_errors','1');
 
 $root    = dirname(__DIR__);
 $htmlDir = $root . '/data/uploads';
-$jsonDir = $root . '/data/uploads/boxscores';
-$teamsP  = $root . '/data/uploads/teams.json';
+$jsonDir = $root . '/assets/json';
+$teamsP  = $root . '/assets/json/teams.json';
 
 $WRITE = (isset($_GET['write']) && $_GET['write'] === '1')
       || (PHP_SAPI === 'cli' && in_array('--write', $argv, true));

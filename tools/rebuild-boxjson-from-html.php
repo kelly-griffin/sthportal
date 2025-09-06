@@ -9,10 +9,10 @@ error_reporting(E_ALL);
 ini_set('display_errors','1');
 
 $root   = dirname(__DIR__);
-$teamsP = $root . '/data/uploads/teams.json';
+$teamsP = $root . '/assets/json/teams.json';
 $htmlDir= $root . '/data/uploads';
-$jsonDir= $root . '/data/uploads/boxscores';
-$report = $root . '/data/uploads/rebuild-boxjson-report.csv';
+$jsonDir= $root . '/assets/json';
+$report = $root . '/data/rebuild-boxjson-report.csv';
 
 function jdump($p,$d){ file_put_contents($p, json_encode($d, JSON_PRETTY_PRINT|JSON_UNESCAPED_SLASHES)); }
 function h2t(string $html): string {

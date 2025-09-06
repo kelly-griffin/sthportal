@@ -10,10 +10,10 @@ error_reporting(E_ALL);
 ini_set('display_errors','1');
 
 $root       = dirname(__DIR__);
-$schedPath  = $root . '/data/uploads/schedule-current.json';
-$teamsPath  = $root . '/data/uploads/teams.json';
-$boxDir     = $root . '/data/uploads/boxscores';
-$reportCsv  = $root . '/data/uploads/patch-boxscore-teams-report.csv';
+$schedPath  = $root . '/assets/json/schedule-current.json';
+$teamsPath  = $root . '/assets/json/teams.json';
+$boxDir     = $root . '/data/uploads/';
+$reportCsv  = $root . '/data/patch-boxscore-teams-report.csv';
 
 function jload(string $p){ return is_file($p) ? json_decode((string)file_get_contents($p), true) : null; }
 function jdump(string $p,$d){ file_put_contents($p, json_encode($d, JSON_PRETTY_PRINT|JSON_UNESCAPED_SLASHES)); }
