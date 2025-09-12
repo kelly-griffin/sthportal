@@ -12,6 +12,7 @@ require_once __DIR__ . '/includes/bootstrap.php';
   <meta charset="utf-8">
   <title>Tournaments</title>
   <script src="assets/js/tournaments.js" defer></script>
+    <?php require_once __DIR__ . '/includes/head-assets.php'; ?>
 </head>
 <body>
   <div class="site">

@@ -1,58 +1,62 @@
 <?php
-// /assets/avatar.php — serves user avatars for chat/messages & previews.
-// Usage: /assets/avatar.php?u=123&s=84
-// Looks in /uploads/<id>.(jpg|png|webp) and /uploads/avatars/<id>.(ext).
-// Falls back to an SVG with initials if no file found.
-
 declare(strict_types=1);
 
-// Params
-$uid  = (int)($_GET['u'] ?? 0);
-$size = (int)($_GET['s'] ?? 64);
-if ($size < 16)  $size = 16;
-if ($size > 256) $size = 256;
+require_once __DIR__ . '/../includes/bootstrap.php';  // get_db()
 
-$root = realpath(__DIR__ . '/..') ?: (__DIR__ . '/..');
+/** @var mysqli $db */
+$db = get_db();
 
-$paths = [
-    $root . '/uploads/avatars/' . $uid . '.jpg',
-    $root . '/uploads/avatars/' . $uid . '.png',
-    $root . '/uploads/avatars/' . $uid . '.webp',
-];
+// Inputs
+$uid  = max(0, (int)($_GET['u'] ?? 0));
+$size = max(16, min(256, (int)($_GET['s'] ?? 64))); // clamp 16–256
 
-// Serve file if present
-foreach ($paths as $p) {
-    if (is_file($p)) {
-        $ext  = strtolower(pathinfo($p, PATHINFO_EXTENSION));
-        $mime = ($ext === 'jpg' || $ext === 'jpeg') ? 'image/jpeg'
-              : ($ext === 'png' ? 'image/png' : 'image/webp');
-        header('Content-Type: ' . $mime);
-        header('Cache-Control: private, max-age=600'); // 10 min
-        readfile($p);
+// Lookup the user's stored avatar path (relative), e.g. "uploads/avatars/abc123.jpg"
+$rel = '';
+if ($uid > 0) {
+    if ($stmt = $db->prepare('SELECT avatar_path FROM users WHERE id=? LIMIT 1')) {
+        $stmt->bind_param('i', $uid);
+        $stmt->execute();
+        $stmt->bind_result($rel);
+        $stmt->fetch();
+        $stmt->close();
+    }
+}
+
+// Resolve to filesystem
+$full = $rel ? app_path($rel) : '';
+if (!$rel || !is_file($full)) {
+    // Fallback image (put a 256x256 neutral PNG here)
+    $fallback = app_path('assets/img/avatar-placeholder.png');
+    if (is_file($fallback)) {
+        $full = $fallback;
+    } else {
+        // Last resort: 404 (keep it simple)
+        http_response_code(404);
+        header('Content-Type: text/plain; charset=utf-8');
+        echo 'no avatar';
         exit;
     }
 }
 
-// No file — fallback SVG with initials
-$name = 'User';
+// Basic cache headers
+$mtime = filemtime($full) ?: time();
+header('Cache-Control: public, max-age=86400, must-revalidate');
+header('Last-Modified: ' . gmdate('D, d M Y H:i:s', $mtime) . ' GMT');
 
-// Optional: try DB for user name if your stack exposes get_db()
-try {
-    if ($uid > 0 && function_exists('get_db')) {
-        $db = get_db();
-        if ($db instanceof mysqli) {
-            if ($stmt = $db->prepare('SELECT `name` FROM `users` WHERE `id`=? LIMIT 1')) {
-                $stmt->bind_param('i', $uid);
-                if ($stmt->execute() && ($res = $stmt->get_result())) {
-                    if ($row = $res->fetch_assoc()) $name = (string)$row['name'];
-                }
-                $stmt->close();
-            }
-        }
-    }
-} catch (Throwable $e) {
-    // ignore; we'll use default "User"
-}
+// Content type
+$ext = strtolower(pathinfo($full, PATHINFO_EXTENSION));
+$ct  = [
+    'png'  => 'image/png',
+    'jpg'  => 'image/jpeg',
+    'jpeg' => 'image/jpeg',
+    'webp' => 'image/webp',
+][$ext] ?? 'application/octet-stream';
+header('Content-Type: ' . $ct);
+
+// NOTE: If you want actual resizing to $size, plug in GD/ImageMagick here.
+// For now we serve the original; callers can request ?s=… just for cache keys.
+readfile($full);
+
 
 $initials = strtoupper(substr(trim($name), 0, 2));
 

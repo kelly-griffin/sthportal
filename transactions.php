@@ -145,8 +145,8 @@ $moves = parse_roster_moves_with_index($LEAGUE_LOG, $TEAMS_JSON, $MOVE_INDEX, $S
 <head>
   <meta charset="utf-8">
   <title>Transactions</title>
-  <link rel="stylesheet" href="assets/css/nav.css">
-  <script src="assets/js/transactions.js" defer></script>
+    <?php require_once __DIR__ . '/includes/head-assets.php'; ?>
+  <script src="assets/js/transactions.js" defer></script>    
 </head>
 
 <body>

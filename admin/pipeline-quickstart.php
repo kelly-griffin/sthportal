@@ -36,6 +36,7 @@ function h($s)
   <title>Data Pipeline Quickstart</title>
 >
 <div class="site">
+    <?php require_once __DIR__ . '/../includes/head-assets.php'; ?>
 </head>
   <body>
     <?php include __DIR__ . '/../includes/topbar.php'; ?>

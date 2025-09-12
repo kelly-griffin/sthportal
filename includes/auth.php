@@ -30,6 +30,11 @@ function _next(): string {
 }
 
 function require_admin(): void {
+    // NEW: ensure session is active before checking flags
+    if (session_status() !== PHP_SESSION_ACTIVE) {
+        @session_start();
+    }
+
     if (empty($_SESSION['is_admin'])) {
         _redirect('login.php', ['next' => _next()]);
     }

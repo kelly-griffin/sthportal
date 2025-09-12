@@ -49,10 +49,6 @@ function dateLong(?string $ts): string {
   <meta charset="utf-8">
   <title><?= h($title) ?> — News — UHA Portal</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="preload" href="<?= h(asset('assets/css/global.css')) ?>" as="style">
-  <link rel="stylesheet" href="<?= h(asset('assets/css/global.css')) ?>">
-  <link rel="stylesheet" href="<?= h(asset('assets/css/nav.css')) ?>">
-  <script defer src="<?= h(asset('assets/js/auto-logos.js')) ?>"></script>
   <style>
     .news-article-wrap{ max-width:960px; margin:24px auto; padding:0 16px; }
     .article-head{ margin:0 0 12px; }
@@ -65,11 +61,12 @@ function dateLong(?string $ts): string {
     .article-body p{ margin:0 0 1em; }
     @media (max-width:700px){ .article-title{ font-size:26px; } .article-hero{ height:240px; } }
   </style>
+    <?php require_once __DIR__ . '/../includes/head-assets.php'; ?>
 </head>
 <body class="news-article-canvas">
 <?php
-require_once __DIR__ . '/includes/leaguebar.php';
-require_once __DIR__ . '/includes/topbar.php';
+require_once __DIR__ . '/../includes/leaguebar.php';
+require_once __DIR__ . '/../includes/topbar.php';
 ?>
 <main class="news-article-wrap">
   <header class="article-head">

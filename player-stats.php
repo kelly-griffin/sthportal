@@ -42,7 +42,7 @@ $title = "Player Statistics — " . ucfirst($view) . " — " . strtoupper($stat)
   <meta charset="utf-8">
   <title><?= htmlspecialchars($title) ?></title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="assets/css/nav.css">
+    <?php require_once __DIR__ . '/includes/head-assets.php'; ?>
 </head>
 <body>
   <div class="site">

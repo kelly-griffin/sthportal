@@ -43,9 +43,7 @@ function dateTiny(?string $ts): string {
   <meta charset="utf-8">
   <title>News — UHA Portal</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="preload" href="<?= h(asset('assets/css/global.css')) ?>" as="style">
-  <link rel="stylesheet" href="<?= h(asset('assets/css/global.css')) ?>">
-  <link rel="stylesheet" href="<?= h(asset('assets/css/nav.css')) ?>">
+
   <script defer src="<?= h(asset('assets/js/auto-logos.js')) ?>"></script>
   <style>
     .news-index-wrap{ max-width:1100px; margin:24px auto; padding:0 16px; }
@@ -66,6 +64,7 @@ function dateTiny(?string $ts): string {
     @media (max-width:980px){ .news-card{ grid-column:span 6; } }
     @media (max-width:640px){ .news-card{ grid-column:span 12; } }
   </style>
+    <?php require_once __DIR__ . '/includes/head-assets.php'; ?>
 </head>
 <body class="news-canvas">
 <?php

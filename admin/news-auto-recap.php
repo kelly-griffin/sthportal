@@ -279,6 +279,7 @@ if ($mode === 'save') {
   <meta charset="utf-8">
   <meta name="viewport" content="width=1280, initial-scale=1">
   <title>Auto Recap — Admin</title>
+    <?php require_once __DIR__ . '/../includes/head-assets.php'; ?>
 </head>
 
 <body>

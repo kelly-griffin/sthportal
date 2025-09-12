@@ -11,7 +11,7 @@ if (!defined('AUTH_LOCK_IP'))                define('AUTH_LOCK_IP', true);
 if (!defined('AUTH_SHOW_BANNER'))            define('AUTH_SHOW_BANNER', true);
 
 // ---------------- DB helpers (non-intrusive; use existing handle if present) ----------------
-require_once __DIR__ . '/db.php';
+require_once __DIR__ . '/bootstrap.php';
 function sg_db(): ?mysqli {
     foreach (['db','conn','mysqli'] as $g) if (isset($GLOBALS[$g]) && $GLOBALS[$g] instanceof mysqli) return $GLOBALS[$g];
     if (function_exists('get_db')) { $h = get_db(); if ($h instanceof mysqli) return $h; }

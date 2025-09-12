@@ -57,6 +57,7 @@ function renderTowPlayer(?array $p, string $role){
 <head>
   <meta charset="utf-8">
   <title><?= htmlspecialchars($title) ?> — UHA Portal</title>
+    <?php require_once __DIR__ . '/../includes/head-assets.php'; ?>
 </head>
 <body>
   <?php include __DIR__ . '/../includes/topbar.php'; ?>

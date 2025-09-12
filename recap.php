@@ -19,12 +19,12 @@ if ($abs && is_file($abs)) {
 <head>
 <meta charset="utf-8">
 <title>Recap <?= h($gid ?: '') ?></title>
-<link rel="stylesheet" href="assets/css/nav.css">
 <style>
   .recap-wrap{max-width:1100px;margin:20px auto}
   .recap-embed .card{max-width:unset}
 </style>
 <script src="assets/js/dark-swap.js" defer></script>
+    <?php require_once __DIR__ . '/includes/head-assets.php'; ?>
 </head>
 <body>
   <div class="site">

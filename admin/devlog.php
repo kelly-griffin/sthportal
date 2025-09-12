@@ -3,7 +3,9 @@
 // with automatic migration from legacy `devlog` table (created_by/created_at/updated_at)
 declare(strict_types=1);
 session_start();
-
+require_once __DIR__ . '/../includes/Parsedown.php';
+$Parsedown = new Parsedown();
+$Parsedown->setSafeMode(true); // escape any raw HTML in entries
 require_once __DIR__ . '/../includes/db.php';
 require_once __DIR__ . '/../includes/auth.php';
 require_once __DIR__ . '/../includes/admin-helpers.php';
@@ -240,7 +242,8 @@ if (!$loadedHeader) {
   .card .hd{ display:flex; align-items:center; justify-content:space-between; padding:.45rem .55rem; border-bottom:1px solid #ddd; background:#fafafa; }
   .card .title{ font-weight:700; }
   .meta{ font-size:.82rem; color:#555; display:flex; gap:.5rem; flex-wrap:wrap; }
-  .card .body{ padding:.5rem .55rem; white-space:pre-wrap; line-height:1.32; }
+  .card .body{ padding:.5rem .55rem; white-space:normal; line-height:1.32; }
+
 
   .table{ width:100%; border-collapse:collapse; }
   th, td{ padding:.4rem .48rem; border-top:1px solid #ddd; text-align:left; vertical-align:top; }
@@ -343,7 +346,7 @@ $lastHref  = qbuild(['p'=> $pages]);
           <td class="nowrap"><?= h((string)$r['author']) ?></td>
           <td>
             <div id="body-<?= (int)$r['id'] ?>" style="max-height:9rem; overflow:auto; white-space:pre-wrap; border:1px solid #eee; border-radius:.5rem; padding:.5rem; background:#fff;">
-              <?= nl2br(h((string)$r['body'])) ?>
+              <?= $Parsedown->text((string)$r['body']) ?>
             </div>
             <div style="margin-top:.25rem; display:flex; gap:.35rem; flex-wrap:wrap;">
               <a class="btn" href="#" onclick="copyText(document.getElementById('body-<?= (int)$r['id'] ?>').innerText);return false;">Copy Body</a>
@@ -397,7 +400,7 @@ $lastHref  = qbuild(['p'=> $pages]);
           </div>
         <?php endif; ?>
         <div class="body collapsible" data-collapsed="true" style="max-height:10rem; overflow:auto;">
-          <?= nl2br(h((string)$r['body'])) ?>
+          <?= $Parsedown->text((string)$r['body']) ?>
         </div>
         <div style="display:flex; gap:.45rem; padding:.5rem .55rem .6rem;">
           <a class="btn" href="#" onclick="toggleBody(this);return false;">Expand</a>

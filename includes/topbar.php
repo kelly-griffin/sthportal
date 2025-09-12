@@ -3,6 +3,130 @@
 declare(strict_types=1);
 require_once __DIR__ . '/bootstrap.php'; // safe, no output
 
+$tabs = [
+  'splash' => [
+    'label' => 'Splash',
+    'href'  => 'index.php',
+  ],
+  'leagues' => [
+    'label' => 'Leagues',
+    'href'  => 'leagues.php',
+    'children' => [
+      ['type' => 'group', 'label' => 'Leagues'],
+      ['label' => 'Pro League (NHL)',   'href' => 'teams.php'],
+      ['label' => 'Farm League (AHL)',  'href' => 'teams.php'],
+      ['label' => 'Development League (ECHL)', 'href' => '#'],
+      ['label' => 'International (Multiple)',  'href' => '#'],
+      ['label' => 'Junior Leagues (Multiple)', 'href' => '#'],
+    ],
+  ],
+  'players' => [
+    'label' => 'Players',
+    'href'  => 'players.php',
+    'children' => [
+      ['type' => 'group', 'label' => 'Players'],
+      ['label' => 'All Players',    'href' => '#'],
+      ['label' => 'Free Agents',    'href' => '#'],
+      ['label' => 'Waiver Wire',    'href' => '#'],
+      ['label' => 'Prospect List',  'href' => '#'],
+      ['label' => 'Compare Players','href' => '#'],
+    ],
+  ],
+  'front-office' => [
+    'label' => 'Front Office',
+    'href'  => 'front-office.php',
+    'children' => [
+      ['type' => 'group', 'label' => 'Front Office'],
+      ['label' => 'Team Dashboard',    'href' => '#'],
+      ['label' => 'Roster Management', 'href' => '#'],
+      ['label' => 'Lines & Strategy',  'href' => '#'],
+      ['label' => 'Depth Charts',      'href' => '#'],
+      ['label' => 'Personnel Changes', 'href' => '#'],
+      ['label' => 'Financial Management', 'href' => '#'],
+      ['label' => 'Scouting Assignments', 'href' => '#'],
+      ['label' => 'Cap Management Tools', 'href' => '#'],
+      ['label' => 'Upload Lines',         'href' => '#'],
+    ],
+  ],
+  'tournaments' => [
+    'label' => 'Tournaments',
+    'href'  => 'tournaments.php',
+    'children' => [
+      ['type' => 'group', 'label' => 'Tournaments'],
+      ['label' => 'World Cup of Hockey', 'href' => '#'],
+      ['label' => 'Olympics',            'href' => '#'],
+      ['label' => 'World Juniors',       'href' => '#'],
+      ['label' => 'IIHF Worlds',         'href' => '#'],
+    ],
+  ],
+  'media' => [
+    'label' => 'Media',
+    'href'  => 'media-hub.php',
+    'children' => [
+      ['type' => 'group', 'label' => 'Media'],
+      ['label' => 'Media Hub',        'href' => 'media-hub.php'],
+      ['label' => 'News',             'href' => 'media/news.php'],
+      ['label' => 'Press Releases',   'href' => 'media/press-releases.php'],
+      ['label' => 'Weekly Recaps',    'href' => 'media/weekly-recaps.php'],
+      ['label' => 'Power Rankings',   'href' => 'media/power-rankings.php'],
+      ['label' => 'Player of the Week','href' => 'media/player-of-the-week.php'],
+      ['label' => 'Team of the Week',  'href' => 'media/team-of-the-week.php'],
+      ['type' => 'divider'],
+      ['type' => 'group', 'label' => 'Social'],
+      ['label' => 'Social Hub',       'href' => 'media/social.php'],
+      ['label' => 'Chat',             'href' => 'media/chat.php'],
+      ['label' => 'Direct Messaging', 'href' => 'media/messages.php'],
+    ],
+  ],
+  'options' => [
+    'label' => 'Options',
+    'href'  => 'options-hub.php',
+    'children' => [
+      ['type' => 'group', 'label' => 'Options'],
+      ['label' => 'Download Latest League File', 'href' => 'download.php?what=league'],
+      ['label' => 'Options Hub',                 'href' => 'options-hub.php'],
+      ['label' => 'Appearance',                  'href' => 'options/appearance.php'],
+      ['label' => 'Defaults',                    'href' => 'options/defaults.php'],
+      ['label' => 'Notifications',               'href' => 'options/notifications.php'],
+      ['label' => 'Data & Privacy',              'href' => 'options/privacy.php'],
+      ['label' => 'Profile & Account',           'href' => 'options/profile.php'],
+      ['label' => 'GM Settings',                 'href' => 'options/gm-settings.php'],
+      ['label' => 'About Us',                    'href' => 'options/about.php'],
+    ],
+  ],
+  'admin' => [
+    'label' => 'Admin',
+    'href'  => 'admin/index.php',
+    'children' => [
+      ['label' => 'Upload League File', 'href' => 'admin/assets-hub.php?do=upload-league'],
+      ['type' => 'group', 'label' => 'League Ops'],
+      ['label' => 'GM Management',        'href' => 'admin/users.php'],
+      ['label' => 'Trade Approvals',      'href' => '#'],
+      ['label' => 'League Settings & Toggles', 'href' => '#'],
+      ['type' => 'divider'],
+      ['type' => 'group', 'label' => 'Schedule & Data'],
+      ['label' => 'Pipeline Quickstart',  'href' => 'admin/pipeline-quickstart.php'],
+      ['label' => 'Data Pipeline Hub',    'href' => 'admin/data-pipeline.php'],
+      ['type' => 'divider'],
+      ['type' => 'group', 'label' => 'Content'],
+      ['label' => 'News Manager', 'href' => 'admin/news.php'],
+      ['label' => 'Devlog',       'href' => 'admin/devlog.php'],
+      ['type' => 'divider'],
+      ['type' => 'group', 'label' => 'Assets'],
+      ['label' => 'Assets Hub',  'href' => 'admin/assets-hub.php'],
+      ['type' => 'divider'],
+      ['type' => 'group', 'label' => 'Security'],
+      ['label' => 'Users / Roles',   'href' => 'admin/users.php'],
+      ['label' => 'Account Locks',   'href' => 'admin/account-locks.php'],
+      ['label' => 'Login Attempts',  'href' => 'admin/login-attempts.php'],
+      ['type' => 'divider'],
+      ['type' => 'group', 'label' => 'System'],
+      ['label' => 'System Hub', 'href' => 'admin/system-hub.php'],
+    ],
+  ],
+];
+
+$activePage = basename($_SERVER['SCRIPT_NAME'], '.php');
 ?>
 <script>
   (function () {
@@ -23,132 +147,61 @@ require_once __DIR__ . '/bootstrap.php'; // safe, no output
     <div class="header-inner">
       <div class="portal-top">
         <div class="brand">
-          <div class="logo" title="Portal Logo"></div>
-          <div class="title" id="portal-title">UHA Portal</div>
+          <div class="logo"><img src="<?= asset('assets/img/logos/portal-logo.png') ?>" alt="Portal Logo" height="64" width="64"></div>
         </div>
         <nav class="main-nav nav-wrap" aria-label="Primary">
-          <div class="nav-item"><a class="nav-btn" href="<?= u('index.php') ?>">Splash</a></div>
+  <?php
+  $currentScript = ltrim($_SERVER['SCRIPT_NAME'] ?? '', '/');
+  $activeBasename = basename($currentScript);
+  $isActiveTab = function(array $tab) use ($activeBasename): bool {
+    // Active if the tab's own href matches
+    if (basename($tab['href']) === $activeBasename) return true;
 
-          <div class="nav-item">
-            <a class="nav-btn" href="<?= u('leagues.php') ?>">Leagues ▾</a>
-            <div class="dropdown">
-              <div class="menu-group">Leagues</div>
-              <a href="<?= u("home.php") ?> ">Pro League (NHL)</a>
-              <a href="<?= u("home-farm.php") ?> ">Farm League (AHL)</a>
-              <a href="#">Development League (ECHL)</a>
-              <a href="#">International (Multiple)</a>
-              <a href="#">Junior Leagues (Multiple)</a>
-            </div>
-          </div>
+    // Prevent league context pages from lighting parent dropdowns
+    $leagueBases = [
+      'home.php','standings.php','schedule.php','statistics.php','transactions.php',
+      'injuries.php','playoffs.php','entry-drafts.php',
+      'home-farm.php','standings-farm.php','schedule-farm.php','statistics-farm.php',
+      'transactions-farm.php','injuries-farm.php','playoffs-farm.php','entry-drafts-farm.php',
+    ];
 
-          <div class="nav-item">
-            <a class="nav-btn" href="<?= u('players.php') ?>">Players ▾</a>
-            <div class="dropdown">
-              <div class="menu-group">Players</div>
-              <a href="#">All Players</a>
-              <a href="#">Free Agents</a>
-              <a href="#">Waiver Wire</a>
-              <a href="#">Prospect List</a>
-              <a href="#">Compare Players</a>
-            </div>
-          </div>
-
-          <div class="nav-item">
-            <a class="nav-btn" href="<?= u('front-office.php') ?>">Front Office ▾</a>
-            <div class="dropdown">
-              <div class="menu-group">Front Office</div>
-              <a href="#">Team Dashboard</a>
-              <a href="#">Roster Management</a>
-              <a href="#">Lines &amp; Strategy</a>
-              <a href="#">Depth Charts</a>
-              <a href="#">Personnel Changes</a>
-              <a href="#">Financial Management</a>
-              <a href="#">Scouting Assignments</a>
-              <a href="#">Cap Management Tools</a>
-              <a href="#">Upload Lines</a>
-            </div>
-          </div>
-
-          <div class="nav-item">
-            <a class="nav-btn" href="<?= u('tournaments.php') ?>">Tournaments ▾</a>
-            <div class="dropdown">
-              <div class="menu-group">Tournaments</div>
-              <a href="#">World Cup of Hockey</a>
-              <a href="#">Olympics</a>
-              <a href="#">World Juniors</a>
-              <a href="#">IIHF Worlds</a>
-            </div>
-          </div>
-
-          <div class="nav-item">
-            <a class="nav-btn" href="<?= u('media-hub.php') ?>">Media ▾</a>
-            <div class="dropdown">
-              <div class="menu-group">Media</div>
-              <a href="<?= u('media-hub.php') ?>">Media Hub</a>
-              <a href="<?= u('media/news.php') ?>">News</a>
-              <a href="<?= u('media/press-releases.php') ?>">Press Releases</a>
-              <a href="<?= u('media/weekly-recaps.php') ?>">Weekly Recaps</a>
-              <a href="<?= u('media/power-rankings.php') ?>">Power Rankings</a>
-              <a href="<?= u('media/player-of-the-week.php') ?>">Player of the Week</a>
-              <a href="<?= u('media/team-of-the-week.php') ?>">Team of the Week</a>
-              <div class="menu-group">Social</div>
-              <a href="<?= u('media/social.php') ?>">Social Hub</a>
-              <a href="<?= u('media/chat.php') ?>">Chat</a>
-              <a href="<?= u('media/messages.php') ?>">Direct Messaging</a>
-            </div>
-          </div>
-
-          <div class="nav-item">
-            <a class="nav-btn" href="<?= u('options-hub.php') ?>">Options ▾</a>
-            <div class="dropdown">
-              <div class="menu-group">Options</div>
-              <a href="<?= u('download.php?what=league') ?>">Download Latest League File</a>
-              <a href="<?= u('options-hub.php') ?>">Options Hub</a>
-              <a href="<?= u('options/appearance.php') ?>">Appearance</a>
-              <a href="<?= u('options/defaults.php') ?>">Defaults</a>
-              <a href="<?= u('options/notifications.php') ?>">Notifications</a>
-              <a href="<?= u('options/privacy.php') ?>">Data &amp; Privacy</a>
-              <a href="<?= u('options/profile.php') ?>">Profile &amp; Account</a>
-              <a href="<?= u('options/gm-settings.php') ?>">GM Settings</a>
-              <a href="<?= u('options/about.php') ?>">About Us</a>
-            </div>
-          </div>
-
-          <div class="nav-item">
-            <a class="nav-btn" href="<?= u('admin/') ?>">Admin ▾</a>
-            <div class="dropdown">
-              <a href="<?= h(u('admin/assets-hub.php')) ?>?do=upload-league">Upload League File</a>
-              <div class="menu-group">League Ops</div>
-              <a href="<?= u('admin/users.php') ?>">GM Management</a>
-              <a href="#">Trade Approvals</a>
-              <a href="#">League Settings &amp; Toggles</a>
-
+    if (!empty($tab['children'])) {
+      foreach ($tab['children'] as $child) {
+        if (($child['type'] ?? 'link') !== 'link') continue;
+        $childBase = basename($child['href']);
+        if (in_array($childBase, $leagueBases, true)) continue; // ignore league links
+        if ($childBase === $activeBasename) return true;        // only non-league child matches count
+      }
+    }
+    return false;
+  };
+  ?>
+  <?php foreach ($tabs as $key => $t): ?>
+    <?php $hasChildren = !empty($t['children']);
+          $active = $isActiveTab($t);
+          $btnCls = 'nav-btn' . ($active ? ' active' : '');
+          $aria = $active ? ' aria-current="page"' : '';
+    ?>
+    <div class="nav-item<?= $hasChildren ? ' has-dropdown' : '' ?>">
+      <a class="<?= $btnCls ?>" href="<?= u($t['href']) ?>"<?= $aria ?>>
+        <?= htmlspecialchars($t['label']) ?><?= $hasChildren ? ' ▾' : '' ?>
+      </a>
+      <?php if ($hasChildren): ?>
+        <div class="dropdown">
+          <?php foreach ($t['children'] as $child): ?>
+            <?php if (($child['type'] ?? 'link') === 'divider'): ?>
               <div class="divider"></div>
-              <div class="menu-group">Schedule &amp; Data</div>
-              <a href="<?= u('admin/pipeline-quickstart.php') ?>">Pipeline Quickstart</a>
-              <a href="<?= u('admin/data-pipeline.php') ?>">Data Pipeline Hub</a>
-
-              <div class="divider"></div>
-              <div class="menu-group">Content</div>
-              <a href="<?= u('admin/news.php') ?>">News Manager</a>
-              <a href="<?= u('admin/devlog.php') ?>">Devlog</a>
-
-              <div class="divider"></div>
-              <div class="menu-group">Assets</div>
-              <a href="<?= u('admin/assets-hub.php') ?>">Assets Hub</a>
-
-              <div class="divider"></div>
-              <div class="menu-group">Security</div>
-              <a href="<?= u('admin/users.php') ?>">Users / Roles</a>
-              <a href="<?= u('admin/account-locks.php') ?>">Account Locks</a>
-              <a href="<?= u('admin/login-attempts.php') ?>">Login Attempts</a>
-
-              <div class="divider"></div>
-              <div class="menu-group">System</div>
-              <a href="<?= u('admin/system-hub.php') ?>">System Hub</a>
-            </div>
-          </div>
-        </nav>
+            <?php elseif (($child['type'] ?? 'link') === 'group'): ?>
+              <div class="menu-group"><?= htmlspecialchars($child['label']) ?></div>
+            <?php else: ?>
+              <a href="<?= u($child['href']) ?>"><?= htmlspecialchars($child['label']) ?></a>
+            <?php endif; ?>
+          <?php endforeach; ?>
+        </div>
+      <?php endif; ?>
+    </div>
+  <?php endforeach; ?>
+</nav>
         <div class="profile">
           <?php
           @require_once __DIR__ . '/user-auth.php';
@@ -339,21 +392,22 @@ require_once __DIR__ . '/bootstrap.php'; // safe, no output
     gap: 6px;
   }
 
-    .profile .btn {
+  .profile .btn {
     background-color: #1B2431;
   }
 
-.profile .username {
+  .profile .username {
     font-size: 0.875rem;
     font-weight: 600;
     white-space: nowrap;
     color: inherit !important;
     text-decoration: none !important;
-}
-.profile .username:hover {
+  }
+
+  .profile .username:hover {
     text-decoration: underline;
     color: #cfe3ff;
-}
+  }
 
   .avatar-thumb {
     width: 28px;
@@ -373,4 +427,111 @@ require_once __DIR__ . '/bootstrap.php'; // safe, no output
     object-fit: cover;
     display: block;
   }
+
+  /* --- Portal logo: glass tile --- */
+  .portal-top .brand .logo {
+    width: 64px;
+    /* match your placeholder square */
+    height: 64px;
+    border-radius: 6px;
+    /* same rounding as the pill buttons */
+    position: relative;
+    overflow: hidden;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    /* tile base */
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, .08), rgba(255, 255, 255, 0) 60%),
+      radial-gradient(150% 120% at 50% -30%, rgba(80, 160, 255, .12), rgba(0, 0, 0, 0) 70%);
+
+    border: 1px solid rgba(255, 255, 255, .12);
+    box-shadow:
+      inset 0 0 0 1px rgba(255, 255, 255, .06),
+      /* inner highlight ring */
+      inset 0 6px 12px rgba(255, 255, 255, .06),
+      /* subtle top glow */
+      inset 0 -8px 16px rgba(0, 0, 0, .35),
+      /* bottom depth */
+      0 1px 2px rgba(0, 0, 0, .45);
+    /* outer lift */
+  }
+
+  /* glossy “glass” layer */
+  .portal-top .brand .logo::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+      linear-gradient(180deg,
+        rgba(255, 255, 255, .35) 0%,
+        rgba(255, 255, 255, .14) 40%,
+        rgba(255, 255, 255, 0) 46%,
+        rgba(0, 0, 0, .18) 100%);
+    mix-blend-mode: screen;
+    /* keeps the highlight light */
+  }
+
+  /* image stays contained behind the glass */
+  .portal-top .brand .logo img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    display: block;
+    filter: saturate(1.05) contrast(1.05);
+    /* tiny pop under glass */
+  }
+/* --- Glassy nav buttons (token-based) --- */
+.main-nav .nav-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 14px;
+  border-radius: var(--radius-sm);
+
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,0) 60%),
+    radial-gradient(120% 100% at 50% -20%, rgba(255,255,255,.18), rgba(255,255,255,0) 60%);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-card), var(--shadow-elevated);
+
+  color: var(--color-ink);
+  font-weight: 600;
+  text-decoration: none;
+  transition: background .2s ease, box-shadow .2s ease;
+}
+
+.main-nav .nav-btn:hover {
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.14), rgba(255,255,255,0) 70%),
+    radial-gradient(120% 100% at 50% -20%, rgba(255,255,255,.25), rgba(255,255,255,0) 60%);
+  box-shadow:
+    inset 0 0 0 1px rgba(255,255,255,.08),
+    inset 0 6px 14px rgba(255,255,255,.10),
+    inset 0 -8px 18px rgba(0,0,0,.30),
+    var(--shadow-elevated);
+}
+
+.main-nav .nav-btn:active {
+  box-shadow:
+    inset 0 2px 4px rgba(0,0,0,.45),
+    inset 0 -2px 6px rgba(255,255,255,.05),
+    var(--shadow-elevated);
+}
+.main-nav .nav-btn.active {
+  background:
+    linear-gradient(180deg, var(--color-accent) 35%, rgba(0,0,0,.15) 100%),
+    radial-gradient(120% 100% at 50% -20%, rgba(255,255,255,.25), rgba(255,255,255,0) 60%);
+  border: 1px solid var(--color-accent);
+  box-shadow:
+    inset 0 0 0 1px rgba(255,255,255,.10),
+    inset 0 6px 12px rgba(255,255,255,.08),
+    inset 0 -8px 16px rgba(0,0,0,.25),
+    0 2px 6px var(--color-accent-hover);
+  color: #fff;
+}
+
+
 </style>

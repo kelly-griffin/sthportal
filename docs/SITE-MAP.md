@@ -224,6 +224,7 @@
 - `assets/js/leagues.js` - scripts for leagues list and pages
 - `assets/js/nav.js` - scripts for the topbar and leaguebar
 - `assets/js/players.js` - scripts for players page and pages
+- `assets/js/playoffs.js` - scripts for playoffs hub and pages
 - `assets/js/schedule.js` - scripts for the schedule page
 - `assets/js/scores.js` - scripts for the scores page(s) and scores home insert
 - `assets/js/standings-page.js` - scripts for the standings page
@@ -242,11 +243,11 @@
 - `assets/json/move_dates.json` - contains dates for roster moves
 - `assets/json/signing_dates.json` - contains dates for signings
 - `assets/json/trade_dates.json` - contains dates for trades
-- `assets/json//broadcasters-overrides.json` - MOVE TO `assets/json/` ASAP
-- `assets/json//broadcasters-rules.json` - MOVE TO `assets/json` ASAP
-- `assets/json//draft-picks-per-round.json`
-- `assets/json//home-data.json`
-- `assets/json//results-overrides.json`
+- `assets/json/broadcasters-overrides.json`
+- `assets/json/broadcasters-rules.json`
+- `assets/json/draft-picks-per-round.json`
+- `assets/json/home-data.json`
+- `assets/json/results-overrides.json`
 - `assets/json/schedule-current.json`
 - `assets/json/schedule-full.json`
 - `assets/json/team-map.json`

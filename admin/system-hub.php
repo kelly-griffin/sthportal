@@ -113,7 +113,7 @@ function ago($ts)
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>System Hub</title>
-
+    <?php require_once __DIR__ . '/../includes/head-assets.php'; ?>
 </head>
 <div class="site">
 

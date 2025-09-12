@@ -13,6 +13,7 @@ $embed = !empty($_GET['embed']);
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title><?= h($title) ?> — UHA Portal</title>
+    <?php require_once __DIR__ . '/../includes/head-assets.php'; ?>
 </head>
 
 <body>
@@ -108,7 +109,7 @@ $embed = !empty($_GET['embed']);
                         inbox.innerHTML = (data.peers || []).map(p =>
                             `<button class="btn" style="display:flex;align-items:center;gap:8px;width:calc(100% - 12px);margin:6px"
                data-peer="${p.peer_id}" data-name="${esc(p.peer_name || ('User #' + p.peer_id))}">
-         <img class="avatar" src="${AV}?u=${p.peer_id}&s=28" alt="">
+         <img class="avatar" src="${AV}?u=${p.peer_id}&s=28" alt="" width="32" height="32">
          <span>${esc(p.peer_name || ('User #' + p.peer_id))}</span>
        </button>`).join('');
                         inbox.querySelectorAll('button[data-peer]').forEach(b => {
@@ -119,7 +120,7 @@ $embed = !empty($_GET['embed']);
                     function selectPeer(id, name) {
                         currentPeer = id; currentPeerName = name || ('User #' + id);
                         badgeName.textContent = currentPeerName;
-                        badge.style.display = 'block';
+                        badge.style.display = 'flex';
                         disableDM(false);
                         lastId = 0; log.innerHTML = ''; setError('');
                         loadThread(true);
@@ -139,9 +140,9 @@ $embed = !empty($_GET['embed']);
                                 const whoName = (whoId === myId) ? 'You' : (m.sender_name || ('User #' + whoId));
                                 const el = document.createElement('div');
                                 el.className = 'msg';
-                                el.innerHTML = `<img class="avatar" src="${AV}?u=${whoId}&s=28" alt="">
+                                el.innerHTML = `<img class="avatar" src="${AV}?u=${whoId}&s=28" alt="" width="32" height="32">
                         <div class="bubble"><strong>${esc(whoName)}</strong>
-                        <span class="t" style="opacity:.7;font-size:12px">${time(m.ts)}</span><br>${esc(m.body)}</div>`;
+                        <div class=msg-body>${esc(m.body)}</div>&nbsp;<span class="t" style="opacity:.7;font-size:10px">${time(m.ts)}</span></div>`;
                                 log.appendChild(el);
                             });
                             if ((data.messages || []).length) log.scrollTop = log.scrollHeight;
