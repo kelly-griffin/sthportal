@@ -10,15 +10,15 @@ echo "<!-- CWD: " . getcwd() . "  DIR: " . __DIR__ . " -->";
 
 // absolute roots (works no matter the URL mount)
 define('PORTAL_ROOT', str_replace('\\', '/', realpath(__DIR__)));
-define('DATA_DIR', PORTAL_ROOT . '/data');
+define('DATA_DIR', PORTAL_ROOT . '/assets');
 define('UPLOADS_DIR', PORTAL_ROOT . '/uploads');
 
 // check the files the stats page typically needs
 $probes = [
-  'leaders' => DATA_DIR . '/derived/leaders.json',
-  'skaters_summary' => DATA_DIR . '/derived/skaters_summary.json',
-  'goalies_summary' => DATA_DIR . '/derived/goalies_summary.json',
-  'teams_summary' => DATA_DIR . '/derived/teams_summary.json',
+  'leaders' => DATA_DIR . '/json/leaders.json',
+  'skaters_summary' => DATA_DIR . '/json/skaters_summary.json',
+  'goalies_summary' => DATA_DIR . '/json/goalies_summary.json',
+  'teams_summary' => DATA_DIR . '/json/teams_summary.json',
 ];
 
 foreach ($probes as $k => $p) {
@@ -27,10 +27,10 @@ foreach ($probes as $k => $p) {
 
 // check the files the stats page typically needs
 $probes = [
-  'leaders' => DATA_DIR . '/derived/leaders.json',
-  'skaters_summary' => DATA_DIR . '/derived/skaters_summary.json',
-  'goalies_summary' => DATA_DIR . '/derived/goalies_summary.json',
-  'teams_summary' => DATA_DIR . '/derived/teams_summary.json',
+  'leaders' => DATA_DIR . '/json/leaders.json',
+  'skaters_summary' => DATA_DIR . '/json/skaters_summary.json',
+  'goalies_summary' => DATA_DIR . '/json/goalies_summary.json',
+  'teams_summary' => DATA_DIR . '/json/teams_summary.json',
 ];
 
 foreach ($probes as $k => $p) {
@@ -143,7 +143,7 @@ foreach (['UHA-V3ProTeam.csv', 'UHA-Teams.csv', 'UHA-V3Teams.csv'] as $cand) {
 
 // Optional per-year draft picks-per-round map
 $draftPicksPerRoundMap = [];
-$draftPicksPath = __DIR__ . '/data/uploads/draft-picks-per-round.json';
+$draftPicksPath = __DIR__ . '/assets/json/draft-picks-per-round.json';
 if (is_file($draftPicksPath)) {
   $tmp = json_decode((string) file_get_contents($draftPicksPath), true);
   if (is_array($tmp))
@@ -151,7 +151,7 @@ if (is_file($draftPicksPath)) {
 }
 
 // --- Derived OTG support (optional file) ---
-$derivedOtgPath = __DIR__ . '/data/uploads/derived-otg.csv';
+$derivedOtgPath = __DIR__ . '/data/derived-otg.csv';
 $derivedOtgMap = [];       // name|TEAM -> int
 $derivedOtgByName = [];    // name -> int (team-agnostic fallback)
 
@@ -594,7 +594,7 @@ if (!function_exists('parse_faceoffs_from_pbp')) {
   <meta charset="utf-8" />
   <meta name="viewport" content="width=1280, initial-scale=1" />
   <title>Statistics</title>
-  <link rel="stylesheet" href="assets/css/nav.css" />
+    <?php require_once __DIR__ . '/includes/head-assets.php'; ?>
 </head>
 
 <body>

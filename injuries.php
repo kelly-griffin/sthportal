@@ -11,7 +11,7 @@ require_once __DIR__ . '/includes/bootstrap.php';
 <head>
   <meta charset="utf-8">
   <title>Injuries</title>
-  <link rel="stylesheet" href="assets/css/nav.css">
+    <?php require_once __DIR__ . '/includes/head-assets.php'; ?>
   <script src="assets/js/injuries.js" defer></script>
 </head>
 <body>

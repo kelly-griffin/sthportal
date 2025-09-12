@@ -65,6 +65,7 @@ function dateLong(?string $ts): string {
     .article-body p{ margin:0 0 1em; }
     @media (max-width:700px){ .article-title{ font-size:26px; } .article-hero{ height:240px; } }
   </style>
+    <?php require_once __DIR__ . '/includes/head-assets.php'; ?>
 </head>
 <body class="news-article-canvas">
 <?php

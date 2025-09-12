@@ -1,4 +1,6 @@
 <?php
+declare(strict_types=1);
+
 require_once __DIR__ . '/includes/bootstrap.php';
 require_once __DIR__ . '/includes/tx_helpers.php';
 require_once __DIR__ . '/includes/sim_clock.php';
@@ -13,8 +15,9 @@ require_once __DIR__ . '/includes/sim_clock.php';
 <body>
   <?php require_once __DIR__ . '/includes/topbar.php'; ?>
   <?php require_once __DIR__ . '/includes/leaguebar.php'; ?>
+<div class="site">  
+    <!-- SCORE TICKER (nav.js only needs #ticker-track) -->
 
-<!-- SCORE TICKER (nav.js only needs #ticker-track) -->
 <div class="score-ticker" aria-label="Live Scores Ticker">
     <div class="ticker-viewport">
         <div class="ticker-track" id="ticker-track"></div>
@@ -147,6 +150,7 @@ require_once __DIR__ . '/includes/sim_clock.php';
 
     </div>
 </section>
+</div>
 </body>
 </html>
 

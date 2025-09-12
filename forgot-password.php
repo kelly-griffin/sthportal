@@ -29,6 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 ?><!doctype html>
 <meta charset="utf-8">
+<head>
 <title>Forgot Password</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <style>
@@ -44,6 +45,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   .dev{margin:.6rem 0;padding:.5rem .6rem;border:1px dashed #94a3b8;background:#f1f5f9;border-radius:8px;word-break:break-all}
   a{color:#2563eb;text-decoration:none}
 </style>
+    <?php require_once __DIR__ . '/includes/head-assets.php'; ?>
+</head>
 <div class="wrap">
   <h1>Forgot Password</h1>
 

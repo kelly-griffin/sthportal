@@ -128,6 +128,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
     window.addEventListener('DOMContentLoaded', initWYS);
   </script>
+    <?php require_once __DIR__ . '/../includes/head-assets.php'; ?>
 </head>
 
 <body>

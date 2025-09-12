@@ -5,6 +5,7 @@ $title = 'Press Releases';
 <!doctype html><html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title><?= h($title) ?> — UHA Portal</title>
+    <?php require_once __DIR__ . '/../includes/head-assets.php'; ?>
 </head>
 <body>
 <div class="site">

@@ -11,63 +11,7 @@ $title = 'Defaults';
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><?= h($title) ?> — UHA Portal</title>
 
-    <!-- Page-local styles (mirrors options-hub.php look/feel) -->
-    <style>
-        :root{
-            --stage:#585858ff;
-            --card:#0D1117;
-            --card-border:#FFFFFF1A;
-            --ink:#E8EEF5;
-            --ink-soft:#95A3B4;
-            --site-width:1200px;
-        }
-
-        body{ margin:0; background:#202428; color:var(--ink);
-              font:14px/1.5 system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif; }
-
-        .site{ width:var(--site-width); margin:0 auto; min-height:100vh; background:transparent; }
-        .canvas{ padding:0 16px 40px; }
-        .wrap{ max-width:1000px; margin:20px auto; }
-
-        .page-surface{
-            margin:12px 0 32px; padding:16px 16px 24px; background:var(--stage);
-            border-radius:16px; box-shadow:inset 0 1px 0 #ffffff0d, 0 0 0 1px #ffffff0f;
-            min-height:calc(100vh - 220px); color:#E8EEF5;
-        }
-
-        h1{ margin:0 0 6px; font-size:28px; line-height:1.15; letter-spacing:.2px; }
-        .muted{ color:var(--ink-soft); }
-
-        .grid2{ display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:16px; }
-        @media (max-width:920px){ .grid2{ grid-template-columns:1fr; } }
-
-        .card{
-            background:var(--card); border:1px solid var(--card-border); border-radius:16px; padding:16px;
-            color:inherit; box-shadow:inset 0 1px 0 #ffffff12;
-        }
-        .card h2{ margin:0 0 10px; color:#DFE8F5; }
-        .card p{ margin:0 0 10px; color:#CFE1F3; }
-
-        .row{ display:flex; gap:12px; align-items:center; flex-wrap:wrap; }
-
-        .btn{
-            display:inline-block; padding:6px 10px; border-radius:10px; border:1px solid #2F3F53;
-            background:#1B2431; color:#E6EEF8; text-decoration:none;
-        }
-        .btn:hover{ background:#223349; border-color:#3D5270; }
-        .btn.small{ padding:4px 8px; font-size:12px; line-height:1; }
-
-        .radio-row{ display:flex; gap:12px; flex-wrap:wrap; }
-        label.radio{ display:inline-flex; align-items:center; gap:6px; cursor:pointer; }
-
-        select, input[type="number"], input[type="text"]{
-            background:#0f1420; color:#e6eef8; border:1px solid #2F3F53; border-radius:8px;
-            padding:6px 8px; min-width:140px;
-        }
-
-        a{ color:#9CC4FF; text-decoration:none; }
-        a:hover{ color:#C8DDFF; }
-    </style>
+    <?php require_once __DIR__ . '/../includes/head-assets.php'; ?>
 </head>
 
 <body>
@@ -76,7 +20,8 @@ $title = 'Defaults';
     <?php include __DIR__ . '/../includes/leaguebar.php'; ?>
 
     <div class="canvas">
-        <div class="wrap">
+        <div class="defaults-container">
+          <div class="defaults-card">
             <div class="page-surface">
                 <h1><?= h($title) ?></h1>
                 <p class="muted">Set your preferred defaults for navigation and views. These save to your browser for now; we’ll wire them into pages next.</p>
@@ -170,6 +115,7 @@ $title = 'Defaults';
 
                 </div>
             </div>
+          </div>
         </div>
     </div>
 

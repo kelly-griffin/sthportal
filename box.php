@@ -18,7 +18,7 @@ if ($abs && is_file($abs)) {
 <head>
 <meta charset="utf-8">
 <title>Boxscore <?= h($gid ?: '') ?></title>
-<link rel="stylesheet" href="assets/css/nav.css">
+    <?php require_once __DIR__ . '/includes/head-assets.php'; ?>
 <style>
   .box-wrap{max-width:1200px;margin:20px auto}
   .box-embed .card{max-width:unset}

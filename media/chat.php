@@ -13,6 +13,7 @@ $embed = !empty($_GET['embed']);
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title><?= h($title) ?> — UHA Portal</title>
+  <?php require_once __DIR__ . '/../includes/head-assets.php'; ?>
 </head>
 
 <body>
@@ -94,9 +95,18 @@ $embed = !empty($_GET['embed']);
             const el = document.createElement('div');
             el.className = 'msg';
             const name = m.username || m.user_name || m.display_name || ('User #' + (m.user_id || 0));
-            el.innerHTML = `<img class="avatar" src="${AV}?u=${m.user_id || 0}&s=24" alt="">
-                          <div class="bubble"><strong>${esc(name)}</strong>
-                          <span class="t">${time(m.ts)}</span><br>${esc(m.body)}</div>`;
+            el.innerHTML = `
+  <div class="chat-message">
+    <img class="avatar" src="${AV}?u=${m.user_id || 0}&s=24" alt="" width="32" height="32">
+    <div class="message-body">
+      <div class="message-meta">
+        <strong class="sender-name">${esc(name)}</strong>
+        <span class="timestamp">${time(m.ts)}</span>
+      </div>
+      <div class="message-text">${esc(m.body)}</div>
+    </div>
+  </div>`;
+
             log.appendChild(el);
           });
           if ((data.messages || []).length) log.scrollTop = log.scrollHeight;

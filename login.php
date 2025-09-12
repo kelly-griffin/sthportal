@@ -69,6 +69,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <?php if (function_exists('recaptcha_enabled') && recaptcha_enabled()): ?>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   <?php endif; ?>
+    <?php require_once __DIR__ . '/includes/head-assets.php'; ?>
 </head>
 <body style="font-family:system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif; color:#e6eef8; background:#202428;">
 <div style="max-width:420px;margin:40px auto;padding:20px;border-radius:16px;background:#0d1117;border:1px solid #ffffff1a;box-shadow:inset 0 1px 0 #ffffff12;">

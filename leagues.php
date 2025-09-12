@@ -10,7 +10,7 @@ require_once __DIR__ . '/includes/bootstrap.php';
 <head>
   <meta charset="utf-8">
   <title>Leagues</title>
-  <link rel="stylesheet" href="assets/css/nav.css">
+    <?php require_once __DIR__ . '/includes/head-assets.php'; ?>
   <script src="assets/js/leagues.js" defer></script>
 </head>
 <body>

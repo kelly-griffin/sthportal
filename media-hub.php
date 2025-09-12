@@ -6,7 +6,9 @@ $title = 'Media';
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title><?= h($title) ?> — UHA Portal</title>
 
-</head><body>
+    <?php require_once __DIR__ . '/includes/head-assets.php'; ?>
+</head>
+<body>
 <div class="site">
   <?php include __DIR__ . '/includes/topbar.php'; ?>
   <?php include __DIR__ . '/includes/leaguebar.php'; ?>

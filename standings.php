@@ -7,15 +7,12 @@ require_once __DIR__ . '/includes/bootstrap.php';
 <head>
   <meta charset="utf-8">
   <title>UHA: NHL Standings</title>
-  <style>.table-title, .conf-h { font-weight: 800; }</style>
-  <script src="assets/js/standings.js" defer></script>
+    <?php require_once __DIR__ . '/includes/head-assets.php'; ?>
 </head>
 <body>
-  <div class="site">
-
-    <?php include __DIR__ . '/includes/topbar.php'; ?>
-    <?php include __DIR__ . '/includes/leaguebar.php'; ?>
-
+  <?php require_once __DIR__ . '/includes/topbar.php'; ?>
+  <?php require_once __DIR__ . '/includes/leaguebar.php'; ?>
+<div class="site">
     <div class="canvas">
       <div class="standings-container">
         <div class="standings-card">
