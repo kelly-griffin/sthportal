@@ -100,9 +100,9 @@ $tabs = [
     'children' => [
       ['label' => 'Upload League File', 'href' => 'admin/assets-hub.php?do=upload-league'],
       ['type' => 'group', 'label' => 'League Ops'],
-      ['label' => 'GM Management',        'href' => 'admin/users.php'],
-      ['label' => 'Trade Approvals',      'href' => '#'],
-      ['label' => 'League Settings & Toggles', 'href' => '#'],
+      ['label' => 'GM Management',        'href' => 'admin/gm-management.php'],
+      ['label' => 'Trade Approvals',      'href' => 'admin/trade-approvals.php'],
+      ['label' => 'League Settings & Toggles', 'href' => 'admin/settings-toggles.php'],
       ['type' => 'divider'],
       ['type' => 'group', 'label' => 'Schedule & Data'],
       ['label' => 'Pipeline Quickstart',  'href' => 'admin/pipeline-quickstart.php'],
