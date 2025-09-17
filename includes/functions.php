@@ -63,7 +63,7 @@ if (!defined('APP_BASE_URL')) {
     $script = str_replace('\\', '/', $_SERVER['SCRIPT_NAME'] ?? '/'); // e.g., /sthportal/home.php
     $dir    = rtrim(dirname($script), '/');                           // e.g., /sthportal
     // If we are inside a subroot, strip it back to app base
-    $dir    = preg_replace('~/(admin|media|api|tools|options)$~', '', $dir);
+    $dir    = preg_replace('~/(admin|media|api|leagues|tournaments|options)$~', '', $dir);
     define('APP_BASE_URL', $dir ?: '');
 }
 

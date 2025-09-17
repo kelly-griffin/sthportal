@@ -1,7 +1,7 @@
 <?php
 // topbar.php
 declare(strict_types=1);
-require_once __DIR__ . '/bootstrap.php'; // safe, no output
+
 
 $tabs = [
   'splash' => [
@@ -53,10 +53,10 @@ $tabs = [
     'href'  => 'tournaments.php',
     'children' => [
       ['type' => 'group', 'label' => 'Tournaments'],
-      ['label' => 'World Cup of Hockey', 'href' => '#'],
-      ['label' => 'Olympics',            'href' => '#'],
-      ['label' => 'World Juniors',       'href' => '#'],
-      ['label' => 'IIHF Worlds',         'href' => '#'],
+      ['label' => 'World Cup of Hockey', 'href' => 'tournaments/world-cup.php'],
+      ['label' => 'Olympics',            'href' => 'tournaments/olympic-hockey.php'],
+      ['label' => 'World Juniors',       'href' => 'tournaments/world-juniors.php'],
+      ['label' => 'IIHF Worlds',         'href' => 'tournaments/worlds.php'],
     ],
   ],
   'media' => [
